@@ -1,35 +1,73 @@
 // globalstyles styles
+/*==========================================================
+Fonts
+==========================================================*/
+
+@font-face {
+    font-family: 'Acari Sans';
+    src: url('font/AcariSans-Regular.woff2') format('woff2'),
+        url('font/AcariSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acari Sans';
+    src: url('font/AcariSans-Bold.woff2') format('woff2'),
+        url('font/AcariSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 /*==========================================================
 Color Theme
 ==========================================================*/
-cd-foreground = white
-cd-flash = purple
-cd-background = black
+cd-darkblue = #1E3255
+cd-turquoise = #3DA299
+cd-lightgrey = #f7f7f7
+
+// - darkblue: #1E3255
+// - turquoise: #3DA299
+// - turquoise-darker: #00A39C
+// - lightgrey: #f7f7f7
 
 /*==========================================================
 Global Variables
 ==========================================================*/
-// max-content-width = 900px
-// mobile-side-padding = 15px
+max-content-width = 1024px
+min-content-height = calc(100vh - 244px)
+content-padding-top = 70px
+content-padding-bottom = 150px
 
 
 /*==========================================================
 General Tag Styles
 ==========================================================*/
-body
-    background-color cd-background
-    color cd-foreground
-    font-family: Arial, Helvetica, sans-serif
-    text-align: center
-    font-size: 12pt
-    height 100vh
+html
+    position relative
     width 100%
-    overflow hidden
-
+    overflow-x: hidden
+    overflow-y: scroll
+body
+    position relative
+    color white
+    font-family: "Acari Sans"
+    text-align: left
+    line-height: 130%
+    font-size: 14pt
+    width 100%
+    overflow: hidden
 h1
     font-size: 17pt
 h2
     font-size: 15pt
 p
-    font-size: 12pt
+    font-size: 14pt
+
+
+/*==========================================================
+Specific Global Class Styles
+==========================================================*/

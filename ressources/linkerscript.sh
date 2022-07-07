@@ -10,7 +10,6 @@ ln -sfT ../../sources/ressources/img img
 ln -sfT ../../sources/ressources/audio audio
 ln -sfT ../../sources/ressources/video video
 
-ln -sf ../../sources/ressources/manifest/* .
 ln -sf ../../sources/ressources/favicon/* .
 
 popd

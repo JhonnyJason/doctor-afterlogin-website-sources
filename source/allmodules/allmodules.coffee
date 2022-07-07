@@ -1,9 +1,11 @@
-import configmodule from "./configmodule"
-import debugmodule from "./debugmodule"
+import * as configmodule from "./configmodule.js"
+import * as debugmodule from "./debugmodule.js"
+import * as overviewtablemodule from "./overviewtablemodule.js"
 
 Modules = {
     configmodule,
-    debugmodule
+    debugmodule,
+    overviewtablemodule,
 }
 
 export default Modules
