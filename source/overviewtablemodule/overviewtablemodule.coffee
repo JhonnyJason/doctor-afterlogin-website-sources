@@ -6,7 +6,7 @@ import { createLogFunctions } from "thingy-debug"
 
 import { createTable } from '@tanstack/table-core'
 
-import { Grid } from "gridjs"
+import { Grid, h } from "gridjs"
 
 
 ############################################################
@@ -47,8 +47,22 @@ export initialize = ->
     options =
         debugTable: true
 
+    bilderObj = {
+        name: ""
+        id: "bilder-button"
+        formatter: bilderFormatter
+        sort: false
+    }
+    befundeObj = {
+        name: ""
+        id: "befunde-button"
+        formatter: befundeFormatter
+        sort: false
+    }
+
     gridJSOptions = {
-        columns: ["Bilder", "Befunde", "Unt.-Datum", "Name + Vorname", "SVN", "Geb.Datum", "Beschreibung", "Radiologie", "Zustellung"]
+        columns: [bilderObj, befundeObj, "Unt.-Datum", "Name + Vorname", "SVN", "Geb.Datum", "Beschreibung", "Radiologie", "Zustellung"]
+        fixedHeader: true,
         search: true,
         sort: true,
         pagination: {
@@ -174,3 +188,22 @@ export initialize = ->
     
     #Implement or Remove :-)
     return
+
+############################################################
+bilderFormatter  = (cell, row) ->
+    formatObj = {
+            className: 'bild-buttom click-button',
+            onClick: ->
+                olog row 
+                log("Bilder Button clicked! @#{row.id}")
+          }
+    return h('button', formatObj, 'Bilder')
+
+befundeFormatter = (cell, row) ->
+    formatObj = {
+            className: 'befund-buttom click-button',
+            onClick: ->
+                olog row
+                log("Befunde Button clicked! @#{row.id}")
+          }
+    return h('button', formatObj, 'Befunde')
