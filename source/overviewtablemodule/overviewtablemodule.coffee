@@ -4,9 +4,11 @@ import { createLogFunctions } from "thingy-debug"
 {log, olog} = createLogFunctions("overviewtablemodule")
 #endregion
 
-import { createTable } from '@tanstack/table-core'
-
+############################################################
 import { Grid, h } from "gridjs"
+import { postData } from "thingy-network-base"
+
+import { dataURL } from "./configmodule.js"
 
 
 ############################################################
@@ -35,6 +37,7 @@ deDE = {
 }  
 #endregion
 
+############################################################
 tableObj = null
 
 
@@ -44,8 +47,14 @@ tableObj = null
 ############################################################
 export initialize = ->
     log "initialize"
-    options =
-        debugTable: true
+
+
+    try
+        data = await getData(0, 1000)
+        olog data
+    catch error
+        log "error occured!"
+        log error
 
     bilderObj = {
         name: ""
@@ -207,3 +216,20 @@ befundeFormatter = (cell, row) ->
                 log("Befunde Button clicked! @#{row.id}")
           }
     return h('button', formatObj, 'Befunde')
+
+
+getData = (page, pageSize) ->
+    # {
+    #     "shareId": 0,
+    #     "modality": "string",
+    #     "fullName": "string",
+    #     "ssn": "string",
+    #     "dob": "string",
+    #     "minDate": "string",
+    #     "maxDate": "string",
+    #     "page": 0,
+    #     "pageSize": 0
+    # }
+
+    requestData = {page, pageSize}
+    return postData(dataURL, requestData)
