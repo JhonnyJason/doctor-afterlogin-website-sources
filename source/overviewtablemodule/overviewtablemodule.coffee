@@ -45,17 +45,55 @@ tableObj = null
 # | Bilder Button | Befunde Button | Untersuchungsdatum | Patienten Name (Fullname) | SSN (4 digits) | Geb.Datum | Untersuchungsbezeichnung | Radiologie | Zeitstempel (Datum + Uhrzeit) |
 
 ############################################################
+loginButtonClicked = ->
+    username = nameInput.value
+    hashedPwd = passwordHashInput.value
+    try
+        loginResult = await demoLogin(username, hashedPwd)
+        olog { loginResult }
+        whoamiResult = await checkWhoAmI()
+        olog { whoamiResult }
+        data = await getData(0, 1000)
+        olog { data }
+
+    catch err
+        log "error occured!"
+        log err
+    
+    return
+
+
+demoLogin = (username, hashedPw) ->
+    url = "https://extern.bilder-befunde.at/caasdemo/api/v1/auth/login"
+    data = {
+        username,
+        hashedPw,
+        isMedic: true,
+        rememberMe: true
+    }
+
+    return postData(url, data)
+
+checkWhoAmI = ->
+    url = "https://extern.bilder-befunde.at/caasdemo/api/v1/auth/whoami"
+    options =
+        method: 'GET'
+        mode: 'cors'
+        credentials: 'include'
+    
+    try
+        response = await fetch(url, options)
+        if !response.ok then throw new Error("Response not ok - status: "+response.status+"!")
+        return response.json()
+    catch err then throw new Error("Network Error: "+err.message)
+
+
+############################################################
 export initialize = ->
     log "initialize"
-
-    try
-        IAM = await checkWhoAmI()
-        olog IAM
-        data = await getData(0, 1000)
-        olog data
-    catch error
-        log "error occured!"
-        log error
+    
+    #for demologin and whole connection testing
+    loginButton.addEventListener("click", loginButtonClicked)
 
     bilderObj = {
         name: ""
@@ -236,18 +274,7 @@ postData = (url, data) ->
         return response.json()
     catch err then throw new Error("Network Error: "+err.message)
 
-checkWhoAmI = ->
-    url = "https://extern.bilder-befunde.at/caasdemo/api/v1/auth/whoami"
-    options =
-        method: 'GET'
-        mode: 'cors'
-        credentials: 'include'
-    
-    try
-        response = await fetch(url, options)
-        if !response.ok then throw new Error("Response not ok - status: "+response.status+"!")
-        return response.json()
-    catch err then throw new Error("Network Error: "+err.message)
+
 
 getData = (page, pageSize) ->
     # {
