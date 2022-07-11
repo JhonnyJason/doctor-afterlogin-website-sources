@@ -6,8 +6,8 @@ import { createLogFunctions } from "thingy-debug"
 
 ############################################################
 import { Grid, h } from "gridjs"
-import { postData } from "thingy-network-base"
 
+############################################################
 import { dataURL } from "./configmodule.js"
 
 
@@ -47,7 +47,6 @@ tableObj = null
 ############################################################
 export initialize = ->
     log "initialize"
-
 
     try
         data = await getData(0, 1000)
@@ -216,6 +215,24 @@ befundeFormatter = (cell, row) ->
                 log("Befunde Button clicked! @#{row.id}")
           }
     return h('button', formatObj, 'Befunde')
+
+
+############################################################
+postData = (url, data) ->
+    options =
+        method: 'POST'
+        mode: 'cors'
+        credentials: 'include'
+    
+        body: JSON.stringify(data)
+        headers:
+            'Content-Type': 'application/json'
+
+    try
+        response = await fetch(url, options)
+        if !response.ok then throw new Error("Response not ok - status: "+response.status+"!")
+        return response.json()
+    catch err then throw new Error("Network Error: "+err.message)
 
 
 getData = (page, pageSize) ->
