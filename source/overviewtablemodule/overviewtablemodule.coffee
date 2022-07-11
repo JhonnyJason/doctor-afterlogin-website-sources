@@ -49,6 +49,8 @@ export initialize = ->
     log "initialize"
 
     try
+        IAM = await checkWhoAmI()
+        olog IAM
         data = await getData(0, 1000)
         olog data
     catch error
@@ -234,6 +236,18 @@ postData = (url, data) ->
         return response.json()
     catch err then throw new Error("Network Error: "+err.message)
 
+checkWhoAmI = ->
+    url = "https://extern.bilder-befunde.at/caasdemo/api/v1/auth/whoami"
+    options =
+        method: 'GET'
+        mode: 'cors'
+        credentials: 'include'
+    
+    try
+        response = await fetch(url, options)
+        if !response.ok then throw new Error("Response not ok - status: "+response.status+"!")
+        return response.json()
+    catch err then throw new Error("Network Error: "+err.message)
 
 getData = (page, pageSize) ->
     # {
