@@ -199,7 +199,7 @@ getHeaderObject = ->
     }
     sendingDateHeadObj = {
         name: "Zustellungsdatum"
-        id: "DateModified"
+        id: "DateCreated"
         formatter: sendingDateFormatter
         sort: { compare: dateCompare }
     }
