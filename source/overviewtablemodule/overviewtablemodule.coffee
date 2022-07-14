@@ -6,10 +6,12 @@ import { createLogFunctions } from "thingy-debug"
 
 ############################################################
 import { Grid, h } from "gridjs"
+import dayjs from "dayjs"
+# import { de } from "dayjs/locales"
 
 ############################################################
-import { dataURL } from "./configmodule.js"
-
+import { requestSharesURL } from "./configmodule.js"
+import { sharesResponse } from "./sampledata.js"
 
 ############################################################
 #region germanLanguage
@@ -91,154 +93,138 @@ checkWhoAmI = ->
 ############################################################
 export initialize = ->
     log "initialize"
-    
     #for demologin and whole connection testing
     loginButton.addEventListener("click", loginButtonClicked)
 
-    bilderObj = {
-        name: ""
-        id: "bilder-button"
-        formatter: bilderFormatter
-        sort: false
-    }
-    befundeObj = {
-        name: ""
-        id: "befunde-button"
-        formatter: befundeFormatter
-        sort: false
-    }
-
-    gridJSOptions = {
-        columns: [bilderObj, befundeObj, "Unt.-Datum", "Name + Vorname", "SVN", "Geb.Datum", "Beschreibung", "Radiologie", "Zustellung"]
-        fixedHeader: true,
-        search: true,
-        sort: true,
-        pagination: {
-            limit: 50
-        }
-        data: [
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]            
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]
-            ["-", "-", "7/7/2022", "Walter Müller", "4444", "23.1.1950", "Sehr interesssante Untersuchung, vielleicht ist die Länge der Beschreibung auch sehr lang.", "Dr. Rad", "7/7/2022-16:32"]        
-        ],
-        language: deDE
-    }
-
-    tableObj = new Grid(gridJSOptions)
-    tableObj.render(overviewtable)
+    renderTable()
     
     #Implement or Remove :-)
     return
 
 ############################################################
-bilderFormatter  = (cell, row) ->
+renderTable = ->
+    headerObject = getHeaderObject()
+    searchObject = getSearchObject()
+    paginationObject = getPaginationObject()
+    serverObject =  getServerObject()
+
+    dataArray = sharesResponse.shares.sort(defaultSharesCompare)
+
+    gridJSOptions = {
+        columns: headerObject
+        data: dataArray,
+        # server: serverObject,
+        search: searchObject,
+        pagination: paginationObject,
+        sort: true,
+        language: deDE,
+        fixedHeader: true,
+        height: "70vh"
+    }
+    tableObj = new Grid(gridJSOptions)
+    # gridjsFrame.
+    tableObj.render(gridjsFrame)
+    return
+
+############################################################
+#region sort functions
+dateCompare = (el1, el2) ->
+    date1 = dayjs(el1)
+    date2 = dayjs(el2)
+    return -date1.diff(date2)
+
+numberCompare = (el1, el2) ->
+    # todo
+    return
+
+defaultSharesCompare = (el1, el2) ->
+    date1 = dayjs(el1.DateModified)
+    date2 = dayjs(el2.DateModified)
+    return -date1.diff(date2)
+#endregion
+
+############################################################
+#region get optionObjects for GridJS
+getHeaderObject = ->
+     
+    bilderHeadObj = {
+        name: ""
+        id: "bilder-button"
+        formatter: bilderFormatter
+        sort: false
+    }
+    befundeHeadObj = {
+        name: ""
+        id: "befunde-button"
+        formatter: befundeFormatter
+        sort: false
+    }
+    screeningDateHeadObj = {
+        name: "Unt.-Datum"
+        id: "CaseDate"
+        formatter: screeningDateFormatter
+        sort: { compare: dateCompare }
+    }
+    nameHeadObj = {
+        name: "Name"
+        id: "PatientFullname"
+        formatter: nameFormatter
+    }
+    svnHeadObj = {
+        name: "SVN"
+        id: "PatientSsn"
+        formatter: svnFormatter
+        sort: {compare: numberCompare}
+    }
+    birthdayHeadObj = {
+        name: "Geb.-Datum"
+        id: "PatientDob"
+        formatter: birthdayFormatter
+        sort:{ compare: dateCompare }
+    }
+    descriptionHeadObj = {
+        name:"Beschreibung"
+        id: "CaseDescription"
+        formatter: descriptionFormatter
+    }
+    radiologistHeadObj = {
+        name: "Radiologie"
+        id: "CreatedBy"
+        formatter: radiologistFormatter
+    }
+    sendingDateHeadObj = {
+        name: "Zustellungsdatum"
+        id: "DateModified"
+        formatter: sendingDateFormatter
+        sort: { compare: dateCompare }
+    }
+
+    return [bilderHeadObj, befundeHeadObj, screeningDateHeadObj, nameHeadObj, svnHeadObj, birthdayHeadObj, descriptionHeadObj, radiologistHeadObj, sendingDateHeadObj]
+
+getSearchObject = ->
+    return true
+
+getServerObject = ->
+    return {
+        url: requestSharesURL,
+        data: (options) -> return new Promise (resolve, reject) ->
+            try
+                response = await postData(options.url, options.parameter)
+                data = response.shares
+                total = response.total_user_count
+                resolve({data, total})
+            catch err then reject(err)
+    }
+
+getPaginationObject = ->
+    # TODO retriev currently chosen limit
+    return { limit: 50 }
+
+#endregion
+
+############################################################
+#region cell formatter functions
+bilderFormatter  = (content, row) ->
     formatObj = {
             className: 'bild-buttom click-button',
             onClick: ->
@@ -247,7 +233,7 @@ bilderFormatter  = (cell, row) ->
           }
     return h('button', formatObj, 'Bilder')
 
-befundeFormatter = (cell, row) ->
+befundeFormatter = (content , row) ->
     formatObj = {
             className: 'befund-buttom click-button',
             onClick: ->
@@ -256,6 +242,31 @@ befundeFormatter = (cell, row) ->
           }
     return h('button', formatObj, 'Befunde')
 
+screeningDateFormatter = (content, row) ->
+    date = dayjs(content)
+    return date.format("DD.MM.YYYY")
+
+nameFormatter = (content, row) ->
+    return content
+
+svnFormatter = (content, row) ->
+    return content
+
+birthdayFormatter = (content, row) ->
+    date = dayjs(content)
+    return date.format("DD.MM.YYYY")
+
+descriptionFormatter = (content, row) ->
+    return content
+
+radiologistFormatter = (content, row) ->
+    return content
+
+sendingDateFormatter = (content, row) ->
+    date = dayjs(content)
+    return date.format("YYYY-MM-DD hh:mm")
+
+#endregion
 
 ############################################################
 postData = (url, data) ->
