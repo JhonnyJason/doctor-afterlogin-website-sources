@@ -1,17 +1,60 @@
 // overviewtable styles
+button-size = 22px
+
 @import '../../../node_modules/gridjs/dist/theme/mermaid.css'
+
+
 #overviewtable
     width 100%
-    
+
+th.gridjs-th
+    background-color #F9FAFB
+    z-index 20
+
 tr.gridjs-tr:nth-child(2n)
     background-color: alpha(cd-darkblue, 0.3)
 
+// td.gridjs-td:nth-child(1)
+//     @extends .click-button
+    
+//     // width 100%
+//     // box-sizing: border-box
+//     // padding 3px
+
+.bild-button
+.befund-button
+    cursor: pointer
+    // color cd-turquoise
+    // border-radius: 5px
+    // background-color cd-turquoise
+    // color white
+    margin auto
+    margin-top 3px
+    // padding 5px 10px
+    // width: 45px
+    // height 35px
+    width: button-size
+    height button-sizet
+
+.bild-button:active
+.befund-button:active
+    opacity 0.5
+
+
 td.gridjs-td
     background transparent
+    font-size: 12pt
+    vertical-align: middle
+    padding 6px 12px
+    svg
+        width: button-size
+        height button-size
 
 .click-button
 .click-button:hover
+    overflow: hidden
     background-color: cd-turquoise
     color white
     padding 10px
     text-transform: uppercase
+

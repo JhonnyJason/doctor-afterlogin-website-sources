@@ -5,7 +5,7 @@ import { createLogFunctions } from "thingy-debug"
 #endregion
 
 ############################################################
-import { Grid, h } from "gridjs"
+import { Grid, html} from "gridjs"
 import dayjs from "dayjs"
 # import { de } from "dayjs/locales"
 
@@ -119,7 +119,12 @@ renderTable = ->
         sort: true,
         language: deDE,
         fixedHeader: true,
+        resizable: true,
         height: "70vh"
+        className: {
+            td: 'table-cell',
+            table: 'c-table'
+        }
     }
     tableObj = new Grid(gridJSOptions)
     # gridjsFrame.
@@ -226,21 +231,30 @@ getPaginationObject = ->
 #region cell formatter functions
 bilderFormatter  = (content, row) ->
     formatObj = {
-            className: 'bild-buttom click-button',
+            content: '<svg><use href="#svg-images-icon" /></svg>'
+            className: 'bild-button click-button',
             onClick: ->
                 olog row 
                 log("Bilder Button clicked! @#{row.id}")
           }
-    return h('button', formatObj, 'Bilder')
+
+    # return h('button', formatObj, '<svg><use href="#svg-images-icon" /></svg>')
+    # return h('button', formatObj, 'B')
+    # return h(HTMLElement, formatObj)
+    innerHTML = '<div class="bild-button" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></div>'
+    return html(innerHTML)
 
 befundeFormatter = (content , row) ->
     formatObj = {
-            className: 'befund-buttom click-button',
+            className: 'befund-button click-button',
             onClick: ->
                 olog row
                 log("Befunde Button clicked! @#{row.id}")
           }
-    return h('button', formatObj, 'Befunde')
+    # return h('button', formatObj, '<svg><use href="#svg-documents-icon" /></svg>')
+    # return h('button', formatObj, 'BF')
+    innerHTML = '<div class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></div>'
+    return html(innerHTML)
 
 screeningDateFormatter = (content, row) ->
     date = dayjs(content)
