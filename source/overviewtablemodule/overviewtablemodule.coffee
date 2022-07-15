@@ -56,6 +56,7 @@ loginButtonClicked = ->
         whoamiResult = await checkWhoAmI()
         olog { whoamiResult }
         minDate = dayjs().subtract(30, "day")
+        log minDate
         data = await getData(minDate)
         olog { data }
         sharesResponse = data
