@@ -55,7 +55,8 @@ loginButtonClicked = ->
         olog { loginResult }
         whoamiResult = await checkWhoAmI()
         olog { whoamiResult }
-        data = await getData(0, 1000)
+        minDate = dayjs().subtract(30, "day")
+        data = await getData(minDate)
         olog { data }
 
     catch err
@@ -151,7 +152,7 @@ defaultSharesCompare = (el1, el2) ->
 ############################################################
 #region get optionObjects for GridJS
 getHeaderObject = ->
-     
+    
     bilderHeadObj = {
         name: ""
         id: "bilder-button"
@@ -301,7 +302,7 @@ postData = (url, data) ->
 
 
 
-getData = (page, pageSize) ->
+getData = (minDate) ->
     # {
     #     "shareId": 0,
     #     "modality": "string",
@@ -314,5 +315,5 @@ getData = (page, pageSize) ->
     #     "pageSize": 0
     # }
 
-    requestData = {page, pageSize}
-    return postData(dataURL, requestData)
+    requestData = {minDate}
+    return postData(requestSharesURL, requestData)
