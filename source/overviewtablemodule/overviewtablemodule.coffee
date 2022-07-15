@@ -58,7 +58,8 @@ loginButtonClicked = ->
         minDate = dayjs().subtract(30, "day")
         data = await getData(minDate)
         olog { data }
-
+        sharesResponse = data
+        renderTable()
     catch err
         log "error occured!"
         log err
@@ -121,7 +122,6 @@ renderTable = ->
         language: deDE,
         fixedHeader: true,
         resizable: true,
-        height: "70vh"
         className: {
             td: 'table-cell',
             table: 'c-table'
