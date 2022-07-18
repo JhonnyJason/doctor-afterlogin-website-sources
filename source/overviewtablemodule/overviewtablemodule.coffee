@@ -101,8 +101,8 @@ dateLimitChanged = ->
         else log "unknown value: "+chooseDateLimit.value
     return
 
-# retrieveAndRenderData = (dayCount) -> updateTable(retrieveData(dayCount))
-retrieveAndRenderData = (dayCount) -> renderTable(retrieveData(dayCount))
+retrieveAndRenderData = (dayCount) -> updateTable(retrieveData(dayCount))
+# retrieveAndRenderData = (dayCount) -> renderTable(retrieveData(dayCount))
 
 ############################################################
 #region sort functions
