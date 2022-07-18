@@ -72,7 +72,7 @@ export renderTable = (dataPromise) ->
         fixedHeader: true,
         resizable: true,
         height: "calc(100vh - 120px)"
-        width: "100%"
+        width: "calc(100% - 10px)"
         className: {
             td: 'table-cell',
             table: 'c-table'
