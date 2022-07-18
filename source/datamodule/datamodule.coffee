@@ -63,11 +63,13 @@ export retrieveData = (dayCount) ->
             requestData = {minDate, page, pageSize}
             log "requesting -> "
             olog requestData
-            
+
             rawData = await postRequest(requestSharesURL, requestData)
             allData.push(rawData.shares)
             receivedCount += rawData.current_shares_count
             if receivedCount == rawData.total_shares_count then break
+            if receivedCount <  pageSize then break
+            if page > 50 then break
             page++
             
         return allData.flat().sort(defaultSharesCompare)
