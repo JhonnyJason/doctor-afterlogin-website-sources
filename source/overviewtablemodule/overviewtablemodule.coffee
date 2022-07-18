@@ -84,9 +84,9 @@ export renderTable = (dataPromise) ->
     return
 
 updateTable = (dataPromise) ->
-    tableObj.updateConfig({data:dataPromise})
-    gridjsFrame.innerHTML = ""
-    tableObj.render(gridjsFrame)
+    tableObj.updateConfig({data: -> dataPromise})
+    # gridjsFrame.innerHTML = ""
+    # tableObj.render(gridjsFrame)
     return
 
 dateLimitChanged = ->
