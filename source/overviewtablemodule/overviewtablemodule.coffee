@@ -10,8 +10,7 @@ import dayjs from "dayjs"
 # import { de } from "dayjs/locales"
 
 ############################################################
-import { requestSharesURL } from "./configmodule.js"
-import { sharesResponse } from "./sampledata.js"
+import { retrieveData } from "./datamodule.js"
 
 ############################################################
 #region germanLanguage
@@ -47,75 +46,23 @@ tableObj = null
 # | Bilder Button | Befunde Button | Untersuchungsdatum | Patienten Name (Fullname) | SSN (4 digits) | Geb.Datum | Untersuchungsbezeichnung | Radiologie | Zeitstempel (Datum + Uhrzeit) |
 
 ############################################################
-loginButtonClicked = ->
-    username = nameInput.value
-    hashedPwd = passwordHashInput.value
-    try
-        loginResult = await demoLogin(username, hashedPwd)
-        olog { loginResult }
-        whoamiResult = await checkWhoAmI()
-        olog { whoamiResult }
-        minDate = dayjs().subtract(30, "day")
-        log minDate
-        data = await getData(minDate)
-        olog { data }
-        sharesResponse = data
-        renderTable()
-    catch err
-        log "error occured!"
-        log err
-    
-    return
-
-
-demoLogin = (username, hashedPw) ->
-    url = "https://extern.bilder-befunde.at/caasdemo/api/v1/auth/login"
-    data = {
-        username,
-        hashedPw,
-        isMedic: true,
-        rememberMe: true
-    }
-
-    return postData(url, data)
-
-checkWhoAmI = ->
-    url = "https://extern.bilder-befunde.at/caasdemo/api/v1/auth/whoami"
-    options =
-        method: 'GET'
-        mode: 'cors'
-        credentials: 'include'
-    
-    try
-        response = await fetch(url, options)
-        if !response.ok then throw new Error("Response not ok - status: "+response.status+"!")
-        return response.json()
-    catch err then throw new Error("Network Error: "+err.message)
-
-
-############################################################
 export initialize = ->
     log "initialize"
-    #for demologin and whole connection testing
-    loginButton.addEventListener("click", loginButtonClicked)
-
-    renderTable()
-    
-    #Implement or Remove :-)
+    chooseDateLimit.addEventListener("change", dateLimitChanged)
+    renderTable(retrieveData(30))
+    # renderTable([])    
     return
 
 ############################################################
-renderTable = ->
+export renderTable = (dataPromise) ->
     headerObject = getHeaderObject()
     searchObject = getSearchObject()
     paginationObject = getPaginationObject()
-    serverObject =  getServerObject()
-
-    dataArray = sharesResponse.shares.sort(defaultSharesCompare)
+    # serverObject =  getServerObject()
 
     gridJSOptions = {
         columns: headerObject
-        data: dataArray,
+        data: dataPromise,
         # server: serverObject,
         search: searchObject,
         pagination: paginationObject,
@@ -123,6 +70,8 @@ renderTable = ->
         language: deDE,
         fixedHeader: true,
         resizable: true,
+        height: "calc(100vh - 120px)"
+        width: "100%"
         className: {
             td: 'table-cell',
             table: 'c-table'
@@ -132,6 +81,22 @@ renderTable = ->
     # gridjsFrame.
     tableObj.render(gridjsFrame)
     return
+
+updateTable = (dataPromise) ->
+    tableObj.updateConfig({data:dataPromise})
+    return
+
+dateLimitChanged = ->
+    log "dateLimitChanged"
+    log chooseDateLimit.value
+    switch chooseDateLimit.value
+        when "1" then retrieveAndRenderData(30)
+        when "2" then retrieveAndRenderData(90)
+        when "3" then retrieveAndRenderData(180)
+        else log "unknown value: "+chooseDateLimit.value
+    return
+
+retrieveAndRenderData = (dayCount) -> updateTable(retrieveData(dayCount))
 
 ############################################################
 #region sort functions
@@ -144,10 +109,6 @@ numberCompare = (el1, el2) ->
     # todo
     return
 
-defaultSharesCompare = (el1, el2) ->
-    date1 = dayjs(el1.DateModified)
-    date2 = dayjs(el2.DateModified)
-    return -date1.diff(date2)
 #endregion
 
 ############################################################
@@ -211,17 +172,17 @@ getHeaderObject = ->
 getSearchObject = ->
     return true
 
-getServerObject = ->
-    return {
-        url: requestSharesURL,
-        data: (options) -> return new Promise (resolve, reject) ->
-            try
-                response = await postData(options.url, options.parameter)
-                data = response.shares
-                total = response.total_user_count
-                resolve({data, total})
-            catch err then reject(err)
-    }
+# getServerObject = ->
+#     return {
+#         url: requestSharesURL,
+#         data: (options) -> return new Promise (resolve, reject) ->
+#             try
+#                 response = await postData(options.url, options.parameter)
+#                 data = response.shares
+#                 total = response.total_user_count
+#                 resolve({data, total})
+#             catch err then reject(err)
+#     }
 
 getPaginationObject = ->
     # TODO retriev currently chosen limit
@@ -283,38 +244,3 @@ sendingDateFormatter = (content, row) ->
     return date.format("YYYY-MM-DD hh:mm")
 
 #endregion
-
-############################################################
-postData = (url, data) ->
-    options =
-        method: 'POST'
-        mode: 'cors'
-        credentials: 'include'
-    
-        body: JSON.stringify(data)
-        headers:
-            'Content-Type': 'application/json'
-
-    try
-        response = await fetch(url, options)
-        if !response.ok then throw new Error("Response not ok - status: "+response.status+"!")
-        return response.json()
-    catch err then throw new Error("Network Error: "+err.message)
-
-
-
-getData = (minDate) ->
-    # {
-    #     "shareId": 0,
-    #     "modality": "string",
-    #     "fullName": "string",
-    #     "ssn": "string",
-    #     "dob": "string",
-    #     "minDate": "string",
-    #     "maxDate": "string",
-    #     "page": 0,
-    #     "pageSize": 0
-    # }
-
-    requestData = {minDate}
-    return postData(requestSharesURL, requestData)
