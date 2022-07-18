@@ -6,7 +6,7 @@ import { createLogFunctions } from "thingy-debug"
 
 ############################################################
 import { requestSharesURL } from "./configmodule.js"
-import { sharesResponse } from "./sampledata.js"
+import { sampleResponse } from "./sampledata.js"
 
 import dayjs from "dayjs"
 
@@ -36,7 +36,11 @@ postRequest = (url, data) ->
 
 ############################################################
 export retrieveData = (dayCount) ->
-    
+    log "retrieveData"
+    return new Promise (resolve) ->
+        returnShares = -> resolve(sampleResponse.shares) 
+        setTimeout(returnShares, 5000)
+
     # dataArray = sharesResponse.shares.sort(defaultSharesCompare)
     
     # {
@@ -50,14 +54,14 @@ export retrieveData = (dayCount) ->
     #     "page": 0,
     #     "pageSize": 0
     # }
-    try
-        minDate = dayjs().subtract(dayCount, "day")
-        requestData = {minDate}
-        rawData = await postRequest(requestSharesURL, requestData)
-        return rawData.shares.sort(defaultSharesCompare)
-    catch err 
-        log err
-        return []
+    # try
+    #     minDate = dayjs().subtract(dayCount, "day")
+    #     requestData = {minDate}
+    #     rawData = await postRequest(requestSharesURL, requestData)
+    #     return rawData.shares.sort(defaultSharesCompare)
+    # catch err 
+    #     log err
+    #     return []
 
 
 

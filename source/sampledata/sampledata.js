@@ -1,4 +1,4 @@
-export const sharesResponse = {
+export const sampleResponse = {
     "page": 1,
     "page_size": 1000,
     "count": 1000,

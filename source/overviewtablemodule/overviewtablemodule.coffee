@@ -50,7 +50,7 @@ export initialize = ->
     log "initialize"
     chooseDateLimit.addEventListener("change", dateLimitChanged)
     renderTable(retrieveData(30))
-    # renderTable([])    
+    # renderTable([])
     return
 
 ############################################################
@@ -62,7 +62,7 @@ export renderTable = (dataPromise) ->
 
     gridJSOptions = {
         columns: headerObject
-        data: dataPromise,
+        data: -> dataPromise,
         # server: serverObject,
         search: searchObject,
         pagination: paginationObject,
@@ -77,13 +77,16 @@ export renderTable = (dataPromise) ->
             table: 'c-table'
         }
     }
+
     tableObj = new Grid(gridJSOptions)
-    # gridjsFrame.
+    gridjsFrame.innerHTML = ""
     tableObj.render(gridjsFrame)
     return
 
 updateTable = (dataPromise) ->
     tableObj.updateConfig({data:dataPromise})
+    gridjsFrame.innerHTML = ""
+    tableObj.render(gridjsFrame)
     return
 
 dateLimitChanged = ->
@@ -97,6 +100,7 @@ dateLimitChanged = ->
     return
 
 retrieveAndRenderData = (dayCount) -> updateTable(retrieveData(dayCount))
+# retrieveAndRenderData = (dayCount) -> renderTable(retrieveData(dayCount))
 
 ############################################################
 #region sort functions
