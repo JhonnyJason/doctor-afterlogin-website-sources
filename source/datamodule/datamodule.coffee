@@ -69,7 +69,7 @@ export retrieveData = (dayCount) ->
             receivedCount += rawData.current_shares_count
             if receivedCount == rawData.total_shares_count then break
             if receivedCount <  pageSize then break
-            if page > 50 then break
+            if page > 10 then break
             page++
             
         return allData.flat().sort(defaultSharesCompare)
