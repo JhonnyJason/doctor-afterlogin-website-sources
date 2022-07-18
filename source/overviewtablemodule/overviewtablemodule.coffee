@@ -55,6 +55,7 @@ export initialize = ->
 
 ############################################################
 export renderTable = (dataPromise) ->
+    log "renderTable"
     headerObject = getHeaderObject()
     searchObject = getSearchObject()
     paginationObject = getPaginationObject()
@@ -84,6 +85,7 @@ export renderTable = (dataPromise) ->
     return
 
 updateTable = (dataPromise) ->
+    log "updateTable"
     tableObj.updateConfig({data: -> dataPromise})
     gridjsFrame.innerHTML = ""
     tableObj.render(gridjsFrame)
