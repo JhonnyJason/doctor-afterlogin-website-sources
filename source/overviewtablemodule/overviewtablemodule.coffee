@@ -55,7 +55,7 @@ export initialize = ->
 
 ############################################################
 export renderTable = (dataPromise) ->
-    log "renderTable"
+    # log "renderTable"
     headerObject = getHeaderObject()
     searchObject = getSearchObject()
     paginationObject = getPaginationObject()
@@ -85,14 +85,14 @@ export renderTable = (dataPromise) ->
     return
 
 updateTable = (dataPromise) ->
-    log "updateTable"
+    # log "updateTable"
     tableObj.updateConfig({data: -> dataPromise})
     tableObj.forceRender()
     return
 
 dateLimitChanged = ->
-    log "dateLimitChanged"
-    log chooseDateLimit.value
+    # log "dateLimitChanged"
+    # log chooseDateLimit.value
     switch chooseDateLimit.value
         when "1" then retrieveAndRenderData(30)
         when "2" then retrieveAndRenderData(90)
@@ -101,7 +101,6 @@ dateLimitChanged = ->
     return
 
 retrieveAndRenderData = (dayCount) -> updateTable(retrieveData(dayCount))
-# retrieveAndRenderData = (dayCount) -> renderTable(retrieveData(dayCount))
 
 ############################################################
 #region sort functions
