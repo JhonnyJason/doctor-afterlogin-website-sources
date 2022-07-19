@@ -5,10 +5,13 @@ import { createLogFunctions } from "thingy-debug"
 #endregion
 
 ############################################################
+import dayjs from "dayjs"
+
+############################################################
 import { requestSharesURL } from "./configmodule.js"
 import { sampleResponse } from "./sampledata.js"
 
-import dayjs from "dayjs"
+import { dataLoadPageSize } from "./configmodule.js"
 
 
 ############################################################
@@ -54,7 +57,7 @@ export retrieveData = (dayCount) ->
     # }
     try
         minDate = dayjs().subtract(dayCount, "day")
-        pageSize = 50
+        pageSize = dataLoadPageSize
         page = 1
         
         receivedCount = 0
@@ -71,8 +74,13 @@ export retrieveData = (dayCount) ->
             if receivedCount == rawData.total_shares_count then break
             if receivedCount <  pageSize then break
             page++
-            
-        return allData.flat().sort(defaultSharesCompare)
+        
+        allData = allData.flat()
+        # TODO group by MedCasePk
+
+        olog allData
+        
+        return allData.sort(defaultSharesCompare)
     catch err 
         log err
         return []
