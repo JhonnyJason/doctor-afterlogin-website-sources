@@ -105,13 +105,17 @@ retrieveAndRenderData = (dayCount) -> updateTable(retrieveData(dayCount))
 ############################################################
 #region sort functions
 dateCompare = (el1, el2) ->
-    date1 = dayjs(el1)
-    date2 = dayjs(el2)
-    return -date1.diff(date2)
+    # date1 = dayjs(el1)
+    # date2 = dayjs(el2)
+    # return -date1.diff(date2)
+    
+    # here we already expect a dayjs object
+    return el1.diff(el2)
 
 numberCompare = (el1, el2) ->
-    # todo
-    return
+    number1 = parseInt(el1)
+    number2 = parseInt(el2)
+    return number1 - number2
 
 #endregion
 
@@ -224,8 +228,11 @@ befundeFormatter = (content , row) ->
     return html(innerHTML)
 
 screeningDateFormatter = (content, row) ->
-    date = dayjs(content)
-    return date.format("DD.MM.YYYY")
+    # date = dayjs(content)
+    # return date.format("DD.MM.YYYY")
+
+    #here we expect to already get a dayjs object
+    return content.format("DD.MM.YYYY")
 
 nameFormatter = (content, row) ->
     return content
@@ -234,8 +241,11 @@ svnFormatter = (content, row) ->
     return content
 
 birthdayFormatter = (content, row) ->
-    date = dayjs(content)
-    return date.format("DD.MM.YYYY")
+    # date = dayjs(content)
+    # return date.format("DD.MM.YYYY")
+
+    #here we expect to already get a dayjs object
+    return content.format("DD.MM.YYYY")
 
 descriptionFormatter = (content, row) ->
     return content
@@ -244,7 +254,11 @@ radiologistFormatter = (content, row) ->
     return content
 
 sendingDateFormatter = (content, row) ->
-    date = dayjs(content)
-    return date.format("YYYY-MM-DD hh:mm")
+    # date = dayjs(content)
+    # return date.format("YYYY-MM-DD hh:mm")
+
+    #here we expect to already get a dayjs object
+    return content.format("DD.MM.YYYY hh:mm")
+
 
 #endregion
