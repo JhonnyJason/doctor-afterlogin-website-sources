@@ -67,7 +67,9 @@ export renderTable = (dataPromise) ->
         # server: serverObject,
         search: searchObject,
         pagination: paginationObject,
-        sort: true,
+        sort: {
+            multiColumn: false
+        },
         language: deDE,
         fixedHeader: true,
         resizable: true,
@@ -110,12 +112,20 @@ dateCompare = (el1, el2) ->
     # return -date1.diff(date2)
     
     # here we already expect a dayjs object
-    return el1.diff(el2)
+    diff = el1.diff(el2)
+    if diff > 0 then return 1
+    if diff < 0 then return -1
+    return 0
 
 numberCompare = (el1, el2) ->
-    number1 = parseInt(el1)
-    number2 = parseInt(el2)
-    return number1 - number2
+    number1 = parseInt(el1, 10)
+    number2 = parseInt(el2, 10)
+
+    if number1 > number2 then return 1
+    if number2 > number1 then return -1
+    return 0
+    # log number1 - number2
+    # return number1 - number2
 
 #endregion
 
