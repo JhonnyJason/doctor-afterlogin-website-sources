@@ -225,7 +225,8 @@ bilderFormatter  = (content, row) ->
     # return h(HTMLElement, formatObj)
     # olog content
 
-    if content.hasImage? and content.documentFormatPk? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="bild-button" target="_blank" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></a>'
+    # if content.hasImage? and content.documentFormatPk? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="bild-button" target="_blank" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></a>'
+    if content.hasImage? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="bild-button" target="_blank" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></a>'
     else innerHTML = '<div disabled class="bild-button" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></div>'
     return html(innerHTML)
 
@@ -240,7 +241,8 @@ befundeFormatter = (content , row) ->
     # return h('button', formatObj, 'BF')
     # olog content
 
-    if content.hasBefund? and content.documentFormatPk? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
+    # if content.hasBefund? and content.documentFormatPk? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
+    if content.hasBefund? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
     else innerHTML = '<div disabled class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></div>'
     return html(innerHTML)
 

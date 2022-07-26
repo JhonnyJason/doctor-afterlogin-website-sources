@@ -28,6 +28,9 @@ tr.gridjs-tr:nth-child(2n)
 //     // box-sizing: border-box
 //     // padding 3px
 
+// td.gridjs-td[data-column-id="CaseDate"]
+//     user-select: none
+
 .bild-button
 .befund-button
     display block
@@ -44,8 +47,13 @@ tr.gridjs-tr:nth-child(2n)
     width: button-size
     height button-size
 
+.befund-button:after
+    content:"asd"
+    opacity 0
+
 .bild-button[disabled]
 .befund-button[disabled]
+    // user-select: none
     opacity 0.3
     pointer-events: none
 
