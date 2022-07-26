@@ -41,6 +41,7 @@ deDE = {
 ############################################################
 tableObj = null
 
+entryBaseURL = "https://www.bilder-befunde.at/webview/index.php?value_dfpk="
 
 ## datamodel 
 # | Bilder Button | Befunde Button | Untersuchungsdatum | Patienten Name (Fullname) | SSN (4 digits) | Geb.Datum | Untersuchungsbezeichnung | Radiologie | Zeitstempel (Datum + Uhrzeit) |
@@ -135,13 +136,13 @@ getHeaderObject = ->
     
     bilderHeadObj = {
         name: ""
-        id: "bilder-button"
+        id: "format"
         formatter: bilderFormatter
         sort: false
     }
     befundeHeadObj = {
         name: ""
-        id: "befunde-button"
+        id: "format"
         formatter: befundeFormatter
         sort: false
     }
@@ -222,7 +223,10 @@ bilderFormatter  = (content, row) ->
     # return h('button', formatObj, '<svg><use href="#svg-images-icon" /></svg>')
     # return h('button', formatObj, 'B')
     # return h(HTMLElement, formatObj)
-    innerHTML = '<div class="bild-button" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></div>'
+    # olog content
+
+    if content.hasImage? and content.documentFormatPk? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="bild-button" target="_blank" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></a>'
+    else innerHTML = '<div disabled class="bild-button" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></div>'
     return html(innerHTML)
 
 befundeFormatter = (content , row) ->
@@ -234,7 +238,10 @@ befundeFormatter = (content , row) ->
           }
     # return h('button', formatObj, '<svg><use href="#svg-documents-icon" /></svg>')
     # return h('button', formatObj, 'BF')
-    innerHTML = '<div class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></div>'
+    # olog content
+
+    if content.hasBefund? and content.documentFormatPk? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
+    else innerHTML = '<div disabled class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></div>'
     return html(innerHTML)
 
 screeningDateFormatter = (content, row) ->

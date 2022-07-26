@@ -30,6 +30,7 @@ tr.gridjs-tr:nth-child(2n)
 
 .bild-button
 .befund-button
+    display block
     cursor: pointer
     // color cd-turquoise
     // border-radius: 5px
@@ -41,7 +42,13 @@ tr.gridjs-tr:nth-child(2n)
     // width: 45px
     // height 35px
     width: button-size
-    height button-sizet
+    height button-size
+
+.bild-button[disabled]
+.befund-button[disabled]
+    opacity 0.3
+    pointer-events: none
+    filter grayscale(100%)
 
 .bild-button:active
 .befund-button:active

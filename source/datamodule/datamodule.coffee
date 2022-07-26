@@ -84,6 +84,16 @@ mergeDateCreated = (obj, share) ->
     if diff < 0 then return niu
     else return current
 
+mergeFormat = (obj, share) ->
+    result = obj.format
+    result = {} unless result?
+
+    if share.FormatTypeMt == 4 then result.hasImage = true
+    else if share.FormatTypeMt != 2 and share.FormatTypeMt < 10 and share.FormatTypeMt > 0 then result.hasBefund = true
+
+    if share.documentFormatPk then result.documentFormatPk = share.documentFormatPk 
+
+    return result
 
 #endregion
 
@@ -108,6 +118,7 @@ groupByMedCase = (data) ->
             obj.CaseDescription = mergeCaseDescription(obj, share)
             obj.CreatedBy = mergeCreatedBy(obj, share)
             obj.DateCreated = mergeDateCreated(obj, share)
+            obj.format = mergeFormat(obj, share)
         results.push(obj)
 
     after = performance.now()
