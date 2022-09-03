@@ -79,6 +79,53 @@ td.gridjs-td
     padding 10px
     text-transform: uppercase
 
+#patient-approval > *
+    margin-left 7px
+
+#patient-approval:first-child
+    margin-left 0
+
+#patient-approval
+    z-index: 99
+    position absolute
+    top 7px
+    left 270px
+    // right 50%
+    // transform translateX(50%)
+    display flex
+    align-items: center
+    // gap 5px
+
+    #approval-svn-part-input 
+        width 57px
+        box-sizing: border-box
+
+    #approval-svn-separator
+        width 12px
+        text-align: center
+        box-sizing: border-box
+
+    #approval-birthday-part-input
+        width 120px
+        box-sizing: border-box
+
+    #approval-pin-input
+        width 75px
+        box-sizing: border-box
+    input
+        background-color: white
+        font-size: 14px
+        padding 10px 3px 10px 13px
+        border-radius: 5px
+        border solid 1px #d2d6dc
+    
+    button
+        background-color cd-turquoise
+        color white
+        font-size: 14px
+        padding 10px
+        border-radius: 5px
+        text-transform: uppercase
 
 #choose-date-limit
     background-color: white
@@ -101,3 +148,13 @@ td.gridjs-td
 #main-block-top
     background-color grey
     text-align: center
+
+
+@media screen and (max-width: 1000px)
+    #patient-approval
+        position relative
+        left -3px
+        width calc(100% - 116px)
+        flex-wrap: wrap
+    #patient-approval > *
+        margin-bottom: 7px
