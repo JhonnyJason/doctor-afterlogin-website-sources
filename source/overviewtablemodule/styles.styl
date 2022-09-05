@@ -8,6 +8,22 @@ button-size = 22px
     position relative
     width 100%
 
+.gridjs-pages
+    display flex
+    max-width: 100% 
+
+.gridjs-pages > button
+    overflow: hidden
+    flex-shrink 2
+
+.gridjs-pages > button:first-child
+    flex-shrink 10
+    text-overflow: ellipsis
+
+.gridjs-pages > button:last-child
+    flex-shrink 10
+    text-overflow: ellipsis
+
 .c-table
     // height calc(100vh - 180px) !important
     max-width 100% !important

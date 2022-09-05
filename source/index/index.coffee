@@ -4,9 +4,8 @@ domconnect.initialize()
 
 global.allModules = Modules
 
-gridjsOffset = 0
-
 ############################################################
+#region login for demoData
 loginButtonClicked = ->
     username = nameInput.value
     hashedPwd = passwordHashInput.value
@@ -47,54 +46,13 @@ checkWhoAmI = ->
         return response.json()
     catch err then throw new Error("Network Error: "+err.message)
 
+#endregion
 
 ############################################################
 appStartup = ->
     #for demologin and whole connection testing
     loginButton.addEventListener("click", loginButtonClicked)
-
-    # The real stuff
-    gridjsOffset = getTopOffset(gridjsFrame)
-
-    centerTableButton.addEventListener("click", centerTableButtonClicked)
-    document.body.addEventListener("scroll", scrolled)
     return
-
-############################################################
-#region centering table funcations
-centerTableButtonClicked = ->
-    scrollOptions = 
-        top: gridjsOffset
-        behavior: "smooth"
-
-    document.body.scrollTo(scrollOptions)
-
-    return
-
-scrolled = ->
-    distance =  Math.abs(document.body.scrollTop - gridjsOffset)
-    if distance > 2 then showCenterTableButton()
-    else hideCenterTableButton()
-    return
-
-hideCenterTableButton = ->
-    centerTableButton.style.opacity = "0"
-    centerTableButton.style.pointerEvents = "none"
-    return
-
-showCenterTableButton = ->
-    centerTableButton.style.opacity = "1"
-    centerTableButton.style.pointerEvents = "all"
-    return
-
-getTopOffset = (elem)->
-    top = 0
-    while elem
-        top += parseInt(elem.offsetTop)
-        elem = elem.offsetParent
-    return top
-
-#endregion
 
 ############################################################
 run = ->

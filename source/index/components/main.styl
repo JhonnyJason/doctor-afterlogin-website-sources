@@ -1,20 +1,26 @@
 main
     background-color cd-darkblue
     color white
-    min-height: calc(100vh - 180px)
-    padding-top content-padding-top
-    padding-bottom content-padding-bottom
+    height 100%
     h1
         font-size: 32pt
         font-weight: bold
         line-height: 110%
 
+#main
+    display: flex
+    flex-direction: column
+    height 100%
+ 
 input:focus
     background-color white
-    
-#main-block-content
+
+#main-block-top
+    display: none
     padding: 10px
     box-sizing: border-box
 
-#content-title
-    padding-bottom 20px
+#main-block-content
+    padding: 10px
+    box-sizing: border-box
+    height 100%

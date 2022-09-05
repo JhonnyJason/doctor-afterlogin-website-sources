@@ -62,6 +62,14 @@ export renderTable = (dataPromise) ->
     paginationObject = getPaginationObject()
     # serverObject =  getServerObject()
 
+    outerPadding = 20
+    footerHeight = 55
+    searchHeight = 53
+    nonTableOffset = footerHeight + searchHeight + outerPadding
+    approvalHeight = patientApproval.offsetHeight
+    if screen.width < 1000 then nonTableOffset += approvalHeight
+    if screen.width < 750 then nonTableOffset += 27
+
     gridJSOptions = {
         columns: headerObject
         data: -> dataPromise,
@@ -73,8 +81,10 @@ export renderTable = (dataPromise) ->
         },
         language: deDE,
         fixedHeader: true,
-        resizable: true,
-        height: "calc(100vh - 120px)"
+        resizable: false,
+        # footer: 
+        height: "calc(100vh - "+nonTableOffset+"px)",
+        # height: "calc(100vh - 100px)"
         width: "100%"
         className: {
             td: 'table-cell',
