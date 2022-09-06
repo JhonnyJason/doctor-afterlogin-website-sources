@@ -1,0 +1,12 @@
+//- patientapproval structure
+#patientapproval
+    form#patient-approval 
+        label Freischaltung:
+        input#approval-svn-part-input(type="text" napme="svn-part" placeholder="SVN")
+        #approval-svn-separator -
+        input#approval-birthday-part-input(type="date" name="birthday-part" placeholder="Geburtsdatum")
+        input#approval-pin-input(type="text" name="pin" placeholder="PIN")
+        #authcode-block
+            label AT -
+            input#approval-authcode-input(type="text" name="authcode" placeholder="AUTHCODE")        
+        button#search-patient-button(type="submit") suchen

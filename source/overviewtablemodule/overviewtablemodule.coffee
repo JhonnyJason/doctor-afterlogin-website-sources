@@ -23,7 +23,7 @@ deDE = {
         sortDesc: 'Spalte absteigend sortieren'
     }
     pagination: {
-        previous: 'Bisherige'
+        previous: 'Vorherige'
         next: 'Nächste'
         navigate: (page, pages) -> "Seite #{page} von #{pages}"
         page: (page) -> "Seite #{page}"

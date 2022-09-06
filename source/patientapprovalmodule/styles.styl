@@ -1,0 +1,71 @@
+// patientapproval styles
+#patient-approval > *
+    margin-left 7px
+
+#patient-approval:first-child
+    margin-left 0
+
+#patient-approval
+    z-index: 99
+    position absolute
+    top 7px
+    left 270px
+    // right 50%
+    // transform translateX(50%)
+    display flex
+    align-items: center
+    // gap 5px
+    
+    #approval-svn-part-input
+        width 60px
+        box-sizing: border-box
+        opacity 0.6
+
+    #approval-svn-separator
+        // width 12px
+        text-align: center
+        box-sizing: border-box
+
+    #approval-birthday-part-input
+        width 140px
+        box-sizing: border-box
+        margin-right 20px
+    #approval-pin-input
+        display: none
+        width 75px
+        box-sizing: border-box
+    #approval-authcode-input
+        width 100px
+    input
+        background-color: white
+        font-size: 14px
+        padding 10px 3px 10px 13px
+        border-radius: 5px
+        border solid 1px #d2d6dc
+    
+    button
+        cursor pointer
+        background-color cd-turquoise
+        color white
+        font-size: 14px
+        padding 10px
+        border-radius: 5px
+        text-transform: uppercase
+        
+#patient-approval.pin-mode
+    #approval-pin-input
+        display: inline-block
+    #approval-svn-part-input
+        opacity 1.0
+    #authcode-block
+        display: none
+    
+
+@media screen and (max-width: 1000px)
+    #patient-approval
+        position relative
+        left -3px
+        width calc(100% - 116px)
+        flex-wrap: wrap
+    #patient-approval > *
+        margin-bottom: 7px
