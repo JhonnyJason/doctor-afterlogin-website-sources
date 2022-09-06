@@ -72,7 +72,8 @@ onLinkClick = (el) ->
     href = el.getAttribute("href")
     ## TODO send right message
     # window.open("mainwindow.html", messageTarget.name)
-    window.open("", messageTarget.name)
+    if messageTarget.closed then messageTarget = window.open("mainwindow.html", messageTarget.name)
+    else window.open("", messageTarget.name)
     messageTarget.postMessage(href)
     # messageTarget.focus()
     # window.blur()
@@ -87,13 +88,18 @@ export renderTable = (dataPromise) ->
     paginationObject = getPaginationObject()
     # serverObject =  getServerObject()
 
+    fullHeight = window.innerHeight
+    fullWidth = window.innerWidth
     outerPadding = 30
     footerHeight = 55
     searchHeight = 53
     nonTableOffset = footerHeight + searchHeight + outerPadding
     approvalHeight = patientApproval.offsetHeight
-    if screen.width < 1000 then nonTableOffset += approvalHeight
-    if screen.width < 750 then nonTableOffset += 27
+    if fullWidth < 1000 then nonTableOffset += approvalHeight
+    if fullWidth < 750 then nonTableOffset += 27
+
+    tableHeight = fullHeight - nonTableOffset
+    olog {tableHeight, fullHeight, nonTableOffset, approvalHeight}
 
     gridJSOptions = {
         columns: headerObject
@@ -108,8 +114,8 @@ export renderTable = (dataPromise) ->
         fixedHeader: true,
         resizable: false,
         # footer: 
-        height: "calc(100vh - "+nonTableOffset+"px)",
-        # height: "calc(100vh - 100px)"
+        # height: "calc(100vh - "+nonTableOffset+"px)",
+        height: tableHeight+"px"
         width: "100%"
         className: {
             td: 'table-cell',
