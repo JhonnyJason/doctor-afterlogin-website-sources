@@ -43,6 +43,7 @@ tableObj = null
 
 entryBaseURL = "https://www.bilder-befunde.at/webview/index.php?value_dfpk="
 
+messageTarget = null
 ## datamodel 
 # | Bilder Button | Befunde Button | Untersuchungsdatum | Patienten Name (Fullname) | SSN (4 digits) | Geb.Datum | Untersuchungsbezeichnung | Radiologie | Zeitstempel (Datum + Uhrzeit) |
 
@@ -55,6 +56,30 @@ export initialize = ->
     return
 
 ############################################################
+export changeLinksToMessageSent = (target) ->
+    # console.log("I have a target opener!")
+    messageTarget = target
+    window.onLinkClick = onLinkClick
+    return
+
+############################################################
+onLinkClick = (el) ->
+    evnt = window.event
+    # console.log("I got called!")
+    # console.log(evnt)
+    evnt.preventDefault()
+    ## TODO send right message
+    href = el.getAttribute("href")
+    ## TODO send right message
+    # window.open("mainwindow.html", messageTarget.name)
+    window.open("", messageTarget.name)
+    messageTarget.postMessage(href)
+    # messageTarget.focus()
+    # window.blur()
+    return
+
+
+############################################################
 export renderTable = (dataPromise) ->
     # log "renderTable"
     headerObject = getHeaderObject()
@@ -62,7 +87,7 @@ export renderTable = (dataPromise) ->
     paginationObject = getPaginationObject()
     # serverObject =  getServerObject()
 
-    outerPadding = 20
+    outerPadding = 30
     footerHeight = 55
     searchHeight = 53
     nonTableOffset = footerHeight + searchHeight + outerPadding
@@ -236,7 +261,9 @@ bilderFormatter  = (content, row) ->
     # olog content
 
     # if content.hasImage? and content.documentFormatPk? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="bild-button" target="_blank" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></a>'
-    if content.hasImage? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="bild-button" target="_blank" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></a>'
+    if content.hasImage? 
+        if messageTarget? then innerHTML = '<a onclick="onLinkClick(this);" href="'+entryBaseURL+content.documentFormatPk+'" class="bild-button" target="_blank" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></a>'
+        else innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="bild-button" target="_blank" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></a>'
     else innerHTML = '<div disabled class="bild-button" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></div>'
     return html(innerHTML)
 
@@ -252,7 +279,10 @@ befundeFormatter = (content , row) ->
     # olog content
 
     # if content.hasBefund? and content.documentFormatPk? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
-    if content.hasBefund? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
+
+    if content.hasBefund?
+        if messageTarget? innerHTML = '<a onClick="onLinkClick(this);" href="'+entryBaseURL+content.documentFormatPk+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
+        else innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
     else innerHTML = '<div disabled class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></div>'
     return html(innerHTML)
 

@@ -3,6 +3,7 @@ import domconnect from "./indexdomconnect"
 domconnect.initialize()
 
 global.allModules = Modules
+window.name = "SusDoxTable"
 
 ############################################################
 #region login for demoData
@@ -52,6 +53,9 @@ checkWhoAmI = ->
 appStartup = ->
     #for demologin and whole connection testing
     loginButton.addEventListener("click", loginButtonClicked)
+    
+    if window.opener? then Modules.overviewtablemodule.changeLinksToMessageSent(window.opener)
+
     return
 
 ############################################################
