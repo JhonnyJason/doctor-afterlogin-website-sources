@@ -104,3 +104,14 @@ focusBirthdayPartFirst = ->
     # approvalBirthdayPartInput.setSelectionRange(0, 0)
     approvalBirthdayPartInput.focus()
     return
+
+############################################################
+export showUI = ->
+    patientapproval.classList.add("shown")
+    searchInput = document.getElementsByClassName("gridjs-search-input")[0]
+    searchInput.style.display = "none"
+    return
+
+export hideUI = ->
+    patientapproval.classList.remove("shown")
+    return

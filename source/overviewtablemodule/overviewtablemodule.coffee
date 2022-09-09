@@ -35,11 +35,35 @@ deDE = {
     loading: 'Wird geladen...'
     noRecordsFound: 'Keine übereinstimmenden Aufzeichnungen gefunden'
     error: 'Beim Abrufen der Daten ist ein Fehler aufgetreten'
-}  
+}
+
+deDEPatientApproval = {
+    search: {
+        placeholder: 'Suche...'
+    }
+    sort: {
+        sortAsc: 'Spalte aufsteigend sortieren'
+        sortDesc: 'Spalte absteigend sortieren'
+    }
+    pagination: {
+        previous: 'Vorherige'
+        next: 'Nächste'
+        navigate: (page, pages) -> "Seite #{page} von #{pages}"
+        page: (page) -> "Seite #{page}"
+        showing: 'Anzeigen'
+        of: 'von'
+        to: 'zu'
+        results: 'Ergebnisse'
+    }
+    loading: 'Wird geladen...'
+    noRecordsFound: 'Geben Sie die Authentifizierungsdaten für den Patienten ein.'
+    error: 'Beim Abrufen der Daten ist ein Fehler aufgetreten'
+}
 #endregion
 
 ############################################################
 tableObj = null
+currentTableHeight = 0
 
 entryBaseURL = "https://www.bilder-befunde.at/webview/index.php?value_dfpk="
 
@@ -50,9 +74,9 @@ messageTarget = null
 ############################################################
 export initialize = ->
     log "initialize"
-    chooseDateLimit.addEventListener("change", dateLimitChanged)
     renderTable(retrieveData(30))
     # renderTable([])
+    setInterval(updateTableHeight, 2000)
     return
 
 ############################################################
@@ -88,18 +112,8 @@ export renderTable = (dataPromise) ->
     paginationObject = getPaginationObject()
     # serverObject =  getServerObject()
 
-    fullHeight = window.innerHeight
-    fullWidth = window.innerWidth
-    outerPadding = 30
-    footerHeight = 55
-    searchHeight = 53
-    nonTableOffset = footerHeight + searchHeight + outerPadding
-    approvalHeight = patientApproval.offsetHeight
-    if fullWidth < 1000 then nonTableOffset += approvalHeight
-    if fullWidth < 750 then nonTableOffset += 27
-
-    tableHeight = fullHeight - nonTableOffset
-    olog {tableHeight, fullHeight, nonTableOffset, approvalHeight}
+    tableHeight = getTableHeight()
+    currentTableHeight = tableHeight
 
     gridJSOptions = {
         columns: headerObject
@@ -130,21 +144,74 @@ export renderTable = (dataPromise) ->
 
 updateTable = (dataPromise) ->
     # log "updateTable"
-    tableObj.updateConfig({data: -> dataPromise})
+    searchInput = document.getElementsByClassName("gridjs-search-input")[0]
+    if searchInput? then searchValue = searchInput.value
+    log searchValue
+    
+    search =
+        enabled: true
+        keyword: searchValue
+
+    data = -> dataPromise
+
+    tableObj.updateConfig({data, search})
     tableObj.forceRender()
+    
+    # if searchValue then searchInput.value = searchValue
     return
 
-dateLimitChanged = ->
-    # log "dateLimitChanged"
-    # log chooseDateLimit.value
-    switch chooseDateLimit.value
-        when "1" then retrieveAndRenderData(30)
-        when "2" then retrieveAndRenderData(90)
-        when "3" then retrieveAndRenderData(180)
-        else log "unknown value: "+chooseDateLimit.value
+updateTableHeight = (height) ->
+    olog {height}
+    if !height? then height = getTableHeight()
+    if currentTableHeight == height then return
+    currentTableHeight = height 
+    height = height+"px"
+
+    searchInput = document.getElementsByClassName("gridjs-search-input")[0]
+    if searchInput? then searchValue = searchInput.value
+    log searchValue
+    search =
+        enabled: true
+        keyword: searchValue
+
+    tableObj.updateConfig({height, search})
+    tableObj.forceRender()
+
     return
 
-retrieveAndRenderData = (dayCount) -> updateTable(retrieveData(dayCount))
+getTableHeight = ->
+    log "getTableHeight"
+    
+    gridJSHead = document.getElementsByClassName("gridjs-head")[0]
+    gridJSFooter = document.getElementsByClassName("gridjs-footer")[0]
+
+    fullHeight = window.innerHeight
+    fullWidth = window.innerWidth
+    
+    outerPadding = 5
+    modecontrolsHeight = modecontrols.offsetHeight
+
+    if gridJSHead? and gridJSFooter?
+        footerHeight = gridJSFooter.offsetHeight
+        searchHeight = gridJSHead.offsetHeight + 5
+    else
+        searchHeight = 58
+        if fullWidth < 750 then footerHeight = 82
+        else footerHeight = 55
+
+    nonTableOffset = modecontrolsHeight + footerHeight + searchHeight + outerPadding
+    approvalHeight = patientApproval.offsetHeight
+
+    if fullWidth < 1000 then nonTableOffset += approvalHeight
+
+    tableHeight = fullHeight - nonTableOffset
+    # olog {tableHeight, fullHeight, nonTableOffset, approvalHeight}
+
+    # return tableHeight
+    return tableHeight
+
+
+export retrieveAndRenderOwnData = (dayCount) -> updateTable(retrieveData(dayCount))
 
 ############################################################
 #region sort functions
@@ -327,3 +394,15 @@ sendingDateFormatter = (content, row) ->
 
 
 #endregion
+
+
+
+
+############################################################
+export clearTable = ->
+    data = []
+    language = deDEPatientApproval
+
+    tableObj.updateConfig({data, language})
+    tableObj.forceRender()    
+    return
