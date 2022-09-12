@@ -16,8 +16,9 @@ export initialize = ->
     approvalSvnPartInput.addEventListener("keydown", svnPartKeyDowned)
     approvalSvnPartInput.addEventListener("keyup", svnPartKeyUpped)
     approvalBirthdayPartInput.addEventListener("keyup", birthdayPartKeyUpped)
-    approvalSvnPartInput.addEventListener("focus", svnPartFocused)
-    approvalSvnPartInput.addEventListener("blur", svnPartBlurred)
+    approvalSvnSwitch.addEventListener("change", approvalSvnSwitchChanged)
+    # approvalSvnPartInput.addEventListener("focus", svnPartFocused)
+    # approvalSvnPartInput.addEventListener("blur", svnPartBlurred)
     return
 
 
@@ -71,15 +72,22 @@ birthdayPartKeyUpped = (evnt) ->
     else svnBirthdayPartLength = newLength
     return
 
-svnPartFocused = ->
-    log "svnPartFocused"
-    patientApproval.classList.add("pin-mode")
+approvalSvnSwitchChanged = ->
+    checked = approvalSvnSwitch.checked
+    if checked then patientApproval.classList.add("pin-mode")
+    else patientApproval.classList.remove("pin-mode")
     return
 
-svnPartBlurred = ->
-    log "svnPartBlurred"
-    if approvalSvnPartInput.value.length == 0 then patientApproval.classList.remove("pin-mode")
-    return
+
+# svnPartFocused = ->
+#     log "svnPartFocused"
+#     patientApproval.classList.add("pin-mode")
+#     return
+
+# svnPartBlurred = ->
+#     log "svnPartBlurred"
+#     if approvalSvnPartInput.value.length == 0 then patientApproval.classList.remove("pin-mode")
+#     return
 
 ############################################################
 searchPatientButtonClicked = (evnt) ->
@@ -108,8 +116,6 @@ focusBirthdayPartFirst = ->
 ############################################################
 export showUI = ->
     patientapproval.classList.add("shown")
-    searchInput = document.getElementsByClassName("gridjs-search-input")[0]
-    searchInput.style.display = "none"
     return
 
 export hideUI = ->

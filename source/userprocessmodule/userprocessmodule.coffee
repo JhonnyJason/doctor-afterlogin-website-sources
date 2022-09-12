@@ -6,6 +6,7 @@ import { createLogFunctions } from "thingy-debug"
 
 ############################################################
 import * as table from "./overviewtablemodule.js"
+import * as loadControls from "./loadcontrolsmodule.js"
 import * as patientApprovalModule from "./patientapprovalmodule.js"
 
 ############################################################
@@ -14,8 +15,13 @@ currentProcess = null
 ############################################################
 patientApprovalProcess = (control)->
     log "patientApprovalProcess"
-    table.clearTable()
+    table.setPatientApproval0()
+    loadControls.hideUI()
     patientApprovalModule.showUI()
+
+    approvalOptions = await patientApprovalModule.getApprovalOptions()
+    table.setPatientAPproval1(approvalOptions)
+
     # loop
 
     # TODO implement

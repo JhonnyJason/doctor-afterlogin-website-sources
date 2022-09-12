@@ -8,13 +8,31 @@ import { createLogFunctions } from "thingy-debug"
 import dayjs from "dayjs"
 
 ############################################################
+# import * as utl from "./datautils.js"
+import * as S from "./statemodule.js"
+
+############################################################
 import { requestSharesURL } from "./configmodule.js"
 import { sampleData } from "./sampledata.js"
+##TODO introduce more sampleData
 
 import { dataLoadPageSize } from "./configmodule.js"
 
+############################################################
 MedCaseToEntry = {}
 
+############################################################
+daysLimit = null
+ownData = null
+
+############################################################
+export initialize = ->
+    log "initialize"
+    daysLimit = S.load("daysLimit")
+    if !daysLimit
+        daysLimit = 30
+        S.save("daysLimit", 30)
+    return
 
 ############################################################
 #region merge Properties Functions
@@ -97,7 +115,6 @@ mergeFormat = (obj, share) ->
 
 #endregion
 
-
 ############################################################
 groupByMedCase = (data) ->
     before = performance.now()
@@ -150,8 +167,7 @@ postRequest = (url, data) ->
         return response.json()
     catch err then throw new Error("Network Error: "+err.message)
 
-############################################################
-export retrieveData = (dayCount) ->
+retrieveOwnData = (dayCount) ->
     log "retrieveData"
     # return new Promise (resolve) ->
     #     returnShares = -> resolve(sampleResponse.shares) 
@@ -211,10 +227,47 @@ export retrieveData = (dayCount) ->
         allData = groupByMedCase(allData.flat())
 
         return allData.sort(defaultSharesCompare)
-    catch err 
+    catch err
         log err
         allData = groupByMedCase(sampleData)
         return allData.sort(defaultSharesCompare)
+
+############################################################
+retrievePatientData = (patientAuth) -> 
+    ## TODO implement!
+    return retrieveData(30)
+
+
+############################################################
+export changeDaysLimit = (daysCount) ->
+    daysLimit = daysCount
+    S.save("daysLimit", daysLimit)
+    ownData = null
+    return
+
+############################################################
+export getOwnData = ->
+    if !ownData? then ownData = retrieveOwnData(daysLimit)
+    return ownData
+
+export getPatientData = (patientAuth) ->
+    log "getPatientData"
+    log "Not Implemented yet!"
+    ## do we need patient auth in the Request?
+    return retrievePatientData(patientAuth)
+
+export getDoctorList = ->
+    log "getDoctorList"
+    log "Not Implemented yet!"
+    ## TODO implement
+    return []
+
+export addToOwnData = (newData) ->
+    log "addToOwnData"
+    log "Not Implemented yet!"
+    ## TODO implement!
+    return
+
 
 
 

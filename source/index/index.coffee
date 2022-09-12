@@ -1,5 +1,6 @@
-import Modules from "./allmodules"
-import domconnect from "./indexdomconnect"
+import Modules from "./allmodules.js"
+import { changeLinksToMessageSent } from "./tableutils.js"
+import domconnect from "./indexdomconnect.js"
 domconnect.initialize()
 
 global.allModules = Modules
@@ -54,7 +55,7 @@ appStartup = ->
     #for demologin and whole connection testing
     loginButton.addEventListener("click", loginButtonClicked)
     
-    if window.opener? then Modules.overviewtablemodule.changeLinksToMessageSent(window.opener)
+    if window.opener? then changeLinksToMessageSent(window.opener)
 
     return
 

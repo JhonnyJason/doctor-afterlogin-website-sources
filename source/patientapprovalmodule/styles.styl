@@ -15,21 +15,25 @@
     z-index: 99
     position absolute
     top 7px
-    left 270px
+    display: flex
     // right 50%
     // transform translateX(50%)
     align-items: center
     // gap 5px
     
+    #approval-svn-switch
+        margin-right 20px
+
     #approval-svn-part-input
         width 60px
         box-sizing: border-box
-        opacity 0.6
+        display none
 
     #approval-svn-separator
         // width 12px
         text-align: center
         box-sizing: border-box
+        display none
 
     #approval-birthday-part-input
         width 140px
@@ -61,7 +65,10 @@
     #approval-pin-input
         display: inline-block
     #approval-svn-part-input
-        opacity 1.0
+        display inline-block
+    #approval-svn-separator
+        // width 12px
+        display inline-block
     #authcode-block
         display: none
     
