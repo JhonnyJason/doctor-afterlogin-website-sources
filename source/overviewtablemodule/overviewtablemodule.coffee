@@ -15,7 +15,7 @@ import { retrieveData } from "./datamodule.js"
 ############################################################
 import * as S from "./statemodule.js"
 import * as utl from "./tableutils.js"
-import * as data from "./datamodule.js"
+import * as dataModule from "./datamodule.js"
 
 ############################################################
 tableObj = null
@@ -112,7 +112,7 @@ updateTableHeight = (height) ->
 ############################################################
 export refresh = ->
     ##TODO check if we should differentiate between states here
-    updateTable(data.getOwnData())
+    updateTable(dataModule.getOwnData())
     return
 
 ############################################################
@@ -145,15 +145,15 @@ export setPatientApproval0 = ->
     tableObj.forceRender()    
     return
 
-export setPatientAPproval1 = (options) ->
+export setPatientAPproval1 = ->
     log "setPatientAPproval1"
     currentState = "patientApproval1"
     overviewtable.classList.remove("patientApproval0")
     ## TODO get the right headers for checkboxes
 
-    data = options
-    language = deDE
-    search = getSearchObject()
+    data = dataModule.getPatientData()
+    language = utl.getLanguageObject(currentState)
+    search = utl.getSearchObject(currentState)
 
     tableObj.updateConfig({search, data, language})
     tableObj.forceRender()    
@@ -166,7 +166,9 @@ export setDefaultState = ->
     currentState = "ownData"
     overviewtable.classList.remove("patientApproval0")
 
-    renderTable(data.getOwnData())
+    dataPromise = dataModule.getOwnData()
+    if tableObj then updateTable(dataPromise)
+    else renderTable(dataPromise)
     return
 
 #endregion

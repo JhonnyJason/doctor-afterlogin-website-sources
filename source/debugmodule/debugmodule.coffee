@@ -8,7 +8,7 @@ export modulesToDebug = {
     # loadcontrolsmodule: true
     modecontrolsmodule: true
     # overviewtablemodule: true
-    # patientapprovalmodule: true
+    patientapprovalmodule: true
     userprocessmodule: true
 }
 

@@ -19,15 +19,18 @@ patientApprovalProcess = (control)->
     loadControls.hideUI()
     patientApprovalModule.showUI()
 
-    approvalOptions = await patientApprovalModule.getApprovalOptions()
-    table.setPatientAPproval1(approvalOptions)
+    await patientApprovalModule.approvalOptionsReceived()
+    if control.isAborted then return
+    log "Patient Options have been received!"
 
-    # loop
+    table.setPatientAPproval1()
+    patientApprovalModule.hideUI()
 
-    # TODO implement
-    # throw new Error("waaaazi!")
-    # await waitMS(5000)
-    # if control.isAborted then return
+
+    ## await selectionMade()
+    if control.isAborted then return
+    
+    table.setDefaultState()
     log "patientApproval succeeded!"
     return
 

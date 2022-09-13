@@ -4,10 +4,19 @@ import { createLogFunctions } from "thingy-debug"
 {log, olog} = createLogFunctions("patientapprovalmodule")
 #endregion
 
+############################################################
+import * as utl from "./utilmodule.js"
+import * as dataModule from "./datamodule.js"
 
 ############################################################
 svnPartLength = 0
 svnBirthdayPartLength = 0
+
+############################################################
+svnMode = true
+
+############################################################
+waitingResolve = null
 
 ############################################################
 export initialize = ->
@@ -17,6 +26,9 @@ export initialize = ->
     approvalSvnPartInput.addEventListener("keyup", svnPartKeyUpped)
     approvalBirthdayPartInput.addEventListener("keyup", birthdayPartKeyUpped)
     approvalSvnSwitch.addEventListener("change", approvalSvnSwitchChanged)
+
+    svnMode = approvalSvnSwitch.checked
+
     # approvalSvnPartInput.addEventListener("focus", svnPartFocused)
     # approvalSvnPartInput.addEventListener("blur", svnPartBlurred)
     return
@@ -73,8 +85,8 @@ birthdayPartKeyUpped = (evnt) ->
     return
 
 approvalSvnSwitchChanged = ->
-    checked = approvalSvnSwitch.checked
-    if checked then patientApproval.classList.add("pin-mode")
+    svnMode = approvalSvnSwitch.checked
+    if svnMode then patientApproval.classList.add("pin-mode")
     else patientApproval.classList.remove("pin-mode")
     return
 
@@ -95,12 +107,69 @@ searchPatientButtonClicked = (evnt) ->
     evnt.preventDefault()
     searchPatientButton.disabled = true
     try
-        ##TODO
-    catch err then return errorFeedback("svnPatient", "Other: " + err.message)
+
+        if svnMode then requestBody = await extractSVNFormBody()
+        else requestBody = await extractNoSVNFormBody()
+        olog {requestBody}
+
+        if !requestBody.hashedPw and !requestBody.username then return
+
+        await dataModule.loadPatientData(requestBody)
+        resolveApprovalOptionsReceived()
+
+    catch err then return errorFeedback("Zugriff auf Patientendaten ist fehlgeschlagen! Fehler geflogen.")
     finally searchPatientButton.disabled = false
     return
 
 
+
+############################################################
+resolveApprovalOptionsReceived = ->
+    if waitingResolve then waitingResolve(true)
+    waitingResolve = null
+    return
+
+############################################################
+extractSVNFormBody = ->
+    isMedic = false
+    rememberMe = false
+    svnPart = ""+approvalSvnPartInput.value
+    birthdayPart = ""+approvalBirthdayPartInput.value
+    olog {birthdayPart}
+    birthdayTokens = birthdayPart.split("-")
+    year = birthdayTokens.shift()
+    birthdayTokens.push(year)
+    birthdayPart = birthdayTokens.join("")
+    olog {birthdayPart}
+
+    username = svnPart+birthdayPart
+    password = ""+approvalPinInput.value
+
+    if !password then hashedPw = ""
+    else hashedPw = await utl.hashUsernamePw(username, password)
+    
+    return {username, hashedPw, isMedic, rememberMe}
+
+extractNoSVNFormBody = ->
+
+    isMedic = false
+    rememberMe = false
+    
+    birthdayPart = ""+approvalBirthdayPartInput.value
+    olog {birthdayPart}
+    
+    username = birthdayPart
+    password = "AT-"+approvalAuthcodeInput.value
+    
+    if password == "AT-" then hashedPw = ""
+    else hashedPw = await utl.hashUsernamePw(username, password)
+    
+    return {username, hashedPw, isMedic, rememberMe}
+
+
+############################################################
+export approvalOptionsReceived = ->
+    return new Promise (resolve) -> waitingResolve = resolve 
 
 ############################################################
 focusSVNPartLast = ->

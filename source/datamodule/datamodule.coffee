@@ -250,18 +250,33 @@ export getOwnData = ->
     if !ownData? then ownData = retrieveOwnData(daysLimit)
     return ownData
 
-export getPatientData = (patientAuth) ->
-    log "getPatientData"
+############################################################
+export loadPatientData = (patientAuthBody) ->
+    log "loadPatientData"
     log "Not Implemented yet!"
     ## do we need patient auth in the Request?
-    return retrievePatientData(patientAuth)
+    return
 
+export clearPatientData = ->
+    log "clearPatientData"
+    ## TODO implement
+    return
+
+export getPatientData = ->
+    log "getPatientData"
+    log "Not Implemented yet!"
+    patientData = []
+    ## TODO get the real patientData
+    return patientData
+
+############################################################
 export getDoctorList = ->
     log "getDoctorList"
     log "Not Implemented yet!"
     ## TODO implement
     return []
 
+############################################################
 export addToOwnData = (newData) ->
     log "addToOwnData"
     log "Not Implemented yet!"
