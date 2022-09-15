@@ -28,15 +28,10 @@ export initialize = ->
     approvalSvnSwitch.addEventListener("change", approvalSvnSwitchChanged)
 
     svnMode = approvalSvnSwitch.checked
-
-    # approvalSvnPartInput.addEventListener("focus", svnPartFocused)
-    # approvalSvnPartInput.addEventListener("blur", svnPartBlurred)
     return
-
 
 ############################################################
 errorFeedback = (message) -> alert(message)
-
 
 ############################################################
 svnPartKeyDowned = (evnt) ->
@@ -90,17 +85,6 @@ approvalSvnSwitchChanged = ->
     else patientApproval.classList.remove("pin-mode")
     return
 
-
-# svnPartFocused = ->
-#     log "svnPartFocused"
-#     patientApproval.classList.add("pin-mode")
-#     return
-
-# svnPartBlurred = ->
-#     log "svnPartBlurred"
-#     if approvalSvnPartInput.value.length == 0 then patientApproval.classList.remove("pin-mode")
-#     return
-
 ############################################################
 searchPatientButtonClicked = (evnt) ->
     log "searchPatientButtonClicked"
@@ -117,11 +101,11 @@ searchPatientButtonClicked = (evnt) ->
         await dataModule.loadPatientData(requestBody)
         resolveApprovalOptionsReceived()
 
-    catch err then return errorFeedback("Zugriff auf Patientendaten ist fehlgeschlagen! Fehler geflogen.")
+    catch err 
+        errorFeedback("Zugriff auf Patientendaten ist fehlgeschlagen!")
+        log err
     finally searchPatientButton.disabled = false
     return
-
-
 
 ############################################################
 resolveApprovalOptionsReceived = ->
@@ -166,7 +150,6 @@ extractNoSVNFormBody = ->
     
     return {username, hashedPw, isMedic, rememberMe}
 
-
 ############################################################
 export approvalOptionsReceived = ->
     return new Promise (resolve) -> waitingResolve = resolve 
@@ -188,5 +171,10 @@ export showUI = ->
     return
 
 export hideUI = ->
+    svnMode = true
+    approvalSvnSwitch.checked = true
+    approvalSvnPartInput.value = ""
+    approvalBirthdayPartInput.value = ""
+    approvalPinInput.value = ""
     patientapproval.classList.remove("shown")
     return

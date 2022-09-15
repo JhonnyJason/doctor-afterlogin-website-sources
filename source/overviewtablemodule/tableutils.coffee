@@ -1,11 +1,15 @@
 ############################################################
 #region debug
 import { createLogFunctions } from "thingy-debug"
-{log, olog} = createLogFunctions("overviewtablemodule")
+{log, olog} = createLogFunctions("tableutils")
 #endregion
 
 ############################################################
 import { Grid, html} from "gridjs"
+import { RowSelection } from "gridjs/plugins/selection"
+
+# import { RowSelection } from "gridjs-selection"
+
 import dayjs from "dayjs"
 # import { de } from "dayjs/locales"
 
@@ -66,7 +70,10 @@ messageTarget = null
 # | Bilder Button | Befunde Button | Untersuchungsdatum | Patienten Name (Fullname) | SSN (4 digits) | Geb.Datum | Untersuchungsbezeichnung | Radiologie | Zeitstempel (Datum + Uhrzeit) |
 
 ## datamodel checkbox entry
-# | checkbox | Untersuchungsdatum | Patienten Name (Fullname) | SSN (4 digits) | Geb.Datum | Untersuchungsbezeichnung | Radiologie | Zeitstempel (Datum + Uhrzeit) |
+# | checkbox | hidden index | Untersuchungsdatum | Patienten Name (Fullname) | SSN (4 digits) | Geb.Datum | Untersuchungsbezeichnung | Radiologie | Zeitstempel (Datum + Uhrzeit) |
+
+## datamodel doctor selection entry
+# | checkbox | doctorName | 
 
 ############################################################
 #region internalFunctions
@@ -115,6 +122,9 @@ numberCompare = (el1, el2) ->
 
 ############################################################
 #region cell formatter functions
+doctorNameFormatter = (content, row) ->
+    return content
+
 bilderFormatter  = (content, row) ->
     formatObj = {
             content: '<svg><use href="#svg-images-icon" /></svg>'
@@ -188,16 +198,111 @@ sendingDateFormatter = (content, row) ->
     #here we expect to already get a dayjs object
     return content.format("DD.MM.YYYY hh:mm")
 
-
 #endregion
-
 
 #endregion
 
 ############################################################
+#region columnHeadObjects
+checkboxHeadObj = {
+    name: "",
+    id: "select",
+    data: () -> false,
+    sort: false,
+    plugin: {
+        component: RowSelection,
+        props: {
+            id: (row) -> row.cell(1).data
+        }
+    }
+}
+
+indexHeadObj = {
+    name: "",
+    id: "index",
+    sort: false,
+    hidden: true
+}
+
+############################################################
+doctorHeadObj = {
+    name: "Name",
+    id: "doctorName",
+    formatter: doctorNameFormatter
+
+}
+
+############################################################
+bilderHeadObj = {
+    name: ""
+    id: "format"
+    formatter: bilderFormatter
+    sort: false
+}
+
+befundeHeadObj = {
+    name: ""
+    id: "format"
+    formatter: befundeFormatter
+    sort: false
+}
+
+############################################################
+#region regularDataFields
+screeningDateHeadObj = {
+    name: "Unt.-Datum"
+    id: "CaseDate"
+    formatter: screeningDateFormatter
+    sort: { compare: dateCompare }
+}
+
+nameHeadObj = {
+    name: "Name"
+    id: "PatientFullname"
+    formatter: nameFormatter
+}
+
+svnHeadObj = {
+    name: "SVN"
+    id: "PatientSsn"
+    formatter: svnFormatter
+    sort: {compare: numberCompare}
+}
+
+birthdayHeadObj = {
+    name: "Geb.-Datum"
+    id: "PatientDob"
+    formatter: birthdayFormatter
+    sort:{ compare: dateCompare }
+}
+
+descriptionHeadObj = {
+    name:"Beschreibung"
+    id: "CaseDescription"
+    formatter: descriptionFormatter
+}
+
+radiologistHeadObj = {
+    name: "Radiologie"
+    id: "CreatedBy"
+    formatter: radiologistFormatter
+}
+
+sendingDateHeadObj = {
+    name: "Zustellungsdatum"
+    id: "DateCreated"
+    formatter: sendingDateFormatter
+    sort: { compare: dateCompare }
+}
+#endregion
+
+#endregion
+
+
+############################################################
 #region exportedFunctions
 export getTableHeight = (state) ->
-    log "getTableHeight"
+    # log "getTableHeight"
     ## TODO check if we need to differentiate between states here
 
     gridJSHead = document.getElementsByClassName("gridjs-head")[0]
@@ -229,78 +334,115 @@ export getTableHeight = (state) ->
     return tableHeight
 
 ############################################################
-#region get optionObjects for GridJS
-export getHeaderObject = (state) ->
-    ##TODO provide adequate result according to the state
+export getColumnsObject = (state) ->
 
+    ############################################################
+    #region columnHeadObjects
+    checkboxHeadObj = {
+        name: "",
+        id: "select",
+        data: () -> false,
+        sort: false,
+        plugin: {
+            component: RowSelection,
+            props: {
+                id: (row) -> row.cell(1).data
+            }
+        }
+    }
+
+    indexHeadObj = {
+        name: "",
+        id: "index",
+        sort: false,
+        hidden: true
+    }
+
+    ############################################################
+    doctorHeadObj = {
+        name: "Name",
+        id: "doctorName",
+        formatter: doctorNameFormatter
+
+    }
+
+    ############################################################
     bilderHeadObj = {
         name: ""
         id: "format"
         formatter: bilderFormatter
         sort: false
     }
+
     befundeHeadObj = {
         name: ""
         id: "format"
         formatter: befundeFormatter
         sort: false
     }
+
+    ############################################################
+    #region regularDataFields
     screeningDateHeadObj = {
         name: "Unt.-Datum"
         id: "CaseDate"
         formatter: screeningDateFormatter
         sort: { compare: dateCompare }
     }
+
     nameHeadObj = {
         name: "Name"
         id: "PatientFullname"
         formatter: nameFormatter
     }
+
     svnHeadObj = {
         name: "SVN"
         id: "PatientSsn"
         formatter: svnFormatter
         sort: {compare: numberCompare}
     }
+
     birthdayHeadObj = {
         name: "Geb.-Datum"
         id: "PatientDob"
         formatter: birthdayFormatter
         sort:{ compare: dateCompare }
     }
+
     descriptionHeadObj = {
         name:"Beschreibung"
         id: "CaseDescription"
         formatter: descriptionFormatter
     }
+
     radiologistHeadObj = {
         name: "Radiologie"
         id: "CreatedBy"
         formatter: radiologistFormatter
     }
+
     sendingDateHeadObj = {
         name: "Zustellungsdatum"
         id: "DateCreated"
         formatter: sendingDateFormatter
         sort: { compare: dateCompare }
     }
+    #endregion
+
+    #endregion
+
+    if state == "shareToDoctor0" then return [checkboxHeadObj, indexHeadObj, screeningDateHeadObj, nameHeadObj, svnHeadObj, birthdayHeadObj, descriptionHeadObj, radiologistHeadObj, sendingDateHeadObj]
+
+    if state == "shareToDoctor1" then return [checkboxHeadObj, indexHeadObj, doctorHeadObj]
+
+    if state == "patientApproval1" then return [checkboxHeadObj, indexHeadObj, screeningDateHeadObj, nameHeadObj, svnHeadObj, birthdayHeadObj, descriptionHeadObj, radiologistHeadObj, sendingDateHeadObj]
 
     return [bilderHeadObj, befundeHeadObj, screeningDateHeadObj, nameHeadObj, svnHeadObj, birthdayHeadObj, descriptionHeadObj, radiologistHeadObj, sendingDateHeadObj]
 
 export getLanguageObject = (state) ->
     if state == "patientApproval0" then return deDEPatientApproval
     else return deDE
-
-export getSearchObject = (state) ->
-    ## TODO check if we need to differentiate between states here
-    return true
-
-export getPaginationObject = (state) ->
-    ## TODO check if we need to differentiate between states here
-    # TODO retrieve currently chosen limit - maybe not?
-    return { limit: 50 }
-
-#endregion
 
 ############################################################
 export changeLinksToMessageSent = (target) ->

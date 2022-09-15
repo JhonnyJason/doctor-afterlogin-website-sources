@@ -8,6 +8,7 @@ import { createLogFunctions } from "thingy-debug"
 import * as table from "./overviewtablemodule.js"
 import * as loadControls from "./loadcontrolsmodule.js"
 import * as patientApprovalModule from "./patientapprovalmodule.js"
+import * as selectionAction from "./selectionactionmodule.js"
 
 ############################################################
 currentProcess = null
@@ -20,16 +21,24 @@ patientApprovalProcess = (control)->
     patientApprovalModule.showUI()
 
     await patientApprovalModule.approvalOptionsReceived()
-    if control.isAborted then return
+    if control.isAborted
+        patientApprovalModule.hideUI()
+        loadControls.showUI()    
+        return
     log "Patient Options have been received!"
 
-    table.setPatientAPproval1()
+    table.setPatientApproval1()
     patientApprovalModule.hideUI()
+    loadControls.showUI()
 
+    selectionAction.showUI()
+    await table.userSelectionMade()
+    if control.isAborted
+        selectionAction.hideUI()    
+        return
+    log "Patient options have been selected!"
 
-    ## await selectionMade()
-    if control.isAborted then return
-    
+    selectionAction.hideUI()    
     table.setDefaultState()
     log "patientApproval succeeded!"
     return
@@ -37,13 +46,31 @@ patientApprovalProcess = (control)->
 shareToDoctorProcess = (control) ->
     log "shareToDoctorProcess"
 
-    # TODO implement
-    # throw new Error("waaaazi!")
-    # await waitMS(5000)
-    # if control.isAborted then return
+    table.setShareToDoctor0()
+    patientApprovalModule.hideUI()
+    loadControls.showUI()    
+
+    selectionAction.showUI()
+    await table.userSelectionMade()
+    if control.isAborted
+        selectionAction.hideUI()    
+        return
+    log "Selection of what to share has been made!"
+
+    table.setShareToDoctor1()
+    loadControls.hideUI()
+    await table.userSelectionMade()
+    if control.isAborted
+        loadControls.showUI() 
+        selectionAction.hideUI()    
+        return
+    log "Selection has been shared to doctor!"
+    
+    loadControls.showUI()
+    selectionAction.hideUI()    
+    table.setDefaultState()
     log "shareToDoctor succeeded!"
     return
-
 
 
 ############################################################
@@ -70,7 +97,6 @@ startSuccessAbortionRace = (success, abortion, control) ->
     return true
 
 
-
 ############################################################
 export startPatientApproval = ->
     log "startPatientApproval"
@@ -88,7 +114,6 @@ export startPatientApproval = ->
     currentProcess = null
     return
 
-
 export startShareToDoctor = ->
     log "startShareToDoctor"
     if currentProcess? then currentProcess.abort("User started new process.")
@@ -104,7 +129,6 @@ export startShareToDoctor = ->
 
     currentProcess = null
     return
-
 
 ############################################################
 export abortCurrentProcess = ->

@@ -25,6 +25,9 @@ currentTableHeight = 0
 currentState = null
 
 ############################################################
+userSelectionResolve = null
+
+############################################################
 export initialize = ->
     log "initialize"         
     setDefaultState()
@@ -32,68 +35,67 @@ export initialize = ->
     return
 
 ############################################################
-export renderTable = (dataPromise) ->
-    # log "renderTable"
-    headerObject = utl.getHeaderObject(currentState)
-    languageObject = utl.getLanguageObject(currentState)
-    searchObject = utl.getSearchObject(currentState)
-    paginationObject = utl.getPaginationObject(currentState)
+renderTable = (dataPromise) ->
+    log "renderTable"
 
-    currentTableHeight = utl.getTableHeight(currentState)
+    columns = utl.getColumnsObject(currentState)
+    data = -> dataPromise
+    language = utl.getLanguageObject(currentState)
+    search = true
 
-    gridJSOptions = {
-        columns: headerObject
-        data: -> dataPromise,
-        # server: serverObject,
-        search: searchObject,
-        pagination: paginationObject,
-        sort: {
-            multiColumn: false
-        },
-        language: languageObject,
-        fixedHeader: true,
-        resizable: false,
-        # footer: 
-        # height: "calc(100vh - "+nonTableOffset+"px)",
-        height: currentTableHeight+"px"
-        width: "100%"
-        # className: {
-        #     td: 'table-cell',
-        #     table: 'c-table'
-        # }
-    }
+    pagination = { limit: 50 }
+    sort = { multiColumn: false }
+    fixedHeader = true
+    resizable = false
+    height = "#{utl.getTableHeight(currentState)}px"
+    width = "100%"
 
-    tableObj = new Grid(gridJSOptions)
-    gridjsFrame.innerHTML = ""
-    tableObj.render(gridjsFrame)
+    gridJSOptions = { columns, data, language, search, pagination, sort, fixedHeader, resizable, height, width }
+
+    if tableObj?
+        tableObj = null
+        gridjsFrame.innerHTML = ""  
+        tableObj = new Grid(gridJSOptions)
+        tableObj.render(gridjsFrame).forceRender()
+        # this does not work here - it seems the Old State still remains in the GridJS singleton thus a render here does not refresh the table at all
+    else
+        tableObj = new Grid(gridJSOptions)
+        gridjsFrame.innerHTML = ""    
+        tableObj.render(gridjsFrame)
     return
 
-updateTable = (dataPromise) ->
-    # log "updateTable"
+updateTableData = (dataPromise) ->
+    # log "updateTableData"
+
+    columns = utl.getColumnsObject(currentState)
+    data = -> dataPromise
+    language = utl.getLanguageObject(currentState)
+
     searchInput = document.getElementsByClassName("gridjs-search-input")[0]
     if searchInput? then searchValue = searchInput.value
     log searchValue
-    
     search =
         enabled: true
         keyword: searchValue
 
-    data = -> dataPromise
-
-    tableObj.updateConfig({data, search})
+    tableObj.updateConfig({columns, data, language, search})
     tableObj.forceRender()
-    
-    # if searchValue then searchInput.value = searchValue
     return
-
 
 ############################################################
 updateTableHeight = (height) ->
-    # olog {height}
+
+    ##updating table height in other states causes selection data issues :-(
+    return unless currentState == "ownData"
+
     if !height? then height = utl.getTableHeight()
     if currentTableHeight == height then return
     currentTableHeight = height 
     height = height+"px"
+
+    # probably the columns and language objects are not useful here
+    # columns = utl.getColumnsObject(currentState)
+    # language = utl.getLanguageObject(currentState)
 
     #preserve input value if we have
     searchInput = document.getElementsByClassName("gridjs-search-input")[0]
@@ -110,53 +112,118 @@ updateTableHeight = (height) ->
     return
 
 ############################################################
-export refresh = ->
-    ##TODO check if we should differentiate between states here
-    updateTable(dataModule.getOwnData())
+userSelectionDone = ->
+    if userSelectionResolve then userSelectionResolve(true)
+    userSelectionResolve = null
     return
 
 ############################################################
-#region setTable to differentState
+export userSelectionMade = ->
+    return new Promise (resolve) -> userSelectionResolve = resolve
+
+export applySelection = ->
+    checkboxPlugin = tableObj.config.plugin.get('select')
+    selectedIndices = checkboxPlugin.props.store.state.rowIds
+
+    olog { selectedIndices }
+
+    selectionData = await tableObj.config.data()
+
+    selectedData = []
+    for index in selectedIndices
+        selectedData.push(selectionData[index])
+
+    # olog { selectedData }
+
+    if currentState == "patientApproval1" then await dataModule.addToOwnData(selectedData)
+    else if currentState == "shareToDoctor0" then await dataModule.setShareData(selectedData)
+    else if currentState == "shareToDoctor1" then await dataModule.shareToDoctors(selectedData)
+    else log "I was not in any selection application state: "+currentState
+
+    ## The reset does not help - BUG! the state of the plugin is set once and would not be changable again TODO FIX
+    # checkboxPlugin.props.store.state.rowIds = [] # reset selection
+    userSelectionDone()
+    return
+
+############################################################
+export refresh = ->
+    log "refresh"
+    log currentState
+    switch currentState
+        when "shareToDoctor0" then setShareToDoctor0()
+        when "shareToDoctor1" then setShareToDoctor1()
+        when "patientApproval0" then setPatientApproval0()
+        when "patientApproval1" then setPatientApproval1()
+        when "ownData" then setDefaultState()
+    return 
+
+############################################################
+#region set to state Functions
 export setShareToDoctor0 = ->
     log "setShareToDoctor0"
-    ## TODO implement
-    
+    currentState = "shareToDoctor0"
+
+    columns = utl.getColumnsObject(currentState)
+    data = -> dataModule.getOwnData()
+    language = utl.getLanguageObject(currentState)
+
+    ## preserve search
+    searchInput = document.getElementsByClassName("gridjs-search-input")[0]
+    if searchInput? 
+        searchValue = searchInput.value
+        # log searchValue
+        search =
+            enabled: true
+            keyword: searchValue
+    else 
+        search = true
+    overviewtable.classList.remove("no-search")
+
+    tableObj.updateConfig({columns, data, language, search})
+    tableObj.forceRender()    
+
     return
 
 export setShareToDoctor1 = ->
     log "setShareToDoctor1"
-    ## TODO implement
+    currentState = "shareToDoctor1"
 
+    columns = utl.getColumnsObject(currentState)
+    data = -> dataModule.getDoctorList()
+    language = utl.getLanguageObject(currentState)
+    search = true
+    overviewtable.classList.remove("no-search")
+
+    tableObj.updateConfig({columns, data, language, search})
+    tableObj.forceRender()    
     return
 
 ############################################################
 export setPatientApproval0 = ->
     log "setPatientApproval0"
     currentState = "patientApproval0"
-    ## TODO get the right headers for patientApproval1 already here
-    
+
     data = []
     language = utl.getLanguageObject(currentState)
     search = false
-
-    overviewtable.classList.add("patientApproval0")
+    overviewtable.classList.add("no-search")
 
     tableObj.updateConfig({search, data, language})
     tableObj.forceRender()    
     return
 
-export setPatientAPproval1 = ->
+export setPatientApproval1 = ->
     log "setPatientAPproval1"
     currentState = "patientApproval1"
-    overviewtable.classList.remove("patientApproval0")
-    ## TODO get the right headers for checkboxes
 
-    data = dataModule.getPatientData()
+    columns = utl.getColumnsObject(currentState)
+    data = -> dataModule.getPatientData()
     language = utl.getLanguageObject(currentState)
-    search = utl.getSearchObject(currentState)
+    search = true
+    overviewtable.classList.remove("no-search")
 
-    tableObj.updateConfig({search, data, language})
-    tableObj.forceRender()    
+    tableObj.updateConfig({columns, search, data, language})
+    tableObj.forceRender()
 
     return
 
@@ -164,10 +231,15 @@ export setPatientAPproval1 = ->
 export setDefaultState = ->
     log "setDefaultState"
     currentState = "ownData"
-    overviewtable.classList.remove("patientApproval0")
+    overviewtable.classList.remove("no-search")
 
     dataPromise = dataModule.getOwnData()
-    if tableObj then updateTable(dataPromise)
+
+    # this is when we want to destroy the table completely
+    # renderTable(dataPromise)
+
+    # in the usual case we only want to update the table when it already exists
+    if tableObj then updateTableData(dataPromise)
     else renderTable(dataPromise)
     return
 
