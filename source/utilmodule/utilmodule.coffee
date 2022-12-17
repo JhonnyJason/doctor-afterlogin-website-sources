@@ -6,9 +6,49 @@ import { createLogFunctions } from "thingy-debug"
 
 ############################################################
 import * as tbut from "thingy-byte-utils"
+import libsodium from "libsodium-wrappers"
 
 ############################################################
 charMap = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+validAlphanumeKeyCodes = null
+validBase32KeyCodes = null
+alphaNumRegex = new RegExp('^[a-z0-9]*$')
+base32Regex = new RegExp('^[a-km-np-z2-9]*$')
+
+sodium = null
+
+############################################################
+export initialize = ->
+    log "initialize"
+    await libsodium.ready
+    sodium = libsodium
+    # olog Object.keys(sodium)
+    prepareValidKeyCodesMap()
+    return
+
+############################################################
+prepareValidKeyCodesMap = ->
+    validAlphanumeKeyCodes = []
+    validBase32KeyCodes = []
+    # validAlphanumeKeyCodes = new Array(255)
+    # validBase32KeyCodes = new Array(255)
+
+    # num = code >= 48 && code <= 57
+    for code in [48..57]
+        validAlphanumeKeyCodes[code] = true
+        if code != 48 and code != 49
+            validBase32KeyCodes[code] = true
+
+    # capitalAlpha = code >= 65 && code <= 90
+    for code in [65..90]
+        validAlphanumeKeyCodes[code] = true
+
+    # smallAlpha = code >= 97 && code <= 122
+    for code in [97..122]
+        validAlphanumeKeyCodes[code] = true
+        if code != 108 and code != 111
+            validBase32KeyCodes[code] = true
+    return
 
 ############################################################
 # from - MIT LICENSE Copyright 2011 Jon Leighton - https://gist.github.com/jonleighton/958841 
@@ -113,3 +153,30 @@ export hashUsernamePw = (username, pwd) ->
 
     hash = await generatePBKDF2SubtleCrypto(username, pwd)
     return hash
+
+export argon2HashPw = (pin, birthdate) ->
+    salt = birthdate + "SUSDOX"
+    log salt
+
+    hash = sodium.crypto_pwhash(
+        32,        # Output size in bytes
+        pin,       # Will be converted to a UTF-8 Uint8Array by sodium.js
+        salt,      # Dito
+        1,         # Number of hash iterations
+        67108864,  # Use 64MB memory
+        sodium.crypto_pwhash_ALG_ARGON2ID13	# Hash algorithm: argon2id
+    )
+    hashHex = tbut.bytesToHex(hash)
+    return hashHex
+
+
+############################################################
+export isAlphanumericCode = (code) -> validAlphanumeKeyCodes[code]
+
+export isBase32Code = (code) -> validBase32KeyCodes[code]
+
+
+############################################################
+export isAlphanumericString = (string) -> alphaNumRegex.test(string)
+
+export isBase32String = (string) -> base32Regex.test(string)

@@ -1,13 +1,19 @@
 //- patientapproval structure
 #patientapproval
-    form#patient-approval.pin-mode
-        label  Patient mit SVN:
-        input#approval-svn-switch(type="checkbox" name="svn-switch" checked)
-        input#approval-svn-part-input(type="text" name="svn-part" placeholder="SVN")
-        #approval-svn-separator -
-        input#approval-birthday-part-input(type="date" name="birthday-part" placeholder="Geburtsdatum")
-        input#approval-pin-input(type="text" name="pin" placeholder="PIN")
-        #authcode-block
-            label AT -
-            input#approval-authcode-input(type="text" name="authcode" placeholder="AUTHCODE")        
+    form#patient-approval
+        input#birthday-input(name="birthday" type="date" max="2999-12-31")
+        input#code-input(type="text" name="code")
+        //- #code-error-feedback-text
         button#search-patient-button(type="submit") suchen
+
+    //- form#patient-approval.pin-mode
+    //-     label  Patient mit SVN:
+    //-     input#approval-svn-switch(type="checkbox" name="svn-switch" checked)
+    //-     input#approval-svn-part-input(type="text" name="svn-part" placeholder="SVN")
+    //-     #approval-svn-separator -
+    //-     input#approval-birthday-part-input(type="date" name="birthday-part" placeholder="Geburtsdatum")
+    //-     input#approval-pin-input(type="text" name="pin" placeholder="PIN")
+    //-     #authcode-block
+    //-         label AT -
+    //-         input#approval-authcode-input(type="text" name="authcode" placeholder="AUTHCODE")        
+    //-     button#search-patient-button(type="submit") suchen

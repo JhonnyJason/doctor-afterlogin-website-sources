@@ -22,68 +22,125 @@ waitingResolve = null
 export initialize = ->
     log "initialize"
     searchPatientButton.addEventListener("click", searchPatientButtonClicked)
-    approvalSvnPartInput.addEventListener("keydown", svnPartKeyDowned)
-    approvalSvnPartInput.addEventListener("keyup", svnPartKeyUpped)
-    approvalBirthdayPartInput.addEventListener("keyup", birthdayPartKeyUpped)
-    approvalSvnSwitch.addEventListener("change", approvalSvnSwitchChanged)
 
-    svnMode = approvalSvnSwitch.checked
+    codeInput.addEventListener("keydown", codeInputKeyDowned)
+    codeInput.addEventListener("keyup", codeInputKeyUpped)
+
+    # approvalSvnPartInput.addEventListener("keydown", svnPartKeyDowned)
+    # approvalSvnPartInput.addEventListener("keyup", svnPartKeyUpped)
+    # approvalBirthdayPartInput.addEventListener("keyup", birthdayPartKeyUpped)
+    # approvalSvnSwitch.addEventListener("change", approvalSvnSwitchChanged)
+
+    # svnMode = approvalSvnSwitch.checked
     return
 
 ############################################################
 errorFeedback = (message) -> alert(message)
 
 ############################################################
-svnPartKeyDowned = (evnt) ->
+codeInputKeyDowned = (evt) ->
     # log "svnPartKeyUpped"
-    value = approvalSvnPartInput.value
-    svnPartLength = value.length
-    # olog {newLength}
-
-    if evnt.keyCode == 46 then return
+    value = codeInput.value
+    codeLength = value.length
     
-    if evnt.keyCode == 8 then return
+    # 46 is delete
+    if evt.keyCode == 46 then return    
+    # 8 is backspace
+    if evt.keyCode == 8 then return
+    # 27 is escape
+    if evt.keyCode == 27 then return
+    
+    # We we donot allow the input to grow furtherly
+    if codeLength == 13
+        evt.preventDefault()
+        return false
+    
+    if codeLength > 13 then codeInput.value = ""
 
-    if svnPartLength > 4 
-        approvalSvnPartInput.value = value.slice(0,4)
-        focusBirthdayPartFirst()
+    # okay = utl.isAlphanumericString(evt.key)
+    okay = utl.isBase32String(evt.key)
+
+    if !okay
+        evt.preventDefault()
+        return false
     return
 
-svnPartKeyUpped = (evnt) ->
+codeInputKeyUpped = (evt) ->
     # log "svnPartKeyUpped"
-    value = approvalSvnPartInput.value
-    svnPartLength = value.length
-    # olog {newLength}
+    value = codeInput.value
+    codeLength = value.length
 
-    if evnt.keyCode == 46 then return
+    codeTokens = []
+    rawCode = value.replaceAll(" ", "")
+    rLen = rawCode.length
     
-    if evnt.keyCode == 8 then return
+    log "rawCode #{rawCode}"
+    if rLen > 0
+        codeTokens.push(rawCode.slice(0,3))
+    if rLen > 3
+        codeTokens.push(rawCode.slice(3,6))
+    if rLen > 6
+        codeTokens.push(rawCode.slice(6))
+    newValue = codeTokens.join("  ")
+    
+    del = evt.keyCode == 46 || evt.keyCode == 8
 
-    if svnPartLength == 4 then focusBirthdayPartFirst()
-    if svnPartLength > 4 
-        approvalSvnPartInput.value = value.slice(0,4)
-        focusBirthdayPartFirst()
+    if rLen == 3 || rLen == 6 then newValue += "  " unless del
+
+    codeInput.value = newValue
     return
 
-birthdayPartKeyUpped = (evnt) ->
-    # log "birthdayPartKeyUpped"
-    value = approvalBirthdayPartInput.value
-    newLength = value.length
-    # olog {newLength}
 
-    if evnt.keyCode != 8
-        svnBirthdayPartLength = newLength
-        return
+# svnPartKeyDowned = (evnt) ->
+#     # log "svnPartKeyUpped"
+#     value = approvalSvnPartInput.value
+#     svnPartLength = value.length
+#     # olog {newLength}
 
-    if svnBirthdayPartLength == 0 then focusSVNPartLast()
-    else svnBirthdayPartLength = newLength
-    return
+#     if evnt.keyCode == 46 then return
+    
+#     if evnt.keyCode == 8 then return
 
-approvalSvnSwitchChanged = ->
-    svnMode = approvalSvnSwitch.checked
-    if svnMode then patientApproval.classList.add("pin-mode")
-    else patientApproval.classList.remove("pin-mode")
-    return
+#     if svnPartLength > 4 
+#         approvalSvnPartInput.value = value.slice(0,4)
+#         focusBirthdayPartFirst()
+#     return
+
+# svnPartKeyUpped = (evnt) ->
+#     # log "svnPartKeyUpped"
+#     value = approvalSvnPartInput.value
+#     svnPartLength = value.length
+#     # olog {newLength}
+
+#     if evnt.keyCode == 46 then return
+    
+#     if evnt.keyCode == 8 then return
+
+#     if svnPartLength == 4 then focusBirthdayPartFirst()
+#     if svnPartLength > 4 
+#         approvalSvnPartInput.value = value.slice(0,4)
+#         focusBirthdayPartFirst()
+#     return
+
+# birthdayPartKeyUpped = (evnt) ->
+#     # log "birthdayPartKeyUpped"
+#     value = approvalBirthdayPartInput.value
+#     newLength = value.length
+#     # olog {newLength}
+
+#     if evnt.keyCode != 8
+#         svnBirthdayPartLength = newLength
+#         return
+
+#     if svnBirthdayPartLength == 0 then focusSVNPartLast()
+#     else svnBirthdayPartLength = newLength
+#     return
+
+# approvalSvnSwitchChanged = ->
+#     svnMode = approvalSvnSwitch.checked
+#     if svnMode then patientApproval.classList.add("pin-mode")
+#     else patientApproval.classList.remove("pin-mode")
+#     return
 
 ############################################################
 searchPatientButtonClicked = (evnt) ->
@@ -92,8 +149,9 @@ searchPatientButtonClicked = (evnt) ->
     searchPatientButton.disabled = true
     try
 
-        if svnMode then requestBody = await extractSVNFormBody()
-        else requestBody = await extractNoSVNFormBody()
+        # if svnMode then requestBody = await extractSVNFormBody()
+        # else requestBody = await extractNoSVNFormBody()
+        requestBody = await extractCodeFormBody()
         olog {requestBody}
 
         if !requestBody.hashedPw and !requestBody.username then return
@@ -114,41 +172,55 @@ resolveApprovalOptionsReceived = ->
     return
 
 ############################################################
-extractSVNFormBody = ->
-    isMedic = false
-    rememberMe = false
-    svnPart = ""+approvalSvnPartInput.value
-    birthdayPart = ""+approvalBirthdayPartInput.value
-    olog {birthdayPart}
-    birthdayTokens = birthdayPart.split("-")
-    year = birthdayTokens.shift()
-    birthdayTokens.push(year)
-    birthdayPart = birthdayTokens.join("")
-    olog {birthdayPart}
+extractCodeFormBody = ->
+    username = ""+birthdayInput.value
+    if !username then return {}
 
-    username = svnPart+birthdayPart
-    password = ""+approvalPinInput.value
-
-    if !password then hashedPw = ""
-    else hashedPw = await utl.hashUsernamePw(username, password)
-    
-    return {username, hashedPw, isMedic, rememberMe}
-
-extractNoSVNFormBody = ->
+    code = codeInput.value.replaceAll(" ", "").toLowerCase()
+    if !utl.isBase32String(code) then return {}
 
     isMedic = false
     rememberMe = false
-    
-    birthdayPart = ""+approvalBirthdayPartInput.value
-    olog {birthdayPart}
-    
-    username = birthdayPart
-    password = "AT-"+approvalAuthcodeInput.value
-    
-    if password == "AT-" then hashedPw = ""
-    else hashedPw = await utl.hashUsernamePw(username, password)
-    
+
+    hashedPw = utl.argon2HashPw(code, username)
+
     return {username, hashedPw, isMedic, rememberMe}
+
+# extractSVNFormBody = ->
+#     isMedic = false
+#     rememberMe = false
+#     svnPart = ""+approvalSvnPartInput.value
+#     birthdayPart = ""+approvalBirthdayPartInput.value
+#     olog {birthdayPart}
+#     birthdayTokens = birthdayPart.split("-")
+#     year = birthdayTokens.shift()
+#     birthdayTokens.push(year)
+#     birthdayPart = birthdayTokens.join("")
+#     olog {birthdayPart}
+
+#     username = svnPart+birthdayPart
+#     password = ""+approvalPinInput.value
+
+#     if !password then hashedPw = ""
+#     else hashedPw = await utl.hashUsernamePw(username, password)
+    
+#     return {username, hashedPw, isMedic, rememberMe}
+
+# extractNoSVNFormBody = ->
+
+#     isMedic = false
+#     rememberMe = false
+    
+#     birthdayPart = ""+approvalBirthdayPartInput.value
+#     olog {birthdayPart}
+    
+#     username = birthdayPart
+#     password = "AT-"+approvalAuthcodeInput.value
+    
+#     if password == "AT-" then hashedPw = ""
+#     else hashedPw = await utl.hashUsernamePw(username, password)
+    
+#     return {username, hashedPw, isMedic, rememberMe}
 
 ############################################################
 export approvalOptionsReceived = ->
