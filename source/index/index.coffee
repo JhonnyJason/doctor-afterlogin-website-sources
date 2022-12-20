@@ -57,6 +57,7 @@ appStartup = ->
     
     if window.opener? then changeLinksToMessageSent(window.opener)
 
+    Modules.uistatemodule.setDefaultState()
     return
 
 ############################################################

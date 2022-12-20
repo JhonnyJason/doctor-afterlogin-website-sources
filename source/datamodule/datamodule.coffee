@@ -39,7 +39,7 @@ export initialize = ->
 
 ############################################################
 #region dataRetrieval
-retrieveOwnData = (daysCount) ->
+retrieveOwnData = (dayCount) ->
     log "retrieveData"
     # return new Promise (resolve) ->
     #     returnShares = -> resolve(sampleResponse.shares) 

@@ -18,6 +18,7 @@ indexdomconnect.initialize = () ->
     global.refreshButton = document.getElementById("refresh-button")
     global.chooseDateLimit = document.getElementById("choose-date-limit")
     global.modecontrols = document.getElementById("modecontrols")
+    global.myDocumentsButton = document.getElementById("my-documents-button")
     global.patientApprovalButton = document.getElementById("patient-approval-button")
     global.shareToDoctorButton = document.getElementById("share-to-doctor-button")
     return

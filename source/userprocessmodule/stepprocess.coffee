@@ -62,6 +62,11 @@ export startProcess = (name) ->
     if onFinish? then onFinish()
     return
 
+export stopAnyProcess = (name) ->
+    return unless currentProcess? and currentProcess.currentStep?
+    currentProcess.currentStep.abort("User stopped any Process!")
+    return
+    
 # ############################################################
 # export abortCurrentProcess = ->
 #     return unless currentProcess?

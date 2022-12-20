@@ -29,8 +29,8 @@ userSelectionResolve = null
 
 ############################################################
 export initialize = ->
-    log "initialize"         
-    setDefaultState()
+    log "initialize"
+    # setDefaultState()
     setInterval(updateTableHeight, 2000)
     return
 
@@ -78,8 +78,12 @@ updateTableData = (dataPromise) ->
         enabled: true
         keyword: searchValue
 
+    focusRange = getSearchFocusRange()
+    
     tableObj.updateConfig({columns, data, language, search})
     tableObj.forceRender()
+
+    if focusRange? then setFocusRange(focusRange)
     return
 
 ############################################################
@@ -101,14 +105,36 @@ updateTableHeight = (height) ->
     searchInput = document.getElementsByClassName("gridjs-search-input")[0]
     if searchInput? 
         searchValue = searchInput.value
-        log searchValue
+        log searchValue    
+        focusRange = getSearchFocusRange()
         search =
             enabled: true
             keyword: searchValue
     else search = false
     
+
+
     tableObj.updateConfig({height, search})
     tableObj.forceRender()
+    
+    if focusRange? then setFocusRange(focusRange)
+
+    return
+
+############################################################
+getSearchFocusRange = ->
+    searchInput = document.getElementsByClassName("gridjs-search-input")[0]
+    return null unless searchInput? and searchInput == document.activeElement
+    start = searchInput.selectionStart
+    end = searchInput.selectionEnd
+    return {start, end}
+
+setFocusRange = (range) ->
+    { start, end } = range
+    searchInput = document.getElementsByClassName("gridjs-search-input")[0]
+    return unless searchInput?
+    searchInput.setSelectionRange(start, end)
+    searchInput.focus()
     return
 
 ############################################################

@@ -53,3 +53,4 @@ shareToDoctorProcess = ->
 ############################################################
 export startPatientApproval = -> proc.startProcess("patientApproval")
 export startShareToDoctor = -> proc.startProcess("shareToDoctor")
+export stopAnyProcess = -> proc.stopAnyProcess()
