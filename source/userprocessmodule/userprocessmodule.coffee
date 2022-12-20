@@ -5,133 +5,51 @@ import { createLogFunctions } from "thingy-debug"
 #endregion
 
 ############################################################
-import * as table from "./overviewtablemodule.js"
-import * as loadControls from "./loadcontrolsmodule.js"
 import * as patientApprovalModule from "./patientapprovalmodule.js"
-import * as selectionAction from "./selectionactionmodule.js"
+import * as table from "./overviewtablemodule.js"
+import * as uiState from "./uistatemodule.js"
+import * as proc from "./stepprocess.js"
 
 ############################################################
-currentProcess = null
+hooks = {
+    onFinish: -> uiState.setDefaultState()
+}
+############################################################
+export initialize = ->
+    log "initialize"
+    proc.addProcess("patientApproval", patientApprovalProcess, hooks)
+    proc.addProcess("shareToDoctor", shareToDoctorProcess, hooks)
+    return
 
 ############################################################
-patientApprovalProcess = (control)->
+patientApprovalProcess = ->
     log "patientApprovalProcess"
-    table.setPatientApproval0()
-    loadControls.hideUI()
-    patientApprovalModule.showUI()
 
-    await patientApprovalModule.approvalOptionsReceived()
-    if control.isAborted
-        patientApprovalModule.hideUI()
-        loadControls.showUI()    
-        return
+    uiState.setPatientApproval0()
+    # user shall log in as patient
+    yield patientApprovalModule.approvalOptionsPromise()
     log "Patient Options have been received!"
 
-    table.setPatientApproval1()
-    patientApprovalModule.hideUI()
-    loadControls.showUI()
-
-    selectionAction.showUI()
-    await table.userSelectionMade()
-    if control.isAborted
-        selectionAction.hideUI()    
-        return
-    log "Patient options have been selected!"
-
-    selectionAction.hideUI()    
-    table.setDefaultState()
+    uiState.setPatientApproval1()
+    # user shall slect the documents to take over
+    yield table.userSelectionPromise()
     log "patientApproval succeeded!"
     return
 
-shareToDoctorProcess = (control) ->
+shareToDoctorProcess = ->
     log "shareToDoctorProcess"
 
-    table.setShareToDoctor0()
-    patientApprovalModule.hideUI()
-    loadControls.showUI()    
+    uiState.setShareToDoctor0()
+    # user shall select documents to share
+    yield table.userSelectionPromise()
+    log "selection of "
 
-    selectionAction.showUI()
-    await table.userSelectionMade()
-    if control.isAborted
-        selectionAction.hideUI()    
-        return
-    log "Selection of what to share has been made!"
-
-    table.setShareToDoctor1()
-    loadControls.hideUI()
-    await table.userSelectionMade()
-    if control.isAborted
-        loadControls.showUI() 
-        selectionAction.hideUI()    
-        return
-    log "Selection has been shared to doctor!"
-    
-    loadControls.showUI()
-    selectionAction.hideUI()    
-    table.setDefaultState()
+    uiState.setShareToDoctor1()
+    # user shall select the doctor so share to
+    yield table.userSelectionPromise()
     log "shareToDoctor succeeded!"
     return
 
-
 ############################################################
-waitMS = (ms) -> new Promise (resolve, reject) -> setTimeout(resolve, ms)
-
-############################################################
-createAbortableProcess = (process) ->
-    control = {isAborted:false}
-    abort = null
-
-    abortionPromise = new Promise (resolve, reject) -> abort = reject
-    successPromise = process(control)
-
-    success = startSuccessAbortionRace(successPromise, abortionPromise, control)
-    
-    return {success, abort}
-
-############################################################
-startSuccessAbortionRace = (success, abortion, control) ->
-    try await Promise.race([success, abortion])
-    catch err 
-        control.isAborted = true
-        throw err
-    return true
-
-
-############################################################
-export startPatientApproval = ->
-    log "startPatientApproval"
-    if currentProcess? then currentProcess.abort("User started new process.") 
-    currentProcess = createAbortableProcess(patientApprovalProcess)
-
-    try 
-        await currentProcess.success
-        log "userProcess patientApproval succeeded!"
-    catch err 
-        log "userProcess patientApproval choked: "+err
-        # in the case of abortion - when user started a new process - the currentProcess has already been replaced. And will be set to null when the new process terminates.
-        if err == "User started new process." then return
-        
-    currentProcess = null
-    return
-
-export startShareToDoctor = ->
-    log "startShareToDoctor"
-    if currentProcess? then currentProcess.abort("User started new process.")
-    currentProcess = createAbortableProcess(shareToDoctorProcess)
-    
-    try 
-        await currentProcess.success
-        log "userProcess shareToDoctor succeeded!"
-    catch err
-        log "userProcess shareToDoctor failed"+err
-        # in the case of abortion - when user started a new process - the currentProcess has already been replaced. And will be set to null when the new process terminates.
-        if err == "User started new process." then return
-
-    currentProcess = null
-    return
-
-############################################################
-export abortCurrentProcess = ->
-    return unless currentProcess?
-    currentProcess.abort("Called for Abortion.")
-    return
+export startPatientApproval = -> proc.startProcess("patientApproval")
+export startShareToDoctor = -> proc.startProcess("shareToDoctor")

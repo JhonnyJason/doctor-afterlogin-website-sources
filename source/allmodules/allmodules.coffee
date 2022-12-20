@@ -7,6 +7,7 @@ import * as overviewtablemodule from "./overviewtablemodule.js"
 import * as patientapprovalmodule from "./patientapprovalmodule.js"
 import * as selectionactionmodule from "./selectionactionmodule.js"
 import * as statemodule from "./statemodule.js"
+import * as uistatemodule from "./uistatemodule.js"
 import * as userprocessmodule from "./userprocessmodule.js"
 import * as utilmodule from "./utilmodule.js"
 
@@ -20,6 +21,7 @@ Modules = {
     patientapprovalmodule,
     selectionactionmodule,
     statemodule,
+    uistatemodule,
     userprocessmodule,
     utilmodule,
 }

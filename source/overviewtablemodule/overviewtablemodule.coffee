@@ -118,8 +118,13 @@ userSelectionDone = ->
     return
 
 ############################################################
-export userSelectionMade = ->
-    return new Promise (resolve) -> userSelectionResolve = resolve
+export userSelectionPromise = ->
+    abort = null
+    p = new Promise (resolve, reject) ->
+        abort = reject
+        userSelectionResolve = resolve
+    p.abort = abort
+    return p
 
 export applySelection = ->
     checkboxPlugin = tableObj.config.plugin.get('select')

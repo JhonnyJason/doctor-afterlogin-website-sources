@@ -180,3 +180,6 @@ export isBase32Code = (code) -> validBase32KeyCodes[code]
 export isAlphanumericString = (string) -> alphaNumRegex.test(string)
 
 export isBase32String = (string) -> base32Regex.test(string)
+
+############################################################
+export waitMS = (ms) -> new Promise (resolve, reject) -> setTimeout(resolve, ms)
