@@ -313,12 +313,14 @@ export getTableHeight = (state) ->
     
     outerPadding = 5
 
-    if !tableWrapper?
+    if !tableWrapper? # table does not exist here
         nonTableOffset = modecontrols.offsetHeight
-        # nonTableOffset += gridJSFooter.offsetHeight
-        nonTableOffset += 155
+        nonTableOffset += 155 # so we guess a height which should be enough
     else 
-        nonTableOffset = tableWrapper.offsetTop + gridJSFooter.offsetHeight + modecontrols.offsetHeight + outerPadding
+        nonTableOffset = modecontrols.offsetHeight
+        nonTableOffset += tableWrapper.offsetTop 
+        nonTableOffset += gridJSFooter.offsetHeight
+        nonTableOffset += outerPadding
 
     if fullWidth <= 600
         nonTableOffset += loadcontrols.offsetHeight
