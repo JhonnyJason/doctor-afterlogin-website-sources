@@ -28,10 +28,10 @@ deDE = {
         next: 'Nächste'
         navigate: (page, pages) -> "Seite #{page} von #{pages}"
         page: (page) -> "Seite #{page}"
-        showing: 'Anzeigen'
+        showing: ' '
         of: 'von'
-        to: 'zu'
-        results: 'Ergebnisse'
+        to: '-'
+        results: 'Daten'
     }
     loading: 'Wird geladen...'
     noRecordsFound: 'Keine übereinstimmenden Aufzeichnungen gefunden'
@@ -51,10 +51,10 @@ deDEPatientApproval = {
         next: 'Nächste'
         navigate: (page, pages) -> "Seite #{page} von #{pages}"
         page: (page) -> "Seite #{page}"
-        showing: 'Anzeigen'
+        showing: ' '
         of: 'von'
-        to: 'zu'
-        results: 'Ergebnisse'
+        to: '-'
+        results: 'Daten'
     }
     loading: 'Wird geladen...'
     noRecordsFound: 'Geben Sie die Authentifizierungsdaten für den Patienten ein.'
@@ -318,7 +318,7 @@ export getTableHeight = (state) ->
         nonTableOffset += 155 # so we guess a height which should be enough
     else 
         nonTableOffset = modecontrols.offsetHeight
-        nonTableOffset += tableWrapper.offsetTop 
+        nonTableOffset += tableWrapper.offsetTop
         nonTableOffset += gridJSFooter.offsetHeight
         nonTableOffset += outerPadding
 
