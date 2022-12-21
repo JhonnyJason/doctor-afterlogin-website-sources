@@ -305,27 +305,23 @@ export getTableHeight = (state) ->
     # log "getTableHeight"
     ## TODO check if we need to differentiate between states here
 
-    gridJSHead = document.getElementsByClassName("gridjs-head")[0]
+    tableWrapper = document.getElementsByClassName("gridjs-wrapper")[0]
     gridJSFooter = document.getElementsByClassName("gridjs-footer")[0]
 
     fullHeight = window.innerHeight
     fullWidth = window.innerWidth
     
     outerPadding = 5
-    modecontrolsHeight = modecontrols.offsetHeight
 
-    if gridJSHead? and gridJSFooter?
-        footerHeight = gridJSFooter.offsetHeight
-        searchHeight = gridJSHead.offsetHeight + 10
-    else
-        searchHeight = 58
-        if fullWidth < 750 then footerHeight = 82
-        else footerHeight = 55
+    if !tableWrapper?
+        nonTableOffset = modecontrols.offsetHeight
+        # nonTableOffset += gridJSFooter.offsetHeight
+        nonTableOffset += 155
+    else 
+        nonTableOffset = tableWrapper.offsetTop + gridJSFooter.offsetHeight + modecontrols.offsetHeight + outerPadding
 
-    nonTableOffset = modecontrolsHeight + footerHeight + searchHeight + outerPadding
-    approvalHeight = patientApproval.offsetHeight
-
-    if fullWidth < 1000 then nonTableOffset += approvalHeight
+    if fullWidth <= 600
+        nonTableOffset += loadcontrols.offsetHeight
 
     tableHeight = fullHeight - nonTableOffset
     # olog {tableHeight, fullHeight, nonTableOffset, approvalHeight}
