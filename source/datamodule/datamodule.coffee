@@ -41,41 +41,6 @@ export initialize = ->
 #region dataRetrieval
 retrieveOwnData = (dayCount) ->
     log "retrieveData"
-    # return new Promise (resolve) ->
-    #     returnShares = -> resolve(sampleResponse.shares) 
-    #     setTimeout(returnShares, 5000)
-
-    # {
-    #     "SharePk": 100012348,
-    #     "OrgPersonPkTo": 9,
-    #     "OrgPersonPkFrom": 7,
-    #     "OrgPersonPkPatient": 100002428,
-    #     "PatientFullname": "Kira Nussbeck",
-    #     "DocumentFormatPk": 0,
-    #     "FormatTypeMt": 0,
-    #     "CaseDate": "2022-02-17T07:09:00",
-    #     "DateCreated": "2022-07-18T23:02:05",
-    #     "CreatedBy": "Karl",
-    #     "DateModified": "2022-07-18T23:02:05",
-    #     "ModifiedBy": "Lenny",
-    #     "Status1": 0,
-    #     "Status2": 0,
-    #     "SessionKeyAenc": "",
-    #     "Sequence": 0,
-    #     "SignatureFrom": "",
-    #     "Remark": "",
-    #     "DownloadStart": "2022-07-18T23:02:05",
-    #     "DownloadEnd": "2022-07-18T23:02:05",
-    #     "DocumentPk": 0,
-    #     "MedCasePk": 100004884,
-    #     "PriorityMt": 1,
-    #     "Percentage": 0,
-    #     "PatientSsn": "1296050503",
-    #     "PatientDob": "2022-07-18T00:00:00",
-    #     "CaseDescription": "CT"
-    # }
-
-
     try
         minDate = dayjs().subtract(dayCount, "day")
         pageSize = dataLoadPageSize
@@ -90,9 +55,10 @@ retrieveOwnData = (dayCount) ->
             olog requestData
 
             rawData = await utl.postRequest(requestSharesURL, requestData)
-            allData.push(rawData.shares)
-            receivedCount += rawData.current_shares_count
-            if receivedCount == rawData.total_shares_count then break
+            allData.push(rawData.shareSummary)
+            # receivedCount = allData.length  
+            receivedCount += rawData.currentSharesCount
+            if receivedCount == rawData.totalSharesCount then break
             if receivedCount <  pageSize then break
             page++
         

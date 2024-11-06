@@ -15,13 +15,13 @@ import { sampleData } from "./sampledata.js"
 import { dataLoadPageSize } from "./configmodule.js"
 
 ############################################################
-MedCaseToEntry = {}
+StudyToEntry = {}
 
 ############################################################
 #region merge Properties Functions
-mergeCaseDate = (obj, share) ->
-    current = obj.CaseDate
-    niu = dayjs(share.CaseDate)
+mergeStudyDate = (obj, share) ->
+    current = obj.studyDate
+    niu = dayjs(share.studyDate)
     if !current? then return niu
 
     # use the newer date
@@ -30,38 +30,38 @@ mergeCaseDate = (obj, share) ->
     else return current
 
 mergePatientFullname = (obj, share) ->
-    current = obj.PatientFullname
-    niu = share.PatientFullname
+    current = obj.patientFullName
+    niu = share.patientFullName
     if !current? then return niu
     
     # just checking if everything is in order
-    if current != niu then log "PatientFullname not matching at @MedCasePk "+share.MedCasePk+". "+current+" vs "+niu
+    if current != niu then log "patientFullName not matching at @studyId "+share.studyId+". "+current+" vs "+niu
     
     return current
 
 mergePatientSsn = (obj, share) ->
-    current = obj.PatientSsn
-    niu = share.PatientSsn
+    current = obj.patientSsn
+    niu = share.patientSsn
     if !current? then return niu
 
     # just checking if everything is in order
-    if current != niu then log "PatientSsn not matching at @MedCasePk "+share.MedCasePk+". "+current+" vs "+niu
+    if current != niu then log "patientSsn not matching at @studyId "+share.studyId+". "+current+" vs "+niu
 
     return current
 
 mergePatientDob = (obj, share) ->
-    current = obj.PatientDob
-    niu = dayjs(share.PatientDob)
+    current = obj.patientDob
+    niu = dayjs(share.patientDob)
     if !current? then return niu
 
     # just checking if everything is in order
-    if current.diff(niu) != 0 then log "PatientDob not matching at @MedCasePk "+share.MedCasePk+". "+current+" vs "+niu
+    if current.diff(niu) != 0 then log "patientDob not matching at @studyId "+share.studyId+". "+current+" vs "+niu
 
     return current
 
-mergeCaseDescription = (obj, share) ->
-    current = obj.CaseDescription
-    niu = share.CaseDescription
+mergeStudyDescription = (obj, share) ->
+    current = obj.studyDescription
+    niu = share.studyDescription
     if !current? then return niu
 
     merged = current + " |\n\n" + niu
@@ -76,8 +76,8 @@ mergeCreatedBy = (obj, share) ->
     return merged
 
 mergeDateCreated = (obj, share) ->
-    current = obj.DateCreated
-    niu = dayjs(share.DateCreated)
+    current = obj.createdAt
+    niu = dayjs(share.createdAt)
     if !current? then return niu
 
     #use the newer date
@@ -88,11 +88,17 @@ mergeDateCreated = (obj, share) ->
 mergeFormat = (obj, share) ->
     result = obj.format
     result = {} unless result?
+    return result unless share.documentUrl?
 
-    if share.FormatTypeMt == 4 then result.hasImage = true
-    else if share.FormatTypeMt != 2 and share.FormatTypeMt < 10 and share.FormatTypeMt > 0 then result.hasBefund = true
+    if share.formatType == 4
+        result.hasImage = true
+        result.imageURL = share.documentUrl
+    else 
+        result.hasBefund = true
+        result.befundURL = share.documentUrl
 
-    if share.documentFormatPk then result.documentFormatPk = share.documentFormatPk 
+    ## This is a more detailed check if the document is a Befund...
+    # else if share.formatType != 2 and share.formatType < 10 and share.formatType > 0 
 
     return result
 
@@ -100,38 +106,38 @@ mergeFormat = (obj, share) ->
 
 ############################################################
 defaultSharesCompare = (el1, el2) ->
-    date1 = dayjs(el1.DateCreated)
-    date2 = dayjs(el2.DateCreated)
+    date1 = dayjs(el1.createdAt)
+    date2 = dayjs(el2.createdAt)
     return -date1.diff(date2)
 
 ############################################################
-groupByMedCase = (data) ->
+groudByStudyId = (data) ->
     ## TODO improve caching of Cases
     ## Because maybe the next cases added would fit to a previous case
 
-    MedCaseToEntry = {}
+    StudyToEntry = {}
 
     before = performance.now()
     for d in data
         entry = {}
-        entry[d.SharePk] = d
-        oldEntry = MedCaseToEntry[d.MedCasePk] 
-        MedCaseToEntry[d.MedCasePk] = Object.assign(entry, oldEntry)
+        entry[d.shareId] = d
+        oldEntry = StudyToEntry[d.studyId]
+        StudyToEntry[d.studyId] = Object.assign(entry, oldEntry)
     
     results = []
-    for key,entry of MedCaseToEntry
+    for key,entry of StudyToEntry
         obj = {}
-        for sharePk,share of entry
-            obj.CaseDate = mergeCaseDate(obj, share)
-            obj.PatientFullname = mergePatientFullname(obj, share)
-            obj.PatientSsn = mergePatientSsn(obj, share)
-            obj.PatientDob = mergePatientDob(obj, share)
-            obj.CaseDescription = mergeCaseDescription(obj, share)
+        for shareId,share of entry
+            obj.studyDate = mergeStudyDate(obj, share)
+            obj.patientFullName = mergePatientFullname(obj, share)
+            obj.patientSsn = mergePatientSsn(obj, share)
+            obj.patientDob = mergePatientDob(obj, share)
+            obj.studyDescription = mergeStudyDescription(obj, share)
             obj.CreatedBy = mergeCreatedBy(obj, share)
-            obj.DateCreated = mergeDateCreated(obj, share)
+            obj.createdAt = mergeDateCreated(obj, share)
             obj.format = mergeFormat(obj, share)
             obj.select = false
-            obj.caseId = key
+            obj.studyId = key
             obj.index = results.length
         results.push(obj)
 
@@ -143,7 +149,7 @@ groupByMedCase = (data) ->
 
 ############################################################
 export groupAndSort = (rawData) ->
-    allData = groupByMedCase(rawData.flat())
+    allData = groudByStudyId(rawData.flat())
     return allData.sort(defaultSharesCompare)
 
 export prepareDoctorsList = (rawData) ->
@@ -185,6 +191,6 @@ export mergeDataSets = (oldData, newData) ->
         d.index = results.length
 
     ## TODO implement more sophisticatedly
-    # we neglect here the situation when we have the same MedCasePk 
+    # we neglect here the situation when we have the same studyId 
     return results
 

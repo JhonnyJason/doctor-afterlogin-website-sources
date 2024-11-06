@@ -10,9 +10,9 @@ import *  as userProcess from "./userprocessmodule.js"
 ############################################################
 export initialize = ->
     log "initialize"
-    myDocumentsButton.addEventListener("click", myDocumentsButtonClicked)
-    patientApprovalButton.addEventListener("click", patientApprovalButtonClicked)
-    shareToDoctorButton.addEventListener("click", shareToDoctorButtonClicked)
+    # myDocumentsButton.addEventListener("click", myDocumentsButtonClicked)
+    # patientApprovalButton.addEventListener("click", patientApprovalButtonClicked)
+    # shareToDoctorButton.addEventListener("click", shareToDoctorButtonClicked)
     return
 
 ############################################################

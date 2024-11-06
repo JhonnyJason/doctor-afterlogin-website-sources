@@ -140,9 +140,9 @@ bilderFormatter  = (content, row) ->
     # olog content
 
     # if content.hasImage? and content.documentFormatPk? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="bild-button" target="_blank" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></a>'
-    if content.hasImage? 
-        if messageTarget? then innerHTML = '<a onclick="onLinkClick(this);" href="'+entryBaseURL+content.documentFormatPk+'" class="bild-button" target="_blank" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></a>'
-        else innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="bild-button" target="_blank" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></a>'
+    if content.hasImage?
+        if messageTarget? then innerHTML = '<a onclick="onLinkClick(this);" href="'+content.imageURL+'" class="bild-button" target="_blank" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></a>'
+        else innerHTML = '<a href="'+content.imageURL+'" class="bild-button" target="_blank" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></a>'
     else innerHTML = '<div disabled class="bild-button" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></div>'
     return html(innerHTML)
 
@@ -160,8 +160,8 @@ befundeFormatter = (content , row) ->
     # if content.hasBefund? and content.documentFormatPk? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
 
     if content.hasBefund?
-        if messageTarget? innerHTML = '<a onClick="onLinkClick(this);" href="'+entryBaseURL+content.documentFormatPk+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
-        else innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
+        if messageTarget? innerHTML = '<a onClick="onLinkClick(this);" href="'+content.befundURL+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
+        else innerHTML = '<a href="'+content.befundURL+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
     else innerHTML = '<div disabled class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></div>'
     return html(innerHTML)
 
@@ -251,34 +251,34 @@ befundeHeadObj = {
 #region regularDataFields
 screeningDateHeadObj = {
     name: "Unt.-Datum"
-    id: "CaseDate"
+    id: "studyDate"
     formatter: screeningDateFormatter
     sort: { compare: dateCompare }
 }
 
 nameHeadObj = {
     name: "Name"
-    id: "PatientFullname"
+    id: "patientFullName"
     formatter: nameFormatter
 }
 
 svnHeadObj = {
     name: "SVN"
-    id: "PatientSsn"
+    id: "patientSsn"
     formatter: svnFormatter
     sort: {compare: numberCompare}
 }
 
 birthdayHeadObj = {
     name: "Geb.-Datum"
-    id: "PatientDob"
+    id: "patientDob"
     formatter: birthdayFormatter
     sort:{ compare: dateCompare }
 }
 
 descriptionHeadObj = {
     name:"Beschreibung"
-    id: "CaseDescription"
+    id: "studyDescription"
     formatter: descriptionFormatter
 }
 
@@ -290,7 +290,7 @@ radiologistHeadObj = {
 
 sendingDateHeadObj = {
     name: "Zustellungsdatum"
-    id: "DateCreated"
+    id: "createdAt"
     formatter: sendingDateFormatter
     sort: { compare: dateCompare }
 }
@@ -302,33 +302,34 @@ sendingDateHeadObj = {
 ############################################################
 #region exportedFunctions
 export getTableHeight = (state) ->
-    # log "getTableHeight"
+    log "getTableHeight"
     ## TODO check if we need to differentiate between states here
 
     tableWrapper = document.getElementsByClassName("gridjs-wrapper")[0]
     gridJSFooter = document.getElementsByClassName("gridjs-footer")[0]
-
+    
     fullHeight = window.innerHeight
     fullWidth = window.innerWidth
     
     outerPadding = 5
 
-    if !tableWrapper? # table does not exist here
-        nonTableOffset = modecontrols.offsetHeight
-        nonTableOffset += 155 # so we guess a height which should be enough
+    # nonTableOffset = modecontrols.offsetHeight
+    ## we removed the modecontrols
+    nonTableOffset = 0
+    if !tableWrapper? # table does not exist yet
+        nonTableOffset += 114 # so we guess a height which should be enough
     else 
-        nonTableOffset = modecontrols.offsetHeight
         nonTableOffset += tableWrapper.offsetTop
         nonTableOffset += gridJSFooter.offsetHeight
         nonTableOffset += outerPadding
-
+        log nonTableOffset
     if fullWidth <= 600
         nonTableOffset += loadcontrols.offsetHeight
 
     tableHeight = fullHeight - nonTableOffset
     # olog {tableHeight, fullHeight, nonTableOffset, approvalHeight}
 
-    # return tableHeight
+    olog {tableHeight}
     return tableHeight
 
 ############################################################
@@ -383,34 +384,34 @@ export getColumnsObject = (state) ->
     #region regularDataFields
     screeningDateHeadObj = {
         name: "Unt.-Datum"
-        id: "CaseDate"
+        id: "studyDate"
         formatter: screeningDateFormatter
         sort: { compare: dateCompare }
     }
 
     nameHeadObj = {
         name: "Name"
-        id: "PatientFullname"
+        id: "patientFullName"
         formatter: nameFormatter
     }
 
     svnHeadObj = {
         name: "SVN"
-        id: "PatientSsn"
+        id: "patientSsn"
         formatter: svnFormatter
         sort: {compare: numberCompare}
     }
 
     birthdayHeadObj = {
         name: "Geb.-Datum"
-        id: "PatientDob"
+        id: "patientDob"
         formatter: birthdayFormatter
         sort:{ compare: dateCompare }
     }
 
     descriptionHeadObj = {
         name:"Beschreibung"
-        id: "CaseDescription"
+        id: "studyDescription"
         formatter: descriptionFormatter
     }
 
@@ -422,7 +423,7 @@ export getColumnsObject = (state) ->
 
     sendingDateHeadObj = {
         name: "Zustellungsdatum"
-        id: "DateCreated"
+        id: "createdAt"
         formatter: sendingDateFormatter
         sort: { compare: dateCompare }
     }

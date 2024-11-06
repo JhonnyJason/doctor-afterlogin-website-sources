@@ -16,10 +16,16 @@ import { retrieveData } from "./datamodule.js"
 import * as S from "./statemodule.js"
 import * as utl from "./tableutils.js"
 import * as dataModule from "./datamodule.js"
+import {tableRenderCycleMS} from "./configmodule.js"
 
 ############################################################
 tableObj = null
 currentTableHeight = 0
+
+############################################################
+# rendering = false
+# updateLater = null
+# firstRenderComplete = false
 
 ############################################################
 currentState = null
@@ -31,13 +37,14 @@ userSelectionResolve = null
 export initialize = ->
     log "initialize"
     # setDefaultState()
-    setInterval(updateTableHeight, 2000)
+    # setInterval(updateTableHeight, tableRenderCycleMS)
+    window.addEventListener("resize", updateTableHeight)
     return
 
 ############################################################
 renderTable = (dataPromise) ->
     log "renderTable"
-
+    
     columns = utl.getColumnsObject(currentState)
     data = -> dataPromise
     language = utl.getLanguageObject(currentState)
@@ -46,7 +53,8 @@ renderTable = (dataPromise) ->
     pagination = { limit: 50 }
     sort = { multiColumn: false }
     fixedHeader = true
-    resizable = false
+    # resizable = false
+    resizable = true
     height = "#{utl.getTableHeight(currentState)}px"
     width = "100%"
 
@@ -56,12 +64,15 @@ renderTable = (dataPromise) ->
         tableObj = null
         gridjsFrame.innerHTML = ""  
         tableObj = new Grid(gridJSOptions)
-        tableObj.render(gridjsFrame).forceRender()
-        # this does not work here - it seems the Old State still remains in the GridJS singleton thus a render here does not refresh the table at all
+        await tableObj.render(gridjsFrame).forceRender()
+        # render alone does not work here - it seems the Old State still remains in the GridJS singleton thus a render here does not refresh the table at all
     else
         tableObj = new Grid(gridJSOptions)
         gridjsFrame.innerHTML = ""    
-        tableObj.render(gridjsFrame)
+        await tableObj.render(gridjsFrame)
+    
+    # firstRenderComplete = true
+    # setInterval(updateTableHeight, tableRenderCycleMS)
     return
 
 updateTableData = (dataPromise) ->
@@ -79,20 +90,22 @@ updateTableData = (dataPromise) ->
         keyword: searchValue
 
     focusRange = getSearchFocusRange()
-    
-    tableObj.updateConfig({columns, data, language, search})
-    tableObj.forceRender()
 
+    await updateTable({columns, data, language, search})
     if focusRange? then setFocusRange(focusRange)
     return
 
 ############################################################
 updateTableHeight = (height) ->
+    # return unless firstRenderComplete
+
+    log "updateTableHeight"
+    olog { height }
 
     ##updating table height in other states causes selection data issues :-(
     return unless currentState == "ownData"
 
-    if !height? then height = utl.getTableHeight()
+    if typeof height != "number" then height = utl.getTableHeight()
     if currentTableHeight == height then return
     currentTableHeight = height 
     height = height+"px"
@@ -112,13 +125,29 @@ updateTableHeight = (height) ->
             keyword: searchValue
     else search = false
     
-
-
-    tableObj.updateConfig({height, search})
-    tableObj.forceRender()
-    
+    await updateTable({height, search})
     if focusRange? then setFocusRange(focusRange)
+    return
 
+############################################################
+updateTable = (config) ->
+    log "updateTable"
+    olog {rendering, updateLater}
+    if rendering  
+        updateLater = () -> updateTable(config)
+        return
+
+    rendering = true
+    try await tableObj.updateConfig(config).forceRender()
+    catch err then log err
+    rendering = false
+    
+    if updateLater?
+        log "updateLater existed!"
+        updateNow = updateLater
+        updateLater = null
+        updateNow()
+    log "update done!"
     return
 
 ############################################################
@@ -210,9 +239,7 @@ export setShareToDoctor0 = ->
         search = true
     overviewtable.classList.remove("no-search")
 
-    tableObj.updateConfig({columns, data, language, search})
-    tableObj.forceRender()    
-
+    updateTable({columns, data, language, search})
     return
 
 export setShareToDoctor1 = ->
@@ -225,8 +252,7 @@ export setShareToDoctor1 = ->
     search = true
     overviewtable.classList.remove("no-search")
 
-    tableObj.updateConfig({columns, data, language, search})
-    tableObj.forceRender()    
+    updateTable({columns, data, language, search})
     return
 
 ############################################################
@@ -239,8 +265,7 @@ export setPatientApproval0 = ->
     search = false
     overviewtable.classList.add("no-search")
 
-    tableObj.updateConfig({search, data, language})
-    tableObj.forceRender()    
+    updateTable({search, data, language})
     return
 
 export setPatientApproval1 = ->
@@ -253,9 +278,7 @@ export setPatientApproval1 = ->
     search = true
     overviewtable.classList.remove("no-search")
 
-    tableObj.updateConfig({columns, search, data, language})
-    tableObj.forceRender()
-
+    updateTable({columns, search, data, language})
     return
 
 ############################################################

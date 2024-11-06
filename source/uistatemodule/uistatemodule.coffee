@@ -13,7 +13,7 @@ import * as selectionAction from "./selectionactionmodule.js"
 
 ############################################################
 export setDefaultState = ->
-    modeButtons.setMyDocumentButtonActive()
+    # modeButtons.setMyDocumentButtonActive()
     table.setDefaultState()
     selectionAction.hideUI()    
     patientApprovalModule.hideUI()
@@ -22,7 +22,7 @@ export setDefaultState = ->
 
 ############################################################
 export setPatientApproval0 = ->
-    modeButtons.setPatientApprovalButtonActive()
+    # modeButtons.setPatientApprovalButtonActive()
     table.setPatientApproval0() 
     patientApprovalModule.showUI()
     loadControls.hideUI()
@@ -30,7 +30,7 @@ export setPatientApproval0 = ->
     return
 
 export setPatientApproval1 = ->
-    modeButtons.setPatientApprovalButtonActive()
+    # modeButtons.setPatientApprovalButtonActive()
     table.setPatientApproval1()
     patientApprovalModule.hideUI()
     selectionAction.showUI()
@@ -39,7 +39,7 @@ export setPatientApproval1 = ->
 
 ############################################################
 export setShareToDoctor0 = ->
-    modeButtons.setShareToDoctorButtonActive()
+    # modeButtons.setShareToDoctorButtonActive()
     table.setShareToDoctor0()
     patientApprovalModule.hideUI()
     loadControls.showUI()    
@@ -47,7 +47,7 @@ export setShareToDoctor0 = ->
     return
 
 export setShareToDoctor1 = ->
-    modeButtons.setShareToDoctorButtonActive()
+    # modeButtons.setShareToDoctorButtonActive()
     table.setShareToDoctor1()
     patientApprovalModule.hideUI()
     loadControls.hideUI()

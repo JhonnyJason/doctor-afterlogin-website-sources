@@ -47,7 +47,7 @@ export startProcess = (name) ->
     { onSuccess, onReplace, onError, onFinish } = processMap[name].hooks
     startStepProcess(processMap[name].process)
 
-    try 
+    try
         result = await currentProcess.p
         if onSuccess? then onSuccess(result)
     catch err
