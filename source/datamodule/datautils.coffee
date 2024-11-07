@@ -68,8 +68,8 @@ mergeStudyDescription = (obj, share) ->
     return merged
 
 mergeCreatedBy = (obj, share) ->
-    current = obj.CreatedBy
-    niu = share.CreatedBy
+    current = obj.fromFullName
+    niu = share.fromFullName
     if !current? then return niu
 
     merged = current + " |\n\n" + niu
@@ -133,7 +133,7 @@ groudByStudyId = (data) ->
             obj.patientSsn = mergePatientSsn(obj, share)
             obj.patientDob = mergePatientDob(obj, share)
             obj.studyDescription = mergeStudyDescription(obj, share)
-            obj.CreatedBy = mergeCreatedBy(obj, share)
+            obj.fromFullName = mergeCreatedBy(obj, share)
             obj.createdAt = mergeDateCreated(obj, share)
             obj.format = mergeFormat(obj, share)
             obj.select = false
@@ -166,7 +166,8 @@ export postRequest = (url, data) ->
     options =
         method: 'POST'
         mode: 'cors'
-    
+        credentials: 'include'
+
         body: JSON.stringify(data)
         headers:
             'Content-Type': 'application/json'

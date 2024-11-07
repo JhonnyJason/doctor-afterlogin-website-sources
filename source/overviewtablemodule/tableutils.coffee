@@ -284,7 +284,7 @@ descriptionHeadObj = {
 
 radiologistHeadObj = {
     name: "Radiologie"
-    id: "CreatedBy"
+    id: "fromFullName"
     formatter: radiologistFormatter
 }
 
@@ -417,7 +417,7 @@ export getColumnsObject = (state) ->
 
     radiologistHeadObj = {
         name: "Radiologie"
-        id: "CreatedBy"
+        id: "fromFullName"
         formatter: radiologistFormatter
     }
 
