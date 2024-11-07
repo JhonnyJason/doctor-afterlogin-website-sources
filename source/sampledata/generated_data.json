@@ -1,4 +1,4 @@
-export const ownSampleData = [
+[
     {
         "shareId": 15768771,
         "from": 84793,

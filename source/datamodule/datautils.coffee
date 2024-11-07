@@ -166,7 +166,6 @@ export postRequest = (url, data) ->
     options =
         method: 'POST'
         mode: 'cors'
-        credentials: 'include'
     
         body: JSON.stringify(data)
         headers:
