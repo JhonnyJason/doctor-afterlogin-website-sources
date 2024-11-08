@@ -19,6 +19,11 @@ StudyToEntry = {}
 
 ############################################################
 #region merge Properties Functions
+mergeIsNew = (obj, share) ->
+    return true if obj.isNew
+    return true if share.isNew or share.isNew == "true"
+    return false
+
 mergeStudyDate = (obj, share) ->
     current = obj.studyDate
     niu = dayjs(share.studyDate)
@@ -71,9 +76,9 @@ mergeCreatedBy = (obj, share) ->
     current = obj.fromFullName
     niu = share.fromFullName
     if !current? then return niu
-
-    merged = current + " |\n\n" + niu
-    return merged
+    else return current
+    # merged = current + " |\n\n" + niu
+    # return merged
 
 mergeDateCreated = (obj, share) ->
     current = obj.createdAt
@@ -85,17 +90,25 @@ mergeDateCreated = (obj, share) ->
     if diff < 0 then return niu
     else return current
 
-mergeFormat = (obj, share) ->
-    result = obj.format
+mergeDocuments = (obj, share) ->
+    result = obj.documents
     result = {} unless result?
     return result unless share.documentUrl?
 
     if share.formatType == 4
-        result.hasImage = true
-        result.imageURL = share.documentUrl
+        result.images = [] unless result.images?
+        image = {
+            url: share.documentUrl, 
+            description: share.documentDescription
+        }
+        result.images.push(image)
     else 
-        result.hasBefund = true
-        result.befundURL = share.documentUrl
+        result.befunde = [] unless result.befunde?
+        befund = {
+            url: share.documentUrl, 
+            description: share.documentDescription
+        }
+        result.befunde.push(befund)
 
     ## This is a more detailed check if the document is a Befund...
     # else if share.formatType != 2 and share.formatType < 10 and share.formatType > 0 
@@ -128,14 +141,15 @@ groudByStudyId = (data) ->
     for key,entry of StudyToEntry
         obj = {}
         for shareId,share of entry
+            obj.isNew = mergeIsNew(obj, share)
             obj.studyDate = mergeStudyDate(obj, share)
             obj.patientFullName = mergePatientFullname(obj, share)
             obj.patientSsn = mergePatientSsn(obj, share)
             obj.patientDob = mergePatientDob(obj, share)
-            obj.studyDescription = mergeStudyDescription(obj, share)
+            # obj.studyDescription = mergeStudyDescription(obj, share)
             obj.fromFullName = mergeCreatedBy(obj, share)
             obj.createdAt = mergeDateCreated(obj, share)
-            obj.format = mergeFormat(obj, share)
+            obj.documents = mergeDocuments(obj,share)
             obj.select = false
             obj.studyId = key
             obj.index = results.length

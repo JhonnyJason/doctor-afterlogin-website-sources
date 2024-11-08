@@ -6,8 +6,7 @@ import { createLogFunctions } from "thingy-debug"
 
 ############################################################
 import { Grid, html} from "gridjs"
-import { RowSelection } from "gridjs/plugins/selection"
-
+# import { RowSelection } from "gridjs/plugins/selection"
 # import { RowSelection } from "gridjs-selection"
 
 import dayjs from "dayjs"
@@ -122,48 +121,52 @@ numberCompare = (el1, el2) ->
 
 ############################################################
 #region cell formatter functions
+isNewFormatter = (content, row) ->
+    dotClass = "isNewDot"
+
+    if content then dotClass = "isNewDot isNew" 
+
+    innerHTML = "<div class='#{dotClass}'></div>"
+    return  html(innerHTML)
+
 doctorNameFormatter = (content, row) ->
     return content
 
 bilderFormatter  = (content, row) ->
-    formatObj = {
-            content: '<svg><use href="#svg-images-icon" /></svg>'
-            className: 'bild-button click-button',
-            onClick: ->
-                olog row 
-                log("Bilder Button clicked! @#{row.id}")
-          }
+    return "" unless content.images?
 
-    # return h('button', formatObj, '<svg><use href="#svg-images-icon" /></svg>')
-    # return h('button', formatObj, 'B')
-    # return h(HTMLElement, formatObj)
-    # olog content
-
-    # if content.hasImage? and content.documentFormatPk? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="bild-button" target="_blank" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></a>'
-    if content.hasImage?
-        if messageTarget? then innerHTML = '<a onclick="onLinkClick(this);" href="'+content.imageURL+'" class="bild-button" target="_blank" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></a>'
-        else innerHTML = '<a href="'+content.imageURL+'" class="bild-button" target="_blank" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></a>'
-    else innerHTML = '<div disabled class="bild-button" ><svg row-id="'+row.id+'" ><use href="#svg-images-icon" /></svg></div>'
+    innerHTML = "<ul>"
+    for image in content.images
+        innerHTML += "<li><a href='#{image.url}'> #{image.description}</a></li>"
+    innerHTML += "</ul>"
     return html(innerHTML)
 
 befundeFormatter = (content , row) ->
-    formatObj = {
-            className: 'befund-button click-button',
-            onClick: ->
-                olog row
-                log("Befunde Button clicked! @#{row.id}")
-          }
-    # return h('button', formatObj, '<svg><use href="#svg-documents-icon" /></svg>')
-    # return h('button', formatObj, 'BF')
-    # olog content
+    return "" unless content.befunde?
 
-    # if content.hasBefund? and content.documentFormatPk? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
-
-    if content.hasBefund?
-        if messageTarget? innerHTML = '<a onClick="onLinkClick(this);" href="'+content.befundURL+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
-        else innerHTML = '<a href="'+content.befundURL+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
-    else innerHTML = '<div disabled class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></div>'
+    innerHTML = "<ul>"
+    for befund in content.befunde
+        innerHTML += "<li><a href='#{befund.url}'> #{befund.description}</a></li>"
+    innerHTML += "</ul>"
     return html(innerHTML)
+
+    # formatObj = {
+    #         className: 'befund-button click-button',
+    #         onClick: ->
+    #             olog row
+    #             log("Befunde Button clicked! @#{row.id}")
+    #       }
+    # # return h('button', formatObj, '<svg><use href="#svg-documents-icon" /></svg>')
+    # # return h('button', formatObj, 'BF')
+    # # olog content
+
+    # # if content.hasBefund? and content.documentFormatPk? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
+
+    # if content.hasBefund?
+    #     if messageTarget? innerHTML = '<a onClick="onLinkClick(this);" href="'+content.befundURL+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
+    #     else innerHTML = '<a href="'+content.befundURL+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
+    # else innerHTML = '<div disabled class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></div>'
+    # return html(innerHTML)
 
 screeningDateFormatter = (content, row) ->
     # date = dayjs(content)
@@ -173,7 +176,10 @@ screeningDateFormatter = (content, row) ->
     return content.format("DD.MM.YYYY")
 
 nameFormatter = (content, row) ->
-    return content
+    innerHTML = """
+        <a onclick='searchForName("#{content}")'>#{content}</a>
+    """
+    return html(innerHTML)
 
 svnFormatter = (content, row) ->
     return content
@@ -196,108 +202,11 @@ sendingDateFormatter = (content, row) ->
     # return date.format("YYYY-MM-DD hh:mm")
 
     #here we expect to already get a dayjs object
-    return content.format("DD.MM.YYYY hh:mm")
+    return content.format("DD.MM.YYYY HH:mm")
 
 #endregion
 
 #endregion
-
-############################################################
-#region columnHeadObjects
-checkboxHeadObj = {
-    name: "",
-    id: "select",
-    data: () -> false,
-    sort: false,
-    plugin: {
-        component: RowSelection,
-        props: {
-            id: (row) -> row.cell(1).data
-        }
-    }
-}
-
-indexHeadObj = {
-    name: "",
-    id: "index",
-    sort: false,
-    hidden: true
-}
-
-############################################################
-doctorHeadObj = {
-    name: "Name",
-    id: "doctorName",
-    formatter: doctorNameFormatter
-
-}
-
-############################################################
-bilderHeadObj = {
-    name: ""
-    id: "format"
-    formatter: bilderFormatter
-    sort: false
-}
-
-befundeHeadObj = {
-    name: ""
-    id: "format"
-    formatter: befundeFormatter
-    sort: false
-}
-
-############################################################
-#region regularDataFields
-screeningDateHeadObj = {
-    name: "Unt.-Datum"
-    id: "studyDate"
-    formatter: screeningDateFormatter
-    sort: { compare: dateCompare }
-}
-
-nameHeadObj = {
-    name: "Name"
-    id: "patientFullName"
-    formatter: nameFormatter
-}
-
-svnHeadObj = {
-    name: "SVN"
-    id: "patientSsn"
-    formatter: svnFormatter
-    sort: {compare: numberCompare}
-}
-
-birthdayHeadObj = {
-    name: "Geb.-Datum"
-    id: "patientDob"
-    formatter: birthdayFormatter
-    sort:{ compare: dateCompare }
-}
-
-descriptionHeadObj = {
-    name:"Beschreibung"
-    id: "studyDescription"
-    formatter: descriptionFormatter
-}
-
-radiologistHeadObj = {
-    name: "Radiologie"
-    id: "fromFullName"
-    formatter: radiologistFormatter
-}
-
-sendingDateHeadObj = {
-    name: "Zustellungsdatum"
-    id: "createdAt"
-    formatter: sendingDateFormatter
-    sort: { compare: dateCompare }
-}
-#endregion
-
-#endregion
-
 
 ############################################################
 #region exportedFunctions
@@ -317,7 +226,7 @@ export getTableHeight = (state) ->
     ## we removed the modecontrols
     nonTableOffset = 0
     if !tableWrapper? # table does not exist yet
-        nonTableOffset += 114 # so we guess a height which should be enough
+        nonTableOffset += 114 # so take the height which should be enough
     else 
         nonTableOffset += tableWrapper.offsetTop
         nonTableOffset += gridJSFooter.offsetHeight
@@ -337,45 +246,23 @@ export getColumnsObject = (state) ->
 
     ############################################################
     #region columnHeadObjects
-    checkboxHeadObj = {
-        name: "",
-        id: "select",
-        data: () -> false,
-        sort: false,
-        plugin: {
-            component: RowSelection,
-            props: {
-                id: (row) -> row.cell(1).data
-            }
-        }
-    }
-
-    indexHeadObj = {
-        name: "",
-        id: "index",
-        sort: false,
-        hidden: true
-    }
-
-    ############################################################
-    doctorHeadObj = {
-        name: "Name",
-        id: "doctorName",
-        formatter: doctorNameFormatter
-
-    }
-
-    ############################################################
-    bilderHeadObj = {
+    isNewHeadObj = {
         name: ""
-        id: "format"
+        id: "isNew"
+        formatter: isNewFormatter
+        sort: false
+    }
+
+    bilderHeadObj = {
+        name: "Bilder"
+        id: "documents"
         formatter: bilderFormatter
         sort: false
     }
 
     befundeHeadObj = {
-        name: ""
-        id: "format"
+        name: "Befunde"
+        id: "documents"
         formatter: befundeFormatter
         sort: false
     }
@@ -386,62 +273,61 @@ export getColumnsObject = (state) ->
         name: "Unt.-Datum"
         id: "studyDate"
         formatter: screeningDateFormatter
-        sort: { compare: dateCompare }
+        sort: false
+        # sort: { compare: dateCompare }
     }
 
     nameHeadObj = {
         name: "Name"
         id: "patientFullName"
         formatter: nameFormatter
+        sort: false
     }
 
     svnHeadObj = {
-        name: "SVN"
+        name: "SVNR"
         id: "patientSsn"
         formatter: svnFormatter
-        sort: {compare: numberCompare}
+        sort: false
+        # sort: {compare: numberCompare}
     }
 
     birthdayHeadObj = {
         name: "Geb.-Datum"
         id: "patientDob"
         formatter: birthdayFormatter
-        sort:{ compare: dateCompare }
+        sort: false
+        # sort:{ compare: dateCompare }
     }
 
     descriptionHeadObj = {
         name:"Beschreibung"
         id: "studyDescription"
         formatter: descriptionFormatter
+        sort: false
     }
 
     radiologistHeadObj = {
         name: "Radiologie"
         id: "fromFullName"
         formatter: radiologistFormatter
+        sort: false
     }
 
     sendingDateHeadObj = {
         name: "Zustellungsdatum"
         id: "createdAt"
         formatter: sendingDateFormatter
-        sort: { compare: dateCompare }
+        # sort: { compare: dateCompare }
+        sort: false
     }
     #endregion
 
     #endregion
 
-    if state == "shareToDoctor0" then return [checkboxHeadObj, indexHeadObj, screeningDateHeadObj, nameHeadObj, svnHeadObj, birthdayHeadObj, descriptionHeadObj, radiologistHeadObj, sendingDateHeadObj]
+    return [isNewHeadObj, screeningDateHeadObj, nameHeadObj, svnHeadObj, birthdayHeadObj, befundeHeadObj, bilderHeadObj, radiologistHeadObj, sendingDateHeadObj]
 
-    if state == "shareToDoctor1" then return [checkboxHeadObj, indexHeadObj, doctorHeadObj]
-
-    if state == "patientApproval1" then return [checkboxHeadObj, indexHeadObj, screeningDateHeadObj, nameHeadObj, svnHeadObj, birthdayHeadObj, descriptionHeadObj, radiologistHeadObj, sendingDateHeadObj]
-
-    return [bilderHeadObj, befundeHeadObj, screeningDateHeadObj, nameHeadObj, svnHeadObj, birthdayHeadObj, descriptionHeadObj, radiologistHeadObj, sendingDateHeadObj]
-
-export getLanguageObject = (state) ->
-    if state == "patientApproval0" then return deDEPatientApproval
-    else return deDE
+export getLanguageObject = (state) -> return deDE
 
 ############################################################
 export changeLinksToMessageSent = (target) ->

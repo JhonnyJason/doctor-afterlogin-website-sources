@@ -38,7 +38,9 @@ export initialize = ->
     log "initialize"
     # setDefaultState()
     # setInterval(updateTableHeight, tableRenderCycleMS)
+    # setInterval(emboldenNewRows, tableRenderCycleMS)
     window.addEventListener("resize", updateTableHeight)
+    window.searchForName = searchForName
     return
 
 ############################################################
@@ -51,15 +53,19 @@ renderTable = (dataPromise) ->
     search = true
 
     pagination = { limit: 50 }
-    sort = { multiColumn: false }
+    # sort = { multiColumn: false }
+    sort = false
     fixedHeader = true
-    # resizable = false
-    resizable = true
+    resizable = false
+    # resizable = true
     height = "#{utl.getTableHeight(currentState)}px"
     width = "100%"
-
-    gridJSOptions = { columns, data, language, search, pagination, sort, fixedHeader, resizable, height, width }
-
+    
+    autoWidth = false
+    afterRender = emboldenNewRows
+    
+    gridJSOptions = { columns, data, language, search, pagination, sort, fixedHeader, resizable, height, width, autoWidth, afterRender }
+    
     if tableObj?
         tableObj = null
         gridjsFrame.innerHTML = ""  
@@ -73,27 +79,31 @@ renderTable = (dataPromise) ->
     
     # firstRenderComplete = true
     # setInterval(updateTableHeight, tableRenderCycleMS)
+    setTimeout(emboldenNewRows, tableRenderCycleMS)
     return
 
-updateTableData = (dataPromise) ->
-    # log "updateTableData"
+# updateTableData = (dataPromise) ->
+#     # log "updateTableData"
 
-    columns = utl.getColumnsObject(currentState)
-    data = -> dataPromise
-    language = utl.getLanguageObject(currentState)
+#     columns = utl.getColumnsObject(currentState)
+#     data = -> dataPromise
+#     language = utl.getLanguageObject(currentState)
 
-    searchInput = document.getElementsByClassName("gridjs-search-input")[0]
-    if searchInput? then searchValue = searchInput.value
-    log searchValue
-    search =
-        enabled: true
-        keyword: searchValue
+#     searchInput = document.getElementsByClassName("gridjs-search-input")[0]
+#     if searchInput? then searchValue = searchInput.value
+#     log searchValue
+#     search =
+#         enabled: true
+#         keyword: searchValue
 
-    focusRange = getSearchFocusRange()
+#     focusRange = getSearchFocusRange()
 
-    await updateTable({columns, data, language, search})
-    if focusRange? then setFocusRange(focusRange)
-    return
+#     height = "#{utl.getTableHeight(currentState)}px"
+#     width = "100%"
+
+#     await updateTable({columns, data, language, search, height, width})
+#     if focusRange? then setFocusRange(focusRange)
+#     return
 
 ############################################################
 updateTableHeight = (height) ->
@@ -141,6 +151,8 @@ updateTable = (config) ->
     try await tableObj.updateConfig(config).forceRender()
     catch err then log err
     rendering = false
+
+    setTimeout(emboldenNewRows, tableRenderCycleMS)
     
     if updateLater?
         log "updateLater existed!"
@@ -166,122 +178,43 @@ setFocusRange = (range) ->
     searchInput.focus()
     return
 
-############################################################
-userSelectionDone = ->
-    if userSelectionResolve then userSelectionResolve(true)
-    userSelectionResolve = null
+emboldenNewRows = ->
+    log "emboldenNewRows"
+    if document.getElementsByClassName("gridjs-loading-bar").length > 0
+        setTimeout(emboldenNewRows, tableRenderCycleMS)
+        return
+
+    isNewIndicators = document.getElementsByClassName("isNew")
+    log "isNewIndicators: #{isNewIndicators.length}"
+
+    for el in isNewIndicators
+        rowEl = getRowForIsNewIndicator(el)
+        rowEl.classList.add("newRow")
+    return
+
+getRowForIsNewIndicator = (indicator) ->
+    node = indicator
+    loop
+        node = node.parentNode
+        if !node? or node.tagName == "TR" then return node
     return
 
 ############################################################
-export userSelectionPromise = ->
-    abort = null
-    p = new Promise (resolve, reject) ->
-        abort = reject
-        userSelectionResolve = resolve
-    p.abort = abort
-    return p
-
-export applySelection = ->
-    checkboxPlugin = tableObj.config.plugin.get('select')
-    selectedIndices = checkboxPlugin.props.store.state.rowIds
-
-    olog { selectedIndices }
-
-    selectionData = await tableObj.config.data()
-
-    selectedData = []
-    for index in selectedIndices
-        selectedData.push(selectionData[index])
-
-    # olog { selectedData }
-
-    if currentState == "patientApproval1" then await dataModule.addToOwnData(selectedData)
-    else if currentState == "shareToDoctor0" then await dataModule.setShareData(selectedData)
-    else if currentState == "shareToDoctor1" then await dataModule.shareToDoctors(selectedData)
-    else log "I was not in any selection application state: "+currentState
-
-    ## The reset does not help - BUG! the state of the plugin is set once and would not be changable again TODO FIX
-    # checkboxPlugin.props.store.state.rowIds = [] # reset selection
-    userSelectionDone()
+searchForName = (name) ->
+    log "searchForName #{name}"
+    search = {keyword: name}
+    updateTable({search})
     return
-
+    
 ############################################################
 export refresh = ->
     log "refresh"
     log currentState
-    switch currentState
-        when "shareToDoctor0" then setShareToDoctor0()
-        when "shareToDoctor1" then setShareToDoctor1()
-        when "patientApproval0" then setPatientApproval0()
-        when "patientApproval1" then setPatientApproval1()
-        when "ownData" then setDefaultState()
+    setDefaultState()
     return 
 
 ############################################################
 #region set to state Functions
-export setShareToDoctor0 = ->
-    log "setShareToDoctor0"
-    currentState = "shareToDoctor0"
-
-    columns = utl.getColumnsObject(currentState)
-    data = -> dataModule.getOwnData()
-    language = utl.getLanguageObject(currentState)
-
-    ## preserve search
-    searchInput = document.getElementsByClassName("gridjs-search-input")[0]
-    if searchInput? 
-        searchValue = searchInput.value
-        # log searchValue
-        search =
-            enabled: true
-            keyword: searchValue
-    else 
-        search = true
-    overviewtable.classList.remove("no-search")
-
-    updateTable({columns, data, language, search})
-    return
-
-export setShareToDoctor1 = ->
-    log "setShareToDoctor1"
-    currentState = "shareToDoctor1"
-
-    columns = utl.getColumnsObject(currentState)
-    data = -> dataModule.getDoctorList()
-    language = utl.getLanguageObject(currentState)
-    search = true
-    overviewtable.classList.remove("no-search")
-
-    updateTable({columns, data, language, search})
-    return
-
-############################################################
-export setPatientApproval0 = ->
-    log "setPatientApproval0"
-    currentState = "patientApproval0"
-
-    data = []
-    language = utl.getLanguageObject(currentState)
-    search = false
-    overviewtable.classList.add("no-search")
-
-    updateTable({search, data, language})
-    return
-
-export setPatientApproval1 = ->
-    log "setPatientAPproval1"
-    currentState = "patientApproval1"
-
-    columns = utl.getColumnsObject(currentState)
-    data = -> dataModule.getPatientData()
-    language = utl.getLanguageObject(currentState)
-    search = true
-    overviewtable.classList.remove("no-search")
-
-    updateTable({columns, search, data, language})
-    return
-
-############################################################
 export setDefaultState = ->
     log "setDefaultState"
     currentState = "ownData"
@@ -290,11 +223,11 @@ export setDefaultState = ->
     dataPromise = dataModule.getOwnData()
 
     # this is when we want to destroy the table completely
-    # renderTable(dataPromise)
+    renderTable(dataPromise)
 
     # in the usual case we only want to update the table when it already exists
-    if tableObj then updateTableData(dataPromise)
-    else renderTable(dataPromise)
+    # if tableObj then updateTableData(dataPromise)
+    # else renderTable(dataPromise)
     return
 
 #endregion
