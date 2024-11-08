@@ -40,7 +40,7 @@ export initialize = ->
     # setInterval(updateTableHeight, tableRenderCycleMS)
     # setInterval(emboldenNewRows, tableRenderCycleMS)
     window.addEventListener("resize", updateTableHeight)
-    window.searchForName = searchForName
+    window.gridSearchByString = gridSearchByString
     return
 
 ############################################################
@@ -62,9 +62,8 @@ renderTable = (dataPromise) ->
     width = "100%"
     
     autoWidth = false
-    afterRender = emboldenNewRows
     
-    gridJSOptions = { columns, data, language, search, pagination, sort, fixedHeader, resizable, height, width, autoWidth, afterRender }
+    gridJSOptions = { columns, data, language, search, pagination, sort, fixedHeader, resizable, height, width, autoWidth }
     
     if tableObj?
         tableObj = null
@@ -79,7 +78,7 @@ renderTable = (dataPromise) ->
     
     # firstRenderComplete = true
     # setInterval(updateTableHeight, tableRenderCycleMS)
-    setTimeout(emboldenNewRows, tableRenderCycleMS)
+    # setTimeout(emboldenNewRows, tableRenderCycleMS)
     return
 
 # updateTableData = (dataPromise) ->
@@ -152,7 +151,7 @@ updateTable = (config) ->
     catch err then log err
     rendering = false
 
-    setTimeout(emboldenNewRows, tableRenderCycleMS)
+    # setTimeout(emboldenNewRows, tableRenderCycleMS)
     
     if updateLater?
         log "updateLater existed!"
@@ -178,19 +177,23 @@ setFocusRange = (range) ->
     searchInput.focus()
     return
 
-emboldenNewRows = ->
-    log "emboldenNewRows"
-    if document.getElementsByClassName("gridjs-loading-bar").length > 0
-        setTimeout(emboldenNewRows, tableRenderCycleMS)
-        return
+# emboldenNewRows = ->
+#     log "emboldenNewRows"
+#     if document.getElementsByClassName("gridjs-loading-bar").length > 0
+#         setTimeout(emboldenNewRows, tableRenderCycleMS)
+#         return
 
-    isNewIndicators = document.getElementsByClassName("isNew")
-    log "isNewIndicators: #{isNewIndicators.length}"
 
-    for el in isNewIndicators
-        rowEl = getRowForIsNewIndicator(el)
-        rowEl.classList.add("newRow")
-    return
+#     searchInput = document.getElementsByClassName("gridjs-search-input")[0]
+#     if searchInput?
+
+#     isNewIndicators = document.getElementsByClassName("isNew")
+#     log "isNewIndicators: #{isNewIndicators.length}"
+
+#     for el in isNewIndicators
+#         rowEl = getRowForIsNewIndicator(el)
+#         rowEl.classList.add("newRow")
+#     return
 
 getRowForIsNewIndicator = (indicator) ->
     node = indicator
@@ -200,8 +203,8 @@ getRowForIsNewIndicator = (indicator) ->
     return
 
 ############################################################
-searchForName = (name) ->
-    log "searchForName #{name}"
+gridSearchByString = (name) ->
+    log "gridSearchByString #{name}"
     search = {keyword: name}
     updateTable({search})
     return

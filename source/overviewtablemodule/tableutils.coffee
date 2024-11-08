@@ -123,14 +123,15 @@ numberCompare = (el1, el2) ->
 #region cell formatter functions
 isNewFormatter = (content, row) ->
     dotClass = "isNewDot"
-
+    
     if content then dotClass = "isNewDot isNew" 
 
     innerHTML = "<div class='#{dotClass}'></div>"
     return  html(innerHTML)
 
 doctorNameFormatter = (content, row) ->
-    return content
+    if row._cells[0].data then return html("<b>#{content}</b>")
+    else return content
 
 bilderFormatter  = (content, row) ->
     return "" unless content.images?
@@ -139,7 +140,9 @@ bilderFormatter  = (content, row) ->
     for image in content.images
         innerHTML += "<li><a href='#{image.url}'> #{image.description}</a></li>"
     innerHTML += "</ul>"
-    return html(innerHTML)
+
+    if row._cells[0].data then return html("<b>#{innerHTML}</b>")
+    else return html(innerHTML) 
 
 befundeFormatter = (content , row) ->
     return "" unless content.befunde?
@@ -148,7 +151,9 @@ befundeFormatter = (content , row) ->
     for befund in content.befunde
         innerHTML += "<li><a href='#{befund.url}'> #{befund.description}</a></li>"
     innerHTML += "</ul>"
-    return html(innerHTML)
+
+    if row._cells[0].data then return html("<b>#{innerHTML}</b>")
+    else return html(innerHTML) 
 
     # formatObj = {
     #         className: 'befund-button click-button',
@@ -173,39 +178,51 @@ screeningDateFormatter = (content, row) ->
     # return date.format("DD.MM.YYYY")
 
     #here we expect to already get a dayjs object
-    return content.format("DD.MM.YYYY")
+    dateString = content.format("DD.MM.YYYY")
+    if row._cells[0].data then return html("<b>#{dateString}</b>")
+    else return dateString 
 
 nameFormatter = (content, row) ->
-    innerHTML = """
-        <a onclick='searchForName("#{content}")'>#{content}</a>
+    linkHTML = """
+        <a onclick='gridSearchByString("#{content}")'>#{content}</a>
     """
-    return html(innerHTML)
+    if row._cells[0].data then return html("<b>#{linkHTML}</b>")
+    else return html(linkHTML)
+
 
 svnFormatter = (content, row) ->
-    innerHTML = """
-        <a onclick='searchForName("#{content}")'>#{content}</a>
+    linkHTML = """
+        <a onclick='gridSearchByString("#{content}")'>#{content}</a>
     """
-    return html(innerHTML)
+    if row._cells[0].data then return html("<b>#{linkHTML}</b>")
+    else return html(linkHTML)
+
 
 birthdayFormatter = (content, row) ->
     # date = dayjs(content)
     # return date.format("DD.MM.YYYY")
 
     #here we expect to already get a dayjs object
-    return content.format("DD.MM.YYYY")
+    dateString = content.format("DD.MM.YYYY")
+    if row._cells[0].data then return html("<b>#{dateString}</b>")
+    else return dateString 
 
 descriptionFormatter = (content, row) ->
-    return content
+    if row._cells[0].data then return html("<b>#{content}</b>")
+    else return content
 
 radiologistFormatter = (content, row) ->
-    return content
+    if row._cells[0].data then return html("<b>#{content}</b>")
+    else return content
 
 sendingDateFormatter = (content, row) ->
     # date = dayjs(content)
     # return date.format("YYYY-MM-DD hh:mm")
 
     #here we expect to already get a dayjs object
-    return content.format("DD.MM.YYYY HH:mm")
+    dateString = content.format("DD.MM.YYYY HH:mm")
+    if row._cells[0].data then return html("<b>#{dateString}</b>")
+    else return dateString 
 
 #endregion
 
