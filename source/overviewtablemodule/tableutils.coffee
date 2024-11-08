@@ -182,7 +182,10 @@ nameFormatter = (content, row) ->
     return html(innerHTML)
 
 svnFormatter = (content, row) ->
-    return content
+    innerHTML = """
+        <a onclick='searchForName("#{content}")'>#{content}</a>
+    """
+    return html(innerHTML)
 
 birthdayFormatter = (content, row) ->
     # date = dayjs(content)
