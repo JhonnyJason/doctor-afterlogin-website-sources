@@ -95,7 +95,7 @@ mergeDocuments = (obj, share) ->
     result = {} unless result?
     return result unless share.documentUrl?
 
-    if share.formatType == 4
+    if share.formatType == 4 or share.formatType == "4"
         result.images = [] unless result.images?
         image = {
             url: share.documentUrl, 

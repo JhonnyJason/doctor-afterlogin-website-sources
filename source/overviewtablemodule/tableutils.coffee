@@ -189,7 +189,6 @@ nameFormatter = (content, row) ->
     if row._cells[0].data then return html("<b>#{linkHTML}</b>")
     else return html(linkHTML)
 
-
 svnFormatter = (content, row) ->
     linkHTML = """
         <a onclick='gridSearchByString("#{content}")'>#{content}</a>
@@ -197,15 +196,22 @@ svnFormatter = (content, row) ->
     if row._cells[0].data then return html("<b>#{linkHTML}</b>")
     else return html(linkHTML)
 
-
 birthdayFormatter = (content, row) ->
     # date = dayjs(content)
     # return date.format("DD.MM.YYYY")
 
     #here we expect to already get a dayjs object
     dateString = content.format("DD.MM.YYYY")
+    # row._cells[4].data = dateString
+    # linkHTML = """
+    #     <a onclick='gridSearchByString("#{dateString}")'>#{dateString}</a>
+    # """
+    
+    # if row._cells[0].data then return html("<b>#{linkHTML}</b>")
+    # else return html(linkHTML)
+
     if row._cells[0].data then return html("<b>#{dateString}</b>")
-    else return dateString 
+    else return dateString
 
 descriptionFormatter = (content, row) ->
     if row._cells[0].data then return html("<b>#{content}</b>")
