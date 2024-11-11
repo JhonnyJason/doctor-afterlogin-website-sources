@@ -1,5 +1,6 @@
 export const ownSampleData = [
     {
+        "isNew": true,
         "shareId": 15768771,
         "from": 84793,
         "to": 84793,
@@ -12,6 +13,7 @@ export const ownSampleData = [
         "patientSsn": 3333030333,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "fromFullName": "Radiologe X",
         "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=0"
     },
@@ -21,14 +23,14 @@ export const ownSampleData = [
         "to": 84793,
         "patientId": 361511,
         "patientFullName": "GWS Gabi",
-        "formatType": "4",
+        "formatType": "2",
         "studyDate": "2018-01-05 00:00:00",
-        "createdAt": "2021-02-27 13:15:23",
-        "studyId": 1664865,
+        "createdAt": "2021-01-27 13:15:23",
+        "studyId": 1664864,
         "patientSsn": 3333030334,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
-        "documentDescription": "bild",
+        "documentDescription": "AlterBefund",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=1"
     },
     {

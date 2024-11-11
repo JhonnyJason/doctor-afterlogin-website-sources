@@ -100,6 +100,7 @@ mergeBefunde = (obj, share) ->
         befund = {
             url: share.documentUrl, 
             description: share.documentDescription
+            isNew: share.isNew
         }
         result.push(befund)
 
@@ -117,6 +118,7 @@ mergeImages = (obj, share) ->
         image = {
             url: share.documentUrl, 
             description: share.documentDescription
+            isNew: share.isNew
         }
         result.push(image)
 

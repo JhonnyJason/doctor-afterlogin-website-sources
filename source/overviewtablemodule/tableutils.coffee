@@ -135,25 +135,35 @@ doctorNameFormatter = (content, row) ->
 
 bilderFormatter  = (content, row) ->
     return "" unless content?
-
     innerHTML = "<ul class='bilder'>"
     for image in content
-        innerHTML += "<li><a href='#{image.url}'> #{image.description}</a></li>"
+        if image.isNew
+            innerHTML += "<li><b><a href='#{image.url}'> #{image.description}</a></b></li>"
+        else
+            innerHTML += "<li><a href='#{image.url}'> #{image.description}</a></li>"
+        
     innerHTML += "</ul>"
+    
+    return html(innerHTML)
 
-    if row._cells[0].data then return html("<b>#{innerHTML}</b>")
-    else return html(innerHTML) 
+    # if row._cells[0].data then return html("<b>#{innerHTML}</b>")
+    # else return html(innerHTML) 
 
 befundeFormatter = (content , row) ->
     return "" unless content?
 
     innerHTML = "<ul class='befunde'>"
     for befund in content
-        innerHTML += "<li><a href='#{befund.url}'> #{befund.description}</a></li>"
+        if befund.isNew
+            innerHTML += "<li><b><a href='#{befund.url}'> #{befund.description}</a></b></li>"
+        else
+            innerHTML += "<li><a href='#{befund.url}'> #{befund.description}</a></li>"
+
     innerHTML += "</ul>"
 
-    if row._cells[0].data then return html("<b>#{innerHTML}</b>")
-    else return html(innerHTML) 
+    return html(innerHTML)
+    # if row._cells[0].data then return html("<b>#{innerHTML}</b>")
+    # else return html(innerHTML) 
 
     # formatObj = {
     #         className: 'befund-button click-button',
@@ -174,13 +184,14 @@ befundeFormatter = (content , row) ->
     # return html(innerHTML)
 
 screeningDateFormatter = (content, row) ->
+    return content.format("DD.MM.YYYY")
     # date = dayjs(content)
     # return date.format("DD.MM.YYYY")
 
     #here we expect to already get a dayjs object
-    dateString = content.format("DD.MM.YYYY")
-    if row._cells[0].data then return html("<b>#{dateString}</b>")
-    else return dateString 
+    # dateString = content.format("DD.MM.YYYY")
+    # if row._cells[0].data then return html("<b>#{dateString}</b>")
+    # else return dateString 
 
 nameFormatter = (content, row) ->
     linkHTML = """
@@ -190,11 +201,12 @@ nameFormatter = (content, row) ->
     else return html(linkHTML)
 
 svnFormatter = (content, row) ->
-    linkHTML = """
-        <a onclick='gridSearchByString("#{content}")'>#{content}</a>
-    """
-    if row._cells[0].data then return html("<b>#{linkHTML}</b>")
-    else return html(linkHTML)
+    return content
+    # linkHTML = """
+    #     <a onclick='gridSearchByString("#{content}")'>#{content}</a>
+    # """
+    # if row._cells[0].data then return html("<b>#{linkHTML}</b>")
+    # else return html(linkHTML)
 
 birthdayFormatter = (content, row) ->
     # date = dayjs(content)
@@ -203,14 +215,15 @@ birthdayFormatter = (content, row) ->
     #here we expect to already get a dayjs object
     if typeof content == "object" 
         dateString = content.format("DD.MM.YYYY")
-        if row._cells[0].data then return html("<b>#{dateString}</b>")
-        else return dateString
-    else
-        linkHTML = """
-            <a onclick='gridSearchByString("#{content}")'>#{content}</a>
-        """
-        if row._cells[0].data then return html("<b>#{linkHTML}</b>")
-        else return html(linkHTML)
+        return dateString
+        # if row._cells[0].data then return html("<b>#{dateString}</b>")
+        # else return dateString
+    else return content
+        # linkHTML = """
+        #     <a onclick='gridSearchByString("#{content}")'>#{content}</a>
+        # """
+        # if row._cells[0].data then return html("<b>#{linkHTML}</b>")
+        # else return html(linkHTML)
             
 
 
@@ -219,8 +232,9 @@ descriptionFormatter = (content, row) ->
     else return content
 
 radiologistFormatter = (content, row) ->
-    if row._cells[0].data then return html("<b>#{content}</b>")
-    else return content
+    return content
+    # if row._cells[0].data then return html("<b>#{content}</b>")
+    # else return content
 
 sendingDateFormatter = (content, row) ->
     # date = dayjs(content)
@@ -352,7 +366,7 @@ export getColumnsObject = (state) ->
 
     #endregion
 
-    return [isNewHeadObj, screeningDateHeadObj, nameHeadObj, svnHeadObj, birthdayHeadObj, befundeHeadObj, bilderHeadObj, radiologistHeadObj, sendingDateHeadObj]
+    return [isNewHeadObj, nameHeadObj, svnHeadObj, birthdayHeadObj, befundeHeadObj, bilderHeadObj, screeningDateHeadObj, radiologistHeadObj, sendingDateHeadObj]
 
 export getLanguageObject = (state) -> return deDE
 
