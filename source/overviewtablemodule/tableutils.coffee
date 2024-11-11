@@ -134,10 +134,10 @@ doctorNameFormatter = (content, row) ->
     else return content
 
 bilderFormatter  = (content, row) ->
-    return "" unless content.images?
+    return "" unless content?
 
-    innerHTML = "<ul>"
-    for image in content.images
+    innerHTML = "<ul class='bilder'>"
+    for image in content
         innerHTML += "<li><a href='#{image.url}'> #{image.description}</a></li>"
     innerHTML += "</ul>"
 
@@ -145,10 +145,10 @@ bilderFormatter  = (content, row) ->
     else return html(innerHTML) 
 
 befundeFormatter = (content , row) ->
-    return "" unless content.befunde?
+    return "" unless content?
 
-    innerHTML = "<ul>"
-    for befund in content.befunde
+    innerHTML = "<ul class='befunde'>"
+    for befund in content
         innerHTML += "<li><a href='#{befund.url}'> #{befund.description}</a></li>"
     innerHTML += "</ul>"
 
@@ -201,17 +201,18 @@ birthdayFormatter = (content, row) ->
     # return date.format("DD.MM.YYYY")
 
     #here we expect to already get a dayjs object
-    dateString = content.format("DD.MM.YYYY")
-    # row._cells[4].data = dateString
-    # linkHTML = """
-    #     <a onclick='gridSearchByString("#{dateString}")'>#{dateString}</a>
-    # """
-    
-    # if row._cells[0].data then return html("<b>#{linkHTML}</b>")
-    # else return html(linkHTML)
+    if typeof content == "object" 
+        dateString = content.format("DD.MM.YYYY")
+        if row._cells[0].data then return html("<b>#{dateString}</b>")
+        else return dateString
+    else
+        linkHTML = """
+            <a onclick='gridSearchByString("#{content}")'>#{content}</a>
+        """
+        if row._cells[0].data then return html("<b>#{linkHTML}</b>")
+        else return html(linkHTML)
+            
 
-    if row._cells[0].data then return html("<b>#{dateString}</b>")
-    else return dateString
 
 descriptionFormatter = (content, row) ->
     if row._cells[0].data then return html("<b>#{content}</b>")
@@ -281,14 +282,14 @@ export getColumnsObject = (state) ->
 
     bilderHeadObj = {
         name: "Bilder"
-        id: "documents"
+        id: "images"
         formatter: bilderFormatter
         sort: false
     }
 
     befundeHeadObj = {
         name: "Befunde"
-        id: "documents"
+        id: "befunde"
         formatter: befundeFormatter
         sort: false
     }

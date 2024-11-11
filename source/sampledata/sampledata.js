@@ -12,6 +12,7 @@ export const ownSampleData = [
         "patientSsn": 3333030333,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=0"
     },
     {
@@ -27,6 +28,7 @@ export const ownSampleData = [
         "patientSsn": 3333030334,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=1"
     },
     {
@@ -42,6 +44,7 @@ export const ownSampleData = [
         "patientSsn": 3333030335,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=2"
     },
     {
@@ -57,6 +60,7 @@ export const ownSampleData = [
         "patientSsn": 3333030336,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=3"
     },
     {
@@ -72,6 +76,7 @@ export const ownSampleData = [
         "patientSsn": 3333030337,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=4"
     },
     {
@@ -87,6 +92,7 @@ export const ownSampleData = [
         "patientSsn": 3333030338,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=5"
     },
     {
@@ -102,6 +108,7 @@ export const ownSampleData = [
         "patientSsn": 3333030339,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=6"
     },
     {
@@ -117,6 +124,7 @@ export const ownSampleData = [
         "patientSsn": 3333030340,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=7"
     },
     {
@@ -132,6 +140,7 @@ export const ownSampleData = [
         "patientSsn": 3333030341,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=8"
     },
     {
@@ -147,6 +156,7 @@ export const ownSampleData = [
         "patientSsn": 3333030342,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=9"
     },
     {
@@ -162,6 +172,7 @@ export const ownSampleData = [
         "patientSsn": 3333030343,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=10"
     },
     {
@@ -177,6 +188,7 @@ export const ownSampleData = [
         "patientSsn": 3333030344,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=11"
     },
     {
@@ -192,6 +204,7 @@ export const ownSampleData = [
         "patientSsn": 3333030345,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=12"
     },
     {
@@ -207,6 +220,7 @@ export const ownSampleData = [
         "patientSsn": 3333030346,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=13"
     },
     {
@@ -222,6 +236,7 @@ export const ownSampleData = [
         "patientSsn": 3333030347,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=14"
     },
     {
@@ -237,6 +252,7 @@ export const ownSampleData = [
         "patientSsn": 3333030348,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=15"
     },
     {
@@ -252,6 +268,7 @@ export const ownSampleData = [
         "patientSsn": 3333030349,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=16"
     },
     {
@@ -267,6 +284,7 @@ export const ownSampleData = [
         "patientSsn": 3333030350,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=17"
     },
     {
@@ -282,6 +300,7 @@ export const ownSampleData = [
         "patientSsn": 3333030351,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=18"
     },
     {
@@ -297,6 +316,7 @@ export const ownSampleData = [
         "patientSsn": 3333030352,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=19"
     },
     {
@@ -312,6 +332,7 @@ export const ownSampleData = [
         "patientSsn": 3333030353,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=20"
     },
     {
@@ -327,6 +348,7 @@ export const ownSampleData = [
         "patientSsn": 3333030354,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=21"
     },
     {
@@ -342,6 +364,7 @@ export const ownSampleData = [
         "patientSsn": 3333030355,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=22"
     },
     {
@@ -357,6 +380,7 @@ export const ownSampleData = [
         "patientSsn": 3333030356,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=23"
     },
     {
@@ -372,6 +396,7 @@ export const ownSampleData = [
         "patientSsn": 3333030357,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=24"
     },
     {
@@ -387,6 +412,7 @@ export const ownSampleData = [
         "patientSsn": 3333030358,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=25"
     },
     {
@@ -402,6 +428,7 @@ export const ownSampleData = [
         "patientSsn": 3333030359,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=26"
     },
     {
@@ -417,6 +444,7 @@ export const ownSampleData = [
         "patientSsn": 3333030360,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=27"
     },
     {
@@ -432,6 +460,7 @@ export const ownSampleData = [
         "patientSsn": 3333030361,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=28"
     },
     {
@@ -447,6 +476,7 @@ export const ownSampleData = [
         "patientSsn": 3333030362,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=29"
     },
     {
@@ -462,6 +492,7 @@ export const ownSampleData = [
         "patientSsn": 3333030363,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=30"
     },
     {
@@ -477,6 +508,7 @@ export const ownSampleData = [
         "patientSsn": 3333030364,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=31"
     },
     {
@@ -492,6 +524,7 @@ export const ownSampleData = [
         "patientSsn": 3333030365,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=32"
     },
     {
@@ -507,6 +540,7 @@ export const ownSampleData = [
         "patientSsn": 3333030366,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=33"
     },
     {
@@ -522,6 +556,7 @@ export const ownSampleData = [
         "patientSsn": 3333030367,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=34"
     },
     {
@@ -537,6 +572,7 @@ export const ownSampleData = [
         "patientSsn": 3333030368,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=35"
     },
     {
@@ -552,6 +588,7 @@ export const ownSampleData = [
         "patientSsn": 3333030369,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=36"
     },
     {
@@ -567,6 +604,7 @@ export const ownSampleData = [
         "patientSsn": 3333030370,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=37"
     },
     {
@@ -582,6 +620,7 @@ export const ownSampleData = [
         "patientSsn": 3333030371,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=38"
     },
     {
@@ -597,6 +636,7 @@ export const ownSampleData = [
         "patientSsn": 3333030372,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=39"
     },
     {
@@ -612,6 +652,7 @@ export const ownSampleData = [
         "patientSsn": 3333030373,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=40"
     },
     {
@@ -627,6 +668,7 @@ export const ownSampleData = [
         "patientSsn": 3333030374,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=41"
     },
     {
@@ -642,6 +684,7 @@ export const ownSampleData = [
         "patientSsn": 3333030375,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=42"
     },
     {
@@ -657,6 +700,7 @@ export const ownSampleData = [
         "patientSsn": 3333030376,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=43"
     },
     {
@@ -672,6 +716,7 @@ export const ownSampleData = [
         "patientSsn": 3333030377,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=44"
     },
     {
@@ -687,6 +732,7 @@ export const ownSampleData = [
         "patientSsn": 3333030378,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=45"
     },
     {
@@ -702,6 +748,7 @@ export const ownSampleData = [
         "patientSsn": 3333030379,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=46"
     },
     {
@@ -717,6 +764,7 @@ export const ownSampleData = [
         "patientSsn": 3333030380,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=47"
     },
     {
@@ -732,6 +780,7 @@ export const ownSampleData = [
         "patientSsn": 3333030381,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=48"
     },
     {
@@ -747,6 +796,7 @@ export const ownSampleData = [
         "patientSsn": 3333030382,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=49"
     },
     {
@@ -762,6 +812,7 @@ export const ownSampleData = [
         "patientSsn": 3333030383,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=50"
     },
     {
@@ -777,6 +828,7 @@ export const ownSampleData = [
         "patientSsn": 3333030384,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=51"
     },
     {
@@ -792,6 +844,7 @@ export const ownSampleData = [
         "patientSsn": 3333030385,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=52"
     },
     {
@@ -807,6 +860,7 @@ export const ownSampleData = [
         "patientSsn": 3333030386,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=53"
     },
     {
@@ -822,6 +876,7 @@ export const ownSampleData = [
         "patientSsn": 3333030387,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=54"
     },
     {
@@ -837,6 +892,7 @@ export const ownSampleData = [
         "patientSsn": 3333030388,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=55"
     },
     {
@@ -852,6 +908,7 @@ export const ownSampleData = [
         "patientSsn": 3333030389,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=56"
     },
     {
@@ -867,6 +924,7 @@ export const ownSampleData = [
         "patientSsn": 3333030390,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=57"
     },
     {
@@ -882,6 +940,7 @@ export const ownSampleData = [
         "patientSsn": 3333030391,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=58"
     },
     {
@@ -897,6 +956,7 @@ export const ownSampleData = [
         "patientSsn": 3333030392,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=59"
     },
     {
@@ -912,6 +972,7 @@ export const ownSampleData = [
         "patientSsn": 3333030393,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=60"
     },
     {
@@ -927,6 +988,7 @@ export const ownSampleData = [
         "patientSsn": 3333030394,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=61"
     },
     {
@@ -942,6 +1004,7 @@ export const ownSampleData = [
         "patientSsn": 3333030395,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=62"
     },
     {
@@ -957,6 +1020,7 @@ export const ownSampleData = [
         "patientSsn": 3333030396,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=63"
     },
     {
@@ -972,6 +1036,7 @@ export const ownSampleData = [
         "patientSsn": 3333030397,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=64"
     },
     {
@@ -987,6 +1052,7 @@ export const ownSampleData = [
         "patientSsn": 3333030398,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=65"
     },
     {
@@ -1002,6 +1068,7 @@ export const ownSampleData = [
         "patientSsn": 3333030399,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=66"
     },
     {
@@ -1017,6 +1084,7 @@ export const ownSampleData = [
         "patientSsn": 3333030400,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=67"
     },
     {
@@ -1032,6 +1100,7 @@ export const ownSampleData = [
         "patientSsn": 3333030401,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=68"
     },
     {
@@ -1047,6 +1116,7 @@ export const ownSampleData = [
         "patientSsn": 3333030402,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=69"
     },
     {
@@ -1062,6 +1132,7 @@ export const ownSampleData = [
         "patientSsn": 3333030403,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=70"
     },
     {
@@ -1077,6 +1148,7 @@ export const ownSampleData = [
         "patientSsn": 3333030404,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=71"
     },
     {
@@ -1092,6 +1164,7 @@ export const ownSampleData = [
         "patientSsn": 3333030405,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=72"
     },
     {
@@ -1107,6 +1180,7 @@ export const ownSampleData = [
         "patientSsn": 3333030406,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=73"
     },
     {
@@ -1122,6 +1196,7 @@ export const ownSampleData = [
         "patientSsn": 3333030407,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=74"
     },
     {
@@ -1137,6 +1212,7 @@ export const ownSampleData = [
         "patientSsn": 3333030408,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=75"
     },
     {
@@ -1152,6 +1228,7 @@ export const ownSampleData = [
         "patientSsn": 3333030409,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=76"
     },
     {
@@ -1167,6 +1244,7 @@ export const ownSampleData = [
         "patientSsn": 3333030410,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=77"
     },
     {
@@ -1182,6 +1260,7 @@ export const ownSampleData = [
         "patientSsn": 3333030411,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=78"
     },
     {
@@ -1197,6 +1276,7 @@ export const ownSampleData = [
         "patientSsn": 3333030412,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=79"
     },
     {
@@ -1212,6 +1292,7 @@ export const ownSampleData = [
         "patientSsn": 3333030413,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=80"
     },
     {
@@ -1227,6 +1308,7 @@ export const ownSampleData = [
         "patientSsn": 3333030414,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=81"
     },
     {
@@ -1242,6 +1324,7 @@ export const ownSampleData = [
         "patientSsn": 3333030415,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=82"
     },
     {
@@ -1257,6 +1340,7 @@ export const ownSampleData = [
         "patientSsn": 3333030416,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=83"
     },
     {
@@ -1272,6 +1356,7 @@ export const ownSampleData = [
         "patientSsn": 3333030417,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=84"
     },
     {
@@ -1287,6 +1372,7 @@ export const ownSampleData = [
         "patientSsn": 3333030418,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=85"
     },
     {
@@ -1302,6 +1388,7 @@ export const ownSampleData = [
         "patientSsn": 3333030419,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=86"
     },
     {
@@ -1317,6 +1404,7 @@ export const ownSampleData = [
         "patientSsn": 3333030420,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=87"
     },
     {
@@ -1332,6 +1420,7 @@ export const ownSampleData = [
         "patientSsn": 3333030421,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=88"
     },
     {
@@ -1347,6 +1436,7 @@ export const ownSampleData = [
         "patientSsn": 3333030422,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=89"
     },
     {
@@ -1362,6 +1452,7 @@ export const ownSampleData = [
         "patientSsn": 3333030423,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=90"
     },
     {
@@ -1377,6 +1468,7 @@ export const ownSampleData = [
         "patientSsn": 3333030424,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=91"
     },
     {
@@ -1392,6 +1484,7 @@ export const ownSampleData = [
         "patientSsn": 3333030425,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=92"
     },
     {
@@ -1407,6 +1500,7 @@ export const ownSampleData = [
         "patientSsn": 3333030426,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=93"
     },
     {
@@ -1422,6 +1516,7 @@ export const ownSampleData = [
         "patientSsn": 3333030427,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=94"
     },
     {
@@ -1437,6 +1532,7 @@ export const ownSampleData = [
         "patientSsn": 3333030428,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=95"
     },
     {
@@ -1452,6 +1548,7 @@ export const ownSampleData = [
         "patientSsn": 3333030429,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=96"
     },
     {
@@ -1467,6 +1564,7 @@ export const ownSampleData = [
         "patientSsn": 3333030430,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=97"
     },
     {
@@ -1482,6 +1580,7 @@ export const ownSampleData = [
         "patientSsn": 3333030431,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=98"
     },
     {
@@ -1497,6 +1596,7 @@ export const ownSampleData = [
         "patientSsn": 3333030432,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=99"
     },
     {
@@ -1512,6 +1612,7 @@ export const ownSampleData = [
         "patientSsn": 3333030433,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=100"
     },
     {
@@ -1527,6 +1628,7 @@ export const ownSampleData = [
         "patientSsn": 3333030434,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=101"
     },
     {
@@ -1542,6 +1644,7 @@ export const ownSampleData = [
         "patientSsn": 3333030435,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=102"
     },
     {
@@ -1557,6 +1660,7 @@ export const ownSampleData = [
         "patientSsn": 3333030436,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=103"
     },
     {
@@ -1572,6 +1676,7 @@ export const ownSampleData = [
         "patientSsn": 3333030437,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=104"
     },
     {
@@ -1587,6 +1692,7 @@ export const ownSampleData = [
         "patientSsn": 3333030438,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=105"
     },
     {
@@ -1602,6 +1708,7 @@ export const ownSampleData = [
         "patientSsn": 3333030439,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=106"
     },
     {
@@ -1617,6 +1724,7 @@ export const ownSampleData = [
         "patientSsn": 3333030440,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=107"
     },
     {
@@ -1632,6 +1740,7 @@ export const ownSampleData = [
         "patientSsn": 3333030441,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=108"
     },
     {
@@ -1647,6 +1756,7 @@ export const ownSampleData = [
         "patientSsn": 3333030442,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=109"
     },
     {
@@ -1662,6 +1772,7 @@ export const ownSampleData = [
         "patientSsn": 3333030443,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=110"
     },
     {
@@ -1677,6 +1788,7 @@ export const ownSampleData = [
         "patientSsn": 3333030444,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=111"
     },
     {
@@ -1692,6 +1804,7 @@ export const ownSampleData = [
         "patientSsn": 3333030445,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=112"
     },
     {
@@ -1707,6 +1820,7 @@ export const ownSampleData = [
         "patientSsn": 3333030446,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=113"
     },
     {
@@ -1722,6 +1836,7 @@ export const ownSampleData = [
         "patientSsn": 3333030447,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=114"
     },
     {
@@ -1737,6 +1852,7 @@ export const ownSampleData = [
         "patientSsn": 3333030448,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=115"
     },
     {
@@ -1752,6 +1868,7 @@ export const ownSampleData = [
         "patientSsn": 3333030449,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=116"
     },
     {
@@ -1767,6 +1884,7 @@ export const ownSampleData = [
         "patientSsn": 3333030450,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=117"
     },
     {
@@ -1782,6 +1900,7 @@ export const ownSampleData = [
         "patientSsn": 3333030451,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=118"
     },
     {
@@ -1797,6 +1916,7 @@ export const ownSampleData = [
         "patientSsn": 3333030452,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=119"
     },
     {
@@ -1812,6 +1932,7 @@ export const ownSampleData = [
         "patientSsn": 3333030453,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=120"
     },
     {
@@ -1827,6 +1948,7 @@ export const ownSampleData = [
         "patientSsn": 3333030454,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=121"
     },
     {
@@ -1842,6 +1964,7 @@ export const ownSampleData = [
         "patientSsn": 3333030455,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=122"
     },
     {
@@ -1857,6 +1980,7 @@ export const ownSampleData = [
         "patientSsn": 3333030456,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=123"
     },
     {
@@ -1872,6 +1996,7 @@ export const ownSampleData = [
         "patientSsn": 3333030457,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=124"
     },
     {
@@ -1887,6 +2012,7 @@ export const ownSampleData = [
         "patientSsn": 3333030458,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=125"
     },
     {
@@ -1902,6 +2028,7 @@ export const ownSampleData = [
         "patientSsn": 3333030459,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=126"
     },
     {
@@ -1917,6 +2044,7 @@ export const ownSampleData = [
         "patientSsn": 3333030460,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=127"
     },
     {
@@ -1932,6 +2060,7 @@ export const ownSampleData = [
         "patientSsn": 3333030461,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=128"
     },
     {
@@ -1947,6 +2076,7 @@ export const ownSampleData = [
         "patientSsn": 3333030462,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=129"
     },
     {
@@ -1962,6 +2092,7 @@ export const ownSampleData = [
         "patientSsn": 3333030463,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=130"
     },
     {
@@ -1977,6 +2108,7 @@ export const ownSampleData = [
         "patientSsn": 3333030464,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=131"
     },
     {
@@ -1992,6 +2124,7 @@ export const ownSampleData = [
         "patientSsn": 3333030465,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=132"
     },
     {
@@ -2007,6 +2140,7 @@ export const ownSampleData = [
         "patientSsn": 3333030466,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=133"
     },
     {
@@ -2022,6 +2156,7 @@ export const ownSampleData = [
         "patientSsn": 3333030467,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=134"
     },
     {
@@ -2037,6 +2172,7 @@ export const ownSampleData = [
         "patientSsn": 3333030468,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=135"
     },
     {
@@ -2052,6 +2188,7 @@ export const ownSampleData = [
         "patientSsn": 3333030469,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=136"
     },
     {
@@ -2067,6 +2204,7 @@ export const ownSampleData = [
         "patientSsn": 3333030470,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=137"
     },
     {
@@ -2082,6 +2220,7 @@ export const ownSampleData = [
         "patientSsn": 3333030471,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=138"
     },
     {
@@ -2097,6 +2236,7 @@ export const ownSampleData = [
         "patientSsn": 3333030472,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=139"
     },
     {
@@ -2112,6 +2252,7 @@ export const ownSampleData = [
         "patientSsn": 3333030473,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=140"
     },
     {
@@ -2127,6 +2268,7 @@ export const ownSampleData = [
         "patientSsn": 3333030474,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=141"
     },
     {
@@ -2142,6 +2284,7 @@ export const ownSampleData = [
         "patientSsn": 3333030475,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=142"
     },
     {
@@ -2157,6 +2300,7 @@ export const ownSampleData = [
         "patientSsn": 3333030476,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=143"
     },
     {
@@ -2172,6 +2316,7 @@ export const ownSampleData = [
         "patientSsn": 3333030477,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=144"
     },
     {
@@ -2187,6 +2332,7 @@ export const ownSampleData = [
         "patientSsn": 3333030478,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=145"
     },
     {
@@ -2202,6 +2348,7 @@ export const ownSampleData = [
         "patientSsn": 3333030479,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=146"
     },
     {
@@ -2217,6 +2364,7 @@ export const ownSampleData = [
         "patientSsn": 3333030480,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=147"
     },
     {
@@ -2232,6 +2380,7 @@ export const ownSampleData = [
         "patientSsn": 3333030481,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=148"
     },
     {
@@ -2247,6 +2396,7 @@ export const ownSampleData = [
         "patientSsn": 3333030482,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=149"
     },
     {
@@ -2262,6 +2412,7 @@ export const ownSampleData = [
         "patientSsn": 3333030483,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=150"
     },
     {
@@ -2277,6 +2428,7 @@ export const ownSampleData = [
         "patientSsn": 3333030484,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=151"
     },
     {
@@ -2292,6 +2444,7 @@ export const ownSampleData = [
         "patientSsn": 3333030485,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=152"
     },
     {
@@ -2307,6 +2460,7 @@ export const ownSampleData = [
         "patientSsn": 3333030486,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=153"
     },
     {
@@ -2322,6 +2476,7 @@ export const ownSampleData = [
         "patientSsn": 3333030487,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=154"
     },
     {
@@ -2337,6 +2492,7 @@ export const ownSampleData = [
         "patientSsn": 3333030488,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=155"
     },
     {
@@ -2352,6 +2508,7 @@ export const ownSampleData = [
         "patientSsn": 3333030489,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=156"
     },
     {
@@ -2367,6 +2524,7 @@ export const ownSampleData = [
         "patientSsn": 3333030490,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=157"
     },
     {
@@ -2382,6 +2540,7 @@ export const ownSampleData = [
         "patientSsn": 3333030491,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=158"
     },
     {
@@ -2397,6 +2556,7 @@ export const ownSampleData = [
         "patientSsn": 3333030492,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=159"
     },
     {
@@ -2412,6 +2572,7 @@ export const ownSampleData = [
         "patientSsn": 3333030493,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=160"
     },
     {
@@ -2427,6 +2588,7 @@ export const ownSampleData = [
         "patientSsn": 3333030494,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=161"
     },
     {
@@ -2442,6 +2604,7 @@ export const ownSampleData = [
         "patientSsn": 3333030495,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=162"
     },
     {
@@ -2457,6 +2620,7 @@ export const ownSampleData = [
         "patientSsn": 3333030496,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=163"
     },
     {
@@ -2472,6 +2636,7 @@ export const ownSampleData = [
         "patientSsn": 3333030497,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=164"
     },
     {
@@ -2487,6 +2652,7 @@ export const ownSampleData = [
         "patientSsn": 3333030498,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=165"
     },
     {
@@ -2502,6 +2668,7 @@ export const ownSampleData = [
         "patientSsn": 3333030499,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=166"
     },
     {
@@ -2517,6 +2684,7 @@ export const ownSampleData = [
         "patientSsn": 3333030500,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=167"
     },
     {
@@ -2532,6 +2700,7 @@ export const ownSampleData = [
         "patientSsn": 3333030501,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=168"
     },
     {
@@ -2547,6 +2716,7 @@ export const ownSampleData = [
         "patientSsn": 3333030502,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=169"
     },
     {
@@ -2562,6 +2732,7 @@ export const ownSampleData = [
         "patientSsn": 3333030503,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=170"
     },
     {
@@ -2577,6 +2748,7 @@ export const ownSampleData = [
         "patientSsn": 3333030504,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=171"
     },
     {
@@ -2592,6 +2764,7 @@ export const ownSampleData = [
         "patientSsn": 3333030505,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=172"
     },
     {
@@ -2607,6 +2780,7 @@ export const ownSampleData = [
         "patientSsn": 3333030506,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=173"
     },
     {
@@ -2622,6 +2796,7 @@ export const ownSampleData = [
         "patientSsn": 3333030507,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=174"
     },
     {
@@ -2637,6 +2812,7 @@ export const ownSampleData = [
         "patientSsn": 3333030508,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=175"
     },
     {
@@ -2652,6 +2828,7 @@ export const ownSampleData = [
         "patientSsn": 3333030509,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=176"
     },
     {
@@ -2667,6 +2844,7 @@ export const ownSampleData = [
         "patientSsn": 3333030510,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=177"
     },
     {
@@ -2682,6 +2860,7 @@ export const ownSampleData = [
         "patientSsn": 3333030511,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=178"
     },
     {
@@ -2697,6 +2876,7 @@ export const ownSampleData = [
         "patientSsn": 3333030512,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=179"
     },
     {
@@ -2712,6 +2892,7 @@ export const ownSampleData = [
         "patientSsn": 3333030513,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=180"
     },
     {
@@ -2727,6 +2908,7 @@ export const ownSampleData = [
         "patientSsn": 3333030514,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=181"
     },
     {
@@ -2742,6 +2924,7 @@ export const ownSampleData = [
         "patientSsn": 3333030515,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=182"
     },
     {
@@ -2757,6 +2940,7 @@ export const ownSampleData = [
         "patientSsn": 3333030516,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=183"
     },
     {
@@ -2772,6 +2956,7 @@ export const ownSampleData = [
         "patientSsn": 3333030517,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=184"
     },
     {
@@ -2787,6 +2972,7 @@ export const ownSampleData = [
         "patientSsn": 3333030518,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=185"
     },
     {
@@ -2802,6 +2988,7 @@ export const ownSampleData = [
         "patientSsn": 3333030519,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=186"
     },
     {
@@ -2817,6 +3004,7 @@ export const ownSampleData = [
         "patientSsn": 3333030520,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=187"
     },
     {
@@ -2832,6 +3020,7 @@ export const ownSampleData = [
         "patientSsn": 3333030521,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=188"
     },
     {
@@ -2847,6 +3036,7 @@ export const ownSampleData = [
         "patientSsn": 3333030522,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=189"
     },
     {
@@ -2862,6 +3052,7 @@ export const ownSampleData = [
         "patientSsn": 3333030523,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=190"
     },
     {
@@ -2877,6 +3068,7 @@ export const ownSampleData = [
         "patientSsn": 3333030524,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=191"
     },
     {
@@ -2892,6 +3084,7 @@ export const ownSampleData = [
         "patientSsn": 3333030525,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=192"
     },
     {
@@ -2907,6 +3100,7 @@ export const ownSampleData = [
         "patientSsn": 3333030526,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=193"
     },
     {
@@ -2922,6 +3116,7 @@ export const ownSampleData = [
         "patientSsn": 3333030527,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=194"
     },
     {
@@ -2937,6 +3132,7 @@ export const ownSampleData = [
         "patientSsn": 3333030528,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=195"
     },
     {
@@ -2952,6 +3148,7 @@ export const ownSampleData = [
         "patientSsn": 3333030529,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=196"
     },
     {
@@ -2967,6 +3164,7 @@ export const ownSampleData = [
         "patientSsn": 3333030530,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=197"
     },
     {
@@ -2982,6 +3180,7 @@ export const ownSampleData = [
         "patientSsn": 3333030531,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=198"
     },
     {
@@ -2997,6 +3196,7 @@ export const ownSampleData = [
         "patientSsn": 3333030532,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=199"
     },
     {
@@ -3012,6 +3212,7 @@ export const ownSampleData = [
         "patientSsn": 3333030533,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=200"
     },
     {
@@ -3027,6 +3228,7 @@ export const ownSampleData = [
         "patientSsn": 3333030534,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=201"
     },
     {
@@ -3042,6 +3244,7 @@ export const ownSampleData = [
         "patientSsn": 3333030535,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=202"
     },
     {
@@ -3057,6 +3260,7 @@ export const ownSampleData = [
         "patientSsn": 3333030536,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=203"
     },
     {
@@ -3072,6 +3276,7 @@ export const ownSampleData = [
         "patientSsn": 3333030537,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=204"
     },
     {
@@ -3087,6 +3292,7 @@ export const ownSampleData = [
         "patientSsn": 3333030538,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=205"
     },
     {
@@ -3102,6 +3308,7 @@ export const ownSampleData = [
         "patientSsn": 3333030539,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=206"
     },
     {
@@ -3117,6 +3324,7 @@ export const ownSampleData = [
         "patientSsn": 3333030540,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=207"
     },
     {
@@ -3132,6 +3340,7 @@ export const ownSampleData = [
         "patientSsn": 3333030541,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=208"
     },
     {
@@ -3147,6 +3356,7 @@ export const ownSampleData = [
         "patientSsn": 3333030542,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=209"
     },
     {
@@ -3162,6 +3372,7 @@ export const ownSampleData = [
         "patientSsn": 3333030543,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=210"
     },
     {
@@ -3177,6 +3388,7 @@ export const ownSampleData = [
         "patientSsn": 3333030544,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=211"
     },
     {
@@ -3192,6 +3404,7 @@ export const ownSampleData = [
         "patientSsn": 3333030545,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=212"
     },
     {
@@ -3207,6 +3420,7 @@ export const ownSampleData = [
         "patientSsn": 3333030546,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=213"
     },
     {
@@ -3222,6 +3436,7 @@ export const ownSampleData = [
         "patientSsn": 3333030547,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=214"
     },
     {
@@ -3237,6 +3452,7 @@ export const ownSampleData = [
         "patientSsn": 3333030548,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=215"
     },
     {
@@ -3252,6 +3468,7 @@ export const ownSampleData = [
         "patientSsn": 3333030549,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=216"
     },
     {
@@ -3267,6 +3484,7 @@ export const ownSampleData = [
         "patientSsn": 3333030550,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=217"
     },
     {
@@ -3282,6 +3500,7 @@ export const ownSampleData = [
         "patientSsn": 3333030551,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=218"
     },
     {
@@ -3297,6 +3516,7 @@ export const ownSampleData = [
         "patientSsn": 3333030552,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=219"
     },
     {
@@ -3312,6 +3532,7 @@ export const ownSampleData = [
         "patientSsn": 3333030553,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=220"
     },
     {
@@ -3327,6 +3548,7 @@ export const ownSampleData = [
         "patientSsn": 3333030554,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=221"
     },
     {
@@ -3342,6 +3564,7 @@ export const ownSampleData = [
         "patientSsn": 3333030555,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=222"
     },
     {
@@ -3357,6 +3580,7 @@ export const ownSampleData = [
         "patientSsn": 3333030556,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=223"
     },
     {
@@ -3372,6 +3596,7 @@ export const ownSampleData = [
         "patientSsn": 3333030557,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=224"
     },
     {
@@ -3387,6 +3612,7 @@ export const ownSampleData = [
         "patientSsn": 3333030558,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=225"
     },
     {
@@ -3402,6 +3628,7 @@ export const ownSampleData = [
         "patientSsn": 3333030559,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=226"
     },
     {
@@ -3417,6 +3644,7 @@ export const ownSampleData = [
         "patientSsn": 3333030560,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=227"
     },
     {
@@ -3432,6 +3660,7 @@ export const ownSampleData = [
         "patientSsn": 3333030561,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=228"
     },
     {
@@ -3447,6 +3676,7 @@ export const ownSampleData = [
         "patientSsn": 3333030562,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=229"
     },
     {
@@ -3462,6 +3692,7 @@ export const ownSampleData = [
         "patientSsn": 3333030563,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=230"
     },
     {
@@ -3477,6 +3708,7 @@ export const ownSampleData = [
         "patientSsn": 3333030564,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=231"
     },
     {
@@ -3492,6 +3724,7 @@ export const ownSampleData = [
         "patientSsn": 3333030565,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=232"
     },
     {
@@ -3507,6 +3740,7 @@ export const ownSampleData = [
         "patientSsn": 3333030566,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=233"
     },
     {
@@ -3522,6 +3756,7 @@ export const ownSampleData = [
         "patientSsn": 3333030567,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=234"
     },
     {
@@ -3537,6 +3772,7 @@ export const ownSampleData = [
         "patientSsn": 3333030568,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=235"
     },
     {
@@ -3552,6 +3788,7 @@ export const ownSampleData = [
         "patientSsn": 3333030569,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=236"
     },
     {
@@ -3567,6 +3804,7 @@ export const ownSampleData = [
         "patientSsn": 3333030570,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=237"
     },
     {
@@ -3582,6 +3820,7 @@ export const ownSampleData = [
         "patientSsn": 3333030571,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=238"
     },
     {
@@ -3597,6 +3836,7 @@ export const ownSampleData = [
         "patientSsn": 3333030572,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=239"
     },
     {
@@ -3612,6 +3852,7 @@ export const ownSampleData = [
         "patientSsn": 3333030573,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=240"
     },
     {
@@ -3627,6 +3868,7 @@ export const ownSampleData = [
         "patientSsn": 3333030574,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=241"
     },
     {
@@ -3642,6 +3884,7 @@ export const ownSampleData = [
         "patientSsn": 3333030575,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=242"
     },
     {
@@ -3657,6 +3900,7 @@ export const ownSampleData = [
         "patientSsn": 3333030576,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=243"
     },
     {
@@ -3672,6 +3916,7 @@ export const ownSampleData = [
         "patientSsn": 3333030577,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=244"
     },
     {
@@ -3687,6 +3932,7 @@ export const ownSampleData = [
         "patientSsn": 3333030578,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=245"
     },
     {
@@ -3702,6 +3948,7 @@ export const ownSampleData = [
         "patientSsn": 3333030579,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=246"
     },
     {
@@ -3717,6 +3964,7 @@ export const ownSampleData = [
         "patientSsn": 3333030580,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=247"
     },
     {
@@ -3732,6 +3980,7 @@ export const ownSampleData = [
         "patientSsn": 3333030581,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=248"
     },
     {
@@ -3747,6 +3996,7 @@ export const ownSampleData = [
         "patientSsn": 3333030582,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=249"
     },
     {
@@ -3762,6 +4012,7 @@ export const ownSampleData = [
         "patientSsn": 3333030583,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=250"
     },
     {
@@ -3777,6 +4028,7 @@ export const ownSampleData = [
         "patientSsn": 3333030584,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=251"
     },
     {
@@ -3792,6 +4044,7 @@ export const ownSampleData = [
         "patientSsn": 3333030585,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=252"
     },
     {
@@ -3807,6 +4060,7 @@ export const ownSampleData = [
         "patientSsn": 3333030586,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=253"
     },
     {
@@ -3822,6 +4076,7 @@ export const ownSampleData = [
         "patientSsn": 3333030587,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=254"
     },
     {
@@ -3837,6 +4092,7 @@ export const ownSampleData = [
         "patientSsn": 3333030588,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=255"
     },
     {
@@ -3852,6 +4108,7 @@ export const ownSampleData = [
         "patientSsn": 3333030589,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=256"
     },
     {
@@ -3867,6 +4124,7 @@ export const ownSampleData = [
         "patientSsn": 3333030590,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=257"
     },
     {
@@ -3882,6 +4140,7 @@ export const ownSampleData = [
         "patientSsn": 3333030591,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=258"
     },
     {
@@ -3897,6 +4156,7 @@ export const ownSampleData = [
         "patientSsn": 3333030592,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=259"
     },
     {
@@ -3912,6 +4172,7 @@ export const ownSampleData = [
         "patientSsn": 3333030593,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=260"
     },
     {
@@ -3927,6 +4188,7 @@ export const ownSampleData = [
         "patientSsn": 3333030594,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=261"
     },
     {
@@ -3942,6 +4204,7 @@ export const ownSampleData = [
         "patientSsn": 3333030595,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=262"
     },
     {
@@ -3957,6 +4220,7 @@ export const ownSampleData = [
         "patientSsn": 3333030596,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=263"
     },
     {
@@ -3972,6 +4236,7 @@ export const ownSampleData = [
         "patientSsn": 3333030597,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=264"
     },
     {
@@ -3987,6 +4252,7 @@ export const ownSampleData = [
         "patientSsn": 3333030598,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=265"
     },
     {
@@ -4002,6 +4268,7 @@ export const ownSampleData = [
         "patientSsn": 3333030599,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=266"
     },
     {
@@ -4017,6 +4284,7 @@ export const ownSampleData = [
         "patientSsn": 3333030600,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=267"
     },
     {
@@ -4032,6 +4300,7 @@ export const ownSampleData = [
         "patientSsn": 3333030601,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=268"
     },
     {
@@ -4047,6 +4316,7 @@ export const ownSampleData = [
         "patientSsn": 3333030602,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=269"
     },
     {
@@ -4062,6 +4332,7 @@ export const ownSampleData = [
         "patientSsn": 3333030603,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=270"
     },
     {
@@ -4077,6 +4348,7 @@ export const ownSampleData = [
         "patientSsn": 3333030604,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=271"
     },
     {
@@ -4092,6 +4364,7 @@ export const ownSampleData = [
         "patientSsn": 3333030605,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=272"
     },
     {
@@ -4107,6 +4380,7 @@ export const ownSampleData = [
         "patientSsn": 3333030606,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=273"
     },
     {
@@ -4122,6 +4396,7 @@ export const ownSampleData = [
         "patientSsn": 3333030607,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=274"
     },
     {
@@ -4137,6 +4412,7 @@ export const ownSampleData = [
         "patientSsn": 3333030608,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=275"
     },
     {
@@ -4152,6 +4428,7 @@ export const ownSampleData = [
         "patientSsn": 3333030609,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=276"
     },
     {
@@ -4167,6 +4444,7 @@ export const ownSampleData = [
         "patientSsn": 3333030610,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=277"
     },
     {
@@ -4182,6 +4460,7 @@ export const ownSampleData = [
         "patientSsn": 3333030611,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=278"
     },
     {
@@ -4197,6 +4476,7 @@ export const ownSampleData = [
         "patientSsn": 3333030612,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=279"
     },
     {
@@ -4212,6 +4492,7 @@ export const ownSampleData = [
         "patientSsn": 3333030613,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=280"
     },
     {
@@ -4227,6 +4508,7 @@ export const ownSampleData = [
         "patientSsn": 3333030614,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=281"
     },
     {
@@ -4242,6 +4524,7 @@ export const ownSampleData = [
         "patientSsn": 3333030615,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=282"
     },
     {
@@ -4257,6 +4540,7 @@ export const ownSampleData = [
         "patientSsn": 3333030616,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=283"
     },
     {
@@ -4272,6 +4556,7 @@ export const ownSampleData = [
         "patientSsn": 3333030617,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=284"
     },
     {
@@ -4287,6 +4572,7 @@ export const ownSampleData = [
         "patientSsn": 3333030618,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=285"
     },
     {
@@ -4302,6 +4588,7 @@ export const ownSampleData = [
         "patientSsn": 3333030619,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=286"
     },
     {
@@ -4317,6 +4604,7 @@ export const ownSampleData = [
         "patientSsn": 3333030620,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=287"
     },
     {
@@ -4332,6 +4620,7 @@ export const ownSampleData = [
         "patientSsn": 3333030621,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=288"
     },
     {
@@ -4347,6 +4636,7 @@ export const ownSampleData = [
         "patientSsn": 3333030622,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=289"
     },
     {
@@ -4362,6 +4652,7 @@ export const ownSampleData = [
         "patientSsn": 3333030623,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=290"
     },
     {
@@ -4377,6 +4668,7 @@ export const ownSampleData = [
         "patientSsn": 3333030624,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=291"
     },
     {
@@ -4392,6 +4684,7 @@ export const ownSampleData = [
         "patientSsn": 3333030625,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=292"
     },
     {
@@ -4407,6 +4700,7 @@ export const ownSampleData = [
         "patientSsn": 3333030626,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=293"
     },
     {
@@ -4422,6 +4716,7 @@ export const ownSampleData = [
         "patientSsn": 3333030627,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=294"
     },
     {
@@ -4437,6 +4732,7 @@ export const ownSampleData = [
         "patientSsn": 3333030628,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=295"
     },
     {
@@ -4452,6 +4748,7 @@ export const ownSampleData = [
         "patientSsn": 3333030629,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=296"
     },
     {
@@ -4467,6 +4764,7 @@ export const ownSampleData = [
         "patientSsn": 3333030630,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=297"
     },
     {
@@ -4482,6 +4780,7 @@ export const ownSampleData = [
         "patientSsn": 3333030631,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=298"
     },
     {
@@ -4497,6 +4796,7 @@ export const ownSampleData = [
         "patientSsn": 3333030632,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=299"
     },
     {
@@ -4512,6 +4812,7 @@ export const ownSampleData = [
         "patientSsn": 3333030633,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=300"
     },
     {
@@ -4527,6 +4828,7 @@ export const ownSampleData = [
         "patientSsn": 3333030634,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=301"
     },
     {
@@ -4542,6 +4844,7 @@ export const ownSampleData = [
         "patientSsn": 3333030635,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=302"
     },
     {
@@ -4557,6 +4860,7 @@ export const ownSampleData = [
         "patientSsn": 3333030636,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=303"
     },
     {
@@ -4572,6 +4876,7 @@ export const ownSampleData = [
         "patientSsn": 3333030637,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=304"
     },
     {
@@ -4587,6 +4892,7 @@ export const ownSampleData = [
         "patientSsn": 3333030638,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=305"
     },
     {
@@ -4602,6 +4908,7 @@ export const ownSampleData = [
         "patientSsn": 3333030639,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=306"
     },
     {
@@ -4617,6 +4924,7 @@ export const ownSampleData = [
         "patientSsn": 3333030640,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=307"
     },
     {
@@ -4632,6 +4940,7 @@ export const ownSampleData = [
         "patientSsn": 3333030641,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=308"
     },
     {
@@ -4647,6 +4956,7 @@ export const ownSampleData = [
         "patientSsn": 3333030642,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=309"
     },
     {
@@ -4662,6 +4972,7 @@ export const ownSampleData = [
         "patientSsn": 3333030643,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=310"
     },
     {
@@ -4677,6 +4988,7 @@ export const ownSampleData = [
         "patientSsn": 3333030644,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=311"
     },
     {
@@ -4692,6 +5004,7 @@ export const ownSampleData = [
         "patientSsn": 3333030645,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=312"
     },
     {
@@ -4707,6 +5020,7 @@ export const ownSampleData = [
         "patientSsn": 3333030646,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=313"
     },
     {
@@ -4722,6 +5036,7 @@ export const ownSampleData = [
         "patientSsn": 3333030647,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=314"
     },
     {
@@ -4737,6 +5052,7 @@ export const ownSampleData = [
         "patientSsn": 3333030648,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=315"
     },
     {
@@ -4752,6 +5068,7 @@ export const ownSampleData = [
         "patientSsn": 3333030649,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=316"
     },
     {
@@ -4767,6 +5084,7 @@ export const ownSampleData = [
         "patientSsn": 3333030650,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=317"
     },
     {
@@ -4782,6 +5100,7 @@ export const ownSampleData = [
         "patientSsn": 3333030651,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=318"
     },
     {
@@ -4797,6 +5116,7 @@ export const ownSampleData = [
         "patientSsn": 3333030652,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=319"
     },
     {
@@ -4812,6 +5132,7 @@ export const ownSampleData = [
         "patientSsn": 3333030653,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=320"
     },
     {
@@ -4827,6 +5148,7 @@ export const ownSampleData = [
         "patientSsn": 3333030654,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=321"
     },
     {
@@ -4842,6 +5164,7 @@ export const ownSampleData = [
         "patientSsn": 3333030655,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=322"
     },
     {
@@ -4857,6 +5180,7 @@ export const ownSampleData = [
         "patientSsn": 3333030656,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=323"
     },
     {
@@ -4872,6 +5196,7 @@ export const ownSampleData = [
         "patientSsn": 3333030657,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=324"
     },
     {
@@ -4887,6 +5212,7 @@ export const ownSampleData = [
         "patientSsn": 3333030658,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=325"
     },
     {
@@ -4902,6 +5228,7 @@ export const ownSampleData = [
         "patientSsn": 3333030659,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=326"
     },
     {
@@ -4917,6 +5244,7 @@ export const ownSampleData = [
         "patientSsn": 3333030660,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=327"
     },
     {
@@ -4932,6 +5260,7 @@ export const ownSampleData = [
         "patientSsn": 3333030661,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=328"
     },
     {
@@ -4947,6 +5276,7 @@ export const ownSampleData = [
         "patientSsn": 3333030662,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=329"
     },
     {
@@ -4962,6 +5292,7 @@ export const ownSampleData = [
         "patientSsn": 3333030663,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=330"
     },
     {
@@ -4977,6 +5308,7 @@ export const ownSampleData = [
         "patientSsn": 3333030664,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=331"
     },
     {
@@ -4992,6 +5324,7 @@ export const ownSampleData = [
         "patientSsn": 3333030665,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=332"
     },
     {
@@ -5007,6 +5340,7 @@ export const ownSampleData = [
         "patientSsn": 3333030666,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=333"
     },
     {
@@ -5022,6 +5356,7 @@ export const ownSampleData = [
         "patientSsn": 3333030667,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=334"
     },
     {
@@ -5037,6 +5372,7 @@ export const ownSampleData = [
         "patientSsn": 3333030668,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=335"
     },
     {
@@ -5052,6 +5388,7 @@ export const ownSampleData = [
         "patientSsn": 3333030669,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=336"
     },
     {
@@ -5067,6 +5404,7 @@ export const ownSampleData = [
         "patientSsn": 3333030670,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=337"
     },
     {
@@ -5082,6 +5420,7 @@ export const ownSampleData = [
         "patientSsn": 3333030671,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=338"
     },
     {
@@ -5097,6 +5436,7 @@ export const ownSampleData = [
         "patientSsn": 3333030672,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=339"
     },
     {
@@ -5112,6 +5452,7 @@ export const ownSampleData = [
         "patientSsn": 3333030673,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=340"
     },
     {
@@ -5127,6 +5468,7 @@ export const ownSampleData = [
         "patientSsn": 3333030674,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=341"
     },
     {
@@ -5142,6 +5484,7 @@ export const ownSampleData = [
         "patientSsn": 3333030675,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=342"
     },
     {
@@ -5157,6 +5500,7 @@ export const ownSampleData = [
         "patientSsn": 3333030676,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=343"
     },
     {
@@ -5172,6 +5516,7 @@ export const ownSampleData = [
         "patientSsn": 3333030677,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=344"
     },
     {
@@ -5187,6 +5532,7 @@ export const ownSampleData = [
         "patientSsn": 3333030678,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=345"
     },
     {
@@ -5202,6 +5548,7 @@ export const ownSampleData = [
         "patientSsn": 3333030679,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=346"
     },
     {
@@ -5217,6 +5564,7 @@ export const ownSampleData = [
         "patientSsn": 3333030680,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=347"
     },
     {
@@ -5232,6 +5580,7 @@ export const ownSampleData = [
         "patientSsn": 3333030681,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=348"
     },
     {
@@ -5247,6 +5596,7 @@ export const ownSampleData = [
         "patientSsn": 3333030682,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=349"
     },
     {
@@ -5262,6 +5612,7 @@ export const ownSampleData = [
         "patientSsn": 3333030683,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=350"
     },
     {
@@ -5277,6 +5628,7 @@ export const ownSampleData = [
         "patientSsn": 3333030684,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=351"
     },
     {
@@ -5292,6 +5644,7 @@ export const ownSampleData = [
         "patientSsn": 3333030685,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=352"
     },
     {
@@ -5307,6 +5660,7 @@ export const ownSampleData = [
         "patientSsn": 3333030686,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=353"
     },
     {
@@ -5322,6 +5676,7 @@ export const ownSampleData = [
         "patientSsn": 3333030687,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=354"
     },
     {
@@ -5337,6 +5692,7 @@ export const ownSampleData = [
         "patientSsn": 3333030688,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=355"
     },
     {
@@ -5352,6 +5708,7 @@ export const ownSampleData = [
         "patientSsn": 3333030689,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=356"
     },
     {
@@ -5367,6 +5724,7 @@ export const ownSampleData = [
         "patientSsn": 3333030690,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=357"
     },
     {
@@ -5382,6 +5740,7 @@ export const ownSampleData = [
         "patientSsn": 3333030691,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=358"
     },
     {
@@ -5397,6 +5756,7 @@ export const ownSampleData = [
         "patientSsn": 3333030692,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=359"
     },
     {
@@ -5412,6 +5772,7 @@ export const ownSampleData = [
         "patientSsn": 3333030693,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=360"
     },
     {
@@ -5427,6 +5788,7 @@ export const ownSampleData = [
         "patientSsn": 3333030694,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=361"
     },
     {
@@ -5442,6 +5804,7 @@ export const ownSampleData = [
         "patientSsn": 3333030695,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=362"
     },
     {
@@ -5457,6 +5820,7 @@ export const ownSampleData = [
         "patientSsn": 3333030696,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=363"
     },
     {
@@ -5472,6 +5836,7 @@ export const ownSampleData = [
         "patientSsn": 3333030697,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=364"
     },
     {
@@ -5487,6 +5852,7 @@ export const ownSampleData = [
         "patientSsn": 3333030698,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=365"
     },
     {
@@ -5502,6 +5868,7 @@ export const ownSampleData = [
         "patientSsn": 3333030699,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=366"
     },
     {
@@ -5517,6 +5884,7 @@ export const ownSampleData = [
         "patientSsn": 3333030700,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=367"
     },
     {
@@ -5532,6 +5900,7 @@ export const ownSampleData = [
         "patientSsn": 3333030701,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=368"
     },
     {
@@ -5547,6 +5916,7 @@ export const ownSampleData = [
         "patientSsn": 3333030702,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=369"
     },
     {
@@ -5562,6 +5932,7 @@ export const ownSampleData = [
         "patientSsn": 3333030703,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=370"
     },
     {
@@ -5577,6 +5948,7 @@ export const ownSampleData = [
         "patientSsn": 3333030704,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=371"
     },
     {
@@ -5592,6 +5964,7 @@ export const ownSampleData = [
         "patientSsn": 3333030705,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=372"
     },
     {
@@ -5607,6 +5980,7 @@ export const ownSampleData = [
         "patientSsn": 3333030706,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=373"
     },
     {
@@ -5622,6 +5996,7 @@ export const ownSampleData = [
         "patientSsn": 3333030707,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=374"
     },
     {
@@ -5637,6 +6012,7 @@ export const ownSampleData = [
         "patientSsn": 3333030708,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=375"
     },
     {
@@ -5652,6 +6028,7 @@ export const ownSampleData = [
         "patientSsn": 3333030709,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=376"
     },
     {
@@ -5667,6 +6044,7 @@ export const ownSampleData = [
         "patientSsn": 3333030710,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=377"
     },
     {
@@ -5682,6 +6060,7 @@ export const ownSampleData = [
         "patientSsn": 3333030711,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=378"
     },
     {
@@ -5697,6 +6076,7 @@ export const ownSampleData = [
         "patientSsn": 3333030712,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=379"
     },
     {
@@ -5712,6 +6092,7 @@ export const ownSampleData = [
         "patientSsn": 3333030713,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=380"
     },
     {
@@ -5727,6 +6108,7 @@ export const ownSampleData = [
         "patientSsn": 3333030714,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=381"
     },
     {
@@ -5742,6 +6124,7 @@ export const ownSampleData = [
         "patientSsn": 3333030715,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=382"
     },
     {
@@ -5757,6 +6140,7 @@ export const ownSampleData = [
         "patientSsn": 3333030716,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=383"
     },
     {
@@ -5772,6 +6156,7 @@ export const ownSampleData = [
         "patientSsn": 3333030717,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=384"
     },
     {
@@ -5787,6 +6172,7 @@ export const ownSampleData = [
         "patientSsn": 3333030718,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=385"
     },
     {
@@ -5802,6 +6188,7 @@ export const ownSampleData = [
         "patientSsn": 3333030719,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=386"
     },
     {
@@ -5817,6 +6204,7 @@ export const ownSampleData = [
         "patientSsn": 3333030720,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=387"
     },
     {
@@ -5832,6 +6220,7 @@ export const ownSampleData = [
         "patientSsn": 3333030721,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=388"
     },
     {
@@ -5847,6 +6236,7 @@ export const ownSampleData = [
         "patientSsn": 3333030722,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=389"
     },
     {
@@ -5862,6 +6252,7 @@ export const ownSampleData = [
         "patientSsn": 3333030723,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=390"
     },
     {
@@ -5877,6 +6268,7 @@ export const ownSampleData = [
         "patientSsn": 3333030724,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=391"
     },
     {
@@ -5892,6 +6284,7 @@ export const ownSampleData = [
         "patientSsn": 3333030725,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=392"
     },
     {
@@ -5907,6 +6300,7 @@ export const ownSampleData = [
         "patientSsn": 3333030726,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=393"
     },
     {
@@ -5922,6 +6316,7 @@ export const ownSampleData = [
         "patientSsn": 3333030727,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=394"
     },
     {
@@ -5937,6 +6332,7 @@ export const ownSampleData = [
         "patientSsn": 3333030728,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=395"
     },
     {
@@ -5952,6 +6348,7 @@ export const ownSampleData = [
         "patientSsn": 3333030729,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=396"
     },
     {
@@ -5967,6 +6364,7 @@ export const ownSampleData = [
         "patientSsn": 3333030730,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=397"
     },
     {
@@ -5982,6 +6380,7 @@ export const ownSampleData = [
         "patientSsn": 3333030731,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=398"
     },
     {
@@ -5997,6 +6396,7 @@ export const ownSampleData = [
         "patientSsn": 3333030732,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=399"
     },
     {
@@ -6012,6 +6412,7 @@ export const ownSampleData = [
         "patientSsn": 3333030733,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=400"
     },
     {
@@ -6027,6 +6428,7 @@ export const ownSampleData = [
         "patientSsn": 3333030734,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=401"
     },
     {
@@ -6042,6 +6444,7 @@ export const ownSampleData = [
         "patientSsn": 3333030735,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=402"
     },
     {
@@ -6057,6 +6460,7 @@ export const ownSampleData = [
         "patientSsn": 3333030736,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=403"
     },
     {
@@ -6072,6 +6476,7 @@ export const ownSampleData = [
         "patientSsn": 3333030737,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=404"
     },
     {
@@ -6087,6 +6492,7 @@ export const ownSampleData = [
         "patientSsn": 3333030738,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=405"
     },
     {
@@ -6102,6 +6508,7 @@ export const ownSampleData = [
         "patientSsn": 3333030739,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=406"
     },
     {
@@ -6117,6 +6524,7 @@ export const ownSampleData = [
         "patientSsn": 3333030740,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=407"
     },
     {
@@ -6132,6 +6540,7 @@ export const ownSampleData = [
         "patientSsn": 3333030741,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=408"
     },
     {
@@ -6147,6 +6556,7 @@ export const ownSampleData = [
         "patientSsn": 3333030742,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=409"
     },
     {
@@ -6162,6 +6572,7 @@ export const ownSampleData = [
         "patientSsn": 3333030743,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=410"
     },
     {
@@ -6177,6 +6588,7 @@ export const ownSampleData = [
         "patientSsn": 3333030744,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=411"
     },
     {
@@ -6192,6 +6604,7 @@ export const ownSampleData = [
         "patientSsn": 3333030745,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=412"
     },
     {
@@ -6207,6 +6620,7 @@ export const ownSampleData = [
         "patientSsn": 3333030746,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=413"
     },
     {
@@ -6222,6 +6636,7 @@ export const ownSampleData = [
         "patientSsn": 3333030747,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=414"
     },
     {
@@ -6237,6 +6652,7 @@ export const ownSampleData = [
         "patientSsn": 3333030748,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=415"
     },
     {
@@ -6252,6 +6668,7 @@ export const ownSampleData = [
         "patientSsn": 3333030749,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=416"
     },
     {
@@ -6267,6 +6684,7 @@ export const ownSampleData = [
         "patientSsn": 3333030750,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=417"
     },
     {
@@ -6282,6 +6700,7 @@ export const ownSampleData = [
         "patientSsn": 3333030751,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=418"
     },
     {
@@ -6297,6 +6716,7 @@ export const ownSampleData = [
         "patientSsn": 3333030752,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=419"
     },
     {
@@ -6312,6 +6732,7 @@ export const ownSampleData = [
         "patientSsn": 3333030753,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=420"
     },
     {
@@ -6327,6 +6748,7 @@ export const ownSampleData = [
         "patientSsn": 3333030754,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=421"
     },
     {
@@ -6342,6 +6764,7 @@ export const ownSampleData = [
         "patientSsn": 3333030755,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=422"
     },
     {
@@ -6357,6 +6780,7 @@ export const ownSampleData = [
         "patientSsn": 3333030756,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=423"
     },
     {
@@ -6372,6 +6796,7 @@ export const ownSampleData = [
         "patientSsn": 3333030757,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=424"
     },
     {
@@ -6387,6 +6812,7 @@ export const ownSampleData = [
         "patientSsn": 3333030758,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=425"
     },
     {
@@ -6402,6 +6828,7 @@ export const ownSampleData = [
         "patientSsn": 3333030759,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=426"
     },
     {
@@ -6417,6 +6844,7 @@ export const ownSampleData = [
         "patientSsn": 3333030760,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=427"
     },
     {
@@ -6432,6 +6860,7 @@ export const ownSampleData = [
         "patientSsn": 3333030761,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=428"
     },
     {
@@ -6447,6 +6876,7 @@ export const ownSampleData = [
         "patientSsn": 3333030762,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=429"
     },
     {
@@ -6462,6 +6892,7 @@ export const ownSampleData = [
         "patientSsn": 3333030763,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=430"
     },
     {
@@ -6477,6 +6908,7 @@ export const ownSampleData = [
         "patientSsn": 3333030764,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=431"
     },
     {
@@ -6492,6 +6924,7 @@ export const ownSampleData = [
         "patientSsn": 3333030765,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=432"
     },
     {
@@ -6507,6 +6940,7 @@ export const ownSampleData = [
         "patientSsn": 3333030766,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=433"
     },
     {
@@ -6522,6 +6956,7 @@ export const ownSampleData = [
         "patientSsn": 3333030767,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=434"
     },
     {
@@ -6537,6 +6972,7 @@ export const ownSampleData = [
         "patientSsn": 3333030768,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=435"
     },
     {
@@ -6552,6 +6988,7 @@ export const ownSampleData = [
         "patientSsn": 3333030769,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=436"
     },
     {
@@ -6567,6 +7004,7 @@ export const ownSampleData = [
         "patientSsn": 3333030770,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=437"
     },
     {
@@ -6582,6 +7020,7 @@ export const ownSampleData = [
         "patientSsn": 3333030771,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=438"
     },
     {
@@ -6597,6 +7036,7 @@ export const ownSampleData = [
         "patientSsn": 3333030772,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=439"
     },
     {
@@ -6612,6 +7052,7 @@ export const ownSampleData = [
         "patientSsn": 3333030773,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=440"
     },
     {
@@ -6627,6 +7068,7 @@ export const ownSampleData = [
         "patientSsn": 3333030774,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=441"
     },
     {
@@ -6642,6 +7084,7 @@ export const ownSampleData = [
         "patientSsn": 3333030775,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=442"
     },
     {
@@ -6657,6 +7100,7 @@ export const ownSampleData = [
         "patientSsn": 3333030776,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=443"
     },
     {
@@ -6672,6 +7116,7 @@ export const ownSampleData = [
         "patientSsn": 3333030777,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=444"
     },
     {
@@ -6687,6 +7132,7 @@ export const ownSampleData = [
         "patientSsn": 3333030778,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=445"
     },
     {
@@ -6702,6 +7148,7 @@ export const ownSampleData = [
         "patientSsn": 3333030779,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=446"
     },
     {
@@ -6717,6 +7164,7 @@ export const ownSampleData = [
         "patientSsn": 3333030780,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=447"
     },
     {
@@ -6732,6 +7180,7 @@ export const ownSampleData = [
         "patientSsn": 3333030781,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=448"
     },
     {
@@ -6747,6 +7196,7 @@ export const ownSampleData = [
         "patientSsn": 3333030782,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=449"
     },
     {
@@ -6762,6 +7212,7 @@ export const ownSampleData = [
         "patientSsn": 3333030783,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=450"
     },
     {
@@ -6777,6 +7228,7 @@ export const ownSampleData = [
         "patientSsn": 3333030784,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=451"
     },
     {
@@ -6792,6 +7244,7 @@ export const ownSampleData = [
         "patientSsn": 3333030785,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=452"
     },
     {
@@ -6807,6 +7260,7 @@ export const ownSampleData = [
         "patientSsn": 3333030786,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=453"
     },
     {
@@ -6822,6 +7276,7 @@ export const ownSampleData = [
         "patientSsn": 3333030787,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=454"
     },
     {
@@ -6837,6 +7292,7 @@ export const ownSampleData = [
         "patientSsn": 3333030788,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=455"
     },
     {
@@ -6852,6 +7308,7 @@ export const ownSampleData = [
         "patientSsn": 3333030789,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=456"
     },
     {
@@ -6867,6 +7324,7 @@ export const ownSampleData = [
         "patientSsn": 3333030790,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=457"
     },
     {
@@ -6882,6 +7340,7 @@ export const ownSampleData = [
         "patientSsn": 3333030791,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=458"
     },
     {
@@ -6897,6 +7356,7 @@ export const ownSampleData = [
         "patientSsn": 3333030792,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=459"
     },
     {
@@ -6912,6 +7372,7 @@ export const ownSampleData = [
         "patientSsn": 3333030793,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=460"
     },
     {
@@ -6927,6 +7388,7 @@ export const ownSampleData = [
         "patientSsn": 3333030794,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=461"
     },
     {
@@ -6942,6 +7404,7 @@ export const ownSampleData = [
         "patientSsn": 3333030795,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=462"
     },
     {
@@ -6957,6 +7420,7 @@ export const ownSampleData = [
         "patientSsn": 3333030796,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=463"
     },
     {
@@ -6972,6 +7436,7 @@ export const ownSampleData = [
         "patientSsn": 3333030797,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=464"
     },
     {
@@ -6987,6 +7452,7 @@ export const ownSampleData = [
         "patientSsn": 3333030798,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=465"
     },
     {
@@ -7002,6 +7468,7 @@ export const ownSampleData = [
         "patientSsn": 3333030799,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=466"
     },
     {
@@ -7017,6 +7484,7 @@ export const ownSampleData = [
         "patientSsn": 3333030800,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=467"
     },
     {
@@ -7032,6 +7500,7 @@ export const ownSampleData = [
         "patientSsn": 3333030801,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=468"
     },
     {
@@ -7047,6 +7516,7 @@ export const ownSampleData = [
         "patientSsn": 3333030802,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=469"
     },
     {
@@ -7062,6 +7532,7 @@ export const ownSampleData = [
         "patientSsn": 3333030803,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=470"
     },
     {
@@ -7077,6 +7548,7 @@ export const ownSampleData = [
         "patientSsn": 3333030804,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=471"
     },
     {
@@ -7092,6 +7564,7 @@ export const ownSampleData = [
         "patientSsn": 3333030805,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=472"
     },
     {
@@ -7107,6 +7580,7 @@ export const ownSampleData = [
         "patientSsn": 3333030806,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=473"
     },
     {
@@ -7122,6 +7596,7 @@ export const ownSampleData = [
         "patientSsn": 3333030807,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=474"
     },
     {
@@ -7137,6 +7612,7 @@ export const ownSampleData = [
         "patientSsn": 3333030808,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=475"
     },
     {
@@ -7152,6 +7628,7 @@ export const ownSampleData = [
         "patientSsn": 3333030809,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=476"
     },
     {
@@ -7167,6 +7644,7 @@ export const ownSampleData = [
         "patientSsn": 3333030810,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=477"
     },
     {
@@ -7182,6 +7660,7 @@ export const ownSampleData = [
         "patientSsn": 3333030811,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=478"
     },
     {
@@ -7197,6 +7676,7 @@ export const ownSampleData = [
         "patientSsn": 3333030812,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=479"
     },
     {
@@ -7212,6 +7692,7 @@ export const ownSampleData = [
         "patientSsn": 3333030813,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=480"
     },
     {
@@ -7227,6 +7708,7 @@ export const ownSampleData = [
         "patientSsn": 3333030814,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=481"
     },
     {
@@ -7242,6 +7724,7 @@ export const ownSampleData = [
         "patientSsn": 3333030815,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=482"
     },
     {
@@ -7257,6 +7740,7 @@ export const ownSampleData = [
         "patientSsn": 3333030816,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=483"
     },
     {
@@ -7272,6 +7756,7 @@ export const ownSampleData = [
         "patientSsn": 3333030817,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=484"
     },
     {
@@ -7287,6 +7772,7 @@ export const ownSampleData = [
         "patientSsn": 3333030818,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=485"
     },
     {
@@ -7302,6 +7788,7 @@ export const ownSampleData = [
         "patientSsn": 3333030819,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=486"
     },
     {
@@ -7317,6 +7804,7 @@ export const ownSampleData = [
         "patientSsn": 3333030820,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=487"
     },
     {
@@ -7332,6 +7820,7 @@ export const ownSampleData = [
         "patientSsn": 3333030821,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=488"
     },
     {
@@ -7347,6 +7836,7 @@ export const ownSampleData = [
         "patientSsn": 3333030822,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=489"
     },
     {
@@ -7362,6 +7852,7 @@ export const ownSampleData = [
         "patientSsn": 3333030823,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=490"
     },
     {
@@ -7377,6 +7868,7 @@ export const ownSampleData = [
         "patientSsn": 3333030824,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=491"
     },
     {
@@ -7392,6 +7884,7 @@ export const ownSampleData = [
         "patientSsn": 3333030825,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=492"
     },
     {
@@ -7407,6 +7900,7 @@ export const ownSampleData = [
         "patientSsn": 3333030826,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=493"
     },
     {
@@ -7422,6 +7916,7 @@ export const ownSampleData = [
         "patientSsn": 3333030827,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=494"
     },
     {
@@ -7437,6 +7932,7 @@ export const ownSampleData = [
         "patientSsn": 3333030828,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=495"
     },
     {
@@ -7452,6 +7948,7 @@ export const ownSampleData = [
         "patientSsn": 3333030829,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=496"
     },
     {
@@ -7467,6 +7964,7 @@ export const ownSampleData = [
         "patientSsn": 3333030830,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=497"
     },
     {
@@ -7482,6 +7980,7 @@ export const ownSampleData = [
         "patientSsn": 3333030831,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=498"
     },
     {
@@ -7497,6 +7996,7 @@ export const ownSampleData = [
         "patientSsn": 3333030832,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=499"
     },
     {
@@ -7512,6 +8012,7 @@ export const ownSampleData = [
         "patientSsn": 3333030833,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=500"
     },
     {
@@ -7527,6 +8028,7 @@ export const ownSampleData = [
         "patientSsn": 3333030834,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=501"
     },
     {
@@ -7542,6 +8044,7 @@ export const ownSampleData = [
         "patientSsn": 3333030835,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=502"
     },
     {
@@ -7557,6 +8060,7 @@ export const ownSampleData = [
         "patientSsn": 3333030836,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=503"
     },
     {
@@ -7572,6 +8076,7 @@ export const ownSampleData = [
         "patientSsn": 3333030837,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=504"
     },
     {
@@ -7587,6 +8092,7 @@ export const ownSampleData = [
         "patientSsn": 3333030838,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=505"
     },
     {
@@ -7602,6 +8108,7 @@ export const ownSampleData = [
         "patientSsn": 3333030839,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=506"
     },
     {
@@ -7617,6 +8124,7 @@ export const ownSampleData = [
         "patientSsn": 3333030840,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=507"
     },
     {
@@ -7632,6 +8140,7 @@ export const ownSampleData = [
         "patientSsn": 3333030841,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=508"
     },
     {
@@ -7647,6 +8156,7 @@ export const ownSampleData = [
         "patientSsn": 3333030842,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=509"
     },
     {
@@ -7662,6 +8172,7 @@ export const ownSampleData = [
         "patientSsn": 3333030843,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=510"
     },
     {
@@ -7677,6 +8188,7 @@ export const ownSampleData = [
         "patientSsn": 3333030844,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=511"
     },
     {
@@ -7692,6 +8204,7 @@ export const ownSampleData = [
         "patientSsn": 3333030845,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=512"
     },
     {
@@ -7707,6 +8220,7 @@ export const ownSampleData = [
         "patientSsn": 3333030846,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=513"
     },
     {
@@ -7722,6 +8236,7 @@ export const ownSampleData = [
         "patientSsn": 3333030847,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=514"
     },
     {
@@ -7737,6 +8252,7 @@ export const ownSampleData = [
         "patientSsn": 3333030848,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=515"
     },
     {
@@ -7752,6 +8268,7 @@ export const ownSampleData = [
         "patientSsn": 3333030849,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=516"
     },
     {
@@ -7767,6 +8284,7 @@ export const ownSampleData = [
         "patientSsn": 3333030850,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=517"
     },
     {
@@ -7782,6 +8300,7 @@ export const ownSampleData = [
         "patientSsn": 3333030851,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=518"
     },
     {
@@ -7797,6 +8316,7 @@ export const ownSampleData = [
         "patientSsn": 3333030852,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=519"
     },
     {
@@ -7812,6 +8332,7 @@ export const ownSampleData = [
         "patientSsn": 3333030853,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=520"
     },
     {
@@ -7827,6 +8348,7 @@ export const ownSampleData = [
         "patientSsn": 3333030854,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=521"
     },
     {
@@ -7842,6 +8364,7 @@ export const ownSampleData = [
         "patientSsn": 3333030855,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=522"
     },
     {
@@ -7857,6 +8380,7 @@ export const ownSampleData = [
         "patientSsn": 3333030856,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=523"
     },
     {
@@ -7872,6 +8396,7 @@ export const ownSampleData = [
         "patientSsn": 3333030857,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=524"
     },
     {
@@ -7887,6 +8412,7 @@ export const ownSampleData = [
         "patientSsn": 3333030858,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=525"
     },
     {
@@ -7902,6 +8428,7 @@ export const ownSampleData = [
         "patientSsn": 3333030859,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=526"
     },
     {
@@ -7917,6 +8444,7 @@ export const ownSampleData = [
         "patientSsn": 3333030860,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=527"
     },
     {
@@ -7932,6 +8460,7 @@ export const ownSampleData = [
         "patientSsn": 3333030861,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=528"
     },
     {
@@ -7947,6 +8476,7 @@ export const ownSampleData = [
         "patientSsn": 3333030862,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=529"
     },
     {
@@ -7962,6 +8492,7 @@ export const ownSampleData = [
         "patientSsn": 3333030863,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=530"
     },
     {
@@ -7977,6 +8508,7 @@ export const ownSampleData = [
         "patientSsn": 3333030864,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=531"
     },
     {
@@ -7992,6 +8524,7 @@ export const ownSampleData = [
         "patientSsn": 3333030865,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=532"
     },
     {
@@ -8007,6 +8540,7 @@ export const ownSampleData = [
         "patientSsn": 3333030866,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=533"
     },
     {
@@ -8022,6 +8556,7 @@ export const ownSampleData = [
         "patientSsn": 3333030867,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=534"
     },
     {
@@ -8037,6 +8572,7 @@ export const ownSampleData = [
         "patientSsn": 3333030868,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=535"
     },
     {
@@ -8052,6 +8588,7 @@ export const ownSampleData = [
         "patientSsn": 3333030869,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=536"
     },
     {
@@ -8067,6 +8604,7 @@ export const ownSampleData = [
         "patientSsn": 3333030870,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=537"
     },
     {
@@ -8082,6 +8620,7 @@ export const ownSampleData = [
         "patientSsn": 3333030871,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=538"
     },
     {
@@ -8097,6 +8636,7 @@ export const ownSampleData = [
         "patientSsn": 3333030872,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=539"
     },
     {
@@ -8112,6 +8652,7 @@ export const ownSampleData = [
         "patientSsn": 3333030873,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=540"
     },
     {
@@ -8127,6 +8668,7 @@ export const ownSampleData = [
         "patientSsn": 3333030874,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=541"
     },
     {
@@ -8142,6 +8684,7 @@ export const ownSampleData = [
         "patientSsn": 3333030875,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=542"
     },
     {
@@ -8157,6 +8700,7 @@ export const ownSampleData = [
         "patientSsn": 3333030876,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=543"
     },
     {
@@ -8172,6 +8716,7 @@ export const ownSampleData = [
         "patientSsn": 3333030877,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=544"
     },
     {
@@ -8187,6 +8732,7 @@ export const ownSampleData = [
         "patientSsn": 3333030878,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=545"
     },
     {
@@ -8202,6 +8748,7 @@ export const ownSampleData = [
         "patientSsn": 3333030879,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=546"
     },
     {
@@ -8217,6 +8764,7 @@ export const ownSampleData = [
         "patientSsn": 3333030880,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=547"
     },
     {
@@ -8232,6 +8780,7 @@ export const ownSampleData = [
         "patientSsn": 3333030881,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=548"
     },
     {
@@ -8247,6 +8796,7 @@ export const ownSampleData = [
         "patientSsn": 3333030882,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=549"
     },
     {
@@ -8262,6 +8812,7 @@ export const ownSampleData = [
         "patientSsn": 3333030883,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=550"
     },
     {
@@ -8277,6 +8828,7 @@ export const ownSampleData = [
         "patientSsn": 3333030884,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=551"
     },
     {
@@ -8292,6 +8844,7 @@ export const ownSampleData = [
         "patientSsn": 3333030885,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=552"
     },
     {
@@ -8307,6 +8860,7 @@ export const ownSampleData = [
         "patientSsn": 3333030886,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=553"
     },
     {
@@ -8322,6 +8876,7 @@ export const ownSampleData = [
         "patientSsn": 3333030887,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=554"
     },
     {
@@ -8337,6 +8892,7 @@ export const ownSampleData = [
         "patientSsn": 3333030888,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=555"
     },
     {
@@ -8352,6 +8908,7 @@ export const ownSampleData = [
         "patientSsn": 3333030889,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=556"
     },
     {
@@ -8367,6 +8924,7 @@ export const ownSampleData = [
         "patientSsn": 3333030890,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=557"
     },
     {
@@ -8382,6 +8940,7 @@ export const ownSampleData = [
         "patientSsn": 3333030891,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=558"
     },
     {
@@ -8397,6 +8956,7 @@ export const ownSampleData = [
         "patientSsn": 3333030892,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=559"
     },
     {
@@ -8412,6 +8972,7 @@ export const ownSampleData = [
         "patientSsn": 3333030893,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=560"
     },
     {
@@ -8427,6 +8988,7 @@ export const ownSampleData = [
         "patientSsn": 3333030894,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=561"
     },
     {
@@ -8442,6 +9004,7 @@ export const ownSampleData = [
         "patientSsn": 3333030895,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=562"
     },
     {
@@ -8457,6 +9020,7 @@ export const ownSampleData = [
         "patientSsn": 3333030896,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=563"
     },
     {
@@ -8472,6 +9036,7 @@ export const ownSampleData = [
         "patientSsn": 3333030897,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=564"
     },
     {
@@ -8487,6 +9052,7 @@ export const ownSampleData = [
         "patientSsn": 3333030898,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=565"
     },
     {
@@ -8502,6 +9068,7 @@ export const ownSampleData = [
         "patientSsn": 3333030899,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=566"
     },
     {
@@ -8517,6 +9084,7 @@ export const ownSampleData = [
         "patientSsn": 3333030900,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=567"
     },
     {
@@ -8532,6 +9100,7 @@ export const ownSampleData = [
         "patientSsn": 3333030901,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=568"
     },
     {
@@ -8547,6 +9116,7 @@ export const ownSampleData = [
         "patientSsn": 3333030902,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=569"
     },
     {
@@ -8562,6 +9132,7 @@ export const ownSampleData = [
         "patientSsn": 3333030903,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=570"
     },
     {
@@ -8577,6 +9148,7 @@ export const ownSampleData = [
         "patientSsn": 3333030904,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=571"
     },
     {
@@ -8592,6 +9164,7 @@ export const ownSampleData = [
         "patientSsn": 3333030905,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=572"
     },
     {
@@ -8607,6 +9180,7 @@ export const ownSampleData = [
         "patientSsn": 3333030906,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=573"
     },
     {
@@ -8622,6 +9196,7 @@ export const ownSampleData = [
         "patientSsn": 3333030907,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=574"
     },
     {
@@ -8637,6 +9212,7 @@ export const ownSampleData = [
         "patientSsn": 3333030908,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=575"
     },
     {
@@ -8652,6 +9228,7 @@ export const ownSampleData = [
         "patientSsn": 3333030909,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=576"
     },
     {
@@ -8667,6 +9244,7 @@ export const ownSampleData = [
         "patientSsn": 3333030910,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=577"
     },
     {
@@ -8682,6 +9260,7 @@ export const ownSampleData = [
         "patientSsn": 3333030911,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=578"
     },
     {
@@ -8697,6 +9276,7 @@ export const ownSampleData = [
         "patientSsn": 3333030912,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=579"
     },
     {
@@ -8712,6 +9292,7 @@ export const ownSampleData = [
         "patientSsn": 3333030913,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=580"
     },
     {
@@ -8727,6 +9308,7 @@ export const ownSampleData = [
         "patientSsn": 3333030914,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=581"
     },
     {
@@ -8742,6 +9324,7 @@ export const ownSampleData = [
         "patientSsn": 3333030915,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=582"
     },
     {
@@ -8757,6 +9340,7 @@ export const ownSampleData = [
         "patientSsn": 3333030916,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=583"
     },
     {
@@ -8772,6 +9356,7 @@ export const ownSampleData = [
         "patientSsn": 3333030917,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=584"
     },
     {
@@ -8787,6 +9372,7 @@ export const ownSampleData = [
         "patientSsn": 3333030918,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=585"
     },
     {
@@ -8802,6 +9388,7 @@ export const ownSampleData = [
         "patientSsn": 3333030919,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=586"
     },
     {
@@ -8817,6 +9404,7 @@ export const ownSampleData = [
         "patientSsn": 3333030920,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=587"
     },
     {
@@ -8832,6 +9420,7 @@ export const ownSampleData = [
         "patientSsn": 3333030921,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=588"
     },
     {
@@ -8847,6 +9436,7 @@ export const ownSampleData = [
         "patientSsn": 3333030922,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=589"
     },
     {
@@ -8862,6 +9452,7 @@ export const ownSampleData = [
         "patientSsn": 3333030923,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=590"
     },
     {
@@ -8877,6 +9468,7 @@ export const ownSampleData = [
         "patientSsn": 3333030924,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=591"
     },
     {
@@ -8892,6 +9484,7 @@ export const ownSampleData = [
         "patientSsn": 3333030925,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=592"
     },
     {
@@ -8907,6 +9500,7 @@ export const ownSampleData = [
         "patientSsn": 3333030926,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=593"
     },
     {
@@ -8922,6 +9516,7 @@ export const ownSampleData = [
         "patientSsn": 3333030927,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=594"
     },
     {
@@ -8937,6 +9532,7 @@ export const ownSampleData = [
         "patientSsn": 3333030928,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=595"
     },
     {
@@ -8952,6 +9548,7 @@ export const ownSampleData = [
         "patientSsn": 3333030929,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=596"
     },
     {
@@ -8967,6 +9564,7 @@ export const ownSampleData = [
         "patientSsn": 3333030930,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=597"
     },
     {
@@ -8982,6 +9580,7 @@ export const ownSampleData = [
         "patientSsn": 3333030931,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=598"
     },
     {
@@ -8997,6 +9596,7 @@ export const ownSampleData = [
         "patientSsn": 3333030932,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=599"
     },
     {
@@ -9012,6 +9612,7 @@ export const ownSampleData = [
         "patientSsn": 3333030933,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=600"
     },
     {
@@ -9027,6 +9628,7 @@ export const ownSampleData = [
         "patientSsn": 3333030934,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=601"
     },
     {
@@ -9042,6 +9644,7 @@ export const ownSampleData = [
         "patientSsn": 3333030935,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=602"
     },
     {
@@ -9057,6 +9660,7 @@ export const ownSampleData = [
         "patientSsn": 3333030936,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=603"
     },
     {
@@ -9072,6 +9676,7 @@ export const ownSampleData = [
         "patientSsn": 3333030937,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=604"
     },
     {
@@ -9087,6 +9692,7 @@ export const ownSampleData = [
         "patientSsn": 3333030938,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=605"
     },
     {
@@ -9102,6 +9708,7 @@ export const ownSampleData = [
         "patientSsn": 3333030939,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=606"
     },
     {
@@ -9117,6 +9724,7 @@ export const ownSampleData = [
         "patientSsn": 3333030940,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=607"
     },
     {
@@ -9132,6 +9740,7 @@ export const ownSampleData = [
         "patientSsn": 3333030941,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=608"
     },
     {
@@ -9147,6 +9756,7 @@ export const ownSampleData = [
         "patientSsn": 3333030942,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=609"
     },
     {
@@ -9162,6 +9772,7 @@ export const ownSampleData = [
         "patientSsn": 3333030943,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=610"
     },
     {
@@ -9177,6 +9788,7 @@ export const ownSampleData = [
         "patientSsn": 3333030944,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=611"
     },
     {
@@ -9192,6 +9804,7 @@ export const ownSampleData = [
         "patientSsn": 3333030945,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=612"
     },
     {
@@ -9207,6 +9820,7 @@ export const ownSampleData = [
         "patientSsn": 3333030946,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=613"
     },
     {
@@ -9222,6 +9836,7 @@ export const ownSampleData = [
         "patientSsn": 3333030947,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=614"
     },
     {
@@ -9237,6 +9852,7 @@ export const ownSampleData = [
         "patientSsn": 3333030948,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=615"
     },
     {
@@ -9252,6 +9868,7 @@ export const ownSampleData = [
         "patientSsn": 3333030949,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=616"
     },
     {
@@ -9267,6 +9884,7 @@ export const ownSampleData = [
         "patientSsn": 3333030950,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=617"
     },
     {
@@ -9282,6 +9900,7 @@ export const ownSampleData = [
         "patientSsn": 3333030951,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=618"
     },
     {
@@ -9297,6 +9916,7 @@ export const ownSampleData = [
         "patientSsn": 3333030952,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=619"
     },
     {
@@ -9312,6 +9932,7 @@ export const ownSampleData = [
         "patientSsn": 3333030953,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=620"
     },
     {
@@ -9327,6 +9948,7 @@ export const ownSampleData = [
         "patientSsn": 3333030954,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=621"
     },
     {
@@ -9342,6 +9964,7 @@ export const ownSampleData = [
         "patientSsn": 3333030955,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=622"
     },
     {
@@ -9357,6 +9980,7 @@ export const ownSampleData = [
         "patientSsn": 3333030956,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=623"
     },
     {
@@ -9372,6 +9996,7 @@ export const ownSampleData = [
         "patientSsn": 3333030957,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=624"
     },
     {
@@ -9387,6 +10012,7 @@ export const ownSampleData = [
         "patientSsn": 3333030958,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=625"
     },
     {
@@ -9402,6 +10028,7 @@ export const ownSampleData = [
         "patientSsn": 3333030959,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=626"
     },
     {
@@ -9417,6 +10044,7 @@ export const ownSampleData = [
         "patientSsn": 3333030960,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=627"
     },
     {
@@ -9432,6 +10060,7 @@ export const ownSampleData = [
         "patientSsn": 3333030961,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=628"
     },
     {
@@ -9447,6 +10076,7 @@ export const ownSampleData = [
         "patientSsn": 3333030962,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=629"
     },
     {
@@ -9462,6 +10092,7 @@ export const ownSampleData = [
         "patientSsn": 3333030963,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=630"
     },
     {
@@ -9477,6 +10108,7 @@ export const ownSampleData = [
         "patientSsn": 3333030964,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=631"
     },
     {
@@ -9492,6 +10124,7 @@ export const ownSampleData = [
         "patientSsn": 3333030965,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=632"
     },
     {
@@ -9507,6 +10140,7 @@ export const ownSampleData = [
         "patientSsn": 3333030966,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=633"
     },
     {
@@ -9522,6 +10156,7 @@ export const ownSampleData = [
         "patientSsn": 3333030967,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=634"
     },
     {
@@ -9537,6 +10172,7 @@ export const ownSampleData = [
         "patientSsn": 3333030968,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=635"
     },
     {
@@ -9552,6 +10188,7 @@ export const ownSampleData = [
         "patientSsn": 3333030969,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=636"
     },
     {
@@ -9567,6 +10204,7 @@ export const ownSampleData = [
         "patientSsn": 3333030970,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=637"
     },
     {
@@ -9582,6 +10220,7 @@ export const ownSampleData = [
         "patientSsn": 3333030971,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=638"
     },
     {
@@ -9597,6 +10236,7 @@ export const ownSampleData = [
         "patientSsn": 3333030972,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=639"
     },
     {
@@ -9612,6 +10252,7 @@ export const ownSampleData = [
         "patientSsn": 3333030973,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=640"
     },
     {
@@ -9627,6 +10268,7 @@ export const ownSampleData = [
         "patientSsn": 3333030974,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=641"
     },
     {
@@ -9642,6 +10284,7 @@ export const ownSampleData = [
         "patientSsn": 3333030975,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=642"
     },
     {
@@ -9657,6 +10300,7 @@ export const ownSampleData = [
         "patientSsn": 3333030976,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=643"
     },
     {
@@ -9672,6 +10316,7 @@ export const ownSampleData = [
         "patientSsn": 3333030977,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=644"
     },
     {
@@ -9687,6 +10332,7 @@ export const ownSampleData = [
         "patientSsn": 3333030978,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=645"
     },
     {
@@ -9702,6 +10348,7 @@ export const ownSampleData = [
         "patientSsn": 3333030979,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=646"
     },
     {
@@ -9717,6 +10364,7 @@ export const ownSampleData = [
         "patientSsn": 3333030980,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=647"
     },
     {
@@ -9732,6 +10380,7 @@ export const ownSampleData = [
         "patientSsn": 3333030981,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=648"
     },
     {
@@ -9747,6 +10396,7 @@ export const ownSampleData = [
         "patientSsn": 3333030982,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=649"
     },
     {
@@ -9762,6 +10412,7 @@ export const ownSampleData = [
         "patientSsn": 3333030983,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=650"
     },
     {
@@ -9777,6 +10428,7 @@ export const ownSampleData = [
         "patientSsn": 3333030984,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=651"
     },
     {
@@ -9792,6 +10444,7 @@ export const ownSampleData = [
         "patientSsn": 3333030985,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=652"
     },
     {
@@ -9807,6 +10460,7 @@ export const ownSampleData = [
         "patientSsn": 3333030986,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=653"
     },
     {
@@ -9822,6 +10476,7 @@ export const ownSampleData = [
         "patientSsn": 3333030987,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=654"
     },
     {
@@ -9837,6 +10492,7 @@ export const ownSampleData = [
         "patientSsn": 3333030988,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=655"
     },
     {
@@ -9852,6 +10508,7 @@ export const ownSampleData = [
         "patientSsn": 3333030989,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=656"
     },
     {
@@ -9867,6 +10524,7 @@ export const ownSampleData = [
         "patientSsn": 3333030990,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=657"
     },
     {
@@ -9882,6 +10540,7 @@ export const ownSampleData = [
         "patientSsn": 3333030991,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=658"
     },
     {
@@ -9897,6 +10556,7 @@ export const ownSampleData = [
         "patientSsn": 3333030992,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=659"
     },
     {
@@ -9912,6 +10572,7 @@ export const ownSampleData = [
         "patientSsn": 3333030993,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=660"
     },
     {
@@ -9927,6 +10588,7 @@ export const ownSampleData = [
         "patientSsn": 3333030994,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=661"
     },
     {
@@ -9942,6 +10604,7 @@ export const ownSampleData = [
         "patientSsn": 3333030995,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=662"
     },
     {
@@ -9957,6 +10620,7 @@ export const ownSampleData = [
         "patientSsn": 3333030996,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=663"
     },
     {
@@ -9972,6 +10636,7 @@ export const ownSampleData = [
         "patientSsn": 3333030997,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=664"
     },
     {
@@ -9987,6 +10652,7 @@ export const ownSampleData = [
         "patientSsn": 3333030998,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=665"
     },
     {
@@ -10002,6 +10668,7 @@ export const ownSampleData = [
         "patientSsn": 3333030999,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=666"
     },
     {
@@ -10017,6 +10684,7 @@ export const ownSampleData = [
         "patientSsn": 3333031000,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=667"
     },
     {
@@ -10032,6 +10700,7 @@ export const ownSampleData = [
         "patientSsn": 3333031001,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=668"
     },
     {
@@ -10047,6 +10716,7 @@ export const ownSampleData = [
         "patientSsn": 3333031002,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=669"
     },
     {
@@ -10062,6 +10732,7 @@ export const ownSampleData = [
         "patientSsn": 3333031003,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=670"
     },
     {
@@ -10077,6 +10748,7 @@ export const ownSampleData = [
         "patientSsn": 3333031004,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=671"
     },
     {
@@ -10092,6 +10764,7 @@ export const ownSampleData = [
         "patientSsn": 3333031005,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=672"
     },
     {
@@ -10107,6 +10780,7 @@ export const ownSampleData = [
         "patientSsn": 3333031006,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=673"
     },
     {
@@ -10122,6 +10796,7 @@ export const ownSampleData = [
         "patientSsn": 3333031007,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=674"
     },
     {
@@ -10137,6 +10812,7 @@ export const ownSampleData = [
         "patientSsn": 3333031008,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=675"
     },
     {
@@ -10152,6 +10828,7 @@ export const ownSampleData = [
         "patientSsn": 3333031009,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=676"
     },
     {
@@ -10167,6 +10844,7 @@ export const ownSampleData = [
         "patientSsn": 3333031010,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=677"
     },
     {
@@ -10182,6 +10860,7 @@ export const ownSampleData = [
         "patientSsn": 3333031011,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=678"
     },
     {
@@ -10197,6 +10876,7 @@ export const ownSampleData = [
         "patientSsn": 3333031012,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=679"
     },
     {
@@ -10212,6 +10892,7 @@ export const ownSampleData = [
         "patientSsn": 3333031013,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=680"
     },
     {
@@ -10227,6 +10908,7 @@ export const ownSampleData = [
         "patientSsn": 3333031014,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=681"
     },
     {
@@ -10242,6 +10924,7 @@ export const ownSampleData = [
         "patientSsn": 3333031015,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=682"
     },
     {
@@ -10257,6 +10940,7 @@ export const ownSampleData = [
         "patientSsn": 3333031016,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=683"
     },
     {
@@ -10272,6 +10956,7 @@ export const ownSampleData = [
         "patientSsn": 3333031017,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=684"
     },
     {
@@ -10287,6 +10972,7 @@ export const ownSampleData = [
         "patientSsn": 3333031018,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=685"
     },
     {
@@ -10302,6 +10988,7 @@ export const ownSampleData = [
         "patientSsn": 3333031019,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=686"
     },
     {
@@ -10317,6 +11004,7 @@ export const ownSampleData = [
         "patientSsn": 3333031020,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=687"
     },
     {
@@ -10332,6 +11020,7 @@ export const ownSampleData = [
         "patientSsn": 3333031021,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=688"
     },
     {
@@ -10347,6 +11036,7 @@ export const ownSampleData = [
         "patientSsn": 3333031022,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=689"
     },
     {
@@ -10362,6 +11052,7 @@ export const ownSampleData = [
         "patientSsn": 3333031023,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=690"
     },
     {
@@ -10377,6 +11068,7 @@ export const ownSampleData = [
         "patientSsn": 3333031024,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=691"
     },
     {
@@ -10392,6 +11084,7 @@ export const ownSampleData = [
         "patientSsn": 3333031025,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=692"
     },
     {
@@ -10407,6 +11100,7 @@ export const ownSampleData = [
         "patientSsn": 3333031026,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=693"
     },
     {
@@ -10422,6 +11116,7 @@ export const ownSampleData = [
         "patientSsn": 3333031027,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=694"
     },
     {
@@ -10437,6 +11132,7 @@ export const ownSampleData = [
         "patientSsn": 3333031028,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=695"
     },
     {
@@ -10452,6 +11148,7 @@ export const ownSampleData = [
         "patientSsn": 3333031029,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=696"
     },
     {
@@ -10467,6 +11164,7 @@ export const ownSampleData = [
         "patientSsn": 3333031030,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=697"
     },
     {
@@ -10482,6 +11180,7 @@ export const ownSampleData = [
         "patientSsn": 3333031031,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=698"
     },
     {
@@ -10497,6 +11196,7 @@ export const ownSampleData = [
         "patientSsn": 3333031032,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=699"
     },
     {
@@ -10512,6 +11212,7 @@ export const ownSampleData = [
         "patientSsn": 3333031033,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=700"
     },
     {
@@ -10527,6 +11228,7 @@ export const ownSampleData = [
         "patientSsn": 3333031034,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=701"
     },
     {
@@ -10542,6 +11244,7 @@ export const ownSampleData = [
         "patientSsn": 3333031035,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=702"
     },
     {
@@ -10557,6 +11260,7 @@ export const ownSampleData = [
         "patientSsn": 3333031036,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=703"
     },
     {
@@ -10572,6 +11276,7 @@ export const ownSampleData = [
         "patientSsn": 3333031037,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=704"
     },
     {
@@ -10587,6 +11292,7 @@ export const ownSampleData = [
         "patientSsn": 3333031038,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=705"
     },
     {
@@ -10602,6 +11308,7 @@ export const ownSampleData = [
         "patientSsn": 3333031039,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=706"
     },
     {
@@ -10617,6 +11324,7 @@ export const ownSampleData = [
         "patientSsn": 3333031040,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=707"
     },
     {
@@ -10632,6 +11340,7 @@ export const ownSampleData = [
         "patientSsn": 3333031041,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=708"
     },
     {
@@ -10647,6 +11356,7 @@ export const ownSampleData = [
         "patientSsn": 3333031042,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=709"
     },
     {
@@ -10662,6 +11372,7 @@ export const ownSampleData = [
         "patientSsn": 3333031043,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=710"
     },
     {
@@ -10677,6 +11388,7 @@ export const ownSampleData = [
         "patientSsn": 3333031044,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=711"
     },
     {
@@ -10692,6 +11404,7 @@ export const ownSampleData = [
         "patientSsn": 3333031045,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=712"
     },
     {
@@ -10707,6 +11420,7 @@ export const ownSampleData = [
         "patientSsn": 3333031046,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=713"
     },
     {
@@ -10722,6 +11436,7 @@ export const ownSampleData = [
         "patientSsn": 3333031047,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=714"
     },
     {
@@ -10737,6 +11452,7 @@ export const ownSampleData = [
         "patientSsn": 3333031048,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=715"
     },
     {
@@ -10752,6 +11468,7 @@ export const ownSampleData = [
         "patientSsn": 3333031049,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=716"
     },
     {
@@ -10767,6 +11484,7 @@ export const ownSampleData = [
         "patientSsn": 3333031050,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=717"
     },
     {
@@ -10782,6 +11500,7 @@ export const ownSampleData = [
         "patientSsn": 3333031051,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=718"
     },
     {
@@ -10797,6 +11516,7 @@ export const ownSampleData = [
         "patientSsn": 3333031052,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=719"
     },
     {
@@ -10812,6 +11532,7 @@ export const ownSampleData = [
         "patientSsn": 3333031053,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=720"
     },
     {
@@ -10827,6 +11548,7 @@ export const ownSampleData = [
         "patientSsn": 3333031054,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=721"
     },
     {
@@ -10842,6 +11564,7 @@ export const ownSampleData = [
         "patientSsn": 3333031055,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=722"
     },
     {
@@ -10857,6 +11580,7 @@ export const ownSampleData = [
         "patientSsn": 3333031056,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=723"
     },
     {
@@ -10872,6 +11596,7 @@ export const ownSampleData = [
         "patientSsn": 3333031057,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=724"
     },
     {
@@ -10887,6 +11612,7 @@ export const ownSampleData = [
         "patientSsn": 3333031058,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=725"
     },
     {
@@ -10902,6 +11628,7 @@ export const ownSampleData = [
         "patientSsn": 3333031059,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=726"
     },
     {
@@ -10917,6 +11644,7 @@ export const ownSampleData = [
         "patientSsn": 3333031060,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=727"
     },
     {
@@ -10932,6 +11660,7 @@ export const ownSampleData = [
         "patientSsn": 3333031061,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=728"
     },
     {
@@ -10947,6 +11676,7 @@ export const ownSampleData = [
         "patientSsn": 3333031062,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=729"
     },
     {
@@ -10962,6 +11692,7 @@ export const ownSampleData = [
         "patientSsn": 3333031063,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=730"
     },
     {
@@ -10977,6 +11708,7 @@ export const ownSampleData = [
         "patientSsn": 3333031064,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=731"
     },
     {
@@ -10992,6 +11724,7 @@ export const ownSampleData = [
         "patientSsn": 3333031065,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=732"
     },
     {
@@ -11007,6 +11740,7 @@ export const ownSampleData = [
         "patientSsn": 3333031066,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=733"
     },
     {
@@ -11022,6 +11756,7 @@ export const ownSampleData = [
         "patientSsn": 3333031067,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=734"
     },
     {
@@ -11037,6 +11772,7 @@ export const ownSampleData = [
         "patientSsn": 3333031068,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=735"
     },
     {
@@ -11052,6 +11788,7 @@ export const ownSampleData = [
         "patientSsn": 3333031069,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=736"
     },
     {
@@ -11067,6 +11804,7 @@ export const ownSampleData = [
         "patientSsn": 3333031070,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=737"
     },
     {
@@ -11082,6 +11820,7 @@ export const ownSampleData = [
         "patientSsn": 3333031071,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=738"
     },
     {
@@ -11097,6 +11836,7 @@ export const ownSampleData = [
         "patientSsn": 3333031072,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=739"
     },
     {
@@ -11112,6 +11852,7 @@ export const ownSampleData = [
         "patientSsn": 3333031073,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=740"
     },
     {
@@ -11127,6 +11868,7 @@ export const ownSampleData = [
         "patientSsn": 3333031074,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=741"
     },
     {
@@ -11142,6 +11884,7 @@ export const ownSampleData = [
         "patientSsn": 3333031075,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=742"
     },
     {
@@ -11157,6 +11900,7 @@ export const ownSampleData = [
         "patientSsn": 3333031076,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=743"
     },
     {
@@ -11172,6 +11916,7 @@ export const ownSampleData = [
         "patientSsn": 3333031077,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=744"
     },
     {
@@ -11187,6 +11932,7 @@ export const ownSampleData = [
         "patientSsn": 3333031078,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=745"
     },
     {
@@ -11202,6 +11948,7 @@ export const ownSampleData = [
         "patientSsn": 3333031079,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=746"
     },
     {
@@ -11217,6 +11964,7 @@ export const ownSampleData = [
         "patientSsn": 3333031080,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=747"
     },
     {
@@ -11232,6 +11980,7 @@ export const ownSampleData = [
         "patientSsn": 3333031081,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=748"
     },
     {
@@ -11247,6 +11996,7 @@ export const ownSampleData = [
         "patientSsn": 3333031082,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=749"
     },
     {
@@ -11262,6 +12012,7 @@ export const ownSampleData = [
         "patientSsn": 3333031083,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=750"
     },
     {
@@ -11277,6 +12028,7 @@ export const ownSampleData = [
         "patientSsn": 3333031084,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=751"
     },
     {
@@ -11292,6 +12044,7 @@ export const ownSampleData = [
         "patientSsn": 3333031085,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=752"
     },
     {
@@ -11307,6 +12060,7 @@ export const ownSampleData = [
         "patientSsn": 3333031086,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=753"
     },
     {
@@ -11322,6 +12076,7 @@ export const ownSampleData = [
         "patientSsn": 3333031087,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=754"
     },
     {
@@ -11337,6 +12092,7 @@ export const ownSampleData = [
         "patientSsn": 3333031088,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=755"
     },
     {
@@ -11352,6 +12108,7 @@ export const ownSampleData = [
         "patientSsn": 3333031089,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=756"
     },
     {
@@ -11367,6 +12124,7 @@ export const ownSampleData = [
         "patientSsn": 3333031090,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=757"
     },
     {
@@ -11382,6 +12140,7 @@ export const ownSampleData = [
         "patientSsn": 3333031091,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=758"
     },
     {
@@ -11397,6 +12156,7 @@ export const ownSampleData = [
         "patientSsn": 3333031092,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=759"
     },
     {
@@ -11412,6 +12172,7 @@ export const ownSampleData = [
         "patientSsn": 3333031093,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=760"
     },
     {
@@ -11427,6 +12188,7 @@ export const ownSampleData = [
         "patientSsn": 3333031094,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=761"
     },
     {
@@ -11442,6 +12204,7 @@ export const ownSampleData = [
         "patientSsn": 3333031095,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=762"
     },
     {
@@ -11457,6 +12220,7 @@ export const ownSampleData = [
         "patientSsn": 3333031096,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=763"
     },
     {
@@ -11472,6 +12236,7 @@ export const ownSampleData = [
         "patientSsn": 3333031097,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=764"
     },
     {
@@ -11487,6 +12252,7 @@ export const ownSampleData = [
         "patientSsn": 3333031098,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=765"
     },
     {
@@ -11502,6 +12268,7 @@ export const ownSampleData = [
         "patientSsn": 3333031099,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=766"
     },
     {
@@ -11517,6 +12284,7 @@ export const ownSampleData = [
         "patientSsn": 3333031100,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=767"
     },
     {
@@ -11532,6 +12300,7 @@ export const ownSampleData = [
         "patientSsn": 3333031101,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=768"
     },
     {
@@ -11547,6 +12316,7 @@ export const ownSampleData = [
         "patientSsn": 3333031102,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=769"
     },
     {
@@ -11562,6 +12332,7 @@ export const ownSampleData = [
         "patientSsn": 3333031103,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=770"
     },
     {
@@ -11577,6 +12348,7 @@ export const ownSampleData = [
         "patientSsn": 3333031104,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=771"
     },
     {
@@ -11592,6 +12364,7 @@ export const ownSampleData = [
         "patientSsn": 3333031105,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=772"
     },
     {
@@ -11607,6 +12380,7 @@ export const ownSampleData = [
         "patientSsn": 3333031106,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=773"
     },
     {
@@ -11622,6 +12396,7 @@ export const ownSampleData = [
         "patientSsn": 3333031107,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=774"
     },
     {
@@ -11637,6 +12412,7 @@ export const ownSampleData = [
         "patientSsn": 3333031108,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=775"
     },
     {
@@ -11652,6 +12428,7 @@ export const ownSampleData = [
         "patientSsn": 3333031109,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=776"
     },
     {
@@ -11667,6 +12444,7 @@ export const ownSampleData = [
         "patientSsn": 3333031110,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=777"
     },
     {
@@ -11682,6 +12460,7 @@ export const ownSampleData = [
         "patientSsn": 3333031111,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=778"
     },
     {
@@ -11697,6 +12476,7 @@ export const ownSampleData = [
         "patientSsn": 3333031112,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=779"
     },
     {
@@ -11712,6 +12492,7 @@ export const ownSampleData = [
         "patientSsn": 3333031113,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=780"
     },
     {
@@ -11727,6 +12508,7 @@ export const ownSampleData = [
         "patientSsn": 3333031114,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=781"
     },
     {
@@ -11742,6 +12524,7 @@ export const ownSampleData = [
         "patientSsn": 3333031115,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=782"
     },
     {
@@ -11757,6 +12540,7 @@ export const ownSampleData = [
         "patientSsn": 3333031116,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=783"
     },
     {
@@ -11772,6 +12556,7 @@ export const ownSampleData = [
         "patientSsn": 3333031117,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=784"
     },
     {
@@ -11787,6 +12572,7 @@ export const ownSampleData = [
         "patientSsn": 3333031118,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=785"
     },
     {
@@ -11802,6 +12588,7 @@ export const ownSampleData = [
         "patientSsn": 3333031119,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=786"
     },
     {
@@ -11817,6 +12604,7 @@ export const ownSampleData = [
         "patientSsn": 3333031120,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=787"
     },
     {
@@ -11832,6 +12620,7 @@ export const ownSampleData = [
         "patientSsn": 3333031121,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=788"
     },
     {
@@ -11847,6 +12636,7 @@ export const ownSampleData = [
         "patientSsn": 3333031122,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=789"
     },
     {
@@ -11862,6 +12652,7 @@ export const ownSampleData = [
         "patientSsn": 3333031123,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=790"
     },
     {
@@ -11877,6 +12668,7 @@ export const ownSampleData = [
         "patientSsn": 3333031124,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=791"
     },
     {
@@ -11892,6 +12684,7 @@ export const ownSampleData = [
         "patientSsn": 3333031125,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=792"
     },
     {
@@ -11907,6 +12700,7 @@ export const ownSampleData = [
         "patientSsn": 3333031126,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=793"
     },
     {
@@ -11922,6 +12716,7 @@ export const ownSampleData = [
         "patientSsn": 3333031127,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=794"
     },
     {
@@ -11937,6 +12732,7 @@ export const ownSampleData = [
         "patientSsn": 3333031128,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=795"
     },
     {
@@ -11952,6 +12748,7 @@ export const ownSampleData = [
         "patientSsn": 3333031129,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=796"
     },
     {
@@ -11967,6 +12764,7 @@ export const ownSampleData = [
         "patientSsn": 3333031130,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=797"
     },
     {
@@ -11982,6 +12780,7 @@ export const ownSampleData = [
         "patientSsn": 3333031131,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=798"
     },
     {
@@ -11997,6 +12796,7 @@ export const ownSampleData = [
         "patientSsn": 3333031132,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=799"
     },
     {
@@ -12012,6 +12812,7 @@ export const ownSampleData = [
         "patientSsn": 3333031133,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=800"
     },
     {
@@ -12027,6 +12828,7 @@ export const ownSampleData = [
         "patientSsn": 3333031134,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=801"
     },
     {
@@ -12042,6 +12844,7 @@ export const ownSampleData = [
         "patientSsn": 3333031135,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=802"
     },
     {
@@ -12057,6 +12860,7 @@ export const ownSampleData = [
         "patientSsn": 3333031136,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=803"
     },
     {
@@ -12072,6 +12876,7 @@ export const ownSampleData = [
         "patientSsn": 3333031137,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=804"
     },
     {
@@ -12087,6 +12892,7 @@ export const ownSampleData = [
         "patientSsn": 3333031138,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=805"
     },
     {
@@ -12102,6 +12908,7 @@ export const ownSampleData = [
         "patientSsn": 3333031139,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=806"
     },
     {
@@ -12117,6 +12924,7 @@ export const ownSampleData = [
         "patientSsn": 3333031140,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=807"
     },
     {
@@ -12132,6 +12940,7 @@ export const ownSampleData = [
         "patientSsn": 3333031141,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=808"
     },
     {
@@ -12147,6 +12956,7 @@ export const ownSampleData = [
         "patientSsn": 3333031142,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=809"
     },
     {
@@ -12162,6 +12972,7 @@ export const ownSampleData = [
         "patientSsn": 3333031143,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=810"
     },
     {
@@ -12177,6 +12988,7 @@ export const ownSampleData = [
         "patientSsn": 3333031144,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=811"
     },
     {
@@ -12192,6 +13004,7 @@ export const ownSampleData = [
         "patientSsn": 3333031145,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=812"
     },
     {
@@ -12207,6 +13020,7 @@ export const ownSampleData = [
         "patientSsn": 3333031146,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=813"
     },
     {
@@ -12222,6 +13036,7 @@ export const ownSampleData = [
         "patientSsn": 3333031147,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=814"
     },
     {
@@ -12237,6 +13052,7 @@ export const ownSampleData = [
         "patientSsn": 3333031148,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=815"
     },
     {
@@ -12252,6 +13068,7 @@ export const ownSampleData = [
         "patientSsn": 3333031149,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=816"
     },
     {
@@ -12267,6 +13084,7 @@ export const ownSampleData = [
         "patientSsn": 3333031150,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=817"
     },
     {
@@ -12282,6 +13100,7 @@ export const ownSampleData = [
         "patientSsn": 3333031151,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=818"
     },
     {
@@ -12297,6 +13116,7 @@ export const ownSampleData = [
         "patientSsn": 3333031152,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=819"
     },
     {
@@ -12312,6 +13132,7 @@ export const ownSampleData = [
         "patientSsn": 3333031153,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=820"
     },
     {
@@ -12327,6 +13148,7 @@ export const ownSampleData = [
         "patientSsn": 3333031154,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=821"
     },
     {
@@ -12342,6 +13164,7 @@ export const ownSampleData = [
         "patientSsn": 3333031155,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=822"
     },
     {
@@ -12357,6 +13180,7 @@ export const ownSampleData = [
         "patientSsn": 3333031156,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=823"
     },
     {
@@ -12372,6 +13196,7 @@ export const ownSampleData = [
         "patientSsn": 3333031157,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=824"
     },
     {
@@ -12387,6 +13212,7 @@ export const ownSampleData = [
         "patientSsn": 3333031158,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=825"
     },
     {
@@ -12402,6 +13228,7 @@ export const ownSampleData = [
         "patientSsn": 3333031159,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=826"
     },
     {
@@ -12417,6 +13244,7 @@ export const ownSampleData = [
         "patientSsn": 3333031160,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=827"
     },
     {
@@ -12432,6 +13260,7 @@ export const ownSampleData = [
         "patientSsn": 3333031161,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=828"
     },
     {
@@ -12447,6 +13276,7 @@ export const ownSampleData = [
         "patientSsn": 3333031162,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=829"
     },
     {
@@ -12462,6 +13292,7 @@ export const ownSampleData = [
         "patientSsn": 3333031163,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=830"
     },
     {
@@ -12477,6 +13308,7 @@ export const ownSampleData = [
         "patientSsn": 3333031164,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=831"
     },
     {
@@ -12492,6 +13324,7 @@ export const ownSampleData = [
         "patientSsn": 3333031165,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=832"
     },
     {
@@ -12507,6 +13340,7 @@ export const ownSampleData = [
         "patientSsn": 3333031166,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=833"
     },
     {
@@ -12522,6 +13356,7 @@ export const ownSampleData = [
         "patientSsn": 3333031167,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=834"
     },
     {
@@ -12537,6 +13372,7 @@ export const ownSampleData = [
         "patientSsn": 3333031168,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=835"
     },
     {
@@ -12552,6 +13388,7 @@ export const ownSampleData = [
         "patientSsn": 3333031169,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=836"
     },
     {
@@ -12567,6 +13404,7 @@ export const ownSampleData = [
         "patientSsn": 3333031170,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=837"
     },
     {
@@ -12582,6 +13420,7 @@ export const ownSampleData = [
         "patientSsn": 3333031171,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=838"
     },
     {
@@ -12597,6 +13436,7 @@ export const ownSampleData = [
         "patientSsn": 3333031172,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=839"
     },
     {
@@ -12612,6 +13452,7 @@ export const ownSampleData = [
         "patientSsn": 3333031173,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=840"
     },
     {
@@ -12627,6 +13468,7 @@ export const ownSampleData = [
         "patientSsn": 3333031174,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=841"
     },
     {
@@ -12642,6 +13484,7 @@ export const ownSampleData = [
         "patientSsn": 3333031175,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=842"
     },
     {
@@ -12657,6 +13500,7 @@ export const ownSampleData = [
         "patientSsn": 3333031176,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=843"
     },
     {
@@ -12672,6 +13516,7 @@ export const ownSampleData = [
         "patientSsn": 3333031177,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=844"
     },
     {
@@ -12687,6 +13532,7 @@ export const ownSampleData = [
         "patientSsn": 3333031178,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=845"
     },
     {
@@ -12702,6 +13548,7 @@ export const ownSampleData = [
         "patientSsn": 3333031179,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=846"
     },
     {
@@ -12717,6 +13564,7 @@ export const ownSampleData = [
         "patientSsn": 3333031180,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=847"
     },
     {
@@ -12732,6 +13580,7 @@ export const ownSampleData = [
         "patientSsn": 3333031181,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=848"
     },
     {
@@ -12747,6 +13596,7 @@ export const ownSampleData = [
         "patientSsn": 3333031182,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=849"
     },
     {
@@ -12762,6 +13612,7 @@ export const ownSampleData = [
         "patientSsn": 3333031183,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=850"
     },
     {
@@ -12777,6 +13628,7 @@ export const ownSampleData = [
         "patientSsn": 3333031184,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=851"
     },
     {
@@ -12792,6 +13644,7 @@ export const ownSampleData = [
         "patientSsn": 3333031185,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=852"
     },
     {
@@ -12807,6 +13660,7 @@ export const ownSampleData = [
         "patientSsn": 3333031186,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=853"
     },
     {
@@ -12822,6 +13676,7 @@ export const ownSampleData = [
         "patientSsn": 3333031187,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=854"
     },
     {
@@ -12837,6 +13692,7 @@ export const ownSampleData = [
         "patientSsn": 3333031188,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=855"
     },
     {
@@ -12852,6 +13708,7 @@ export const ownSampleData = [
         "patientSsn": 3333031189,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=856"
     },
     {
@@ -12867,6 +13724,7 @@ export const ownSampleData = [
         "patientSsn": 3333031190,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=857"
     },
     {
@@ -12882,6 +13740,7 @@ export const ownSampleData = [
         "patientSsn": 3333031191,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=858"
     },
     {
@@ -12897,6 +13756,7 @@ export const ownSampleData = [
         "patientSsn": 3333031192,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=859"
     },
     {
@@ -12912,6 +13772,7 @@ export const ownSampleData = [
         "patientSsn": 3333031193,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=860"
     },
     {
@@ -12927,6 +13788,7 @@ export const ownSampleData = [
         "patientSsn": 3333031194,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=861"
     },
     {
@@ -12942,6 +13804,7 @@ export const ownSampleData = [
         "patientSsn": 3333031195,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=862"
     },
     {
@@ -12957,6 +13820,7 @@ export const ownSampleData = [
         "patientSsn": 3333031196,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=863"
     },
     {
@@ -12972,6 +13836,7 @@ export const ownSampleData = [
         "patientSsn": 3333031197,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=864"
     },
     {
@@ -12987,6 +13852,7 @@ export const ownSampleData = [
         "patientSsn": 3333031198,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=865"
     },
     {
@@ -13002,6 +13868,7 @@ export const ownSampleData = [
         "patientSsn": 3333031199,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=866"
     },
     {
@@ -13017,6 +13884,7 @@ export const ownSampleData = [
         "patientSsn": 3333031200,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=867"
     },
     {
@@ -13032,6 +13900,7 @@ export const ownSampleData = [
         "patientSsn": 3333031201,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=868"
     },
     {
@@ -13047,6 +13916,7 @@ export const ownSampleData = [
         "patientSsn": 3333031202,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=869"
     },
     {
@@ -13062,6 +13932,7 @@ export const ownSampleData = [
         "patientSsn": 3333031203,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=870"
     },
     {
@@ -13077,6 +13948,7 @@ export const ownSampleData = [
         "patientSsn": 3333031204,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=871"
     },
     {
@@ -13092,6 +13964,7 @@ export const ownSampleData = [
         "patientSsn": 3333031205,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=872"
     },
     {
@@ -13107,6 +13980,7 @@ export const ownSampleData = [
         "patientSsn": 3333031206,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=873"
     },
     {
@@ -13122,6 +13996,7 @@ export const ownSampleData = [
         "patientSsn": 3333031207,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=874"
     },
     {
@@ -13137,6 +14012,7 @@ export const ownSampleData = [
         "patientSsn": 3333031208,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=875"
     },
     {
@@ -13152,6 +14028,7 @@ export const ownSampleData = [
         "patientSsn": 3333031209,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=876"
     },
     {
@@ -13167,6 +14044,7 @@ export const ownSampleData = [
         "patientSsn": 3333031210,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=877"
     },
     {
@@ -13182,6 +14060,7 @@ export const ownSampleData = [
         "patientSsn": 3333031211,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=878"
     },
     {
@@ -13197,6 +14076,7 @@ export const ownSampleData = [
         "patientSsn": 3333031212,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=879"
     },
     {
@@ -13212,6 +14092,7 @@ export const ownSampleData = [
         "patientSsn": 3333031213,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=880"
     },
     {
@@ -13227,6 +14108,7 @@ export const ownSampleData = [
         "patientSsn": 3333031214,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=881"
     },
     {
@@ -13242,6 +14124,7 @@ export const ownSampleData = [
         "patientSsn": 3333031215,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=882"
     },
     {
@@ -13257,6 +14140,7 @@ export const ownSampleData = [
         "patientSsn": 3333031216,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=883"
     },
     {
@@ -13272,6 +14156,7 @@ export const ownSampleData = [
         "patientSsn": 3333031217,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=884"
     },
     {
@@ -13287,6 +14172,7 @@ export const ownSampleData = [
         "patientSsn": 3333031218,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=885"
     },
     {
@@ -13302,6 +14188,7 @@ export const ownSampleData = [
         "patientSsn": 3333031219,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=886"
     },
     {
@@ -13317,6 +14204,7 @@ export const ownSampleData = [
         "patientSsn": 3333031220,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=887"
     },
     {
@@ -13332,6 +14220,7 @@ export const ownSampleData = [
         "patientSsn": 3333031221,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=888"
     },
     {
@@ -13347,6 +14236,7 @@ export const ownSampleData = [
         "patientSsn": 3333031222,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=889"
     },
     {
@@ -13362,6 +14252,7 @@ export const ownSampleData = [
         "patientSsn": 3333031223,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=890"
     },
     {
@@ -13377,6 +14268,7 @@ export const ownSampleData = [
         "patientSsn": 3333031224,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=891"
     },
     {
@@ -13392,6 +14284,7 @@ export const ownSampleData = [
         "patientSsn": 3333031225,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=892"
     },
     {
@@ -13407,6 +14300,7 @@ export const ownSampleData = [
         "patientSsn": 3333031226,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=893"
     },
     {
@@ -13422,6 +14316,7 @@ export const ownSampleData = [
         "patientSsn": 3333031227,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=894"
     },
     {
@@ -13437,6 +14332,7 @@ export const ownSampleData = [
         "patientSsn": 3333031228,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=895"
     },
     {
@@ -13452,6 +14348,7 @@ export const ownSampleData = [
         "patientSsn": 3333031229,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=896"
     },
     {
@@ -13467,6 +14364,7 @@ export const ownSampleData = [
         "patientSsn": 3333031230,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=897"
     },
     {
@@ -13482,6 +14380,7 @@ export const ownSampleData = [
         "patientSsn": 3333031231,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=898"
     },
     {
@@ -13497,6 +14396,7 @@ export const ownSampleData = [
         "patientSsn": 3333031232,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=899"
     },
     {
@@ -13512,6 +14412,7 @@ export const ownSampleData = [
         "patientSsn": 3333031233,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=900"
     },
     {
@@ -13527,6 +14428,7 @@ export const ownSampleData = [
         "patientSsn": 3333031234,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=901"
     },
     {
@@ -13542,6 +14444,7 @@ export const ownSampleData = [
         "patientSsn": 3333031235,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=902"
     },
     {
@@ -13557,6 +14460,7 @@ export const ownSampleData = [
         "patientSsn": 3333031236,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=903"
     },
     {
@@ -13572,6 +14476,7 @@ export const ownSampleData = [
         "patientSsn": 3333031237,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=904"
     },
     {
@@ -13587,6 +14492,7 @@ export const ownSampleData = [
         "patientSsn": 3333031238,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=905"
     },
     {
@@ -13602,6 +14508,7 @@ export const ownSampleData = [
         "patientSsn": 3333031239,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=906"
     },
     {
@@ -13617,6 +14524,7 @@ export const ownSampleData = [
         "patientSsn": 3333031240,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=907"
     },
     {
@@ -13632,6 +14540,7 @@ export const ownSampleData = [
         "patientSsn": 3333031241,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=908"
     },
     {
@@ -13647,6 +14556,7 @@ export const ownSampleData = [
         "patientSsn": 3333031242,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=909"
     },
     {
@@ -13662,6 +14572,7 @@ export const ownSampleData = [
         "patientSsn": 3333031243,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=910"
     },
     {
@@ -13677,6 +14588,7 @@ export const ownSampleData = [
         "patientSsn": 3333031244,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=911"
     },
     {
@@ -13692,6 +14604,7 @@ export const ownSampleData = [
         "patientSsn": 3333031245,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=912"
     },
     {
@@ -13707,6 +14620,7 @@ export const ownSampleData = [
         "patientSsn": 3333031246,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=913"
     },
     {
@@ -13722,6 +14636,7 @@ export const ownSampleData = [
         "patientSsn": 3333031247,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=914"
     },
     {
@@ -13737,6 +14652,7 @@ export const ownSampleData = [
         "patientSsn": 3333031248,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=915"
     },
     {
@@ -13752,6 +14668,7 @@ export const ownSampleData = [
         "patientSsn": 3333031249,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=916"
     },
     {
@@ -13767,6 +14684,7 @@ export const ownSampleData = [
         "patientSsn": 3333031250,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=917"
     },
     {
@@ -13782,6 +14700,7 @@ export const ownSampleData = [
         "patientSsn": 3333031251,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=918"
     },
     {
@@ -13797,6 +14716,7 @@ export const ownSampleData = [
         "patientSsn": 3333031252,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=919"
     },
     {
@@ -13812,6 +14732,7 @@ export const ownSampleData = [
         "patientSsn": 3333031253,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=920"
     },
     {
@@ -13827,6 +14748,7 @@ export const ownSampleData = [
         "patientSsn": 3333031254,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=921"
     },
     {
@@ -13842,6 +14764,7 @@ export const ownSampleData = [
         "patientSsn": 3333031255,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=922"
     },
     {
@@ -13857,6 +14780,7 @@ export const ownSampleData = [
         "patientSsn": 3333031256,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=923"
     },
     {
@@ -13872,6 +14796,7 @@ export const ownSampleData = [
         "patientSsn": 3333031257,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=924"
     },
     {
@@ -13887,6 +14812,7 @@ export const ownSampleData = [
         "patientSsn": 3333031258,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=925"
     },
     {
@@ -13902,6 +14828,7 @@ export const ownSampleData = [
         "patientSsn": 3333031259,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=926"
     },
     {
@@ -13917,7 +14844,8 @@ export const ownSampleData = [
         "patientSsn": 3333031260,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
-        "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=927"
+        "documentDescription": "bild",
+                "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=927"
     },
     {
         "shareId": 15769699,
@@ -13932,7 +14860,8 @@ export const ownSampleData = [
         "patientSsn": 3333031261,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
-        "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=928"
+        "documentDescription": "bild",
+                "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=928"
     },
     {
         "shareId": 15769700,
@@ -13947,6 +14876,7 @@ export const ownSampleData = [
         "patientSsn": 3333031262,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=929"
     },
     {
@@ -13962,6 +14892,7 @@ export const ownSampleData = [
         "patientSsn": 3333031263,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=930"
     },
     {
@@ -13977,6 +14908,7 @@ export const ownSampleData = [
         "patientSsn": 3333031264,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=931"
     },
     {
@@ -13992,6 +14924,7 @@ export const ownSampleData = [
         "patientSsn": 3333031265,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=932"
     },
     {
@@ -14007,6 +14940,7 @@ export const ownSampleData = [
         "patientSsn": 3333031266,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=933"
     },
     {
@@ -14022,6 +14956,7 @@ export const ownSampleData = [
         "patientSsn": 3333031267,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=934"
     },
     {
@@ -14037,6 +14972,7 @@ export const ownSampleData = [
         "patientSsn": 3333031268,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=935"
     },
     {
@@ -14052,6 +14988,7 @@ export const ownSampleData = [
         "patientSsn": 3333031269,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=936"
     },
     {
@@ -14067,6 +15004,7 @@ export const ownSampleData = [
         "patientSsn": 3333031270,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=937"
     },
     {
@@ -14082,6 +15020,7 @@ export const ownSampleData = [
         "patientSsn": 3333031271,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=938"
     },
     {
@@ -14097,6 +15036,7 @@ export const ownSampleData = [
         "patientSsn": 3333031272,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=939"
     },
     {
@@ -14112,6 +15052,7 @@ export const ownSampleData = [
         "patientSsn": 3333031273,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=940"
     },
     {
@@ -14127,6 +15068,7 @@ export const ownSampleData = [
         "patientSsn": 3333031274,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=941"
     },
     {
@@ -14142,6 +15084,7 @@ export const ownSampleData = [
         "patientSsn": 3333031275,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=942"
     },
     {
@@ -14157,6 +15100,7 @@ export const ownSampleData = [
         "patientSsn": 3333031276,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=943"
     },
     {
@@ -14172,6 +15116,7 @@ export const ownSampleData = [
         "patientSsn": 3333031277,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=944"
     },
     {
@@ -14187,6 +15132,7 @@ export const ownSampleData = [
         "patientSsn": 3333031278,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=945"
     },
     {
@@ -14202,6 +15148,7 @@ export const ownSampleData = [
         "patientSsn": 3333031279,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=946"
     },
     {
@@ -14217,6 +15164,7 @@ export const ownSampleData = [
         "patientSsn": 3333031280,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=947"
     },
     {
@@ -14232,6 +15180,7 @@ export const ownSampleData = [
         "patientSsn": 3333031281,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=948"
     },
     {
@@ -14247,6 +15196,7 @@ export const ownSampleData = [
         "patientSsn": 3333031282,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=949"
     },
     {
@@ -14262,6 +15212,7 @@ export const ownSampleData = [
         "patientSsn": 3333031283,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=950"
     },
     {
@@ -14277,6 +15228,7 @@ export const ownSampleData = [
         "patientSsn": 3333031284,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=951"
     },
     {
@@ -14292,6 +15244,7 @@ export const ownSampleData = [
         "patientSsn": 3333031285,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=952"
     },
     {
@@ -14307,6 +15260,7 @@ export const ownSampleData = [
         "patientSsn": 3333031286,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=953"
     },
     {
@@ -14322,6 +15276,7 @@ export const ownSampleData = [
         "patientSsn": 3333031287,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=954"
     },
     {
@@ -14337,6 +15292,7 @@ export const ownSampleData = [
         "patientSsn": 3333031288,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=955"
     },
     {
@@ -14352,6 +15308,7 @@ export const ownSampleData = [
         "patientSsn": 3333031289,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=956"
     },
     {
@@ -14367,6 +15324,7 @@ export const ownSampleData = [
         "patientSsn": 3333031290,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=957"
     },
     {
@@ -14382,6 +15340,7 @@ export const ownSampleData = [
         "patientSsn": 3333031291,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=958"
     },
     {
@@ -14397,6 +15356,7 @@ export const ownSampleData = [
         "patientSsn": 3333031292,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=959"
     },
     {
@@ -14412,6 +15372,7 @@ export const ownSampleData = [
         "patientSsn": 3333031293,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=960"
     },
     {
@@ -14427,6 +15388,7 @@ export const ownSampleData = [
         "patientSsn": 3333031294,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=961"
     },
     {
@@ -14442,6 +15404,7 @@ export const ownSampleData = [
         "patientSsn": 3333031295,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=962"
     },
     {
@@ -14457,6 +15420,7 @@ export const ownSampleData = [
         "patientSsn": 3333031296,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=963"
     },
     {
@@ -14472,6 +15436,7 @@ export const ownSampleData = [
         "patientSsn": 3333031297,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=964"
     },
     {
@@ -14487,6 +15452,7 @@ export const ownSampleData = [
         "patientSsn": 3333031298,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=965"
     },
     {
@@ -14502,6 +15468,7 @@ export const ownSampleData = [
         "patientSsn": 3333031299,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=966"
     },
     {
@@ -14517,6 +15484,7 @@ export const ownSampleData = [
         "patientSsn": 3333031300,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=967"
     },
     {
@@ -14532,6 +15500,7 @@ export const ownSampleData = [
         "patientSsn": 3333031301,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=968"
     },
     {
@@ -14547,6 +15516,7 @@ export const ownSampleData = [
         "patientSsn": 3333031302,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=969"
     },
     {
@@ -14562,6 +15532,7 @@ export const ownSampleData = [
         "patientSsn": 3333031303,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=970"
     },
     {
@@ -14577,6 +15548,7 @@ export const ownSampleData = [
         "patientSsn": 3333031304,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=971"
     },
     {
@@ -14592,6 +15564,7 @@ export const ownSampleData = [
         "patientSsn": 3333031305,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=972"
     },
     {
@@ -14607,6 +15580,7 @@ export const ownSampleData = [
         "patientSsn": 3333031306,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=973"
     },
     {
@@ -14622,6 +15596,7 @@ export const ownSampleData = [
         "patientSsn": 3333031307,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=974"
     },
     {
@@ -14637,6 +15612,7 @@ export const ownSampleData = [
         "patientSsn": 3333031308,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=975"
     },
     {
@@ -14652,6 +15628,7 @@ export const ownSampleData = [
         "patientSsn": 3333031309,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=976"
     },
     {
@@ -14667,6 +15644,7 @@ export const ownSampleData = [
         "patientSsn": 3333031310,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=977"
     },
     {
@@ -14682,6 +15660,7 @@ export const ownSampleData = [
         "patientSsn": 3333031311,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=978"
     },
     {
@@ -14697,6 +15676,7 @@ export const ownSampleData = [
         "patientSsn": 3333031312,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=979"
     },
     {
@@ -14712,6 +15692,7 @@ export const ownSampleData = [
         "patientSsn": 3333031313,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=980"
     },
     {
@@ -14727,6 +15708,7 @@ export const ownSampleData = [
         "patientSsn": 3333031314,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=981"
     },
     {
@@ -14742,6 +15724,7 @@ export const ownSampleData = [
         "patientSsn": 3333031315,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=982"
     },
     {
@@ -14757,6 +15740,7 @@ export const ownSampleData = [
         "patientSsn": 3333031316,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=983"
     },
     {
@@ -14772,6 +15756,7 @@ export const ownSampleData = [
         "patientSsn": 3333031317,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=984"
     },
     {
@@ -14787,6 +15772,7 @@ export const ownSampleData = [
         "patientSsn": 3333031318,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=985"
     },
     {
@@ -14802,6 +15788,7 @@ export const ownSampleData = [
         "patientSsn": 3333031319,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=986"
     },
     {
@@ -14817,6 +15804,7 @@ export const ownSampleData = [
         "patientSsn": 3333031320,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=987"
     },
     {
@@ -14832,6 +15820,7 @@ export const ownSampleData = [
         "patientSsn": 3333031321,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=988"
     },
     {
@@ -14847,6 +15836,7 @@ export const ownSampleData = [
         "patientSsn": 3333031322,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=989"
     },
     {
@@ -14862,6 +15852,7 @@ export const ownSampleData = [
         "patientSsn": 3333031323,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=990"
     },
     {
@@ -14877,6 +15868,7 @@ export const ownSampleData = [
         "patientSsn": 3333031324,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=991"
     },
     {
@@ -14892,6 +15884,7 @@ export const ownSampleData = [
         "patientSsn": 3333031325,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=992"
     },
     {
@@ -14907,6 +15900,7 @@ export const ownSampleData = [
         "patientSsn": 3333031326,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=993"
     },
     {
@@ -14922,6 +15916,7 @@ export const ownSampleData = [
         "patientSsn": 3333031327,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=994"
     },
     {
@@ -14937,6 +15932,7 @@ export const ownSampleData = [
         "patientSsn": 3333031328,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=995"
     },
     {
@@ -14952,6 +15948,7 @@ export const ownSampleData = [
         "patientSsn": 3333031329,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=996"
     },
     {
@@ -14967,6 +15964,7 @@ export const ownSampleData = [
         "patientSsn": 3333031330,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=997"
     },
     {
@@ -14982,6 +15980,7 @@ export const ownSampleData = [
         "patientSsn": 3333031331,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=998"
     },
     {
@@ -14997,6 +15996,7 @@ export const ownSampleData = [
         "patientSsn": 3333031332,
         "patientDob": "1933-03-03",
         "studyDescription": "MLWS",
+        "documentDescription": "bild",
         "documentUrl": "https://www.bilder-befunde.at/webview/viewer/index.php?value=999"
     }
 ]

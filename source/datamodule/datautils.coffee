@@ -55,14 +55,15 @@ mergePatientSsn = (obj, share) ->
     return current
 
 mergePatientDob = (obj, share) ->
-    current = obj.patientDob
+    currentString = obj.patientDob
     niu = dayjs(share.patientDob)
-    if !current? then return niu
+    niuString = niu.format("DD.MM.YYYY")
+    if !currentString? then return niuString
 
     # just checking if everything is in order
-    if current.diff(niu) != 0 then log "patientDob not matching at @studyId "+share.studyId+". "+current+" vs "+niu
+    if niuString != currentString then log "patientDob not matching at @studyId "+share.studyId+". "+currentString+" vs "+niuString
 
-    return current
+    return currentString
 
 mergeStudyDescription = (obj, share) ->
     current = obj.studyDescription
@@ -89,6 +90,41 @@ mergeDateCreated = (obj, share) ->
     diff = current.diff(niu)
     if diff < 0 then return niu
     else return current
+
+mergeBefunde = (obj, share) ->
+    result = obj.befunde
+    result = [] unless result?
+    return result unless share.documentUrl?
+
+    if !(share.formatType == 4 or share.formatType == "4")
+        befund = {
+            url: share.documentUrl, 
+            description: share.documentDescription
+        }
+        result.push(befund)
+
+    ## This is a more detailed check if the document is a Befund...
+    # else if share.formatType != 2 and share.formatType < 10 and share.formatType > 0 
+
+    return result
+
+mergeImages = (obj, share) ->
+    result = obj.images
+    result = [] unless result?
+    return result unless share.documentUrl?
+
+    if (share.formatType == 4 or share.formatType == "4")
+        image = {
+            url: share.documentUrl, 
+            description: share.documentDescription
+        }
+        result.push(image)
+
+    ## This is a more detailed check if the document is a Befund...
+    # else if share.formatType != 2 and share.formatType < 10 and share.formatType > 0 
+
+    return result
+
 
 mergeDocuments = (obj, share) ->
     result = obj.documents
@@ -149,7 +185,9 @@ groudByStudyId = (data) ->
             # obj.studyDescription = mergeStudyDescription(obj, share)
             obj.fromFullName = mergeCreatedBy(obj, share)
             obj.createdAt = mergeDateCreated(obj, share)
-            obj.documents = mergeDocuments(obj,share)
+            # obj.documents = mergeDocuments(obj,share)
+            obj.befunde = mergeBefunde(obj,share)
+            obj.images = mergeImages(obj,share)
             obj.select = false
             obj.studyId = key
             obj.index = results.length
