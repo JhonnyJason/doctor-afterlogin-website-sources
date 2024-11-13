@@ -1,7 +1,12 @@
 //- loadcontrols structure
+#mindate-indication Ergebnisse ab: 
+    span#mindate-display
+
 #loadcontrols
     button#refresh-button.click-button: svg: use(href="#svg-refresh-icon")
     select#choose-date-limit
         option(value="1") 30 Tage
-        option(value="2") 90 Tage 
-        option(value="3") 180 Tage
+        option(value="2") 3 Monate 
+        option(value="3") 6 Monate
+        option(value="4") 1 Jahr
+        option(value="5") 2 Jahre

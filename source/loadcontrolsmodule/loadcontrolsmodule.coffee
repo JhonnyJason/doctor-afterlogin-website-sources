@@ -10,14 +10,36 @@ import * as data from "./datamodule.js"
 import * as S from "./statemodule.js"
 
 ############################################################
+mindateDisplay = document.getElementById("mindate-display")
+
+############################################################
 export initialize = ->
     log "initialize"
-    daysLimit = S.load("daysLimit")
-    if daysLimit then switch daysLimit
-        when 30 then chooseDateLimit.value = 1
-        when 90 then chooseDateLimit.value = 2
-        when 180 then chooseDateLimit.value = 3
-        else log "Error: daysLimit was not of the expected 30,90 or 180!"
+    optionValue = S.load("minDateOptionValue")
+    if optionValue? then switch chooseDateLimit.value
+        when "1" 
+            chooseDateLimit.value = optionValue
+            data.setMinDateDaysBack(30)
+        when "2" 
+            chooseDateLimit.value = optionValue
+            data.setMinDateMonthsBack(3)
+        when "3" 
+            chooseDateLimit.value = optionValue
+            data.setMinDateMonthsBack(6)
+        when "4" 
+            chooseDateLimit.value = optionValue
+            data.setMinDateYearsBack(1)
+        when "5" 
+            chooseDateLimit.value = optionValue
+            data.setMinDateYearsBack(2)
+        else throw new Error("Error: optionValue was an unexpected value: #{optionValue}")
+    else
+        chooseDateLimit.value = "1"
+        data.setMinDateDaysBack(30)
+
+    minDate = data.getMinDate()
+    log minDate
+    mindateDisplay.textContent = data.getMinDate()
 
     refreshButton.addEventListener("click", refreshButtonClicked)
     chooseDateLimit.addEventListener("change", dateLimitChanged)
@@ -32,11 +54,15 @@ refreshButtonClicked = ->
 dateLimitChanged = ->
     # log "dateLimitChanged"
     # log chooseDateLimit.value
+    S.save("minDateOptionValue", chooseDateLimit.value)
     switch chooseDateLimit.value
-        when "1" then data.changeDaysLimit(30)
-        when "2" then data.changeDaysLimit(90)
-        when "3" then data.changeDaysLimit(180)
+        when "1" then data.setMinDateDaysBack(30)
+        when "2" then data.setMinDateMonthsBack(3)
+        when "3" then data.setMinDateMonthsBack(6)
+        when "4" then data.setMinDateYearsBack(1)
+        when "5" then data.setMinDateYearsBack(2)
         else log "unknown value: "+chooseDateLimit.value
+    mindateDisplay.textContent = data.getMinDate()
     table.refresh()
     return
 
@@ -44,4 +70,3 @@ dateLimitChanged = ->
 export hideUI = -> loadcontrols.classList.add("hidden")
 
 export showUI = -> loadcontrols.classList.remove("hidden")
-

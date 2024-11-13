@@ -4,8 +4,6 @@ import * as debugmodule from "./debugmodule.js"
 import * as loadcontrolsmodule from "./loadcontrolsmodule.js"
 import * as modecontrolsmodule from "./modecontrolsmodule.js"
 import * as overviewtablemodule from "./overviewtablemodule.js"
-import * as patientapprovalmodule from "./patientapprovalmodule.js"
-import * as selectionactionmodule from "./selectionactionmodule.js"
 import * as statemodule from "./statemodule.js"
 import * as uistatemodule from "./uistatemodule.js"
 import * as userprocessmodule from "./userprocessmodule.js"
@@ -18,8 +16,6 @@ Modules = {
     loadcontrolsmodule,
     modecontrolsmodule,
     overviewtablemodule,
-    patientapprovalmodule,
-    selectionactionmodule,
     statemodule,
     uistatemodule,
     userprocessmodule,
