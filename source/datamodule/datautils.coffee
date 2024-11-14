@@ -20,9 +20,11 @@ StudyToEntry = {}
 ############################################################
 #region merge Properties Functions
 mergeIsNew = (obj, share) ->
-    return true if obj.isNew
-    return true if share.isNew or share.isNew == "true"
+    return true if obj.isNew or share.isNew or share.isNew == "true"
     return false
+
+mergePatientId = (obj, share) ->
+    return share.patientId
 
 mergeStudyDate = (obj, share) ->
     current = obj.studyDate
@@ -64,14 +66,6 @@ mergePatientDob = (obj, share) ->
     if niuString != currentString then log "patientDob not matching at @studyId "+share.studyId+". "+currentString+" vs "+niuString
 
     return currentString
-
-mergeStudyDescription = (obj, share) ->
-    current = obj.studyDescription
-    niu = share.studyDescription
-    if !current? then return niu
-
-    merged = current + " |\n\n" + niu
-    return merged
 
 mergeCreatedBy = (obj, share) ->
     current = obj.fromFullName
@@ -127,32 +121,6 @@ mergeImages = (obj, share) ->
 
     return result
 
-
-mergeDocuments = (obj, share) ->
-    result = obj.documents
-    result = {} unless result?
-    return result unless share.documentUrl?
-
-    if share.formatType == 4 or share.formatType == "4"
-        result.images = [] unless result.images?
-        image = {
-            url: share.documentUrl, 
-            description: share.documentDescription
-        }
-        result.images.push(image)
-    else 
-        result.befunde = [] unless result.befunde?
-        befund = {
-            url: share.documentUrl, 
-            description: share.documentDescription
-        }
-        result.befunde.push(befund)
-
-    ## This is a more detailed check if the document is a Befund...
-    # else if share.formatType != 2 and share.formatType < 10 and share.formatType > 0 
-
-    return result
-
 #endregion
 
 ############################################################
@@ -181,6 +149,7 @@ groudByStudyId = (data) ->
         for shareId,share of entry
             obj.isNew = mergeIsNew(obj, share)
             obj.studyDate = mergeStudyDate(obj, share)
+            obj.patientId = mergePatientId(obj, share)
             obj.patientFullName = mergePatientFullname(obj, share)
             obj.patientSsn = mergePatientSsn(obj, share)
             obj.patientDob = mergePatientDob(obj, share)

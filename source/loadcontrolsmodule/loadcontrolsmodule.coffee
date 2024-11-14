@@ -11,13 +11,14 @@ import * as S from "./statemodule.js"
 
 ############################################################
 mindateDisplay = document.getElementById("mindate-display")
+patientNameIndication = document.getElementById("patient-name-indication")
 
 ############################################################
 export initialize = ->
     log "initialize"
     optionValue = S.load("minDateOptionValue")
-    if optionValue? then switch chooseDateLimit.value
-        when "1" 
+    if optionValue? then switch optionValue
+        when "1"
             chooseDateLimit.value = optionValue
             data.setMinDateDaysBack(30)
         when "2" 
@@ -43,6 +44,14 @@ export initialize = ->
 
     refreshButton.addEventListener("click", refreshButtonClicked)
     chooseDateLimit.addEventListener("change", dateLimitChanged)
+    backButton.addEventListener("click", backButtonClicked)
+    return
+
+
+############################################################
+backButtonClicked = ->
+    log "backButtonClicked"
+    table.backFromPatientTable()
     return
 
 ############################################################
@@ -67,6 +76,6 @@ dateLimitChanged = ->
     return
 
 ############################################################
-export hideUI = -> loadcontrols.classList.add("hidden")
-
-export showUI = -> loadcontrols.classList.remove("hidden")
+export setPatientName = (patientName) ->
+    patientNameIndication.textContent = patientName
+    return

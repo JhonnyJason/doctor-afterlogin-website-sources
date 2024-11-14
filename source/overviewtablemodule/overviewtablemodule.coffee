@@ -15,41 +15,39 @@ import { retrieveData } from "./datamodule.js"
 ############################################################
 import * as S from "./statemodule.js"
 import * as utl from "./tableutils.js"
+import * as loadcontrols from "./loadcontrolsmodule.js"
 import * as dataModule from "./datamodule.js"
 import {tableRenderCycleMS} from "./configmodule.js"
 
 ############################################################
 tableObj = null
 currentTableHeight = 0
+############################################################
+updateLater = null
+navigatingBack = false
 
 ############################################################
-# rendering = false
-# updateLater = null
-# firstRenderComplete = false
+patientId = null
+patientName = null
 
 ############################################################
-currentState = null
-
-############################################################
-userSelectionResolve = null
+gridJSSearch = null
 
 ############################################################
 export initialize = ->
     log "initialize"
-    # setDefaultState()
-    # setInterval(updateTableHeight, tableRenderCycleMS)
-    # setInterval(emboldenNewRows, tableRenderCycleMS)
     window.addEventListener("resize", updateTableHeight)
     window.gridSearchByString = gridSearchByString
+    window.selectPatient = selectPatient
     return
 
 ############################################################
 renderTable = (dataPromise) ->
     log "renderTable"
     
-    columns = utl.getColumnsObject(currentState)
+    columns = utl.getStandardColumnObjects()
     data = -> dataPromise
-    language = utl.getLanguageObject(currentState)
+    language = utl.getLanguageObject()
     search = true
 
     pagination = { limit: 50 }
@@ -58,7 +56,7 @@ renderTable = (dataPromise) ->
     fixedHeader = true
     resizable = false
     # resizable = true
-    height = "#{utl.getTableHeight(currentState)}px"
+    height = "#{utl.getTableHeight()}px"
     width = "100%"
     
     autoWidth = false
@@ -76,52 +74,54 @@ renderTable = (dataPromise) ->
         gridjsFrame.innerHTML = ""    
         await tableObj.render(gridjsFrame)
     
-    # firstRenderComplete = true
-    # setInterval(updateTableHeight, tableRenderCycleMS)
-    # setTimeout(emboldenNewRows, tableRenderCycleMS)
     return
 
-# updateTableData = (dataPromise) ->
-#     # log "updateTableData"
+############################################################
+renderPatientTable = (dataPromise) ->
+    log "renderPatientTable"
+    
+    columns = utl.getPatientsColumnObjects()
+    data = -> dataPromise
+    language = utl.getLanguageObject()
+    search = true
 
-#     columns = utl.getColumnsObject(currentState)
-#     data = -> dataPromise
-#     language = utl.getLanguageObject(currentState)
-
-#     searchInput = document.getElementsByClassName("gridjs-search-input")[0]
-#     if searchInput? then searchValue = searchInput.value
-#     log searchValue
-#     search =
-#         enabled: true
-#         keyword: searchValue
-
-#     focusRange = getSearchFocusRange()
-
-#     height = "#{utl.getTableHeight(currentState)}px"
-#     width = "100%"
-
-#     await updateTable({columns, data, language, search, height, width})
-#     if focusRange? then setFocusRange(focusRange)
-#     return
+    pagination = { limit: 50 }
+    # sort = { multiColumn: false }
+    sort = false
+    fixedHeader = true
+    resizable = false
+    # resizable = true
+    height = "#{utl.getTableHeight()}px"
+    width = "100%"
+    
+    autoWidth = false
+    
+    gridJSOptions = { columns, data, language, search, pagination, sort, fixedHeader, resizable, height, width, autoWidth }
+    
+    if tableObj?
+        tableObj = null
+        gridjsFrame.innerHTML = ""  
+        tableObj = new Grid(gridJSOptions)
+        await tableObj.render(gridjsFrame).forceRender()
+        # render alone does not work here - it seems the Old State still remains in the GridJS singleton thus a render here does not refresh the table at all
+    else
+        tableObj = new Grid(gridJSOptions)
+        gridjsFrame.innerHTML = ""    
+        await tableObj.render(gridjsFrame)
+    
+    gridJSSearch = document.getElementsByClassName("gridjs-search")[0]
+    gridJSSearch.addEventListener("animationend", searchPositionMoved)
+    return
 
 ############################################################
 updateTableHeight = (height) ->
-    # return unless firstRenderComplete
-
     log "updateTableHeight"
     olog { height }
-
-    ##updating table height in other states causes selection data issues :-(
-    return unless currentState == "ownData"
 
     if typeof height != "number" then height = utl.getTableHeight()
     if currentTableHeight == height then return
     currentTableHeight = height 
     height = height+"px"
-
-    # probably the columns and language objects are not useful here
-    # columns = utl.getColumnsObject(currentState)
-    # language = utl.getLanguageObject(currentState)
 
     #preserve input value if we have
     searchInput = document.getElementsByClassName("gridjs-search-input")[0]
@@ -150,8 +150,6 @@ updateTable = (config) ->
     try await tableObj.updateConfig(config).forceRender()
     catch err then log err
     rendering = false
-
-    # setTimeout(emboldenNewRows, tableRenderCycleMS)
     
     if updateLater?
         log "updateLater existed!"
@@ -177,30 +175,15 @@ setFocusRange = (range) ->
     searchInput.focus()
     return
 
-# emboldenNewRows = ->
-#     log "emboldenNewRows"
-#     if document.getElementsByClassName("gridjs-loading-bar").length > 0
-#         setTimeout(emboldenNewRows, tableRenderCycleMS)
-#         return
 
-
-#     searchInput = document.getElementsByClassName("gridjs-search-input")[0]
-#     if searchInput?
-
-#     isNewIndicators = document.getElementsByClassName("isNew")
-#     log "isNewIndicators: #{isNewIndicators.length}"
-
-#     for el in isNewIndicators
-#         rowEl = getRowForIsNewIndicator(el)
-#         rowEl.classList.add("newRow")
-#     return
-
-getRowForIsNewIndicator = (indicator) ->
-    node = indicator
-    loop
-        node = node.parentNode
-        if !node? or node.tagName == "TR" then return node
+############################################################
+searchPositionMoved = ->
+    log "searchPositionMoved"
+    if navigatingBack 
+        navigatingBack = false
+        setDefaultState()
     return
+
 
 ############################################################
 gridSearchByString = (name) ->
@@ -208,29 +191,45 @@ gridSearchByString = (name) ->
     search = {keyword: name}
     updateTable({search})
     return
+
+selectPatient = (selectedPatientId, selectedPatientName) ->
+    log "selectPatient #{patientId}"
+    patientId = selectedPatientId
+    patientName = selectedPatientName
+    loadcontrols.setPatientName(patientName)
+    setPatientSelectedState()
+    return
     
+
 ############################################################
 export refresh = ->
     log "refresh"
-    log currentState
     setDefaultState()
     return 
 
+export backFromPatientTable = ->
+    log "backFromPatientTable"
+    navigatingBack = true
+    overviewtable.classList.add("go-back")
+    return
 ############################################################
 #region set to state Functions
 export setDefaultState = ->
     log "setDefaultState"
-    currentState = "ownData"
-    overviewtable.classList.remove("no-search")
+    overviewtable.classList.remove("patient-table")
+    overviewtable.classList.remove("go-back")
 
-    dataPromise = dataModule.getOwnData()
-
+    dataPromise = dataModule.getAllData()
     # this is when we want to destroy the table completely
-    renderTable(dataPromise)
+    renderTable(dataPromise) # we always want to do that :-)
+    return
 
-    # in the usual case we only want to update the table when it already exists
-    # if tableObj then updateTableData(dataPromise)
-    # else renderTable(dataPromise)
+export setPatientSelectedState = ->
+    log "setPatientSelectedState"
+    overviewtable.classList.add("patient-table")
+
+    dataPromise = dataModule.getDataForPatientId(patientId)
+    renderPatientTable(dataPromise)
     return
 
 #endregion

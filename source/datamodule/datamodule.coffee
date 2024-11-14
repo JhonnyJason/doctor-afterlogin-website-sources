@@ -23,16 +23,15 @@ minDateFormatted  = null
 patientAuth = null
 
 ############################################################
-ownDataPromise = null
+allDataPromise = null
 patientDataPromise = null
 
 ############################################################
 dataToShare = null
 
 ############################################################
-#region dataRetrieval
-retrieveData = (minDate) ->
-    log "retrieveData"
+retrieveData = (minDate, patientId) ->
+    log "retrieveData #{minDate},#{patientId}"
     try
         pageSize = dataLoadPageSize
         page = 1
@@ -41,7 +40,7 @@ retrieveData = (minDate) ->
         allData = []
 
         loop
-            requestData = {minDate, page, pageSize}
+            requestData = {minDate, patientId, page, pageSize}
             log "requesting -> "
             olog requestData
 
@@ -59,62 +58,43 @@ retrieveData = (minDate) ->
         log err
         return utl.groupAndSort(ownSampleData)
 
-#endregion
 
 ############################################################
 export setMinDateDaysBack = (daysCount) ->
-    log "setMinDateDaysBack"
+    log "setMinDateDaysBack #{daysCount}"
     dateObj = dayjs().subtract(daysCount, "day")
     minDate = dateObj.toJSON()
     minDateFormatted = dateObj.format("DD.MM.YYYY")
 
-    ownDataPromise = null
+    allDataPromise = null
     return
 
 export setMinDateMonthsBack = (monthsCount) ->
-    log "setMinDateMonthsBack"
+    log "setMinDateMonthsBack #{monthsCount}"
     dateObj = dayjs().subtract(monthsCount, "month")
     minDate = dateObj.toJSON()
     minDateFormatted = dateObj.format("DD.MM.YYYY")
 
-    ownDataPromise = null
+    allDataPromise = null
     return
 
-
 export setMinDateYearsBack = (yearsCount) ->
-    log "setMinDateYearsBack"
+    log "setMinDateYearsBack #{yearsCount}"
     dateObj = dayjs().subtract(yearsCount, "year")
     minDate = dateObj.toJSON()
     minDateFormatted = dateObj.format("DD.MM.YYYY")
 
-    ownDataPromise = null
+    allDataPromise = null
     return
 
 ############################################################
-export getOwnData = ->
-    if !ownDataPromise? then ownDataPromise = retrieveData(minDate)
-    return ownDataPromise
+export getAllData = ->
+    if !allDataPromise? then allDataPromise = retrieveData(minDate, undefined)
+    return allDataPromise
+
+export getDataForPatientId = (patientId) ->
+    if !patientDataPromise? then patientDataPromise = retrieveData(undefined, patientId)
+    return patientDataPromise
 
 ############################################################
-export addToOwnData = (newData) ->
-    log "addToOwnData"
-    if ownDataPromise? then ownDataPromise = utl.mergeDataSets((await ownDataPromise), newData)
-    # olog { ownDataPromise }
-    return
-
 export getMinDate = -> minDateFormatted
-
-############################################################
-export setShareData = (data) ->
-    dataToShare = data
-    return
-
-export clearShareData = ->
-    dataToShare = null
-    return
-
-export shareToDoctors = (doctors) ->
-    log "shareToDoctors"
-    for doctor in doctors
-        shareToDoctor(dataToShare, doctor)
-    return

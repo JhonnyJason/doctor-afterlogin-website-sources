@@ -3,11 +3,8 @@ button-size = 22px
 
 @import '../../../node_modules/gridjs/dist/theme/mermaid.css'
 
-#overviewtable.no-search
-    // padding-top 58px
-    .gridjs-search-input
-        dislplay none
-
+.girdjs-search
+    transition: transform 0.3s
 .gridjs-search-input
     width 220px
 
@@ -61,10 +58,6 @@ th.gridjs-th
     flex-shrink 10
     text-overflow: ellipsis
 
-.c-table
-    // height calc(100vh - 180px) !important
-    max-width 100% !important
-    min-width calc(100% - 10px)
 
 table.gridjs-table
     // min-width 100%
@@ -76,50 +69,8 @@ th.gridjs-th
     background-color #F9FAFB
     z-index 20
 
-
 tr.gridjs-tr:nth-child(2n)
     background-color: alpha(cd-darkblue, 0.3)
-
-// td.gridjs-td:nth-child(1)
-//     @extends .click-button
-    
-//     // width 100%
-//     // box-sizing: border-box
-//     // padding 3px
-
-// td.gridjs-td[data-column-id="studyDate"]
-//     user-select: none
-
-.bild-button
-.befund-button
-    display block
-    cursor: pointer
-    // color cd-turquoise
-    // border-radius: 5px
-    // background-color cd-turquoise
-    // color white
-    margin auto
-    margin-top 3px
-    // padding 5px 10px
-    // width: 45px
-    // height 35px
-    width: button-size
-    height button-size
-
-.befund-button:after
-    content:"asd"
-    opacity 0
-
-.bild-button[disabled]
-.befund-button[disabled]
-    // user-select: none
-    opacity 0.3
-    pointer-events: none
-
-.bild-button:active
-.befund-button:active
-    opacity 0.5
-
 
 td.gridjs-td
     background transparent
@@ -139,6 +90,7 @@ td.gridjs-td
     ul.bilder
         list-style-image url("img/icon_bild.gif")
         padding-left 15px
+
 .click-button
 .click-button:hover
     overflow: hidden
@@ -147,11 +99,6 @@ td.gridjs-td
     padding 10px
     text-transform: uppercase    
 
-
-// #main-block-top
-//     background-color grey
-//     text-align: center
-
 .isNewDot
     height 12px
     width 12px
@@ -159,74 +106,136 @@ td.gridjs-td
     border solid 1px #999
     background-color: #eee
 
-
 .isNewDot.isNew
     border-color #449900
     background-color: #44e000
 
-.newRow
-    td
-        font-weight: bold
-
 
 // isNew indicator
 th.gridjs-th:nth-child(1) 
-td.gridjs-th:nth-child(1)
+td.gridjs-td:nth-child(1)
     width 20px !important
     min-width 20px !important
     max-width 20px !important
 // Name
 th.gridjs-th:nth-child(2) 
-td.gridjs-th:nth-child(2) 
+td.gridjs-td:nth-child(2) 
     width auto !important
     min-width auto !important
     max-width 300px !important
 
 //SVNR
 th.gridjs-th:nth-child(3) 
-td.gridjs-th:nth-child(3) 
+td.gridjs-td:nth-child(3) 
     width 75px !important
     min-width 75px !important
     max-width 75px !important
+    text-align: center
+td.gridjs-td:nth-child(3) 
+    font-size 11pt
 
 // Geb.-Datum
 th.gridjs-th:nth-child(4) 
-td.gridjs-th:nth-child(4)
+td.gridjs-td:nth-child(4)
     width 122px !important
     min-width 122px !important
     max-width 122px !important
 
 // Befunde
 th.gridjs-th:nth-child(5) 
-td.gridjs-th:nth-child(5) 
+td.gridjs-td:nth-child(5)
     width auto !important
     min-width auto !important
     max-width auto !important
 
 // Bilder
 th.gridjs-th:nth-child(6) 
-td.gridjs-th:nth-child(6) 
+td.gridjs-td:nth-child(6)
     width auto !important
     min-width auto !important
     max-width auto !important
 
 // Unt.-Datum
 th.gridjs-th:nth-child(7) 
-td.gridjs-th:nth-child(7) 
+td.gridjs-td:nth-child(7)
+    text-align: center
     width 122px !important
     min-width 122px !important
     max-width 122px !important
 
 // Radiologie
 th.gridjs-th:nth-child(8) 
-td.gridjs-th:nth-child(8) 
+td.gridjs-td:nth-child(8)
     width auto !important
     min-width auto !important
     max-width auto !important
 
 // Zustellungsdatum
 th.gridjs-th:nth-child(9) 
-td.gridjs-th:nth-child(9) 
+td.gridjs-td:nth-child(9)
+    text-align: center
     width 180px !important
     min-width 180px !important
     max-width 180px !important
+
+
+
+// Patient Table State ------------------------------
+.patient-table.go-back
+    .gridjs-search
+        float none
+        animation slide-to-left 0.2s ease-in forwards
+
+.patient-table
+    .gridjs-search
+        float none
+        animation slide-to-right 0.2s ease-in forwards
+    // .gridjs-search-input
+    //     animation slide-to-right 0.2s ease-in forwards
+    // .gridjs-search-input.go-back
+        
+    table.gridjs-table
+        min-width: 800px
+
+    // Befunde
+    th.gridjs-th:nth-child(2) 
+    td.gridjs-td:nth-child(2)
+        width auto !important
+        min-width auto !important
+        max-width auto !important
+
+    // Bilder
+    th.gridjs-th:nth-child(3) 
+    td.gridjs-td:nth-child(3)
+        width auto !important
+        min-width auto !important
+        max-width auto !important
+
+    // Unt.-Datum
+    th.gridjs-th:nth-child(4) 
+    td.gridjs-td:nth-child(4)
+        text-align: center
+        width 122px !important
+        min-width 122px !important
+        max-width 122px !important
+
+    // Radiologie
+    th.gridjs-th:nth-child(5) 
+    td.gridjs-td:nth-child(5)
+        width auto !important
+        min-width auto !important
+        max-width auto !important
+
+
+// ---------- animations --------------
+@keyframes slide-to-right
+    from
+        transform translateX(0)
+    to
+        transform: translateX(calc(100vw - 234px))
+
+@keyframes slide-to-left
+    from
+        transform translateX(calc(100vw - 234px))
+    to
+        transform: translateX(0)

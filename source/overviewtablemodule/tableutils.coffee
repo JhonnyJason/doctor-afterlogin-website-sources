@@ -13,6 +13,10 @@ import dayjs from "dayjs"
 # import { de } from "dayjs/locales"
 
 ############################################################
+PATIENTID_CELL = 0
+ISNEW_CELL = 1
+
+############################################################
 #region germanLanguage
 deDE = {
     search: {
@@ -78,21 +82,21 @@ messageTarget = null
 #region internalFunctions
 
 ############################################################
-onLinkClick = (el) ->
-    evnt = window.event
-    # console.log("I got called!")
-    # console.log(evnt)
-    evnt.preventDefault()
-    ## TODO send right message
-    href = el.getAttribute("href")
-    ## TODO send right message
-    # window.open("mainwindow.html", messageTarget.name)
-    if messageTarget.closed then messageTarget = window.open("mainwindow.html", messageTarget.name)
-    else window.open("", messageTarget.name)
-    messageTarget.postMessage(href)
-    # messageTarget.focus()
-    # window.blur()
-    return
+# onLinkClick = (el) ->
+#     evnt = window.event
+#     # console.log("I got called!")
+#     # console.log(evnt)
+#     evnt.preventDefault()
+#     ## TODO send right message
+#     href = el.getAttribute("href")
+#     ## TODO send right message
+#     # window.open("mainwindow.html", messageTarget.name)
+#     if messageTarget.closed then messageTarget = window.open("mainwindow.html", messageTarget.name)
+#     else window.open("", messageTarget.name)
+#     messageTarget.postMessage(href)
+#     # messageTarget.focus()
+#     # window.blur()
+#     return
 
 ############################################################
 #region sort functions
@@ -129,10 +133,6 @@ isNewFormatter = (content, row) ->
     innerHTML = "<div class='#{dotClass}'></div>"
     return  html(innerHTML)
 
-doctorNameFormatter = (content, row) ->
-    if row._cells[0].data then return html("<b>#{content}</b>")
-    else return content
-
 bilderFormatter  = (content, row) ->
     return "" unless content?
     innerHTML = "<ul class='bilder'>"
@@ -145,9 +145,6 @@ bilderFormatter  = (content, row) ->
     innerHTML += "</ul>"
     
     return html(innerHTML)
-
-    # if row._cells[0].data then return html("<b>#{innerHTML}</b>")
-    # else return html(innerHTML) 
 
 befundeFormatter = (content , row) ->
     return "" unless content?
@@ -162,99 +159,40 @@ befundeFormatter = (content , row) ->
     innerHTML += "</ul>"
 
     return html(innerHTML)
-    # if row._cells[0].data then return html("<b>#{innerHTML}</b>")
-    # else return html(innerHTML) 
-
-    # formatObj = {
-    #         className: 'befund-button click-button',
-    #         onClick: ->
-    #             olog row
-    #             log("Befunde Button clicked! @#{row.id}")
-    #       }
-    # # return h('button', formatObj, '<svg><use href="#svg-documents-icon" /></svg>')
-    # # return h('button', formatObj, 'BF')
-    # # olog content
-
-    # # if content.hasBefund? and content.documentFormatPk? then innerHTML = '<a href="'+entryBaseURL+content.documentFormatPk+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
-
-    # if content.hasBefund?
-    #     if messageTarget? innerHTML = '<a onClick="onLinkClick(this);" href="'+content.befundURL+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
-    #     else innerHTML = '<a href="'+content.befundURL+'" class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></a>'
-    # else innerHTML = '<div disabled class="befund-button" ><svg row-id="'+row.id+'" ><use href="#svg-documents-icon" /></svg></div>'
-    # return html(innerHTML)
 
 screeningDateFormatter = (content, row) ->
     return content.format("DD.MM.YYYY")
-    # date = dayjs(content)
-    # return date.format("DD.MM.YYYY")
-
-    #here we expect to already get a dayjs object
-    # dateString = content.format("DD.MM.YYYY")
-    # if row._cells[0].data then return html("<b>#{dateString}</b>")
-    # else return dateString 
 
 nameFormatter = (content, row) ->
     linkHTML = """
-        <a onclick='gridSearchByString("#{content}")'>#{content}</a>
+        <a onclick='selectPatient(#{row._cells[PATIENTID_CELL].data}, "#{content}")'>#{content}</a>
     """
-    if row._cells[0].data then return html("<b>#{linkHTML}</b>")
+    if row._cells[ISNEW_CELL].data then return html("<b>#{linkHTML}</b>")
     else return html(linkHTML)
 
 svnFormatter = (content, row) ->
     return content
-    # linkHTML = """
-    #     <a onclick='gridSearchByString("#{content}")'>#{content}</a>
-    # """
-    # if row._cells[0].data then return html("<b>#{linkHTML}</b>")
-    # else return html(linkHTML)
 
 birthdayFormatter = (content, row) ->
-    # date = dayjs(content)
-    # return date.format("DD.MM.YYYY")
-
-    #here we expect to already get a dayjs object
     if typeof content == "object" 
         dateString = content.format("DD.MM.YYYY")
         return dateString
-        # if row._cells[0].data then return html("<b>#{dateString}</b>")
-        # else return dateString
     else return content
-        # linkHTML = """
-        #     <a onclick='gridSearchByString("#{content}")'>#{content}</a>
-        # """
-        # if row._cells[0].data then return html("<b>#{linkHTML}</b>")
-        # else return html(linkHTML)
             
-
-
-descriptionFormatter = (content, row) ->
-    if row._cells[0].data then return html("<b>#{content}</b>")
-    else return content
-
 radiologistFormatter = (content, row) ->
     return content
-    # if row._cells[0].data then return html("<b>#{content}</b>")
-    # else return content
 
 sendingDateFormatter = (content, row) ->
-    # date = dayjs(content)
-    # return date.format("YYYY-MM-DD hh:mm")
-
-    #here we expect to already get a dayjs object
     dateString = content.format("DD.MM.YYYY HH:mm")
-    if row._cells[0].data then return html("<b>#{dateString}</b>")
+    if row._cells[ISNEW_CELL].data then return html("<b>#{dateString}</b>")
     else return dateString 
-
-#endregion
 
 #endregion
 
 ############################################################
 #region exportedFunctions
-export getTableHeight = (state) ->
+export getTableHeight = ->
     log "getTableHeight"
-    ## TODO check if we need to differentiate between states here
-
     tableWrapper = document.getElementsByClassName("gridjs-wrapper")[0]
     gridJSFooter = document.getElementsByClassName("gridjs-footer")[0]
     
@@ -283,98 +221,92 @@ export getTableHeight = (state) ->
     return tableHeight
 
 ############################################################
-export getColumnsObject = (state) ->
+#region Definition of columnHeadObjects
+patientIdHeadObj = {
+    name: ""
+    id: "patientId"
+    hidden: true
+}
 
-    ############################################################
-    #region columnHeadObjects
-    isNewHeadObj = {
-        name: ""
-        id: "isNew"
-        formatter: isNewFormatter
-        sort: false
-    }
+isNewHeadObj = {
+    name: ""
+    id: "isNew"
+    formatter: isNewFormatter
+    sort: false
+}
 
-    bilderHeadObj = {
-        name: "Bilder"
-        id: "images"
-        formatter: bilderFormatter
-        sort: false
-    }
+bilderHeadObj = {
+    name: "Bilder"
+    id: "images"
+    formatter: bilderFormatter
+    sort: false
+}
 
-    befundeHeadObj = {
-        name: "Befunde"
-        id: "befunde"
-        formatter: befundeFormatter
-        sort: false
-    }
+befundeHeadObj = {
+    name: "Befunde"
+    id: "befunde"
+    formatter: befundeFormatter
+    sort: false
+}
 
-    ############################################################
-    #region regularDataFields
-    screeningDateHeadObj = {
-        name: "Unt.-Datum"
-        id: "studyDate"
-        formatter: screeningDateFormatter
-        sort: false
-        # sort: { compare: dateCompare }
-    }
+screeningDateHeadObj = {
+    name: "Unt.-Datum"
+    id: "studyDate"
+    formatter: screeningDateFormatter
+    sort: false
+}
 
-    nameHeadObj = {
-        name: "Name"
-        id: "patientFullName"
-        formatter: nameFormatter
-        sort: false
-    }
+nameHeadObj = {
+    name: "Name"
+    id: "patientFullName"
+    formatter: nameFormatter
+    sort: false
+}
 
-    svnHeadObj = {
-        name: "SVNR"
-        id: "patientSsn"
-        formatter: svnFormatter
-        sort: false
-        # sort: {compare: numberCompare}
-    }
+svnHeadObj = {
+    name: "SVNR"
+    id: "patientSsn"
+    formatter: svnFormatter
+    sort: false
+}
 
-    birthdayHeadObj = {
-        name: "Geb.-Datum"
-        id: "patientDob"
-        formatter: birthdayFormatter
-        sort: false
-        # sort:{ compare: dateCompare }
-    }
+birthdayHeadObj = {
+    name: "Geb.-Datum"
+    id: "patientDob"
+    formatter: birthdayFormatter
+    sort: false
+}
 
-    descriptionHeadObj = {
-        name:"Beschreibung"
-        id: "studyDescription"
-        formatter: descriptionFormatter
-        sort: false
-    }
+radiologistHeadObj = {
+    name: "Radiologie"
+    id: "fromFullName"
+    formatter: radiologistFormatter
+    sort: false
+}
 
-    radiologistHeadObj = {
-        name: "Radiologie"
-        id: "fromFullName"
-        formatter: radiologistFormatter
-        sort: false
-    }
+sendingDateHeadObj = {
+    name: "Zustellungsdatum"
+    id: "createdAt"
+    formatter: sendingDateFormatter
+    sort: false
+}
 
-    sendingDateHeadObj = {
-        name: "Zustellungsdatum"
-        id: "createdAt"
-        formatter: sendingDateFormatter
-        # sort: { compare: dateCompare }
-        sort: false
-    }
-    #endregion
+#endregion
 
-    #endregion
+export getStandardColumnObjects = (state) ->
+    return [patientIdHeadObj, isNewHeadObj, nameHeadObj, svnHeadObj, birthdayHeadObj, befundeHeadObj, bilderHeadObj, screeningDateHeadObj, radiologistHeadObj, sendingDateHeadObj]
 
-    return [isNewHeadObj, nameHeadObj, svnHeadObj, birthdayHeadObj, befundeHeadObj, bilderHeadObj, screeningDateHeadObj, radiologistHeadObj, sendingDateHeadObj]
-
-export getLanguageObject = (state) -> return deDE
+export getPatientsColumnObjects = (state) ->
+    return [isNewHeadObj, befundeHeadObj, bilderHeadObj, screeningDateHeadObj, radiologistHeadObj]
 
 ############################################################
-export changeLinksToMessageSent = (target) ->
-    # console.log("I have a target opener!")
-    messageTarget = target
-    window.onLinkClick = onLinkClick
-    return
+export getLanguageObject = -> return deDE
+
+# ############################################################
+# export changeLinksToMessageSent = (target) ->
+#     # console.log("I have a target opener!")
+#     messageTarget = target
+#     window.onLinkClick = onLinkClick
+#     return
 
 #endregion
