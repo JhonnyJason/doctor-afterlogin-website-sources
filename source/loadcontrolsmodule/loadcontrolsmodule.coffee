@@ -76,6 +76,6 @@ dateLimitChanged = ->
     return
 
 ############################################################
-export setPatientName = (patientName) ->
-    patientNameIndication.textContent = patientName
+export setPatientString = (patientString) ->
+    patientNameIndication.textContent = patientString
     return

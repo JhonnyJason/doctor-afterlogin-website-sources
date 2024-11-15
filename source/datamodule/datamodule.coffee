@@ -97,4 +97,9 @@ export getDataForPatientId = (patientId) ->
     return patientDataPromise
 
 ############################################################
+export invalidatePatientData = ->
+    patientDataPromise = null
+    return
+
+############################################################
 export getMinDate = -> minDateFormatted

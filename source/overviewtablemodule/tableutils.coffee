@@ -15,6 +15,7 @@ import dayjs from "dayjs"
 ############################################################
 PATIENTID_CELL = 0
 ISNEW_CELL = 1
+DOBSTANDARD_CELL = 4
 
 ############################################################
 #region germanLanguage
@@ -135,29 +136,47 @@ isNewFormatter = (content, row) ->
 
 bilderFormatter  = (content, row) ->
     return "" unless content?
+    # log typeof content
     innerHTML = "<ul class='bilder'>"
-    for image in content
-        if image.isNew
-            innerHTML += "<li><b><a href='#{image.url}'> #{image.description}</a></b></li>"
+
+    lines = content.split(" : ")
+    for line in lines when line.length > 3
+        params = line.split(" . ")
+        if params.length != 3 then throw new Error("Error in Merged Bilder parameter! '#{content}'")
+        # image = {
+        #     description: params[0],
+        #     url: params[1],
+        #     isNew: params[2] == "1"
+        # }
+
+        if params[2] == "1"
+            innerHTML += "<li><b><a href='#{params[1]}'> #{params[0]}</a></b></li>"
         else
-            innerHTML += "<li><a href='#{image.url}'> #{image.description}</a></li>"
+            innerHTML += "<li><a href='#{params[1]}'> #{params[0]}</a></li>"    
         
     innerHTML += "</ul>"
-    
     return html(innerHTML)
 
 befundeFormatter = (content , row) ->
     return "" unless content?
-
+    # log typeof content
     innerHTML = "<ul class='befunde'>"
-    for befund in content
-        if befund.isNew
-            innerHTML += "<li><b><a href='#{befund.url}'> #{befund.description}</a></b></li>"
+
+    lines = content.split(" : ")
+    for line in lines when line.length > 3
+        params = line.split(" . ")
+        if params.length != 3 then throw new Error("Error in Merged Bilder parameter! '#{content}'")
+        # befund = {
+        #     description: params[0],
+        #     url: params[1],
+        #     isNew: params[2] == "1"
+        # }
+        if params[2] == "1"
+            innerHTML += "<li><b><a href='#{params[1]}'> #{params[0]}</a></b></li>"
         else
-            innerHTML += "<li><a href='#{befund.url}'> #{befund.description}</a></li>"
+            innerHTML += "<li><a href='#{params[1]}'> #{params[0]}</a></li>"
 
     innerHTML += "</ul>"
-
     return html(innerHTML)
 
 screeningDateFormatter = (content, row) ->
@@ -165,7 +184,7 @@ screeningDateFormatter = (content, row) ->
 
 nameFormatter = (content, row) ->
     linkHTML = """
-        <a onclick='selectPatient(#{row._cells[PATIENTID_CELL].data}, "#{content}")'>#{content}</a>
+        <a onclick='selectPatient(#{row._cells[PATIENTID_CELL].data}, "#{content}", "#{row._cells[DOBSTANDARD_CELL].data}")'>#{content}</a>
     """
     if row._cells[ISNEW_CELL].data then return html("<b>#{linkHTML}</b>")
     else return html(linkHTML)
@@ -174,10 +193,7 @@ svnFormatter = (content, row) ->
     return content
 
 birthdayFormatter = (content, row) ->
-    if typeof content == "object" 
-        dateString = content.format("DD.MM.YYYY")
-        return dateString
-    else return content
+    return content
             
 radiologistFormatter = (content, row) ->
     return content
@@ -297,7 +313,7 @@ export getStandardColumnObjects = (state) ->
     return [patientIdHeadObj, isNewHeadObj, nameHeadObj, svnHeadObj, birthdayHeadObj, befundeHeadObj, bilderHeadObj, screeningDateHeadObj, radiologistHeadObj, sendingDateHeadObj]
 
 export getPatientsColumnObjects = (state) ->
-    return [isNewHeadObj, befundeHeadObj, bilderHeadObj, screeningDateHeadObj, radiologistHeadObj]
+    return [patientIdHeadObj, isNewHeadObj, befundeHeadObj, bilderHeadObj, screeningDateHeadObj, radiologistHeadObj]
 
 ############################################################
 export getLanguageObject = -> return deDE

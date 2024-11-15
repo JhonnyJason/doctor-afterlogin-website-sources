@@ -28,10 +28,10 @@ navigatingBack = false
 
 ############################################################
 patientId = null
-patientName = null
 
 ############################################################
 gridJSSearch = null
+rootStyle = null
 
 ############################################################
 export initialize = ->
@@ -39,6 +39,8 @@ export initialize = ->
     window.addEventListener("resize", updateTableHeight)
     window.gridSearchByString = gridSearchByString
     window.selectPatient = selectPatient
+    rootObj = document.querySelector(':root')
+    rootStyle = rootObj.style
     return
 
 ############################################################
@@ -57,11 +59,18 @@ renderTable = (dataPromise) ->
     resizable = false
     # resizable = true
     height = "#{utl.getTableHeight()}px"
+    rootStyle.setProperty("--table-max-height", height)
     width = "100%"
     
     autoWidth = false
     
-    gridJSOptions = { columns, data, language, search, pagination, sort, fixedHeader, resizable, height, width, autoWidth }
+    # gridJSOptions = { columns, data, language, search, pagination, sort, fixedHeader, resizable, height, width, autoWidth }
+    ## Try without defining the height
+    gridJSOptions = { columns, data, language, search, pagination, sort, fixedHeader, resizable,
+    #  height, 
+    #  width, 
+    #  autoWidth 
+     }
     
     if tableObj?
         tableObj = null
@@ -92,11 +101,19 @@ renderPatientTable = (dataPromise) ->
     resizable = false
     # resizable = true
     height = "#{utl.getTableHeight()}px"
+    rootStyle.setProperty("--table-max-height", height)
+
     width = "100%"
     
     autoWidth = false
     
-    gridJSOptions = { columns, data, language, search, pagination, sort, fixedHeader, resizable, height, width, autoWidth }
+    # gridJSOptions = { columns, data, language, search, pagination, sort, fixedHeader, resizable, height, width, autoWidth }
+    ## Try without defining the height
+    gridJSOptions = { columns, data, language, search, pagination, sort, fixedHeader, resizable,
+    #  height, 
+    #  width, 
+    #  autoWidth 
+     }
     
     if tableObj?
         tableObj = null
@@ -122,20 +139,21 @@ updateTableHeight = (height) ->
     if currentTableHeight == height then return
     currentTableHeight = height 
     height = height+"px"
+    rootStyle.setProperty("--table-max-height", height)
 
-    #preserve input value if we have
-    searchInput = document.getElementsByClassName("gridjs-search-input")[0]
-    if searchInput? 
-        searchValue = searchInput.value
-        log searchValue    
-        focusRange = getSearchFocusRange()
-        search =
-            enabled: true
-            keyword: searchValue
-    else search = false
+    # #preserve input value if we have
+    # searchInput = document.getElementsByClassName("gridjs-search-input")[0]
+    # if searchInput? 
+    #     searchValue = searchInput.value
+    #     log searchValue    
+    #     focusRange = getSearchFocusRange()
+    #     search =
+    #         enabled: true
+    #         keyword: searchValue
+    # else search = false
     
-    await updateTable({height, search})
-    if focusRange? then setFocusRange(focusRange)
+    # # await updateTable({height, search})
+    # if focusRange? then setFocusRange(focusRange)
     return
 
 ############################################################
@@ -192,11 +210,11 @@ gridSearchByString = (name) ->
     updateTable({search})
     return
 
-selectPatient = (selectedPatientId, selectedPatientName) ->
-    log "selectPatient #{patientId}"
+selectPatient = (selectedPatientId, selectedPatientName, selectedDateOfBirth) ->
+    log "selectPatient #{selectedPatientId},#{selectedPatientName},#{selectedDateOfBirth}"
     patientId = selectedPatientId
-    patientName = selectedPatientName
-    loadcontrols.setPatientName(patientName)
+    patientString = "#{selectedPatientName}, #{selectedDateOfBirth}"
+    loadcontrols.setPatientString(patientString)
     setPatientSelectedState()
     return
     
@@ -209,6 +227,7 @@ export refresh = ->
 
 export backFromPatientTable = ->
     log "backFromPatientTable"
+    dataModule.invalidatePatientData()
     navigatingBack = true
     overviewtable.classList.add("go-back")
     return

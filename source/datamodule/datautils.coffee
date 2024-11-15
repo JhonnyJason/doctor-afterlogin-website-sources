@@ -87,37 +87,23 @@ mergeDateCreated = (obj, share) ->
 
 mergeBefunde = (obj, share) ->
     result = obj.befunde
-    result = [] unless result?
+    result = "" unless result?
     return result unless share.documentUrl?
 
     if !(share.formatType == 4 or share.formatType == "4")
-        befund = {
-            url: share.documentUrl, 
-            description: share.documentDescription
-            isNew: share.isNew
-        }
-        result.push(befund)
-
-    ## This is a more detailed check if the document is a Befund...
-    # else if share.formatType != 2 and share.formatType < 10 and share.formatType > 0 
+        if share.isNew? then isNew = 1 else isNew = 0
+        result += "#{share.documentDescription} . #{share.documentURL} . #{isNew} : "
 
     return result
 
 mergeImages = (obj, share) ->
     result = obj.images
-    result = [] unless result?
+    result = "" unless result?
     return result unless share.documentUrl?
 
     if (share.formatType == 4 or share.formatType == "4")
-        image = {
-            url: share.documentUrl, 
-            description: share.documentDescription
-            isNew: share.isNew
-        }
-        result.push(image)
-
-    ## This is a more detailed check if the document is a Befund...
-    # else if share.formatType != 2 and share.formatType < 10 and share.formatType > 0 
+        if share.isNew? then isNew = 1 else isNew = 0
+        result += "#{share.documentDescription} . #{share.documentURL} . #{isNew} : "
 
     return result
 
