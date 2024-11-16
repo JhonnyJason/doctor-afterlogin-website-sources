@@ -92,7 +92,7 @@ mergeBefunde = (obj, share) ->
 
     if !(share.formatType == 4 or share.formatType == "4")
         if share.isNew? then isNew = 1 else isNew = 0
-        result += "#{share.documentDescription} . #{share.documentURL} . #{isNew} : "
+        result += "#{share.documentDescription} . #{share.documentUrl} . #{isNew} : "
 
     return result
 
@@ -103,7 +103,7 @@ mergeImages = (obj, share) ->
 
     if (share.formatType == 4 or share.formatType == "4")
         if share.isNew? then isNew = 1 else isNew = 0
-        result += "#{share.documentDescription} . #{share.documentURL} . #{isNew} : "
+        result += "#{share.documentDescription} . #{share.documentUrl} . #{isNew} : "
 
     return result
 
