@@ -9,6 +9,7 @@ import { Grid, html} from "gridjs"
 # import { RowSelection } from "gridjs/plugins/selection"
 # import { RowSelection } from "gridjs-selection"
 
+import M from "mustache"
 import dayjs from "dayjs"
 # import { de } from "dayjs/locales"
 
@@ -38,32 +39,12 @@ deDE = {
         results: 'Daten'
     }
     loading: 'Wird geladen...'
-    noRecordsFound: 'Keine übereinstimmenden Aufzeichnungen gefunden'
+    noRecordsFound: 'Es wurden keine Untersuchungen gefunden!'
     error: 'Beim Abrufen der Daten ist ein Fehler aufgetreten'
 }
 
-deDEPatientApproval = {
-    search: {
-        placeholder: 'Suche...'
-    }
-    sort: {
-        sortAsc: 'Spalte aufsteigend sortieren'
-        sortDesc: 'Spalte absteigend sortieren'
-    }
-    pagination: {
-        previous: 'Vorherige'
-        next: 'Nächste'
-        navigate: (page, pages) -> "Seite #{page} von #{pages}"
-        page: (page) -> "Seite #{page}"
-        showing: ' '
-        of: 'von'
-        to: '-'
-        results: 'Daten'
-    }
-    loading: 'Wird geladen...'
-    noRecordsFound: 'Geben Sie die Authentifizierungsdaten für den Patienten ein.'
-    error: 'Beim Abrufen der Daten ist ein Fehler aufgetreten'
-}
+deNoRecordsFoundMindateTemplate = "Es wurden keine Untersuchungen ab {{{minDate}}} gefunden!"
+
 #endregion
 
 ############################################################
@@ -318,6 +299,13 @@ export getPatientsColumnObjects = (state) ->
 ############################################################
 export getLanguageObject = -> return deDE
 
+export getLanguagObjectWithMinDate = (minDate) ->
+    newObj = JSON.parse(JSON.stringify(deDE))
+
+    newNoRecordsString = M.render(deNoRecordsFoundMindateTemplate, {minDate})
+
+    newObj.noRecordsFound = newNoRecordsString
+    return newObj
 # ############################################################
 # export changeLinksToMessageSent = (target) ->
 #     # console.log("I have a target opener!")

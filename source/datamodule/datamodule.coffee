@@ -56,8 +56,8 @@ retrieveData = (minDate, patientId) ->
 
     catch err
         log err
-        return utl.groupAndSort(ownSampleData)
-
+        # return utl.groupAndSort(ownSampleData)
+        return []
 
 ############################################################
 export setMinDateDaysBack = (daysCount) ->

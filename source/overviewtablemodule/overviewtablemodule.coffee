@@ -49,7 +49,8 @@ renderTable = (dataPromise) ->
     
     columns = utl.getStandardColumnObjects()
     data = -> dataPromise
-    language = utl.getLanguageObject()
+    minDate = dataModule.getMinDate()
+    language = utl.getLanguagObjectWithMinDate(minDate)
     search = true
 
     pagination = { limit: 50 }
