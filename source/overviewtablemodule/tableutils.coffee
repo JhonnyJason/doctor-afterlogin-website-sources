@@ -202,15 +202,16 @@ export getTableHeight = ->
     ## we removed the modecontrols
     nonTableOffset = 0
     if !tableWrapper? # table does not exist yet
-        nonTableOffset += 114 # so take the height which should be enough
+        # so take the height which should be enough
+        if fullWidth <= 570
+            nonTableOffset = 189 # mobile 
+        else
+            nonTableOffset = 114 
     else 
         nonTableOffset += tableWrapper.offsetTop
         nonTableOffset += gridJSFooter.offsetHeight
         nonTableOffset += outerPadding
         log nonTableOffset
-    if fullWidth <= 570
-        nonTableOffset += loadcontrols.offsetHeight
-        nonTableOffset += 45
 
     tableHeight = fullHeight - nonTableOffset
     # olog {tableHeight, fullHeight, nonTableOffset, approvalHeight}
