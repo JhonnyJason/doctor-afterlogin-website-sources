@@ -16,6 +16,8 @@ import { dataLoadPageSize } from "./configmodule.js"
 
 ############################################################
 StudyToEntry = {}
+PatientToEntry = {}
+
 
 ############################################################
 #region merge Properties Functions
@@ -36,13 +38,16 @@ mergeStudyDate = (obj, share) ->
     if diff < 0 then return niu
     else return current
 
+mergeStudyId = (obj, share) ->
+    return ""
+
 mergePatientFullname = (obj, share) ->
     current = obj.patientFullName
     niu = share.patientFullName
     if !current? then return niu
     
     # just checking if everything is in order
-    if current != niu then log "patientFullName not matching at @studyId "+share.studyId+". "+current+" vs "+niu
+    if current != niu then log "patientFullName not matching. "+current+" vs "+niu
     
     return current
 
@@ -52,7 +57,7 @@ mergePatientSsn = (obj, share) ->
     if !current? then return niu
 
     # just checking if everything is in order
-    if current != niu then log "patientSsn not matching at @studyId "+share.studyId+". "+current+" vs "+niu
+    if current != niu then log "patientSsn not matching. "+current+" vs "+niu+" @(studyId:#{share.studyId} | patientId:#{share.patientId})"
 
     return current
 
@@ -63,7 +68,7 @@ mergePatientDob = (obj, share) ->
     if !currentString? then return niuString
 
     # just checking if everything is in order
-    if niuString != currentString then log "patientDob not matching at @studyId "+share.studyId+". "+currentString+" vs "+niuString
+    if niuString != currentString then log "patientDob not matching. "+currentString+" vs "+niuString+" @(studyId:#{share.studyId} | patientId:#{share.patientId})"
 
     return currentString
 
@@ -156,9 +161,55 @@ groudByStudyId = (data) ->
     
     return results
 
+
+groudByPatientId = (data) ->
+    ## TODO improve caching of Cases
+    ## Because maybe the next cases added would fit to a previous case
+
+    PatientToEntry = {}
+
+    before = performance.now()
+    for d in data
+        entry = {}
+        entry[d.shareId] = d
+        oldEntry = PatientToEntry[d.patientId]
+        PatientToEntry[d.patientId] = Object.assign(entry, oldEntry)
+    
+    results = []
+    for key,entry of PatientToEntry
+        obj = {}
+        for shareId,share of entry
+            obj.isNew = mergeIsNew(obj, share)
+            obj.studyDate = mergeStudyDate(obj, share)
+            obj.studyId = mergeStudyId(obj, share)
+            obj.patientFullName = mergePatientFullname(obj, share)
+            obj.patientSsn = mergePatientSsn(obj, share)
+            obj.patientDob = mergePatientDob(obj, share)
+            # obj.studyDescription = mergeStudyDescription(obj, share)
+            obj.fromFullName = mergeCreatedBy(obj, share)
+            obj.createdAt = mergeDateCreated(obj, share)
+            # obj.documents = mergeDocuments(obj,share)
+            obj.befunde = mergeBefunde(obj,share)
+            obj.images = mergeImages(obj,share)
+            obj.select = false
+            obj.patientId = key
+            obj.index = results.length
+        results.push(obj)
+
+    after = performance.now()
+    diff = after - before
+    log "mapping took: "+diff+"ms"
+    
+    return results
+
+
 ############################################################
-export groupAndSort = (rawData) ->
+export groupAndSortByStudyId = (rawData) ->
     allData = groudByStudyId(rawData.flat())
+    return allData.sort(defaultSharesCompare)
+
+export groupAndSortByPatientId = (rawData) ->
+    allData = groudByPatientId(rawData.flat())
     return allData.sort(defaultSharesCompare)
 
 export prepareDoctorsList = (rawData) ->
