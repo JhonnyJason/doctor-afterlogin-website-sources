@@ -208,8 +208,9 @@ export getTableHeight = ->
         nonTableOffset += gridJSFooter.offsetHeight
         nonTableOffset += outerPadding
         log nonTableOffset
-    if fullWidth <= 600
+    if fullWidth <= 570
         nonTableOffset += loadcontrols.offsetHeight
+        nonTableOffset += 45
 
     tableHeight = fullHeight - nonTableOffset
     # olog {tableHeight, fullHeight, nonTableOffset, approvalHeight}
