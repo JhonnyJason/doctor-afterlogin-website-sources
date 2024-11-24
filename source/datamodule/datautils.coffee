@@ -120,6 +120,11 @@ defaultSharesCompare = (el1, el2) ->
     date2 = dayjs(el2.createdAt)
     return -date1.diff(date2)
 
+patientSharesCompare = (el1, el2) ->
+    date1 = dayjs(el1.studyDate)
+    date2 = dayjs(el2.studyDate)
+    return -date1.diff(date2)
+
 ############################################################
 groudByStudyId = (data) ->
     ## TODO improve caching of Cases
@@ -202,24 +207,17 @@ groudByPatientId = (data) ->
     
     return results
 
-
 ############################################################
+# this function is called, when doctor looks at the patientTable
 export groupAndSortByStudyId = (rawData) ->
     allData = groudByStudyId(rawData.flat())
-    return allData.sort(defaultSharesCompare)
+    # return allData.sort(defaultSharesCompare)
+    return allData.sort(patientSharesCompare)
 
+# this function is called when doctor looks at the default Table
 export groupAndSortByPatientId = (rawData) ->
     allData = groudByPatientId(rawData.flat())
     return allData.sort(defaultSharesCompare)
-
-export prepareDoctorsList = (rawData) ->
-    results = []
-    for d in rawData
-        obj = {}
-        obj.index = results.length
-        obj.doctorName = d
-        results.push(obj)
-    return results
     
 ############################################################
 export postRequest = (url, data) ->
@@ -237,20 +235,3 @@ export postRequest = (url, data) ->
         if !response.ok then throw new Error("Response not ok - status: "+response.status+"!")
         return response.json()
     catch err then throw new Error("Network Error: "+err.message)
-
-
-############################################################
-export mergeDataSets = (oldData, newData) ->
-    log "mergeDataSets"
-    results = []
-    for d in newData
-        results.push(d)
-        d.index = results.length
-    for d in oldData
-        results.push(d)
-        d.index = results.length
-
-    ## TODO implement more sophisticatedly
-    # we neglect here the situation when we have the same studyId 
-    return results
-
