@@ -112,6 +112,25 @@ mergeImages = (obj, share) ->
 
     return result
 
+mergeSharedTo = (obj, share) ->
+    result = obj.sharedTo || ""
+    return result unless share.toFullName? 
+    addedString = ""
+    if Array.isArray(share.toFullName) then addedString = share.toFullName.join(" : ")
+    else if typeof share.toFullName == "string" then addedString = share.toFullName
+    
+    if result.length > 0 and addedString.length > 0 then return "#{result} : #{addedString}"
+    
+    if result.length > 0 then return result
+    
+    return addedString
+
+
+mergeForward = (obj, share) ->
+    # result = obj.forward
+    return "#{location.origin}/webview/viewer/forward.php?studyId=#{share.studyId}"
+
+
 #endregion
 
 ############################################################
@@ -155,6 +174,8 @@ groudByStudyId = (data) ->
             # obj.documents = mergeDocuments(obj,share)
             obj.befunde = mergeBefunde(obj,share)
             obj.images = mergeImages(obj,share)
+            obj.forward = mergeForward(obj,share)
+            obj.sharedTo = mergeSharedTo(obj, share)
             obj.select = false
             obj.studyId = key
             obj.index = results.length

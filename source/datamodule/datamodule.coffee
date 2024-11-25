@@ -10,6 +10,7 @@ import dayjs from "dayjs"
 ############################################################
 import * as utl from "./datautils.js"
 import * as S from "./statemodule.js"
+import { setUserRole } from "./overviewtablemodule.js"
 
 ############################################################
 import { requestSharesURL } from "./configmodule.js"
@@ -45,7 +46,9 @@ retrieveData = (minDate, patientId) ->
             olog requestData
 
             rawData = await utl.postRequest(requestSharesURL, requestData)
-            allData.push(rawData.shareSummary)
+            allData.push(rawData.shareSummary)    
+            setUserRole(rawData.roleId)            
+        
             # receivedCount = allData.length  
             receivedCount += rawData.currentSharesCount
             if receivedCount == rawData.totalSharesCount then break

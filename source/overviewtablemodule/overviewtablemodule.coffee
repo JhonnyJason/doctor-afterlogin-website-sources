@@ -34,6 +34,10 @@ gridJSSearch = null
 rootStyle = null
 
 ############################################################
+userRole = 3 # 1 admin, 2 radiologist, 3 doctor
+useExtendedPatientTable = false
+
+############################################################
 export initialize = ->
     log "initialize"
     window.addEventListener("resize", updateTableHeight)
@@ -90,7 +94,9 @@ renderTable = (dataPromise) ->
 renderPatientTable = (dataPromise) ->
     log "renderPatientTable"
     
-    columns = utl.getPatientsColumnObjects()
+    if useExtendedPatientTable then columns = utl.getExtendedPatientsColumnObjects() 
+    else columns = utl.getPatientsColumnObjects()
+
     data = -> dataPromise
     language = utl.getLanguageObject()
     search = true
@@ -219,6 +225,19 @@ selectPatient = (selectedPatientId, selectedPatientName, selectedDateOfBirth) ->
     setPatientSelectedState()
     return
     
+############################################################
+checkUserRole = ->
+    log "checkUserRole"
+    # oneway switch only
+    return if useExtendedPatientTable 
+
+    useExtendedPatientTable = (userRole == 1) or (userRole == 2)
+    return
+
+############################################################
+export setUserRole = (role) -> 
+    userRole = role
+    return
 
 ############################################################
 export refresh = ->
@@ -247,6 +266,8 @@ export setDefaultState = ->
 export setPatientSelectedState = ->
     log "setPatientSelectedState"
     overviewtable.classList.add("patient-table")
+    checkUserRole()
+    if useExtendedPatientTable then overviewtable.classList.add("privileged")
 
     dataPromise = dataModule.getDataForPatientId(patientId)
     renderPatientTable(dataPromise)
