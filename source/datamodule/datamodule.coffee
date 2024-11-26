@@ -55,8 +55,9 @@ retrieveData = (minDate, patientId) ->
             if receivedCount <  pageSize then break
             page++
             
-        if patientId? then return utl.groupAndSortByStudyId(allData)
-        else return utl.groupAndSortByPatientId(allData)
+        return utl.groupAndSortByStudyId(allData)
+        # if patientId? then return utl.groupAndSortByStudyId(allData)
+        # else return utl.groupAndSortByPatientId(allData)
 
     catch err
         log err
