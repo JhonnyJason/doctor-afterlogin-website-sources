@@ -61,7 +61,7 @@ retrieveData = (minDate, patientId) ->
 
     catch err
         log err
-        return utl.groupAndSort(ownSampleData)
+        return utl.groupAndSortByStudyId(ownSampleData)
         # return []
 
 ############################################################
