@@ -138,11 +138,13 @@ defaultSharesCompare = (el1, el2) ->
     date1 = dayjs(el1.createdAt)
     date2 = dayjs(el2.createdAt)
     return -date1.diff(date2)
+    # return date1.diff(date2)
 
 patientSharesCompare = (el1, el2) ->
     date1 = dayjs(el1.studyDate)
     date2 = dayjs(el2.studyDate)
     return -date1.diff(date2)
+    # return date1.diff(date2)
 
 ############################################################
 groudByStudyId = (data) ->
@@ -232,8 +234,8 @@ groudByPatientId = (data) ->
 # this function is called, when doctor looks at the patientTable
 export groupAndSortByStudyId = (rawData) ->
     allData = groudByStudyId(rawData.flat())
-    # return allData.sort(defaultSharesCompare)
-    return allData.sort(patientSharesCompare)
+    return allData.sort(defaultSharesCompare)
+    # return allData.sort(patientSharesCompare)
 
 # this function is called when doctor looks at the default Table
 export groupAndSortByPatientId = (rawData) ->
