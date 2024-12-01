@@ -51,32 +51,59 @@ export initialize = ->
 renderTable = (dataPromise) ->
     log "renderTable"
     
+    #region variant Standard Request Once
+    # columns = utl.getStandardColumnObjects()
+    # data = -> dataPromise
+    # minDate = dataModule.getMinDate()
+    # language = utl.getLanguagObjectWithMinDate(minDate)
+    # search = true
+
+    # pagination = { limit: 50 }
+    # # sort = { multiColumn: false }
+    # sort = false
+    # fixedHeader = true
+    # resizable = false
+    # # resizable = true
+    # height = "#{utl.getTableHeight()}px"
+    # rootStyle.setProperty("--table-max-height", height)
+    # width = "100%"
+    
+    # autoWidth = false
+    
+    # # gridJSOptions = { columns, data, language, search, pagination, sort, fixedHeader, resizable, height, width, autoWidth }
+    # ## Try without defining the height
+    # gridJSOptions = { columns, data, language, search, pagination, sort, fixedHeader, resizable,
+    # #  height, 
+    # #  width, 
+    # #  autoWidth 
+    #  }
+    #endregion
+
+    #region variant request server via gridjs
     columns = utl.getStandardColumnObjects()
-    data = -> dataPromise
-    minDate = dataModule.getMinDate()
-    language = utl.getLanguagObjectWithMinDate(minDate)
-    search = true
+    server = dataModule.standardServerObj()
+    # minDate = dataModule.getMinDate()
+    # language = utl.getLanguagObjectWithMinDate(minDate)
+    language = utl.getLanguageObject()
+    search = {
+        server: dataModule.standardServerSearchObj()
+        debounceTimeout: 1200
+
+    }
 
     pagination = { limit: 50 }
-    # sort = { multiColumn: false }
     sort = false
     fixedHeader = true
     resizable = false
-    # resizable = true
     height = "#{utl.getTableHeight()}px"
     rootStyle.setProperty("--table-max-height", height)
     width = "100%"
     
     autoWidth = false
     
-    # gridJSOptions = { columns, data, language, search, pagination, sort, fixedHeader, resizable, height, width, autoWidth }
-    ## Try without defining the height
-    gridJSOptions = { columns, data, language, search, pagination, sort, fixedHeader, resizable,
-    #  height, 
-    #  width, 
-    #  autoWidth 
-     }
-    
+    gridJSOptions = { columns, server, language, search, pagination, sort, fixedHeader, resizable }
+    #endregion
+
     if tableObj?
         tableObj = null
         gridjsFrame.innerHTML = ""  
@@ -258,9 +285,11 @@ export setDefaultState = ->
     overviewtable.classList.remove("patient-table")
     overviewtable.classList.remove("go-back")
 
-    dataPromise = dataModule.getAllData()
     # this is when we want to destroy the table completely
-    renderTable(dataPromise) # we always want to do that :-)
+
+    # dataPromise = dataModule.getAllData()
+    # renderTable(dataPromise) 
+    renderTable()
     return
 
 export setPatientSelectedState = ->

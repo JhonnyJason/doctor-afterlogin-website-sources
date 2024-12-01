@@ -13,7 +13,7 @@ import * as S from "./statemodule.js"
 import { setUserRole } from "./overviewtablemodule.js"
 
 ############################################################
-import { requestSharesURL } from "./configmodule.js"
+import { requestSharesURL, requestSharesSearchURL } from "./configmodule.js"
 import { ownSampleData, patientSampleData, doctorsSampleData } from "./sampledata.js"
 
 import { dataLoadPageSize } from "./configmodule.js"
@@ -22,6 +22,8 @@ import { dataLoadPageSize } from "./configmodule.js"
 minDate = null
 minDateFormatted  = null
 patientAuth = null
+
+currentEntryLimit = null
 
 ############################################################
 allDataPromise = null
@@ -93,6 +95,8 @@ export setMinDateYearsBack = (yearsCount) ->
     return
 
 ############################################################
+export setEntryLimit = (entryLimit) -> currentEntryLimit = entryLimit
+############################################################
 export getAllData = ->
     if !allDataPromise? then allDataPromise = retrieveData(minDate, undefined)
     return allDataPromise
@@ -108,3 +112,73 @@ export invalidatePatientData = ->
 
 ############################################################
 export getMinDate = -> minDateFormatted
+
+############################################################
+export standardServerSearchObj = ->
+    log "serverSearchObj"
+    
+    url = (prev, keyword) ->
+        if !keyword? or keyword.length < 3 then throw new Error("Stopping request from firing :-)") 
+        return "#{prev}?search=#{keyword}"
+    return {url}
+
+    # method = "POST"
+    # mode = "cors"
+    # credentials = "include"
+    # headers = {
+    #         'Content-Type': 'application/json'
+    # }
+
+    # body = {}
+    # # body = {minDate, patientId, page, pageSize}
+
+    # handle = (response) ->
+    #     log "handle search" 
+    #     log response.status
+    #     if !response.ok then return null
+    #     return response.json()
+
+    # obj = { url, method, mode, credentials, headers, body, handle }
+
+    # obj.then = (data) ->
+    #     lof "postprocess search"
+    #     # olog data
+    #     if data and data.shareSummary then return utl.groupAndSortByStudyId(data.shareSummary)
+    #     else return []
+
+    # return obj
+
+############################################################
+export standardServerObj = ->
+    log "standardServerObj"
+    url = requestSharesURL
+    method = "POST"
+    mode = "cors"
+    credentials = "include"
+    headers = {
+            'Content-Type': 'application/json'
+    }
+    limit = currentEntryLimit
+
+    # entryLimit = limit
+    body = JSON.stringify({limit})
+    
+    # body = JSON.stringify({entryLimit})
+    # body = {minDate, patientId, page, pageSize}
+
+    handle = (response) ->
+        log "handle data request" 
+        log response.status
+        if !response.ok then return null
+        return await response.json()
+
+    obj = { url, method, mode, credentials, headers, body, handle }
+
+    obj.then = (data) ->
+        log "postprocess data request"
+        # olog data
+        # return []
+        if data and data.shareSummary then return utl.groupAndSortByStudyId(data.shareSummary)
+        else return []
+
+    return obj

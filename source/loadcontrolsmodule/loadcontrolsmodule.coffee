@@ -16,31 +16,39 @@ patientNameIndication = document.getElementById("patient-name-indication")
 ############################################################
 export initialize = ->
     log "initialize"
-    optionValue = S.load("minDateOptionValue")
+    optionValue = S.load("entryLimitOptionValue")
     if optionValue? then switch optionValue
         when "1"
             chooseDateLimit.value = optionValue
-            data.setMinDateDaysBack(30)
+            # data.setMinDateDaysBack(30)
+            setEntryLimit(250)
         when "2" 
             chooseDateLimit.value = optionValue
-            data.setMinDateMonthsBack(3)
+            # data.setMinDateMonthsBack(3)
+            setEntryLimit(500)
         when "3" 
             chooseDateLimit.value = optionValue
-            data.setMinDateMonthsBack(6)
+            # data.setMinDateMonthsBack(6)
+            setEntryLimit(1000)
         when "4" 
             chooseDateLimit.value = optionValue
-            data.setMinDateYearsBack(1)
+            # data.setMinDateYearsBack(1)
+            setEntryLimit(2500)
         when "5" 
             chooseDateLimit.value = optionValue
-            data.setMinDateYearsBack(2)
+            # data.setMinDateYearsBack(2)
+            setEntryLimit(5000)
+        when "6" 
+            chooseDateLimit.value = optionValue
+            # data.setMinDateYearsBack(2)
+            setEntryLimit(10000)
         else throw new Error("Error: optionValue was an unexpected value: #{optionValue}")
     else
         chooseDateLimit.value = "1"
-        data.setMinDateDaysBack(30)
+        # data.setMinDateDaysBack(30)
+        setEntryLimit(250)
 
-    minDate = data.getMinDate()
-    log minDate
-    mindateDisplay.textContent = data.getMinDate()
+    # mindateDisplay.textContent = data.getMinDate()
 
     refreshButton.addEventListener("click", refreshButtonClicked)
     chooseDateLimit.addEventListener("change", dateLimitChanged)
@@ -63,16 +71,24 @@ refreshButtonClicked = ->
 dateLimitChanged = ->
     # log "dateLimitChanged"
     # log chooseDateLimit.value
-    S.save("minDateOptionValue", chooseDateLimit.value)
+    S.save("entryLimitOptionValue", chooseDateLimit.value)
     switch chooseDateLimit.value
-        when "1" then data.setMinDateDaysBack(30)
-        when "2" then data.setMinDateMonthsBack(3)
-        when "3" then data.setMinDateMonthsBack(6)
-        when "4" then data.setMinDateYearsBack(1)
-        when "5" then data.setMinDateYearsBack(2)
+        when "1" then setEntryLimit(250)
+        when "2" then setEntryLimit(500)
+        when "3" then setEntryLimit(1000)
+        when "4" then setEntryLimit(2500)
+        when "5" then setEntryLimit(5000)
+        when "6" then setEntryLimit(10000)
         else log "unknown value: "+chooseDateLimit.value
-    mindateDisplay.textContent = data.getMinDate()
+    # mindateDisplay.textContent = data.getMinDate()
     table.refresh()
+    return
+
+############################################################
+setEntryLimit = (entryLimit) ->
+    data.setEntryLimit(entryLimit)
+    log entryLimit
+    entryLimitDisplay.textContent = " #{entryLimit} Einträge"
     return
 
 ############################################################

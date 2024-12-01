@@ -40,10 +40,11 @@ deDE = {
     }
     loading: 'Wird geladen...'
     noRecordsFound: 'Es wurden keine Untersuchungen gefunden!'
-    error: 'Beim Abrufen der Daten ist ein Fehler aufgetreten'
+    # error: 'Beim Abrufen der Daten ist ein Fehler aufgetreten'
+    error: " "
 }
 
-deNoRecordsFoundMindateTemplate = "Es wurden keine Untersuchungen ab {{{minDate}}} gefunden!"
+# deNoRecordsFoundMindateTemplate = "Es wurden keine Untersuchungen ab {{{minDate}}} gefunden!"
 
 #endregion
 
@@ -344,6 +345,7 @@ export getLanguagObjectWithMinDate = (minDate) ->
 
     newObj.noRecordsFound = newNoRecordsString
     return newObj
+
 # ############################################################
 # export changeLinksToMessageSent = (target) ->
 #     # console.log("I have a target opener!")
