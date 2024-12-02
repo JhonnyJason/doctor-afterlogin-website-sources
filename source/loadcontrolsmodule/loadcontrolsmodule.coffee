@@ -88,7 +88,7 @@ dateLimitChanged = ->
 setEntryLimit = (entryLimit) ->
     data.setEntryLimit(entryLimit)
     log entryLimit
-    entryLimitDisplay.textContent = " #{entryLimit} Einträge"
+    # entryLimitDisplay.textContent = " #{entryLimit} Einträge"
     return
 
 ############################################################
