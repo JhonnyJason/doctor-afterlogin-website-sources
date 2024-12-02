@@ -39,6 +39,7 @@ useExtendedPatientTable = false
 
 ############################################################
 instantSearchLocked = false
+currentKeyword = null
 nextSearch = null
 
 ############################################################
@@ -55,7 +56,8 @@ instantSearch = (keyword) ->
     return if keyword.length < 3 
 
     nextSearch = null
-    if instantSearchLocked then return nextSearch = () -> instantSearch(keyword)
+    if instantSearchLocked and keyword != currentKeyword then nextSearch = () -> instantSearch(keyword)
+    if instantSearchLocked then return
     instantSearchLocked = true
 
     log "instantSearch"

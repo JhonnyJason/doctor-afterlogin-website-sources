@@ -3,4 +3,4 @@ export requestSharesSearchURL = "https://www.bilder-befunde.at/pwa-api/api/v1/co
 
 export dataLoadPageSize = 1000
 export tableRenderCycleMS = 200
-export searchDebounceMS = 700
+export searchDebounceMS = 1100
