@@ -17,7 +17,7 @@ import * as S from "./statemodule.js"
 import * as utl from "./tableutils.js"
 import * as loadcontrols from "./loadcontrolsmodule.js"
 import * as dataModule from "./datamodule.js"
-import {tableRenderCycleMS} from "./configmodule.js"
+import {tableRenderCycleMS, searchDebounceMS} from "./configmodule.js"
 
 ############################################################
 tableObj = null
@@ -38,6 +38,10 @@ userRole = 3 # 1 admin, 2 radiologist, 3 doctor
 useExtendedPatientTable = false
 
 ############################################################
+instantSearchLocked = false
+nextSearch = null
+
+############################################################
 export initialize = ->
     log "initialize"
     window.addEventListener("resize", updateTableHeight)
@@ -46,6 +50,73 @@ export initialize = ->
     rootObj = document.querySelector(':root')
     rootStyle = rootObj.style
     return
+
+instantSearch = (keyword) ->
+    return if keyword.length < 3 
+
+    nextSearch = null
+    if instantSearchLocked then return nextSearch = () -> instantSearch(keyword)
+    instantSearchLocked = true
+
+    log "instantSearch"
+    columns = utl.getStandardColumnObjects()
+    server = dataModule.standardServerObj()
+
+    ##patch handle to exit correctly
+    handleResponse = server.handle
+
+    patchedResponseHandle = (response) ->
+        error = null
+        try result = await handleResponse(response)
+        catch err then error = err
+
+        instantSearchLocked = false
+        if nextSearch? then nextSearch()
+        
+        if error? then throw error
+        return result
+
+    server.handle = patchedResponseHandle
+
+
+    language = utl.getLanguageObject()
+
+    search = {
+        server: dataModule.standardServerSearchObj()
+        debounceTimeout: searchDebounceMS        
+        keyword: keyword
+    }
+
+    pagination = { limit: 50 }
+    sort = false
+    fixedHeader = true
+    resizable = false
+
+    gridJSOptions = { columns, server, language, search, pagination, sort, fixedHeader, resizable }
+    
+    height = "#{utl.getTableHeight()}px"
+    rootStyle.setProperty("--table-max-height", height)
+
+    range = getSearchFocusRange()
+
+    if tableObj?
+        tableObj = null
+        gridjsFrame.innerHTML = ""  
+        tableObj = new Grid(gridJSOptions)
+        await tableObj.render(gridjsFrame).forceRender()
+        # render alone does not work here - it seems the Old State still remains in the GridJS singleton thus a render here does not refresh the table at all
+    else
+        tableObj = new Grid(gridJSOptions)
+        gridjsFrame.innerHTML = ""    
+        await tableObj.render(gridjsFrame)
+    
+    gridJSSearchInput = document.getElementsByClassName("gridjs-search-input")[0]
+    if gridJSSearchInput? 
+        gridJSSearchInput.addEventListener("keydown", gridJSSearchInputKeyDowned)
+        setSearchFocusRange(range, keyword)
+    
+    return
+
 
 ############################################################
 renderTable = (dataPromise) ->
@@ -87,8 +158,7 @@ renderTable = (dataPromise) ->
     language = utl.getLanguageObject()
     search = {
         server: dataModule.standardServerSearchObj()
-        debounceTimeout: 1200
-
+        debounceTimeout: searchDebounceMS
     }
 
     pagination = { limit: 50 }
@@ -115,6 +185,8 @@ renderTable = (dataPromise) ->
         gridjsFrame.innerHTML = ""    
         await tableObj.render(gridjsFrame)
     
+    gridJSSearchInput = document.getElementsByClassName("gridjs-search-input")[0]
+    if gridJSSearchInput? then gridJSSearchInput.addEventListener("keydown", gridJSSearchInputKeyDowned)
     return
 
 ############################################################
@@ -187,7 +259,7 @@ updateTableHeight = (height) ->
     # else search = false
     
     # # await updateTable({height, search})
-    # if focusRange? then setFocusRange(focusRange)
+    # if focusRange? then setSearchFocusRange(focusRange)
     return
 
 ############################################################
@@ -219,10 +291,17 @@ getSearchFocusRange = ->
     end = searchInput.selectionEnd
     return {start, end}
 
-setFocusRange = (range) ->
+setSearchFocusRange = (range,keyword) ->
     { start, end } = range
     searchInput = document.getElementsByClassName("gridjs-search-input")[0]
     return unless searchInput?
+    
+    olog {range}
+    log searchInput.value
+    if searchInput.value == "" then searchInput.value = keyword
+    log searchInput.value
+
+
     searchInput.setSelectionRange(start, end)
     searchInput.focus()
     return
@@ -252,6 +331,12 @@ selectPatient = (selectedPatientId, selectedPatientName, selectedDateOfBirth) ->
     setPatientSelectedState()
     return
     
+
+############################################################
+gridJSSearchInputKeyDowned = (evnt) ->
+    log "gridJSSearchInputKeyDowned"
+    if (evnt.key == 'Enter' or evnt.keyCode == 13) then instantSearch(this.value)
+    return
 ############################################################
 checkUserRole = ->
     log "checkUserRole"
