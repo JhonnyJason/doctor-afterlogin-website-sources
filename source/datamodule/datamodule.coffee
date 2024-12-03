@@ -178,6 +178,7 @@ export standardServerObj = ->
         log "postprocess data request"
         # olog data
         # return []
+        if data? and data.roleId? then setUserRole(data.roleId)            
         if data and data.shareSummary then return utl.groupAndSortByStudyId(data.shareSummary)
         else return []
 

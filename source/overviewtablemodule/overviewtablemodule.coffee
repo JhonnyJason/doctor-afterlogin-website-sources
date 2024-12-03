@@ -349,7 +349,7 @@ checkUserRole = ->
     return
 
 ############################################################
-export setUserRole = (role) -> 
+export setUserRole = (role) ->
     userRole = role
     return
 
