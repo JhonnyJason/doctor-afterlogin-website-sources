@@ -188,7 +188,9 @@ renderTable = (dataPromise) ->
         await tableObj.render(gridjsFrame)
     
     gridJSSearchInput = document.getElementsByClassName("gridjs-search-input")[0]
-    if gridJSSearchInput? then gridJSSearchInput.addEventListener("keydown", gridJSSearchInputKeyDowned)
+    if gridJSSearchInput? 
+        gridJSSearchInput.addEventListener("keydown", gridJSSearchInputKeyDowned)
+        gridJSSearchInput.focus()
     return
 
 ############################################################
@@ -312,9 +314,12 @@ setSearchFocusRange = (range,keyword) ->
 ############################################################
 searchPositionMoved = ->
     log "searchPositionMoved"
-    if navigatingBack 
+    if navigatingBack
         navigatingBack = false
         setDefaultState()
+    else
+        gridJSSearchInput = document.getElementsByClassName("gridjs-search-input")[0]
+        if gridJSSearchInput? then gridJSSearchInput.focus()
     return
 
 

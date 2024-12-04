@@ -18,7 +18,6 @@ import { dataLoadPageSize } from "./configmodule.js"
 StudyToEntry = {}
 PatientToEntry = {}
 
-
 ############################################################
 #region merge Properties Functions
 mergeIsNew = (obj, share) ->
@@ -116,6 +115,7 @@ mergeSharedTo = (obj, share) ->
     result = obj.sharedTo || ""
     return result unless share.toFullName? 
     addedString = ""
+
     if Array.isArray(share.toFullName) then addedString = share.toFullName.join(" : ")
     else if typeof share.toFullName == "string" then addedString = share.toFullName
     

@@ -197,10 +197,11 @@ sharedToFormatter = (content , row) ->
     innerHTML = "<ul class='sharedTo'>"
     existingLines = new Set()
 
-    lines = content.split(" : ")
-    for line in lines when !existingLines.has(line)
+    lines = content.split(" : ").map((el) -> el.trim())
+    for line in lines when !existingLines.has(line)        
         innerHTML += "<li>#{line}</li>"
         existingLines.add(line)
+        
     innerHTML += "</ul>"
     return html(innerHTML)
 
