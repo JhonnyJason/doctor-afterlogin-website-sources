@@ -32,11 +32,36 @@
     opacity: 0
     transform: translateX(-100vw)
     position absolute
-    left 60px
+    left 55px
     top 17px
     z-index: 99
     color white
+    font-size: 12pt
     
+.entries-selected
+    #forwarding-link
+        transform: translateX(0)
+
+#forwarding-link
+    display flex
+    position absolute
+    top 15px
+    right 5px
+    display: flex
+    cursor: pointer
+    z-index 99
+    transform: translateX(150%)
+    transition: none
+    svg
+        width 23px
+        height 23px
+        margin-right 5px
+        vertical-align: middle
+    .label
+        line-height: 25px
+
+#forwarding-link:hover
+    border-bottom: solid 1px #fff
 
 #back-button
     pointer-events: none
@@ -121,4 +146,3 @@
 
     .gridjs-input
         margin-top 50px
-        margin-bottom 25px

@@ -194,6 +194,12 @@ td.gridjs-td:nth-child(9)
 
 
 // Patient Table State ------------------------------
+
+.entries-selected
+    .patient-table
+        .gridjs-search
+            transform translateX(calc(100vw - 370px)) !important
+
 .patient-table.go-back
     .gridjs-search
         float none
@@ -283,3 +289,10 @@ td.gridjs-td:nth-child(9)
         transform translateX(calc(100vw - 234px))
     to
         transform: translateX(0)
+
+
+@keyframes make-space
+    from
+        transform translateX(calc(100vw - 234px))
+    to
+        transform translateX(calc(100vw - 534px))

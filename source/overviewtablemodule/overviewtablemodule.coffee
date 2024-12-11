@@ -17,7 +17,9 @@ import * as S from "./statemodule.js"
 import * as utl from "./tableutils.js"
 import * as loadcontrols from "./loadcontrolsmodule.js"
 import * as dataModule from "./datamodule.js"
-import {tableRenderCycleMS, searchDebounceMS} from "./configmodule.js"
+import {
+    tableRenderCycleMS, searchDebounceMS, forwardBaseURL 
+    } from "./configmodule.js"
 
 ############################################################
 tableObj = null
@@ -28,6 +30,7 @@ navigatingBack = false
 
 ############################################################
 patientId = null
+forwardingHRef = ""
 
 ############################################################
 gridJSSearch = null
@@ -236,8 +239,52 @@ renderPatientTable = (dataPromise) ->
         gridjsFrame.innerHTML = ""    
         await tableObj.render(gridjsFrame)
     
+    tableObj.config.store.subscribe(tableStateChanged)
+    
     gridJSSearch = document.getElementsByClassName("gridjs-search")[0]
     gridJSSearch.addEventListener("animationend", searchPositionMoved)
+    return
+
+
+############################################################
+tableStateChanged = (state) ->
+    log "tableStateChanged"
+    # olog state
+    ## tableObj = {callbacks, config, plugin}
+    ## tableObj.callbacks = {cellClick, rowClick}
+    ## tableObj.config = {store, plugin, tableRef, width, height, autoWidth, style, className, instance, eventEmitter, columns, data, language, search, pagination, sort, fixedHeader, resizable, header, storage, pipeline, translator, container }
+    ## tableObj.config.store = { state, listeners, isDispatching, getState, getListeners, dispatch, subscribe }
+    ## tableObj.config.storage = { data }
+    ## tableObj.config.storage.data = undefined ...? 
+    oldForwardURL = forwardingHRef
+
+    selection = tableObj.config.store.state.rowSelection
+    if selection? and selection.rowIds? and selection.rowIds.length > 0
+        rowIds = selection.rowIds
+        # olog rowIds
+        rowData = rowIds.map(getRowData)
+        # rowData = rowData.filter((el) -> el?) 
+        studyIds = rowData.map((el) -> el[0].data)
+        # olog rowData
+        parameterList = "studyId=#{studyIds.join("&studyId=")}"
+        forwardingHRef = "#{forwardBaseURL}#{parameterList}"
+    else forwardingHRef = ""
+
+    if oldForwardURL != forwardingHRef then updateForwarderLink()
+    return
+    
+getRowData = (id) ->
+    log "getRowData"
+    allRows = tableObj.config.store.state.data.rows
+    return row._cells for row in allRows when row._id == id
+    return null
+
+############################################################
+updateForwarderLink = ->
+    log "updateForwarderLink #{forwardingHRef}"
+    forwardingLink.setAttribute("href", forwardingHRef)
+    if forwardingHRef then document.body.classList.add("entries-selected")
+    else document.body.classList.remove("entries-selected")
     return
 
 ############################################################
@@ -369,6 +416,8 @@ export backFromPatientTable = ->
     dataModule.invalidatePatientData()
     navigatingBack = true
     overviewtable.classList.add("go-back")
+    forwardingHRef = ""
+    updateForwarderLink()
     return
 ############################################################
 #region set to state Functions

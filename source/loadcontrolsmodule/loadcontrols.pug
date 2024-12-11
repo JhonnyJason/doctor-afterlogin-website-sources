@@ -3,8 +3,13 @@
 //-     //- span#mindate-display
 //-     span#entry-limit-display
 
+a#forwarding-link
+    //- a {{{content.forwardingLinkText}}}
+    svg: use(href="#svg-forward-icon")
+    .label Weiterleiten
+
 button#back-button.click-button: svg: use(href="#svg-chevron-left-icon")
-#patient-name-indication Chosen One
+#patient-name-indication
 
 #loadcontrols
     button#refresh-button.click-button: svg: use(href="#svg-refresh-icon")

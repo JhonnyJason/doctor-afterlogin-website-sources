@@ -6,7 +6,7 @@ import { createLogFunctions } from "thingy-debug"
 
 ############################################################
 import { Grid, html} from "gridjs"
-# import { RowSelection } from "gridjs/plugins/selection"
+import { RowSelection } from "gridjs/plugins/selection"
 # import { RowSelection } from "gridjs-selection"
 
 import M from "mustache"
@@ -248,6 +248,12 @@ patientIdHeadObj = {
     hidden: true
 }
 
+studyIdHeadObj = {
+    name: ""
+    id: "studyId"
+    hidden: true
+}
+
 isNewHeadObj = {
     name: ""
     id: "isNew"
@@ -318,11 +324,11 @@ sharedToHeadObj = {
     sort: false
 }
 
+
 forwardHeadObj = {
     name: ""
     id: "forward"
-    formatter: forwardFormatter
-    sort: false
+    plugin: {component: RowSelection}
 }
 
 #endregion
@@ -331,10 +337,10 @@ export getStandardColumnObjects = (state) ->
     return [patientIdHeadObj, isNewHeadObj, nameHeadObj, svnHeadObj, birthdayHeadObj, befundeHeadObj, bilderHeadObj, screeningDateHeadObj, radiologistHeadObj, sendingDateHeadObj]
 
 export getPatientsColumnObjects = (state) ->
-    return [patientIdHeadObj, isNewHeadObj, befundeHeadObj, bilderHeadObj, screeningDateHeadObj, radiologistHeadObj, forwardHeadObj]
+    return [studyIdHeadObj, isNewHeadObj, befundeHeadObj, bilderHeadObj, screeningDateHeadObj, radiologistHeadObj, forwardHeadObj]
 
 export getExtendedPatientsColumnObjects = (state) ->
-    return [patientIdHeadObj, isNewHeadObj, befundeHeadObj, bilderHeadObj, screeningDateHeadObj, radiologistHeadObj, sharedToHeadObj, forwardHeadObj]
+    return [studyIdHeadObj, isNewHeadObj, befundeHeadObj, bilderHeadObj, screeningDateHeadObj, radiologistHeadObj, sharedToHeadObj, forwardHeadObj]
 
 ############################################################
 export getLanguageObject = -> return deDE
