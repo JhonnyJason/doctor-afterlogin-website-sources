@@ -13,10 +13,8 @@ import * as S from "./statemodule.js"
 import { setUserRole } from "./overviewtablemodule.js"
 
 ############################################################
-import { requestSharesURL } from "./configmodule.js"
-import { ownSampleData, patientSampleData, doctorsSampleData } from "./sampledata.js"
-
-import { dataLoadPageSize } from "./configmodule.js"
+import { requestSharesURL, dataLoadPageSize } from "./configmodule.js"
+# import { ownSampleData } from "./sampledata.js"
 
 ############################################################
 minDate = null
