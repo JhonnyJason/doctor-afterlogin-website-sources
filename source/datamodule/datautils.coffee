@@ -17,9 +17,8 @@ PatientToEntry = {}
 ############################################################
 #region merge Properties Functions
 mergeIsNew = (obj, share) ->
-    shareIsNew = share.isNew? and share.isNew and share.isNew != "false"
-    return true if obj.isNew or shareIsNew
-    return false
+    shareIsNew = share.isNew? and share.isNew and share.isNew != false
+    return obj.isNew or shareIsNew
 
 mergePatientId = (obj, share) ->
     return share.patientId
