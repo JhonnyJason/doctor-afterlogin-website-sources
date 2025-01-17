@@ -169,15 +169,14 @@ renderTable = (dataPromise) ->
     pagination = { limit: 50 }
     sort = false
     fixedHeader = true
-    resizable = false
-    height = "#{utl.getTableHeight()}px"
-    rootStyle.setProperty("--table-max-height", height)
-    width = "100%"
-    
+    resizable = false    
     autoWidth = false
     
-    gridJSOptions = { columns, server, language, search, pagination, sort, fixedHeader, resizable }
+    gridJSOptions = { columns, server, language, search, pagination, sort, fixedHeader, resizable, autoWidth }
     #endregion
+
+    height = "#{utl.getTableHeight()}px"
+    rootStyle.setProperty("--table-max-height", height)
 
     if tableObj?
         tableObj = null
